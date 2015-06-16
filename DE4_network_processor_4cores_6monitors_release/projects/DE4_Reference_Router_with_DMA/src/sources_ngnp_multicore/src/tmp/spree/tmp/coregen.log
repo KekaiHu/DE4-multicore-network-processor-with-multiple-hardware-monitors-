@@ -1,0 +1,13 @@
+Welcome to Xilinx CORE Generator.
+Opened project file /home/qiang/Desktop/coregen.cgp.
+WARNING:sim:252 - Unable to determine location of PDF viewerCustomizing IP...
+Finished Customizing.
+Generating IP...
+WARNING:sim:217 - The chosen IP does not support a Verilog behavioral model,
+   generating a Verilog structural model instead.Generating Implementation files.
+Generating ISE symbol file...
+Generating NGC file.
+Generating Verilog structural model.
+Finished Generating.
+Successfully generated lpm_mult.
+Closed project file.

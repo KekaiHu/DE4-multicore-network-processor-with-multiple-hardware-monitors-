@@ -1,0 +1,118 @@
+//
+// Designed by Qiang Wu
+//	16K bytes, 32bit interface
+
+`timescale 1ns/1ps
+
+
+module lr0(clk, addr, data_in, data_out, we, en, reset);
+input clk;
+input [13:2] addr;
+input [31:0] data_in;
+output [31:0] data_out;
+input [3:0] we;
+input en;
+input reset;
+
+
+RAMB16_S4_altera localram0(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[3:0]),
+	.wren (we[0]),
+	.q (data_out[3:0])
+);
+
+defparam localram0.altsyncram_component.init_file = "lr0_0.mif";
+	
+
+RAMB16_S4_altera localram1(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[7:4]),
+	.wren (we[0]),
+	.q (data_out[7:4])
+);
+
+defparam localram1.altsyncram_component.init_file = "lr0_1.mif";
+
+
+RAMB16_S4_altera localram2(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[11:8]),
+	.wren (we[1]),
+	.q (data_out[11:8])
+);
+
+defparam localram1.altsyncram_component.init_file = "lr0_2.mif";
+
+
+RAMB16_S4_altera localram3(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[15:12]),
+	.wren (we[1]),
+	.q (data_out[15:12])
+);
+
+defparam localram1.altsyncram_component.init_file = "lr0_3.mif";
+
+RAMB16_S4_altera localram4(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[19:16]),
+	.wren (we[2]),
+	.q (data_out[19:16])
+);
+
+defparam localram1.altsyncram_component.init_file = "lr0_4.mif";
+
+RAMB16_S4_altera localram5(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[23:20]),
+	.wren (we[2]),
+	.q (data_out[23:20])
+);
+
+defparam localram1.altsyncram_component.init_file = "lr0_5.mif";
+
+RAMB16_S4_altera localram6(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[27:24]),
+	.wren (we[3]),
+	.q (data_out[27:24])
+);
+
+defparam localram1.altsyncram_component.init_file = "lr0_6.mif";
+
+RAMB16_S4_altera localram7(
+	.aclr (reset),
+	.address (addr[13:2]),
+	.clken (en),
+	.clock (clk),
+	.data (data_in[31:28]),
+	.wren (we[3]),
+	.q (data_out[31:28])
+);
+
+
+defparam localram1.altsyncram_component.init_file = "lr0_7.mif";
+
+endmodule

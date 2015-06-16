@@ -1,0 +1,4546 @@
+removed node callee2
+rtl_reate_basic_block
+create_basic_block_structure
+rtl_reate_basic_block
+create_basic_block_structure
+rtl_reate_basic_block
+create_basic_block_structure
+rtl_reate_basic_block
+create_basic_block_structure
+cleanup cfg
+basic block no. index 2
+basic block no. index 3
+basic block no. index 4
+basic block no. index 6
+optimize cfg
+optimize cfg
+basic block no. 2
+cleanup cfg returned
+cleanup cfg
+basic block no. index 2
+optimize cfg
+basic block no. 2
+cleanup cfg returned
+YF32_ISR
+final_start_function
+
+final called
+counter = 1
+get_code = 10
+NOTE_KIND = 0
+counter = 2
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 2
+counter = 3
+get_code = 5
+addiu	,,
+counter = 4
+get_code = 5
+sw	,
+counter = 5
+get_code = 5
+move	,
+counter = 6
+get_code = 10
+NOTE_KIND = 5
+counter = 7
+get_code = 10
+NOTE_KIND = 4
+counter = 8
+get_code = 10
+NOTE_KIND = 6
+counter = 9
+get_code = 5
+move	,
+counter = 10
+get_code = 5
+lw	,
+counter = 11
+get_code = 5
+addiu	,,
+counter = 12
+get_code = 6
+j	
+counter = 13
+get_code = 8
+counter = 14
+get_code = 10
+NOTE_KIND = 0
+printed cgraph = 0
+.set	macro
+.set	reorder
+function released
+removed node callee2
+removed node callee2
+rtl_reate_basic_block
+create_basic_block_structure
+rtl_reate_basic_block
+create_basic_block_structure
+rtl_reate_basic_block
+create_basic_block_structure
+rtl_reate_basic_block
+create_basic_block_structure
+cleanup cfg
+basic block no. index 2
+basic block no. index 3
+basic block no. index 4
+basic block no. index 5
+basic block no. index 6
+basic block no. index 7
+basic block no. index 8
+basic block no. index 9
+basic block no. index 10
+basic block no. index 11
+basic block no. index 12
+basic block no. index 13
+basic block no. index 14
+basic block no. index 15
+basic block no. index 16
+basic block no. index 17
+basic block no. index 18
+basic block no. index 19
+basic block no. index 20
+optimize cfg
+optimize cfg
+basic block no. 2
+basic block no. 4
+basic block no. 5
+basic block no. 7
+basic block no. 8
+basic block no. 9
+basic block no. 10
+basic block no. 11
+basic block no. 12
+basic block no. 13
+basic block no. 14
+basic block no. 15
+basic block no. 16
+basic block no. 17
+basic block no. 18
+basic block no. 19
+basic block no. 20
+cleanup cfg returned
+cleanup cfg
+basic block no. index 2
+basic block no. index 4
+basic block no. index 5
+basic block no. index 7
+basic block no. index 8
+basic block no. index 9
+basic block no. index 10
+basic block no. index 11
+basic block no. index 12
+basic block no. index 13
+basic block no. index 14
+basic block no. index 15
+basic block no. index 16
+basic block no. index 17
+basic block no. index 18
+basic block no. index 19
+basic block no. index 20
+optimize cfg
+basic block no. 2
+basic block no. 3
+basic block no. 4
+basic block no. 5
+basic block no. 6
+basic block no. 7
+basic block no. 8
+basic block no. 9
+basic block no. 10
+basic block no. 11
+basic block no. 12
+basic block no. 13
+basic block no. 14
+basic block no. 15
+basic block no. 16
+basic block no. 17
+basic block no. 18
+cleanup cfg returned
+main
+final_start_function
+
+final called
+counter = 15
+get_code = 10
+NOTE_KIND = 0
+counter = 16
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 2
+counter = 17
+get_code = 5
+addiu	,,
+counter = 18
+get_code = 5
+sw	,
+counter = 19
+get_code = 5
+move	,
+counter = 20
+get_code = 10
+NOTE_KIND = 5
+counter = 21
+get_code = 5
+sw	,
+counter = 22
+get_code = 5
+sw	,
+counter = 23
+get_code = 10
+NOTE_KIND = 4
+counter = 24
+get_code = 5
+sw	,
+counter = 25
+get_code = 5
+sw	,
+counter = 26
+get_code = 9
+counter = 27
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 3
+counter = 28
+get_code = 5
+li	,			# 
+counter = 29
+get_code = 5
+sw	,
+counter = 30
+get_code = 9
+counter = 31
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 4
+counter = 32
+get_code = 5
+li	,			# 
+counter = 33
+get_code = 5
+lw	,
+counter = 34
+get_code = 5
+li	,			# 
+counter = 35
+get_code = 6
+b	,,
+counter = 36
+get_code = 9
+counter = 37
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 5
+counter = 38
+get_code = 5
+li	,			# 
+counter = 39
+get_code = 5
+ori	,,
+counter = 40
+get_code = 5
+lw	,
+counter = 41
+get_code = 5
+nop
+counter = 42
+get_code = 5
+sw	,
+counter = 43
+get_code = 5
+lw	,
+counter = 44
+get_code = 5
+nop
+counter = 45
+get_code = 5
+srl	,,
+counter = 46
+get_code = 5
+sw	,
+counter = 47
+get_code = 5
+lw	,
+counter = 48
+get_code = 5
+li	,			# 
+counter = 49
+get_code = 6
+b	,,
+counter = 50
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 6
+counter = 51
+get_code = 5
+sw	,
+counter = 52
+get_code = 5
+li	,			# 
+counter = 53
+get_code = 5
+ori	,,
+counter = 54
+get_code = 5
+lw	,
+counter = 55
+get_code = 5
+nop
+counter = 56
+get_code = 5
+sw	,
+counter = 57
+get_code = 5
+lw	,
+counter = 58
+get_code = 5
+nop
+counter = 59
+get_code = 5
+andi	,,
+counter = 60
+get_code = 5
+srl	,,
+counter = 61
+get_code = 5
+sw	,
+counter = 62
+get_code = 5
+lw	,
+counter = 63
+get_code = 5
+nop
+counter = 64
+get_code = 6
+b	,,
+counter = 65
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 7
+counter = 66
+get_code = 5
+li	,			# 
+counter = 67
+get_code = 5
+ori	,,
+counter = 68
+get_code = 5
+lw	,
+counter = 69
+get_code = 5
+nop
+counter = 70
+get_code = 5
+sw	,
+counter = 71
+get_code = 5
+lw	,
+counter = 72
+get_code = 5
+nop
+counter = 73
+get_code = 5
+andi	,,
+counter = 74
+get_code = 5
+sw	,
+counter = 75
+get_code = 5
+li	,			# 
+counter = 76
+get_code = 5
+ori	,,
+counter = 77
+get_code = 5
+lw	,
+counter = 78
+get_code = 5
+nop
+counter = 79
+get_code = 5
+sw	,
+counter = 80
+get_code = 5
+lw	,
+counter = 81
+get_code = 5
+nop
+counter = 82
+get_code = 5
+srl	,,
+counter = 83
+get_code = 5
+sw	,
+counter = 84
+get_code = 5
+lw	,
+counter = 85
+get_code = 5
+nop
+counter = 86
+get_code = 5
+sll	,,
+counter = 87
+get_code = 5
+sw	,
+counter = 88
+get_code = 5
+lw	,
+counter = 89
+get_code = 5
+lw	,
+counter = 90
+get_code = 5
+nop
+counter = 91
+get_code = 5
+addu	,,
+counter = 92
+get_code = 5
+sw	,
+counter = 93
+get_code = 5
+sw	,
+counter = 94
+get_code = 5
+sw	,
+counter = 95
+get_code = 6
+j	mna ki to *$L7
+counter = 96
+get_code = 8
+counter = 97
+get_code = 9
+counter = 98
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 8
+counter = 99
+get_code = 5
+sw	,
+counter = 100
+get_code = 5
+sw	,
+counter = 101
+get_code = 5
+lw	,
+counter = 102
+get_code = 5
+lui	,
+counter = 103
+get_code = 5
+sll	,,
+counter = 104
+get_code = 5
+addiu	,,
+counter = 105
+get_code = 5
+addu	,,
+counter = 106
+get_code = 5
+lw	,
+counter = 107
+get_code = 5
+nop
+counter = 108
+get_code = 5
+andi	,,
+counter = 109
+get_code = 5
+sw	,
+counter = 110
+get_code = 5
+lw	,
+counter = 111
+get_code = 5
+lui	,
+counter = 112
+get_code = 5
+sll	,,
+counter = 113
+get_code = 5
+addiu	,,
+counter = 114
+get_code = 5
+addu	,,
+counter = 115
+get_code = 5
+lw	,
+counter = 116
+get_code = 5
+nop
+counter = 117
+get_code = 5
+srl	,,
+counter = 118
+get_code = 5
+sw	,
+counter = 119
+get_code = 5
+lw	,
+counter = 120
+get_code = 5
+nop
+counter = 121
+get_code = 5
+srl	,,
+counter = 122
+get_code = 5
+move	,
+counter = 123
+get_code = 5
+lw	,
+counter = 124
+get_code = 5
+nop
+counter = 125
+get_code = 6
+b	,,
+counter = 126
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 9
+counter = 127
+get_code = 5
+li	,			# 
+counter = 128
+get_code = 5
+sw	,
+counter = 129
+get_code = 5
+lw	,
+counter = 130
+get_code = 5
+nop
+counter = 131
+get_code = 5
+sll	,,
+counter = 132
+get_code = 5
+sw	,
+counter = 133
+get_code = 5
+li	,			# 
+counter = 134
+get_code = 5
+lw	,
+counter = 135
+get_code = 5
+nop
+counter = 136
+get_code = 5
+sw	,
+counter = 137
+get_code = 5
+lw	,
+counter = 138
+get_code = 5
+lw	,
+counter = 139
+get_code = 5
+nop
+counter = 140
+get_code = 5
+or	,,
+counter = 141
+get_code = 5
+sw	,
+counter = 142
+get_code = 5
+li	,			# 
+counter = 143
+get_code = 5
+lw	,
+counter = 144
+get_code = 5
+nop
+counter = 145
+get_code = 5
+sw	,
+counter = 146
+get_code = 6
+j	mna ki to *$L9
+counter = 147
+get_code = 8
+counter = 148
+get_code = 9
+counter = 149
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 10
+counter = 150
+get_code = 5
+lw	,
+counter = 151
+get_code = 5
+nop
+counter = 152
+get_code = 5
+addiu	,,
+counter = 153
+get_code = 5
+sw	,
+counter = 154
+get_code = 9
+counter = 155
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 11
+counter = 156
+get_code = 5
+lw	,
+counter = 157
+get_code = 5
+nop
+counter = 158
+get_code = 5
+slt	,,
+counter = 159
+get_code = 6
+b	,,
+counter = 160
+get_code = 9
+counter = 161
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 12
+counter = 162
+get_code = 5
+lw	,
+counter = 163
+get_code = 5
+nop
+counter = 164
+get_code = 6
+b	,,
+counter = 165
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 13
+counter = 166
+get_code = 5
+li	,			# 
+counter = 167
+get_code = 5
+lw	,
+counter = 168
+get_code = 5
+nop
+counter = 169
+get_code = 5
+sw	,
+counter = 170
+get_code = 5
+lw	,
+counter = 171
+get_code = 5
+li	,			# 
+counter = 172
+get_code = 5
+or	,,
+counter = 173
+get_code = 5
+sw	,
+counter = 174
+get_code = 5
+li	,			# 
+counter = 175
+get_code = 5
+lw	,
+counter = 176
+get_code = 5
+nop
+counter = 177
+get_code = 5
+sw	,
+counter = 178
+get_code = 9
+counter = 179
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 14
+counter = 180
+get_code = 5
+lw	,
+counter = 181
+get_code = 5
+nop
+counter = 182
+get_code = 5
+addiu	,,
+counter = 183
+get_code = 5
+sw	,
+counter = 184
+get_code = 5
+li	,			# 
+counter = 185
+get_code = 5
+ori	,,
+counter = 186
+get_code = 5
+lw	,
+counter = 187
+get_code = 5
+nop
+counter = 188
+get_code = 5
+sw	,
+counter = 189
+get_code = 5
+lw	,
+counter = 190
+get_code = 5
+li	,			# 
+counter = 191
+get_code = 5
+ori	,,
+counter = 192
+get_code = 5
+and	,,
+counter = 193
+get_code = 5
+sw	,
+counter = 194
+get_code = 5
+lw	,
+counter = 195
+get_code = 5
+nop
+counter = 196
+get_code = 5
+sll	,,
+counter = 197
+get_code = 5
+move	,
+counter = 198
+get_code = 5
+lw	,
+counter = 199
+get_code = 5
+nop
+counter = 200
+get_code = 5
+or	,,
+counter = 201
+get_code = 5
+sw	,
+counter = 202
+get_code = 5
+li	,			# 
+counter = 203
+get_code = 5
+ori	,,
+counter = 204
+get_code = 5
+lw	,
+counter = 205
+get_code = 5
+nop
+counter = 206
+get_code = 5
+sw	,
+counter = 207
+get_code = 5
+li	,			# 
+counter = 208
+get_code = 5
+ori	,,
+counter = 209
+get_code = 5
+lw	,
+counter = 210
+get_code = 5
+nop
+counter = 211
+get_code = 5
+sw	,
+counter = 212
+get_code = 5
+lw	,
+counter = 213
+get_code = 5
+nop
+counter = 214
+get_code = 5
+srl	,,
+counter = 215
+get_code = 5
+sw	,
+counter = 216
+get_code = 5
+lw	,
+counter = 217
+get_code = 5
+li	,			# 
+counter = 218
+get_code = 5
+slt	,,
+counter = 219
+get_code = 6
+b	,,
+counter = 220
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 15
+counter = 221
+get_code = 5
+lw	,
+counter = 222
+get_code = 5
+nop
+counter = 223
+get_code = 5
+addiu	,,
+counter = 224
+get_code = 5
+sw	,
+counter = 225
+get_code = 6
+j	mna ki to *$L13
+counter = 226
+get_code = 8
+counter = 227
+get_code = 9
+counter = 228
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 16
+counter = 229
+get_code = 5
+lw	,
+counter = 230
+get_code = 5
+nop
+counter = 231
+get_code = 5
+addiu	,,
+counter = 232
+get_code = 5
+sw	,
+counter = 233
+get_code = 9
+counter = 234
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 17
+counter = 235
+get_code = 5
+li	,			# 
+counter = 236
+get_code = 5
+ori	,,
+counter = 237
+get_code = 5
+lw	,
+counter = 238
+get_code = 5
+nop
+counter = 239
+get_code = 5
+sw	,
+counter = 240
+get_code = 5
+lw	,
+counter = 241
+get_code = 5
+nop
+counter = 242
+get_code = 5
+andi	,,
+counter = 243
+get_code = 5
+sw	,
+counter = 244
+get_code = 5
+lw	,
+counter = 245
+get_code = 5
+nop
+counter = 246
+get_code = 5
+sll	,,
+counter = 247
+get_code = 5
+move	,
+counter = 248
+get_code = 5
+lw	,
+counter = 249
+get_code = 5
+nop
+counter = 250
+get_code = 5
+or	,,
+counter = 251
+get_code = 5
+sw	,
+counter = 252
+get_code = 5
+li	,			# 
+counter = 253
+get_code = 5
+ori	,,
+counter = 254
+get_code = 5
+lw	,
+counter = 255
+get_code = 5
+nop
+counter = 256
+get_code = 5
+sw	,
+counter = 257
+get_code = 9
+counter = 258
+get_code = 10
+NOTE_KIND = 10
+	 # basic block 18
+counter = 259
+get_code = 5
+li	,			# 
+counter = 260
+get_code = 5
+li	,			# 
+counter = 261
+get_code = 5
+sw	,
+counter = 262
+get_code = 6
+j	mna ki to *$L14
+counter = 263
+get_code = 8
+counter = 264
+get_code = 10
+NOTE_KIND = 0
+printed cgraph = 1
+.set	macro
+.set	reorder
+function released
+removed node callee2
+out file create 
+symbol_create $0
+synmbol_name $0
+synmbol_new
+symbol_table_insert
+symbol_create $1
+synmbol_name $1
+synmbol_new
+symbol_table_insert
+symbol_create $2
+synmbol_name $2
+synmbol_new
+symbol_table_insert
+symbol_create $3
+synmbol_name $3
+synmbol_new
+symbol_table_insert
+symbol_create $4
+synmbol_name $4
+synmbol_new
+symbol_table_insert
+symbol_create $5
+synmbol_name $5
+synmbol_new
+symbol_table_insert
+symbol_create $6
+synmbol_name $6
+synmbol_new
+symbol_table_insert
+symbol_create $7
+synmbol_name $7
+synmbol_new
+symbol_table_insert
+symbol_create $8
+synmbol_name $8
+synmbol_new
+symbol_table_insert
+symbol_create $9
+synmbol_name $9
+synmbol_new
+symbol_table_insert
+symbol_create $10
+synmbol_name $10
+synmbol_new
+symbol_table_insert
+symbol_create $11
+synmbol_name $11
+synmbol_new
+symbol_table_insert
+symbol_create $12
+synmbol_name $12
+synmbol_new
+symbol_table_insert
+symbol_create $13
+synmbol_name $13
+synmbol_new
+symbol_table_insert
+symbol_create $14
+synmbol_name $14
+synmbol_new
+symbol_table_insert
+symbol_create $15
+synmbol_name $15
+synmbol_new
+symbol_table_insert
+symbol_create $16
+synmbol_name $16
+synmbol_new
+symbol_table_insert
+symbol_create $17
+synmbol_name $17
+synmbol_new
+symbol_table_insert
+symbol_create $18
+synmbol_name $18
+synmbol_new
+symbol_table_insert
+symbol_create $19
+synmbol_name $19
+synmbol_new
+symbol_table_insert
+symbol_create $20
+synmbol_name $20
+synmbol_new
+symbol_table_insert
+symbol_create $21
+synmbol_name $21
+synmbol_new
+symbol_table_insert
+symbol_create $22
+synmbol_name $22
+synmbol_new
+symbol_table_insert
+symbol_create $23
+synmbol_name $23
+synmbol_new
+symbol_table_insert
+symbol_create $24
+synmbol_name $24
+synmbol_new
+symbol_table_insert
+symbol_create $25
+synmbol_name $25
+synmbol_new
+symbol_table_insert
+symbol_create $26
+synmbol_name $26
+synmbol_new
+symbol_table_insert
+symbol_create $27
+synmbol_name $27
+synmbol_new
+symbol_table_insert
+symbol_create $28
+synmbol_name $28
+synmbol_new
+symbol_table_insert
+symbol_create $29
+synmbol_name $29
+synmbol_new
+symbol_table_insert
+symbol_create $30
+synmbol_name $30
+synmbol_new
+symbol_table_insert
+symbol_create $31
+synmbol_name $31
+synmbol_new
+symbol_table_insert
+symbol_create $f0
+synmbol_name $f0
+synmbol_new
+symbol_table_insert
+symbol_create $f1
+synmbol_name $f1
+synmbol_new
+symbol_table_insert
+symbol_create $f2
+synmbol_name $f2
+synmbol_new
+symbol_table_insert
+symbol_create $f3
+synmbol_name $f3
+synmbol_new
+symbol_table_insert
+symbol_create $f4
+synmbol_name $f4
+synmbol_new
+symbol_table_insert
+symbol_create $f5
+synmbol_name $f5
+synmbol_new
+symbol_table_insert
+symbol_create $f6
+synmbol_name $f6
+synmbol_new
+symbol_table_insert
+symbol_create $f7
+synmbol_name $f7
+synmbol_new
+symbol_table_insert
+symbol_create $f8
+synmbol_name $f8
+synmbol_new
+symbol_table_insert
+symbol_create $f9
+synmbol_name $f9
+synmbol_new
+symbol_table_insert
+symbol_create $f10
+synmbol_name $f10
+synmbol_new
+symbol_table_insert
+symbol_create $f11
+synmbol_name $f11
+synmbol_new
+symbol_table_insert
+symbol_create $f12
+synmbol_name $f12
+synmbol_new
+symbol_table_insert
+symbol_create $f13
+synmbol_name $f13
+synmbol_new
+symbol_table_insert
+symbol_create $f14
+synmbol_name $f14
+synmbol_new
+symbol_table_insert
+symbol_create $f15
+synmbol_name $f15
+synmbol_new
+symbol_table_insert
+symbol_create $f16
+synmbol_name $f16
+synmbol_new
+symbol_table_insert
+symbol_create $f17
+synmbol_name $f17
+synmbol_new
+symbol_table_insert
+symbol_create $f18
+synmbol_name $f18
+synmbol_new
+symbol_table_insert
+symbol_create $f19
+synmbol_name $f19
+synmbol_new
+symbol_table_insert
+symbol_create $f20
+synmbol_name $f20
+synmbol_new
+symbol_table_insert
+symbol_create $f21
+synmbol_name $f21
+synmbol_new
+symbol_table_insert
+symbol_create $f22
+synmbol_name $f22
+synmbol_new
+symbol_table_insert
+symbol_create $f23
+synmbol_name $f23
+synmbol_new
+symbol_table_insert
+symbol_create $f24
+synmbol_name $f24
+synmbol_new
+symbol_table_insert
+symbol_create $f25
+synmbol_name $f25
+synmbol_new
+symbol_table_insert
+symbol_create $f26
+synmbol_name $f26
+synmbol_new
+symbol_table_insert
+symbol_create $f27
+synmbol_name $f27
+synmbol_new
+symbol_table_insert
+symbol_create $f28
+synmbol_name $f28
+synmbol_new
+symbol_table_insert
+symbol_create $f29
+synmbol_name $f29
+synmbol_new
+symbol_table_insert
+symbol_create $f30
+synmbol_name $f30
+synmbol_new
+symbol_table_insert
+symbol_create $f31
+synmbol_name $f31
+synmbol_new
+symbol_table_insert
+symbol_create $fcc0
+synmbol_name $fcc0
+synmbol_new
+symbol_table_insert
+symbol_create $fcc1
+synmbol_name $fcc1
+synmbol_new
+symbol_table_insert
+symbol_create $fcc2
+synmbol_name $fcc2
+synmbol_new
+symbol_table_insert
+symbol_create $fcc3
+synmbol_name $fcc3
+synmbol_new
+symbol_table_insert
+symbol_create $fcc4
+synmbol_name $fcc4
+synmbol_new
+symbol_table_insert
+symbol_create $fcc5
+synmbol_name $fcc5
+synmbol_new
+symbol_table_insert
+symbol_create $fcc6
+synmbol_name $fcc6
+synmbol_new
+symbol_table_insert
+symbol_create $fcc7
+synmbol_name $fcc7
+synmbol_new
+symbol_table_insert
+symbol_create $cc0
+synmbol_name $cc0
+synmbol_new
+symbol_table_insert
+symbol_create $cc1
+synmbol_name $cc1
+synmbol_new
+symbol_table_insert
+symbol_create $cc2
+synmbol_name $cc2
+synmbol_new
+symbol_table_insert
+symbol_create $cc3
+synmbol_name $cc3
+synmbol_new
+symbol_table_insert
+symbol_create $cc4
+synmbol_name $cc4
+synmbol_new
+symbol_table_insert
+symbol_create $cc5
+synmbol_name $cc5
+synmbol_new
+symbol_table_insert
+symbol_create $cc6
+synmbol_name $cc6
+synmbol_new
+symbol_table_insert
+symbol_create $cc7
+synmbol_name $cc7
+synmbol_new
+symbol_table_insert
+symbol_create $zero
+synmbol_name $zero
+synmbol_new
+symbol_table_insert
+symbol_create $at
+synmbol_name $at
+synmbol_new
+symbol_table_insert
+symbol_create $AT
+synmbol_name $AT
+synmbol_new
+symbol_table_insert
+symbol_create $v0
+synmbol_name $v0
+synmbol_new
+symbol_table_insert
+symbol_create $v1
+synmbol_name $v1
+synmbol_new
+symbol_table_insert
+symbol_create $a0
+synmbol_name $a0
+synmbol_new
+symbol_table_insert
+symbol_create $a1
+synmbol_name $a1
+synmbol_new
+symbol_table_insert
+symbol_create $a2
+synmbol_name $a2
+synmbol_new
+symbol_table_insert
+symbol_create $a3
+synmbol_name $a3
+synmbol_new
+symbol_table_insert
+symbol_create $s0
+synmbol_name $s0
+synmbol_new
+symbol_table_insert
+symbol_create $s1
+synmbol_name $s1
+synmbol_new
+symbol_table_insert
+symbol_create $s2
+synmbol_name $s2
+synmbol_new
+symbol_table_insert
+symbol_create $s3
+synmbol_name $s3
+synmbol_new
+symbol_table_insert
+symbol_create $s4
+synmbol_name $s4
+synmbol_new
+symbol_table_insert
+symbol_create $s5
+synmbol_name $s5
+synmbol_new
+symbol_table_insert
+symbol_create $s6
+synmbol_name $s6
+synmbol_new
+symbol_table_insert
+symbol_create $s7
+synmbol_name $s7
+synmbol_new
+symbol_table_insert
+symbol_create $t8
+synmbol_name $t8
+synmbol_new
+symbol_table_insert
+symbol_create $t9
+synmbol_name $t9
+synmbol_new
+symbol_table_insert
+symbol_create $k0
+synmbol_name $k0
+synmbol_new
+symbol_table_insert
+symbol_create $kt0
+synmbol_name $kt0
+synmbol_new
+symbol_table_insert
+symbol_create $k1
+synmbol_name $k1
+synmbol_new
+symbol_table_insert
+symbol_create $kt1
+synmbol_name $kt1
+synmbol_new
+symbol_table_insert
+symbol_create $gp
+synmbol_name $gp
+synmbol_new
+symbol_table_insert
+symbol_create $sp
+synmbol_name $sp
+synmbol_new
+symbol_table_insert
+symbol_create $s8
+synmbol_name $s8
+synmbol_new
+symbol_table_insert
+symbol_create $fp
+synmbol_name $fp
+synmbol_new
+symbol_table_insert
+symbol_create $ra
+synmbol_name $ra
+synmbol_new
+symbol_table_insert
+symbol_create $pc
+synmbol_name $pc
+synmbol_new
+symbol_table_insert
+symbol_create $v2
+synmbol_name $v2
+synmbol_new
+symbol_table_insert
+symbol_create $v3
+synmbol_name $v3
+synmbol_new
+symbol_table_insert
+symbol_create $v4
+synmbol_name $v4
+synmbol_new
+symbol_table_insert
+symbol_create $v5
+synmbol_name $v5
+synmbol_new
+symbol_table_insert
+symbol_create $v6
+synmbol_name $v6
+synmbol_new
+symbol_table_insert
+symbol_create $v7
+synmbol_name $v7
+synmbol_new
+symbol_table_insert
+symbol_create $v8
+synmbol_name $v8
+synmbol_new
+symbol_table_insert
+symbol_create $v9
+synmbol_name $v9
+synmbol_new
+symbol_table_insert
+symbol_create $v10
+synmbol_name $v10
+synmbol_new
+symbol_table_insert
+symbol_create $v11
+synmbol_name $v11
+synmbol_new
+symbol_table_insert
+symbol_create $v12
+synmbol_name $v12
+synmbol_new
+symbol_table_insert
+symbol_create $v13
+synmbol_name $v13
+synmbol_new
+symbol_table_insert
+symbol_create $v14
+synmbol_name $v14
+synmbol_new
+symbol_table_insert
+symbol_create $v15
+synmbol_name $v15
+synmbol_new
+symbol_table_insert
+symbol_create $v16
+synmbol_name $v16
+synmbol_new
+symbol_table_insert
+symbol_create $v17
+synmbol_name $v17
+synmbol_new
+symbol_table_insert
+symbol_create $v18
+synmbol_name $v18
+synmbol_new
+symbol_table_insert
+symbol_create $v19
+synmbol_name $v19
+synmbol_new
+symbol_table_insert
+symbol_create $v20
+synmbol_name $v20
+synmbol_new
+symbol_table_insert
+symbol_create $v21
+synmbol_name $v21
+synmbol_new
+symbol_table_insert
+symbol_create $v22
+synmbol_name $v22
+synmbol_new
+symbol_table_insert
+symbol_create $v23
+synmbol_name $v23
+synmbol_new
+symbol_table_insert
+symbol_create $v24
+synmbol_name $v24
+synmbol_new
+symbol_table_insert
+symbol_create $v25
+synmbol_name $v25
+synmbol_new
+symbol_table_insert
+symbol_create $v26
+synmbol_name $v26
+synmbol_new
+symbol_table_insert
+symbol_create $v27
+synmbol_name $v27
+synmbol_new
+symbol_table_insert
+symbol_create $v28
+synmbol_name $v28
+synmbol_new
+symbol_table_insert
+symbol_create $v29
+synmbol_name $v29
+synmbol_new
+symbol_table_insert
+symbol_create $v30
+synmbol_name $v30
+synmbol_new
+symbol_table_insert
+symbol_create $v31
+synmbol_name $v31
+synmbol_new
+symbol_table_insert
+symbol_create $ac0
+synmbol_name $ac0
+synmbol_new
+symbol_table_insert
+symbol_create $ac1
+synmbol_name $ac1
+synmbol_new
+symbol_table_insert
+symbol_create $ac2
+synmbol_name $ac2
+synmbol_new
+symbol_table_insert
+symbol_create $ac3
+synmbol_name $ac3
+synmbol_new
+symbol_table_insert
+symbol_create $t0
+synmbol_name $t0
+synmbol_new
+symbol_table_insert
+symbol_create $t1
+synmbol_name $t1
+synmbol_new
+symbol_table_insert
+symbol_create $t2
+synmbol_name $t2
+synmbol_new
+symbol_table_insert
+symbol_create $t3
+synmbol_name $t3
+synmbol_new
+symbol_table_insert
+symbol_create $t4
+synmbol_name $t4
+synmbol_new
+symbol_table_insert
+symbol_create $t5
+synmbol_name $t5
+synmbol_new
+symbol_table_insert
+symbol_create $t6
+synmbol_name $t6
+synmbol_new
+symbol_table_insert
+symbol_create $t7
+synmbol_name $t7
+synmbol_new
+symbol_table_insert
+symbol_create $ta0
+synmbol_name $ta0
+synmbol_new
+symbol_table_insert
+symbol_create $ta1
+synmbol_name $ta1
+synmbol_new
+symbol_table_insert
+symbol_create $ta2
+synmbol_name $ta2
+synmbol_new
+symbol_table_insert
+symbol_create $ta3
+synmbol_name $ta3
+synmbol_new
+symbol_table_insert
+frag_more
+graf_grow
+symbol_create .text
+synmbol_name .text
+synmbol_new
+symbol_table_insert
+symbol_create .data
+synmbol_name .data
+synmbol_new
+symbol_table_insert
+symbol_create .bss
+synmbol_name .bss
+synmbol_new
+symbol_table_insert
+symbol_create firmware.c
+synmbol_name firmware.c
+synmbol_new
+symbol_create .mdebug.abi32
+synmbol_name .mdebug.abi32
+synmbol_new
+symbol_table_insert
+frag_var
+graf_grow
+frag_new
+symbol_find_or_make YF32_ISR
+symbol_create YF32_ISR
+synmbol_name YF32_ISR
+synmbol_new
+symbol_table_insert
+tc-mips.c
+symbol_find_or_make YF32_ISR
+colon YF32_ISR
+F_YF32_ISRassembling addiu $sp,$sp,-8
+-t-,-r-,-j- returned from mips_ip(addiu) insn_opcode = 0x27bd0000
+type1
+frag_more
+graf_grow
+installing instruction at 144 = 27bd0000
+installing instruction at 144 = 27bdfff8
+assembling sw $fp,4($sp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafbe0000
+type2
+frag_more
+graf_grow
+installing instruction at 148 = afbe0000
+installing instruction at 148 = afbe0004
+assembling move $fp,$sp
+-d-,-s- returned from mips_ip(move) insn_opcode = 0x3a0f000
+frag_more
+graf_grow
+installing instruction at 14c = 3a0f021
+installing instruction at 14c = 3a0f021
+assembling move $sp,$fp
+-d-,-s- returned from mips_ip(move) insn_opcode = 0x3c0e800
+frag_more
+graf_grow
+installing instruction at 150 = 3c0e821
+installing instruction at 150 = 3c0e821
+assembling lw $fp,4($sp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fbe0000
+type2
+frag_more
+graf_grow
+installing instruction at 154 = 8fbe0000
+installing instruction at 154 = 8fbe0004
+assembling addiu $sp,$sp,8
+-t-,-r-,-j- returned from mips_ip(addiu) insn_opcode = 0x27bd0000
+type1
+frag_more
+graf_grow
+installing instruction at 158 = 27bd0000
+installing instruction at 158 = 27bd0008
+assembling j $31
+-s- returned from mips_ip(j) insn_opcode = 0x3e00008
+type3
+frag_more
+graf_grow
+installing instruction at 15c = 3e00008
+installing instruction at 15c = 3e00008
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 160 = 0
+installing instruction at 160 = 0
+symbol_find_or_make YF32_ISR
+symbol_create L0
+synmbol_name L0
+synmbol_new
+frag_more
+graf_grow
+frag_more
+graf_grow
+symbol_create L0
+synmbol_name L0
+synmbol_new
+symbol_find_or_make YF32_ISR
+symbol_find_or_make YF32_ISR
+symbol_find_or_make table
+symbol_create table
+synmbol_name table
+synmbol_new
+symbol_table_insert
+frag_var
+graf_grow
+frag_new
+symbol_find_or_make table
+symbol_find_or_make table
+colon table
+F_tablefrag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+symbol_find_or_make main
+symbol_create main
+synmbol_name main
+synmbol_new
+symbol_table_insert
+tc-mips.c
+symbol_find_or_make main
+colon main
+F_mainassembling addiu $sp,$sp,-56
+-t-,-r-,-j- returned from mips_ip(addiu) insn_opcode = 0x27bd0000
+type1
+frag_more
+graf_grow
+installing instruction at 144 = 27bd0000
+installing instruction at 144 = 27bdffc8
+assembling sw $fp,52($sp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafbe0000
+type2
+frag_more
+graf_grow
+installing instruction at 148 = afbe0000
+installing instruction at 148 = afbe0034
+assembling move $fp,$sp
+-d-,-s- returned from mips_ip(move) insn_opcode = 0x3a0f000
+frag_more
+graf_grow
+installing instruction at 14c = 3a0f021
+installing instruction at 14c = 3a0f021
+assembling sw $4,56($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc40000
+type2
+frag_more
+graf_grow
+installing instruction at 150 = afc40000
+installing instruction at 150 = afc40038
+assembling sw $5,60($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc50000
+type2
+frag_more
+graf_grow
+installing instruction at 154 = afc50000
+installing instruction at 154 = afc5003c
+assembling sw $0,16($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc00000
+type2
+frag_more
+graf_grow
+installing instruction at 158 = afc00000
+installing instruction at 158 = afc00010
+assembling sw $0,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc00000
+type2
+frag_more
+graf_grow
+installing instruction at 15c = afc00000
+installing instruction at 15c = afc00004
+colon $L14
+synmbol_name $L14
+assembling li $2,402653184
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 160 = 3c020000
+installing instruction at 160 = 3c021800
+assembling sw $0,0($2)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xac400000
+type2
+frag_more
+graf_grow
+installing instruction at 164 = ac400000
+installing instruction at 164 = ac400000
+colon $L5
+synmbol_name $L5
+assembling li $2,520093696
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 168 = 3c020000
+installing instruction at 168 = 3c021f00
+assembling lw $3,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c430000
+type2
+frag_more
+graf_grow
+installing instruction at 16c = 8c430000
+installing instruction at 16c = 8c430000
+assembling li $2,1
+-t-,-j- returned from mips_ip(li) insn_opcode = 0x24020000
+type1
+frag_more
+graf_grow
+installing instruction at 170 = 24020000
+installing instruction at 170 = 24020001
+assembling bne $3,$2,$L5
+-s-,-t-,-psymbol_find_or_make $L5
+hmm j?
+- returned from mips_ip(bne) insn_opcode = 0x14620000
+type2
+frag_more
+graf_grow
+installing instruction at 174 = 14620000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 174 = 14620000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 178 = 0
+installing instruction at 178 = 0
+colon $L4
+synmbol_name $L4
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 17c = 3c020000
+installing instruction at 17c = 3c021000
+assembling ori $2,$2,0x14
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 180 = 34420000
+installing instruction at 180 = 34420014
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 184 = 8c420000
+installing instruction at 184 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 188 = 0
+installing instruction at 188 = 0
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+symbol_create temp_u32
+synmbol_name temp_u32
+synmbol_new
+symbol_table_insert
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 18c = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 18c = af820000
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 190 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 190 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 194 = 0
+installing instruction at 194 = 0
+assembling srl $2,$2,16
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(srl) insn_opcode = 0x21402
+type3
+frag_more
+graf_grow
+installing instruction at 198 = 21402
+installing instruction at 198 = 21402
+assembling sw $2,20($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 19c = afc20000
+installing instruction at 19c = afc20014
+assembling lw $3,20($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc30000
+type2
+frag_more
+graf_grow
+installing instruction at 1a0 = 8fc30000
+installing instruction at 1a0 = 8fc30014
+assembling li $2,2048
+-t-,-j- returned from mips_ip(li) insn_opcode = 0x24020000
+type1
+frag_more
+graf_grow
+installing instruction at 1a4 = 24020000
+installing instruction at 1a4 = 24020800
+assembling bne $3,$2,$L6
+-s-,-t-,-psymbol_find_or_make $L6
+synmbol_name $L6
+hmm j?
+- returned from mips_ip(bne) insn_opcode = 0x14620000
+type2
+frag_more
+graf_grow
+installing instruction at 1a8 = 14620000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 1a8 = 14620000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 1ac = 0
+installing instruction at 1ac = 0
+assembling sw $0,0($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc00000
+type2
+frag_more
+graf_grow
+installing instruction at 1b0 = afc00000
+installing instruction at 1b0 = afc00000
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 1b4 = 3c020000
+installing instruction at 1b4 = 3c021000
+assembling ori $2,$2,0x1c
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 1b8 = 34420000
+installing instruction at 1b8 = 3442001c
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 1bc = 8c420000
+installing instruction at 1bc = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 1c0 = 0
+installing instruction at 1c0 = 0
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 1c4 = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 1c4 = af820000
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 1c8 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 1c8 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 1cc = 0
+installing instruction at 1cc = 0
+assembling andi $2,$2,0xff00
+-t-,-r-,-i- returned from mips_ip(andi) insn_opcode = 0x30420000
+type1
+frag_more
+graf_grow
+installing instruction at 1d0 = 30420000
+installing instruction at 1d0 = 3042ff00
+assembling srl $2,$2,8
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(srl) insn_opcode = 0x21202
+type3
+frag_more
+graf_grow
+installing instruction at 1d4 = 21202
+installing instruction at 1d4 = 21202
+assembling sw $2,0($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 1d8 = afc20000
+installing instruction at 1d8 = afc20000
+assembling lw $2,0($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 1dc = 8fc20000
+installing instruction at 1dc = 8fc20000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 1e0 = 0
+installing instruction at 1e0 = 0
+assembling beq $2,$0,$L6
+-s-,-t-,-psymbol_find_or_make $L6
+hmm j?
+- returned from mips_ip(beq) insn_opcode = 0x10400000
+type2
+frag_more
+graf_grow
+installing instruction at 1e4 = 10400000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 1e4 = 10400000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 1e8 = 0
+installing instruction at 1e8 = 0
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 1ec = 3c020000
+installing instruction at 1ec = 3c021000
+assembling ori $2,$2,0x24
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 1f0 = 34420000
+installing instruction at 1f0 = 34420024
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 1f4 = 8c420000
+installing instruction at 1f4 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 1f8 = 0
+installing instruction at 1f8 = 0
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 1fc = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 1fc = af820000
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 200 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 200 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 204 = 0
+installing instruction at 204 = 0
+assembling andi $2,$2,0xffff
+-t-,-r-,-i- returned from mips_ip(andi) insn_opcode = 0x30420000
+type1
+frag_more
+graf_grow
+installing instruction at 208 = 30420000
+installing instruction at 208 = 3042ffff
+assembling sw $2,44($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 20c = afc20000
+installing instruction at 20c = afc2002c
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 210 = 3c020000
+installing instruction at 210 = 3c021000
+assembling ori $2,$2,0x28
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 214 = 34420000
+installing instruction at 214 = 34420028
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 218 = 8c420000
+installing instruction at 218 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 21c = 0
+installing instruction at 21c = 0
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 220 = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 220 = af820000
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 224 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 224 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 228 = 0
+installing instruction at 228 = 0
+assembling srl $2,$2,16
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(srl) insn_opcode = 0x21402
+type3
+frag_more
+graf_grow
+installing instruction at 22c = 21402
+installing instruction at 22c = 21402
+assembling sw $2,28($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 230 = afc20000
+installing instruction at 230 = afc2001c
+assembling lw $2,44($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 234 = 8fc20000
+installing instruction at 234 = 8fc2002c
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 238 = 0
+installing instruction at 238 = 0
+assembling sll $2,$2,16
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(sll) insn_opcode = 0x21400
+type3
+frag_more
+graf_grow
+installing instruction at 23c = 21400
+installing instruction at 23c = 21400
+assembling sw $2,32($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 240 = afc20000
+installing instruction at 240 = afc20020
+assembling lw $3,32($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc30000
+type2
+frag_more
+graf_grow
+installing instruction at 244 = 8fc30000
+installing instruction at 244 = 8fc30020
+assembling lw $2,28($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 248 = 8fc20000
+installing instruction at 248 = 8fc2001c
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 24c = 0
+installing instruction at 24c = 0
+assembling addu $2,$3,$2
+-d-,-v-,-t- returned from mips_ip(addu) insn_opcode = 0x621021
+type3
+frag_more
+graf_grow
+installing instruction at 250 = 621021
+installing instruction at 250 = 621021
+assembling sw $2,24($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 254 = afc20000
+installing instruction at 254 = afc20018
+assembling sw $0,36($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc00000
+type2
+frag_more
+graf_grow
+installing instruction at 258 = afc00000
+installing instruction at 258 = afc00024
+assembling sw $0,16($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc00000
+type2
+frag_more
+graf_grow
+installing instruction at 25c = afc00000
+installing instruction at 25c = afc00010
+assembling j $L7
+-s-asymbol_find_or_make $L7
+synmbol_name $L7
+yehi hay kia?
+- returned from mips_ip(j) insn_opcode = 0x0
+M_J_A
+mna - BFD_RELOC_MIPS_JMP
+frag_more
+graf_grow
+installing instruction at 260 = 8000000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 260 = 8000000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 264 = 0
+installing instruction at 264 = 0
+colon $L10
+synmbol_name $L10
+assembling sw $0,12($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc00000
+type2
+frag_more
+graf_grow
+installing instruction at 268 = afc00000
+installing instruction at 268 = afc0000c
+assembling sw $0,8($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc00000
+type2
+frag_more
+graf_grow
+installing instruction at 26c = afc00000
+installing instruction at 26c = afc00008
+assembling lw $2,16($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 270 = 8fc20000
+installing instruction at 270 = 8fc20010
+assembling lui $3,%hi(table)
+-t-,-usymbol_find_or_make table
+- returned from mips_ip(lui) insn_opcode = 0x3c030000
+type1
+frag_more
+graf_grow
+installing instruction at 274 = 3c030000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 274 = 3c030000
+assembling sll $4,$2,2
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(sll) insn_opcode = 0x22080
+type3
+frag_more
+graf_grow
+installing instruction at 278 = 22080
+installing instruction at 278 = 22080
+assembling addiu $2,$3,%lo(table)
+-t-,-r-,-jsymbol_find_or_make table
+- returned from mips_ip(addiu) insn_opcode = 0x24620000
+type1
+frag_more
+graf_grow
+installing instruction at 27c = 24620000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 27c = 24620000
+assembling addu $2,$4,$2
+-d-,-v-,-t- returned from mips_ip(addu) insn_opcode = 0x821021
+type3
+frag_more
+graf_grow
+installing instruction at 280 = 821021
+installing instruction at 280 = 821021
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 284 = 8c420000
+installing instruction at 284 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 288 = 0
+installing instruction at 288 = 0
+assembling andi $2,$2,0xff
+-t-,-r-,-i- returned from mips_ip(andi) insn_opcode = 0x30420000
+type1
+frag_more
+graf_grow
+installing instruction at 28c = 30420000
+installing instruction at 28c = 304200ff
+assembling sw $2,8($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 290 = afc20000
+installing instruction at 290 = afc20008
+assembling lw $2,16($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 294 = 8fc20000
+installing instruction at 294 = 8fc20010
+assembling lui $3,%hi(table)
+-t-,-usymbol_find_or_make table
+- returned from mips_ip(lui) insn_opcode = 0x3c030000
+type1
+frag_more
+graf_grow
+installing instruction at 298 = 3c030000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 298 = 3c030000
+assembling sll $4,$2,2
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(sll) insn_opcode = 0x22080
+type3
+frag_more
+graf_grow
+installing instruction at 29c = 22080
+installing instruction at 29c = 22080
+assembling addiu $2,$3,%lo(table)
+-t-,-r-,-jsymbol_find_or_make table
+- returned from mips_ip(addiu) insn_opcode = 0x24620000
+type1
+frag_more
+graf_grow
+installing instruction at 2a0 = 24620000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 2a0 = 24620000
+assembling addu $2,$4,$2
+-d-,-v-,-t- returned from mips_ip(addu) insn_opcode = 0x821021
+type3
+frag_more
+graf_grow
+installing instruction at 2a4 = 821021
+installing instruction at 2a4 = 821021
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 2a8 = 8c420000
+installing instruction at 2a8 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 2ac = 0
+installing instruction at 2ac = 0
+assembling srl $2,$2,8
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(srl) insn_opcode = 0x21202
+type3
+frag_more
+graf_grow
+installing instruction at 2b0 = 21202
+installing instruction at 2b0 = 21202
+assembling sw $2,12($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 2b4 = afc20000
+installing instruction at 2b4 = afc2000c
+assembling lw $2,24($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 2b8 = 8fc20000
+installing instruction at 2b8 = 8fc20018
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 2bc = 0
+installing instruction at 2bc = 0
+assembling srl $2,$2,8
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(srl) insn_opcode = 0x21202
+type3
+frag_more
+graf_grow
+installing instruction at 2c0 = 21202
+installing instruction at 2c0 = 21202
+assembling move $3,$2
+-d-,-s- returned from mips_ip(move) insn_opcode = 0x401800
+frag_more
+graf_grow
+installing instruction at 2c4 = 401821
+installing instruction at 2c4 = 401821
+assembling lw $2,12($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 2c8 = 8fc20000
+installing instruction at 2c8 = 8fc2000c
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 2cc = 0
+installing instruction at 2cc = 0
+assembling bne $3,$2,$L8
+-s-,-t-,-psymbol_find_or_make $L8
+synmbol_name $L8
+hmm j?
+- returned from mips_ip(bne) insn_opcode = 0x14620000
+type2
+frag_more
+graf_grow
+installing instruction at 2d0 = 14620000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 2d0 = 14620000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 2d4 = 0
+installing instruction at 2d4 = 0
+assembling li $2,1
+-t-,-j- returned from mips_ip(li) insn_opcode = 0x24020000
+type1
+frag_more
+graf_grow
+installing instruction at 2d8 = 24020000
+installing instruction at 2d8 = 24020001
+assembling sw $2,36($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 2dc = afc20000
+installing instruction at 2dc = afc20024
+assembling lw $2,8($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 2e0 = 8fc20000
+installing instruction at 2e0 = 8fc20008
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 2e4 = 0
+installing instruction at 2e4 = 0
+assembling sll $2,$2,16
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(sll) insn_opcode = 0x21400
+type3
+frag_more
+graf_grow
+installing instruction at 2e8 = 21400
+installing instruction at 2e8 = 21400
+assembling sw $2,8($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 2ec = afc20000
+installing instruction at 2ec = afc20008
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 2f0 = 3c020000
+installing instruction at 2f0 = 3c021000
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 2f4 = 8c420000
+installing instruction at 2f4 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 2f8 = 0
+installing instruction at 2f8 = 0
+assembling sw $2,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 2fc = afc20000
+installing instruction at 2fc = afc20028
+assembling lw $3,8($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc30000
+type2
+frag_more
+graf_grow
+installing instruction at 300 = 8fc30000
+installing instruction at 300 = 8fc30008
+assembling lw $2,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 304 = 8fc20000
+installing instruction at 304 = 8fc20028
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 308 = 0
+installing instruction at 308 = 0
+assembling or $2,$2,$3
+-d-,-v-,-t- returned from mips_ip(or) insn_opcode = 0x431025
+type3
+frag_more
+graf_grow
+installing instruction at 30c = 431025
+installing instruction at 30c = 431025
+assembling sw $2,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 310 = afc20000
+installing instruction at 310 = afc20028
+assembling li $3,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x30000
+frag_more
+graf_grow
+installing instruction at 314 = 3c030000
+installing instruction at 314 = 3c031000
+assembling lw $2,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 318 = 8fc20000
+installing instruction at 318 = 8fc20028
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 31c = 0
+installing instruction at 31c = 0
+assembling sw $2,0($3)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xac620000
+type2
+frag_more
+graf_grow
+installing instruction at 320 = ac620000
+installing instruction at 320 = ac620000
+assembling j $L9
+-s-asymbol_find_or_make $L9
+synmbol_name $L9
+yehi hay kia?
+- returned from mips_ip(j) insn_opcode = 0x0
+M_J_A
+mna - BFD_RELOC_MIPS_JMP
+frag_more
+graf_grow
+installing instruction at 324 = 8000000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 324 = 8000000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 328 = 0
+installing instruction at 328 = 0
+colon $L8
+assembling lw $2,16($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 32c = 8fc20000
+installing instruction at 32c = 8fc20010
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 330 = 0
+installing instruction at 330 = 0
+assembling addiu $2,$2,1
+-t-,-r-,-j- returned from mips_ip(addiu) insn_opcode = 0x24420000
+type1
+frag_more
+graf_grow
+installing instruction at 334 = 24420000
+installing instruction at 334 = 24420001
+assembling sw $2,16($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 338 = afc20000
+installing instruction at 338 = afc20010
+colon $L7
+assembling lw $2,16($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 33c = 8fc20000
+installing instruction at 33c = 8fc20010
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 340 = 0
+installing instruction at 340 = 0
+assembling slt $2,$2,101
+-d-,-v-,-t-d-,-v-,-I- returned from mips_ip(slt) insn_opcode = 0x401000
+frag_more
+graf_grow
+installing instruction at 344 = 28420000
+installing instruction at 344 = 28420065
+assembling bne $2,$0,$L10
+-s-,-t-,-psymbol_find_or_make $L10
+hmm j?
+- returned from mips_ip(bne) insn_opcode = 0x14400000
+type2
+frag_more
+graf_grow
+installing instruction at 348 = 14400000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 348 = 14400000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 34c = 0
+installing instruction at 34c = 0
+colon $L9
+assembling lw $2,36($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 350 = 8fc20000
+installing instruction at 350 = 8fc20024
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 354 = 0
+installing instruction at 354 = 0
+assembling bne $2,$0,$L11
+-s-,-t-,-psymbol_find_or_make $L11
+synmbol_name $L11
+hmm j?
+- returned from mips_ip(bne) insn_opcode = 0x14400000
+type2
+frag_more
+graf_grow
+installing instruction at 358 = 14400000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 358 = 14400000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 35c = 0
+installing instruction at 35c = 0
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 360 = 3c020000
+installing instruction at 360 = 3c021000
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 364 = 8c420000
+installing instruction at 364 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 368 = 0
+installing instruction at 368 = 0
+assembling sw $2,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 36c = afc20000
+installing instruction at 36c = afc20028
+assembling lw $3,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc30000
+type2
+frag_more
+graf_grow
+installing instruction at 370 = 8fc30000
+installing instruction at 370 = 8fc30028
+assembling li $2,262144
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 374 = 3c020000
+installing instruction at 374 = 3c020004
+assembling or $2,$3,$2
+-d-,-v-,-t- returned from mips_ip(or) insn_opcode = 0x621025
+type3
+frag_more
+graf_grow
+installing instruction at 378 = 621025
+installing instruction at 378 = 621025
+assembling sw $2,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 37c = afc20000
+installing instruction at 37c = afc20028
+assembling li $3,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x30000
+frag_more
+graf_grow
+installing instruction at 380 = 3c030000
+installing instruction at 380 = 3c031000
+assembling lw $2,40($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 384 = 8fc20000
+installing instruction at 384 = 8fc20028
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 388 = 0
+installing instruction at 388 = 0
+assembling sw $2,0($3)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xac620000
+type2
+frag_more
+graf_grow
+installing instruction at 38c = ac620000
+installing instruction at 38c = ac620000
+colon $L11
+assembling lw $2,0($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 390 = 8fc20000
+installing instruction at 390 = 8fc20000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 394 = 0
+installing instruction at 394 = 0
+assembling addiu $2,$2,-1
+-t-,-r-,-j- returned from mips_ip(addiu) insn_opcode = 0x24420000
+type1
+frag_more
+graf_grow
+installing instruction at 398 = 24420000
+installing instruction at 398 = 2442ffff
+assembling sw $2,0($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 39c = afc20000
+installing instruction at 39c = afc20000
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 3a0 = 3c020000
+installing instruction at 3a0 = 3c021000
+assembling ori $2,$2,0x1c
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 3a4 = 34420000
+installing instruction at 3a4 = 3442001c
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 3a8 = 8c420000
+installing instruction at 3a8 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 3ac = 0
+installing instruction at 3ac = 0
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 3b0 = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 3b0 = af820000
+assembling lw $3,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f830000
+type2
+frag_more
+graf_grow
+installing instruction at 3b4 = 8f830000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 3b4 = 8f830000
+assembling li $2,-65536
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 3b8 = 3c020000
+installing instruction at 3b8 = 3c02ffff
+assembling ori $2,$2,0xff
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 3bc = 34420000
+installing instruction at 3bc = 344200ff
+assembling and $2,$3,$2
+-d-,-v-,-t- returned from mips_ip(and) insn_opcode = 0x621024
+type3
+frag_more
+graf_grow
+installing instruction at 3c0 = 621024
+installing instruction at 3c0 = 621024
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 3c4 = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 3c4 = af820000
+assembling lw $2,0($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 3c8 = 8fc20000
+installing instruction at 3c8 = 8fc20000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 3cc = 0
+installing instruction at 3cc = 0
+assembling sll $2,$2,8
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(sll) insn_opcode = 0x21200
+type3
+frag_more
+graf_grow
+installing instruction at 3d0 = 21200
+installing instruction at 3d0 = 21200
+assembling move $3,$2
+-d-,-s- returned from mips_ip(move) insn_opcode = 0x401800
+frag_more
+graf_grow
+installing instruction at 3d4 = 401821
+installing instruction at 3d4 = 401821
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 3d8 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 3d8 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 3dc = 0
+installing instruction at 3dc = 0
+assembling or $2,$3,$2
+-d-,-v-,-t- returned from mips_ip(or) insn_opcode = 0x621025
+type3
+frag_more
+graf_grow
+installing instruction at 3e0 = 621025
+installing instruction at 3e0 = 621025
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 3e4 = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 3e4 = af820000
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 3e8 = 3c020000
+installing instruction at 3e8 = 3c021000
+assembling ori $3,$2,0x1c
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34430000
+type1
+frag_more
+graf_grow
+installing instruction at 3ec = 34430000
+installing instruction at 3ec = 3443001c
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 3f0 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 3f0 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 3f4 = 0
+installing instruction at 3f4 = 0
+assembling sw $2,0($3)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xac620000
+type2
+frag_more
+graf_grow
+installing instruction at 3f8 = ac620000
+installing instruction at 3f8 = ac620000
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 3fc = 3c020000
+installing instruction at 3fc = 3c021000
+assembling ori $2,$2,0x20
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 400 = 34420000
+installing instruction at 400 = 34420020
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 404 = 8c420000
+installing instruction at 404 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 408 = 0
+installing instruction at 408 = 0
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 40c = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 40c = af820000
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 410 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 410 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 414 = 0
+installing instruction at 414 = 0
+assembling srl $2,$2,16
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(srl) insn_opcode = 0x21402
+type3
+frag_more
+graf_grow
+installing instruction at 418 = 21402
+installing instruction at 418 = 21402
+assembling sw $2,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 41c = afc20000
+installing instruction at 41c = afc20004
+assembling lw $3,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc30000
+type2
+frag_more
+graf_grow
+installing instruction at 420 = 8fc30000
+installing instruction at 420 = 8fc30004
+assembling li $2,65279
+-t-,-j-t-,-i- returned from mips_ip(li) insn_opcode = 0x34020000
+type1
+frag_more
+graf_grow
+installing instruction at 424 = 34020000
+installing instruction at 424 = 3402feff
+assembling slt $2,$3,$2
+-d-,-v-,-t- returned from mips_ip(slt) insn_opcode = 0x62102a
+type3
+frag_more
+graf_grow
+installing instruction at 428 = 62102a
+installing instruction at 428 = 62102a
+assembling bne $2,$0,$L12
+-s-,-t-,-psymbol_find_or_make $L12
+synmbol_name $L12
+hmm j?
+- returned from mips_ip(bne) insn_opcode = 0x14400000
+type2
+frag_more
+graf_grow
+installing instruction at 42c = 14400000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 42c = 14400000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 430 = 0
+installing instruction at 430 = 0
+assembling lw $2,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 434 = 8fc20000
+installing instruction at 434 = 8fc20004
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 438 = 0
+installing instruction at 438 = 0
+assembling addiu $2,$2,257
+-t-,-r-,-j- returned from mips_ip(addiu) insn_opcode = 0x24420000
+type1
+frag_more
+graf_grow
+installing instruction at 43c = 24420000
+installing instruction at 43c = 24420101
+assembling sw $2,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 440 = afc20000
+installing instruction at 440 = afc20004
+assembling j $L13
+-s-asymbol_find_or_make $L13
+synmbol_name $L13
+yehi hay kia?
+- returned from mips_ip(j) insn_opcode = 0x0
+M_J_A
+mna - BFD_RELOC_MIPS_JMP
+frag_more
+graf_grow
+installing instruction at 444 = 8000000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 444 = 8000000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 448 = 0
+installing instruction at 448 = 0
+colon $L12
+assembling lw $2,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 44c = 8fc20000
+installing instruction at 44c = 8fc20004
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 450 = 0
+installing instruction at 450 = 0
+assembling addiu $2,$2,256
+-t-,-r-,-j- returned from mips_ip(addiu) insn_opcode = 0x24420000
+type1
+frag_more
+graf_grow
+installing instruction at 454 = 24420000
+installing instruction at 454 = 24420100
+assembling sw $2,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xafc20000
+type2
+frag_more
+graf_grow
+installing instruction at 458 = afc20000
+installing instruction at 458 = afc20004
+colon $L13
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 45c = 3c020000
+installing instruction at 45c = 3c021000
+assembling ori $2,$2,0x20
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34420000
+type1
+frag_more
+graf_grow
+installing instruction at 460 = 34420000
+installing instruction at 460 = 34420020
+assembling lw $2,0($2)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8c420000
+type2
+frag_more
+graf_grow
+installing instruction at 464 = 8c420000
+installing instruction at 464 = 8c420000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 468 = 0
+installing instruction at 468 = 0
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 46c = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 46c = af820000
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 470 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 470 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 474 = 0
+installing instruction at 474 = 0
+assembling andi $2,$2,0xffff
+-t-,-r-,-i- returned from mips_ip(andi) insn_opcode = 0x30420000
+type1
+frag_more
+graf_grow
+installing instruction at 478 = 30420000
+installing instruction at 478 = 3042ffff
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 47c = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 47c = af820000
+assembling lw $2,4($fp)
+-t-,-o-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8fc20000
+type2
+frag_more
+graf_grow
+installing instruction at 480 = 8fc20000
+installing instruction at 480 = 8fc20004
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 484 = 0
+installing instruction at 484 = 0
+assembling sll $2,$2,16
+-d-,-w-,-s-d-,-w-,-<- returned from mips_ip(sll) insn_opcode = 0x21400
+type3
+frag_more
+graf_grow
+installing instruction at 488 = 21400
+installing instruction at 488 = 21400
+assembling move $3,$2
+-d-,-s- returned from mips_ip(move) insn_opcode = 0x401800
+frag_more
+graf_grow
+installing instruction at 48c = 401821
+installing instruction at 48c = 401821
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 490 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 490 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 494 = 0
+installing instruction at 494 = 0
+assembling or $2,$3,$2
+-d-,-v-,-t- returned from mips_ip(or) insn_opcode = 0x621025
+type3
+frag_more
+graf_grow
+installing instruction at 498 = 621025
+installing instruction at 498 = 621025
+assembling sw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(sw) insn_opcode = 0xaf820000
+type2
+frag_more
+graf_grow
+installing instruction at 49c = af820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 49c = af820000
+assembling li $2,268435456
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x20000
+frag_more
+graf_grow
+installing instruction at 4a0 = 3c020000
+installing instruction at 4a0 = 3c021000
+assembling ori $3,$2,0x20
+-t-,-r-,-i- returned from mips_ip(ori) insn_opcode = 0x34430000
+type1
+frag_more
+graf_grow
+installing instruction at 4a4 = 34430000
+installing instruction at 4a4 = 34430020
+assembling lw $2,%gp_rel(temp_u32)($28)
+-t-,-osymbol_find_or_make temp_u32
+-(-b-)- returned from mips_ip(lw) insn_opcode = 0x8f820000
+type2
+frag_more
+graf_grow
+installing instruction at 4a8 = 8f820000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 4a8 = 8f820000
+assembling nop 
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 4ac = 0
+installing instruction at 4ac = 0
+assembling sw $2,0($3)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xac620000
+type2
+frag_more
+graf_grow
+installing instruction at 4b0 = ac620000
+installing instruction at 4b0 = ac620000
+colon $L6
+assembling li $3,402653184
+-t-,-j-t-,-i-t-,-I- returned from mips_ip(li) insn_opcode = 0x30000
+frag_more
+graf_grow
+installing instruction at 4b4 = 3c030000
+installing instruction at 4b4 = 3c031800
+assembling li $2,1
+-t-,-j- returned from mips_ip(li) insn_opcode = 0x24020000
+type1
+frag_more
+graf_grow
+installing instruction at 4b8 = 24020000
+installing instruction at 4b8 = 24020001
+assembling sw $2,0($3)
+-t-,-o-(-b-)- returned from mips_ip(sw) insn_opcode = 0xac620000
+type2
+frag_more
+graf_grow
+installing instruction at 4bc = ac620000
+installing instruction at 4bc = ac620000
+assembling j $L14
+-s-asymbol_find_or_make $L14
+yehi hay kia?
+- returned from mips_ip(j) insn_opcode = 0x0
+M_J_A
+mna - BFD_RELOC_MIPS_JMP
+frag_more
+graf_grow
+installing instruction at 4c0 = 8000000
+reloc_type < BFD_RELOC_UNUSED
+installing instruction at 4c0 = 8000000
+assembling nop
+- returned from mips_ip(nop) insn_opcode = 0x0
+type3
+frag_more
+graf_grow
+installing instruction at 4c4 = 0
+installing instruction at 4c4 = 0
+symbol_find_or_make main
+symbol_create L0
+synmbol_name L0
+synmbol_new
+frag_more
+graf_grow
+frag_more
+graf_grow
+symbol_create L0
+synmbol_name L0
+synmbol_new
+symbol_find_or_make main
+symbol_find_or_make main
+symbol_find_or_make temp_u32
+frag_more
+graf_grow
+frag_more
+graf_grow
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+frag_var
+graf_grow
+frag_new
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 20
+write.c fragP->fr_address = 3a4
+write.c fragP->last_fr_address = 20
+write.c fragP->last_fr_address = 3a4
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 4
+write.c fragP->fr_address = 8
+write.c fragP->fr_address = c
+write.c fragP->fr_address = 10
+write.c fragP->fr_address = 14
+write.c fragP->fr_address = 18
+write.c fragP->fr_address = 1c
+write.c fragP->fr_address = 20
+write.c fragP->fr_address = 24
+write.c fragP->fr_address = 28
+write.c fragP->fr_address = 2c
+write.c fragP->fr_address = 30
+write.c fragP->fr_address = 34
+write.c fragP->fr_address = 38
+write.c fragP->fr_address = 3c
+write.c fragP->fr_address = 40
+write.c fragP->fr_address = 44
+write.c fragP->fr_address = 48
+write.c fragP->fr_address = 4c
+write.c fragP->fr_address = 50
+write.c fragP->fr_address = 54
+write.c fragP->fr_address = 58
+write.c fragP->fr_address = 5c
+write.c fragP->fr_address = 60
+write.c fragP->fr_address = 64
+write.c fragP->fr_address = 68
+write.c fragP->fr_address = 6c
+write.c fragP->fr_address = 70
+write.c fragP->fr_address = 74
+write.c fragP->fr_address = 78
+write.c fragP->fr_address = 7c
+write.c fragP->fr_address = 80
+write.c fragP->fr_address = 84
+write.c fragP->fr_address = 88
+write.c fragP->fr_address = 8c
+write.c fragP->fr_address = 90
+write.c fragP->fr_address = 94
+write.c fragP->fr_address = 98
+write.c fragP->fr_address = 9c
+write.c fragP->fr_address = a0
+write.c fragP->fr_address = a4
+write.c fragP->fr_address = a8
+write.c fragP->fr_address = ac
+write.c fragP->fr_address = b0
+write.c fragP->fr_address = b4
+write.c fragP->fr_address = b8
+write.c fragP->fr_address = bc
+write.c fragP->fr_address = c0
+write.c fragP->fr_address = c4
+write.c fragP->fr_address = c8
+write.c fragP->fr_address = cc
+write.c fragP->fr_address = d0
+write.c fragP->fr_address = d4
+write.c fragP->fr_address = d8
+write.c fragP->fr_address = dc
+write.c fragP->fr_address = e0
+write.c fragP->fr_address = e4
+write.c fragP->fr_address = e8
+write.c fragP->fr_address = ec
+write.c fragP->fr_address = f0
+write.c fragP->fr_address = f4
+write.c fragP->fr_address = f8
+write.c fragP->fr_address = fc
+write.c fragP->fr_address = 100
+write.c fragP->fr_address = 104
+write.c fragP->fr_address = 108
+write.c fragP->fr_address = 10c
+write.c fragP->fr_address = 110
+write.c fragP->fr_address = 114
+write.c fragP->fr_address = 118
+write.c fragP->fr_address = 11c
+write.c fragP->fr_address = 120
+write.c fragP->fr_address = 124
+write.c fragP->fr_address = 128
+write.c fragP->fr_address = 12c
+write.c fragP->fr_address = 130
+write.c fragP->fr_address = 134
+write.c fragP->fr_address = 138
+write.c fragP->fr_address = 13c
+write.c fragP->fr_address = 140
+write.c fragP->fr_address = 144
+write.c fragP->fr_address = 148
+write.c fragP->fr_address = 14c
+write.c fragP->fr_address = 150
+write.c fragP->fr_address = 154
+write.c fragP->fr_address = 158
+write.c fragP->fr_address = 15c
+write.c fragP->fr_address = 160
+write.c fragP->fr_address = 164
+write.c fragP->fr_address = 168
+write.c fragP->fr_address = 16c
+write.c fragP->fr_address = 170
+write.c fragP->fr_address = 174
+write.c fragP->fr_address = 178
+write.c fragP->fr_address = 17c
+write.c fragP->fr_address = 180
+write.c fragP->fr_address = 184
+write.c fragP->fr_address = 188
+write.c fragP->fr_address = 18c
+write.c fragP->fr_address = 190
+write.c fragP->fr_address = 194
+write.c fragP->last_fr_address = 4
+write.c fragP->last_fr_address = 8
+write.c fragP->last_fr_address = c
+write.c fragP->last_fr_address = 10
+write.c fragP->last_fr_address = 14
+write.c fragP->last_fr_address = 18
+write.c fragP->last_fr_address = 1c
+write.c fragP->last_fr_address = 20
+write.c fragP->last_fr_address = 24
+write.c fragP->last_fr_address = 28
+write.c fragP->last_fr_address = 2c
+write.c fragP->last_fr_address = 30
+write.c fragP->last_fr_address = 34
+write.c fragP->last_fr_address = 38
+write.c fragP->last_fr_address = 3c
+write.c fragP->last_fr_address = 40
+write.c fragP->last_fr_address = 44
+write.c fragP->last_fr_address = 48
+write.c fragP->last_fr_address = 4c
+write.c fragP->last_fr_address = 50
+write.c fragP->last_fr_address = 54
+write.c fragP->last_fr_address = 58
+write.c fragP->last_fr_address = 5c
+write.c fragP->last_fr_address = 60
+write.c fragP->last_fr_address = 64
+write.c fragP->last_fr_address = 68
+write.c fragP->last_fr_address = 6c
+write.c fragP->last_fr_address = 70
+write.c fragP->last_fr_address = 74
+write.c fragP->last_fr_address = 78
+write.c fragP->last_fr_address = 7c
+write.c fragP->last_fr_address = 80
+write.c fragP->last_fr_address = 84
+write.c fragP->last_fr_address = 88
+write.c fragP->last_fr_address = 8c
+write.c fragP->last_fr_address = 90
+write.c fragP->last_fr_address = 94
+write.c fragP->last_fr_address = 98
+write.c fragP->last_fr_address = 9c
+write.c fragP->last_fr_address = a0
+write.c fragP->last_fr_address = a4
+write.c fragP->last_fr_address = a8
+write.c fragP->last_fr_address = ac
+write.c fragP->last_fr_address = b0
+write.c fragP->last_fr_address = b4
+write.c fragP->last_fr_address = b8
+write.c fragP->last_fr_address = bc
+write.c fragP->last_fr_address = c0
+write.c fragP->last_fr_address = c4
+write.c fragP->last_fr_address = c8
+write.c fragP->last_fr_address = cc
+write.c fragP->last_fr_address = d0
+write.c fragP->last_fr_address = d4
+write.c fragP->last_fr_address = d8
+write.c fragP->last_fr_address = dc
+write.c fragP->last_fr_address = e0
+write.c fragP->last_fr_address = e4
+write.c fragP->last_fr_address = e8
+write.c fragP->last_fr_address = ec
+write.c fragP->last_fr_address = f0
+write.c fragP->last_fr_address = f4
+write.c fragP->last_fr_address = f8
+write.c fragP->last_fr_address = fc
+write.c fragP->last_fr_address = 100
+write.c fragP->last_fr_address = 104
+write.c fragP->last_fr_address = 108
+write.c fragP->last_fr_address = 10c
+write.c fragP->last_fr_address = 110
+write.c fragP->last_fr_address = 114
+write.c fragP->last_fr_address = 118
+write.c fragP->last_fr_address = 11c
+write.c fragP->last_fr_address = 120
+write.c fragP->last_fr_address = 124
+write.c fragP->last_fr_address = 128
+write.c fragP->last_fr_address = 12c
+write.c fragP->last_fr_address = 130
+write.c fragP->last_fr_address = 134
+write.c fragP->last_fr_address = 138
+write.c fragP->last_fr_address = 13c
+write.c fragP->last_fr_address = 140
+write.c fragP->last_fr_address = 144
+write.c fragP->last_fr_address = 148
+write.c fragP->last_fr_address = 14c
+write.c fragP->last_fr_address = 150
+write.c fragP->last_fr_address = 154
+write.c fragP->last_fr_address = 158
+write.c fragP->last_fr_address = 15c
+write.c fragP->last_fr_address = 160
+write.c fragP->last_fr_address = 164
+write.c fragP->last_fr_address = 168
+write.c fragP->last_fr_address = 16c
+write.c fragP->last_fr_address = 170
+write.c fragP->last_fr_address = 174
+write.c fragP->last_fr_address = 178
+write.c fragP->last_fr_address = 17c
+write.c fragP->last_fr_address = 180
+write.c fragP->last_fr_address = 184
+write.c fragP->last_fr_address = 188
+write.c fragP->last_fr_address = 18c
+write.c fragP->last_fr_address = 190
+write.c fragP->last_fr_address = 194
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 18
+write.c fragP->last_fr_address = 18
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 40
+write.c fragP->last_fr_address = 40
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 12
+write.c fragP->last_fr_address = 12
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 10
+write.c fragP->last_fr_address = 10
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 20
+write.c fragP->fr_address = 3a4
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 4
+write.c fragP->fr_address = 8
+write.c fragP->fr_address = c
+write.c fragP->fr_address = 10
+write.c fragP->fr_address = 14
+write.c fragP->fr_address = 18
+write.c fragP->fr_address = 1c
+write.c fragP->fr_address = 20
+write.c fragP->fr_address = 24
+write.c fragP->fr_address = 28
+write.c fragP->fr_address = 2c
+write.c fragP->fr_address = 30
+write.c fragP->fr_address = 34
+write.c fragP->fr_address = 38
+write.c fragP->fr_address = 3c
+write.c fragP->fr_address = 40
+write.c fragP->fr_address = 44
+write.c fragP->fr_address = 48
+write.c fragP->fr_address = 4c
+write.c fragP->fr_address = 50
+write.c fragP->fr_address = 54
+write.c fragP->fr_address = 58
+write.c fragP->fr_address = 5c
+write.c fragP->fr_address = 60
+write.c fragP->fr_address = 64
+write.c fragP->fr_address = 68
+write.c fragP->fr_address = 6c
+write.c fragP->fr_address = 70
+write.c fragP->fr_address = 74
+write.c fragP->fr_address = 78
+write.c fragP->fr_address = 7c
+write.c fragP->fr_address = 80
+write.c fragP->fr_address = 84
+write.c fragP->fr_address = 88
+write.c fragP->fr_address = 8c
+write.c fragP->fr_address = 90
+write.c fragP->fr_address = 94
+write.c fragP->fr_address = 98
+write.c fragP->fr_address = 9c
+write.c fragP->fr_address = a0
+write.c fragP->fr_address = a4
+write.c fragP->fr_address = a8
+write.c fragP->fr_address = ac
+write.c fragP->fr_address = b0
+write.c fragP->fr_address = b4
+write.c fragP->fr_address = b8
+write.c fragP->fr_address = bc
+write.c fragP->fr_address = c0
+write.c fragP->fr_address = c4
+write.c fragP->fr_address = c8
+write.c fragP->fr_address = cc
+write.c fragP->fr_address = d0
+write.c fragP->fr_address = d4
+write.c fragP->fr_address = d8
+write.c fragP->fr_address = dc
+write.c fragP->fr_address = e0
+write.c fragP->fr_address = e4
+write.c fragP->fr_address = e8
+write.c fragP->fr_address = ec
+write.c fragP->fr_address = f0
+write.c fragP->fr_address = f4
+write.c fragP->fr_address = f8
+write.c fragP->fr_address = fc
+write.c fragP->fr_address = 100
+write.c fragP->fr_address = 104
+write.c fragP->fr_address = 108
+write.c fragP->fr_address = 10c
+write.c fragP->fr_address = 110
+write.c fragP->fr_address = 114
+write.c fragP->fr_address = 118
+write.c fragP->fr_address = 11c
+write.c fragP->fr_address = 120
+write.c fragP->fr_address = 124
+write.c fragP->fr_address = 128
+write.c fragP->fr_address = 12c
+write.c fragP->fr_address = 130
+write.c fragP->fr_address = 134
+write.c fragP->fr_address = 138
+write.c fragP->fr_address = 13c
+write.c fragP->fr_address = 140
+write.c fragP->fr_address = 144
+write.c fragP->fr_address = 148
+write.c fragP->fr_address = 14c
+write.c fragP->fr_address = 150
+write.c fragP->fr_address = 154
+write.c fragP->fr_address = 158
+write.c fragP->fr_address = 15c
+write.c fragP->fr_address = 160
+write.c fragP->fr_address = 164
+write.c fragP->fr_address = 168
+write.c fragP->fr_address = 16c
+write.c fragP->fr_address = 170
+write.c fragP->fr_address = 174
+write.c fragP->fr_address = 178
+write.c fragP->fr_address = 17c
+write.c fragP->fr_address = 180
+write.c fragP->fr_address = 184
+write.c fragP->fr_address = 188
+write.c fragP->fr_address = 18c
+write.c fragP->fr_address = 190
+write.c fragP->fr_address = 194
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 18
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 40
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 12
+write.c fragP->fr_address = 0
+write.c fragP->fr_address = 10
+mna size_seg
+mna size_seg
+mna size_seg
+mna size_seg
+mna size_seg
+mna size_seg
+mna size_seg
+mna size_seg
+symbol_create $L5
+synmbol_name $L5
+synmbol_new
+symbol_table_insert
+symbol_create $L6
+synmbol_name $L6
+synmbol_new
+symbol_table_insert
+symbol_create $L7
+synmbol_name $L7
+synmbol_new
+symbol_table_insert
+symbol_create $L8
+synmbol_name $L8
+synmbol_new
+symbol_table_insert
+symbol_create $L9
+synmbol_name $L9
+synmbol_new
+symbol_table_insert
+symbol_create $L10
+synmbol_name $L10
+synmbol_new
+symbol_table_insert
+symbol_create $L11
+synmbol_name $L11
+synmbol_new
+symbol_table_insert
+symbol_create $L12
+synmbol_name $L12
+synmbol_new
+symbol_table_insert
+symbol_create $L13
+synmbol_name $L13
+synmbol_new
+symbol_table_insert
+symbol_create $L14
+synmbol_name $L14
+synmbol_new
+symbol_table_insert
+symbol_create *ABS*
+synmbol_name *ABS*
+synmbol_new
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+here in write.c
+writing frag .text
+this is the one
+frag here 
+frag here 
+fragging size = 20 file = firmware.s at =144
+mna BFD section = .text flags = 11f size = 32
+frag here 
+fragging size = 384 file = firmware.s at =164
+mna BFD section = .text flags = 11f size = 900
+frag here 
+writing frag .data
+frag here 
+frag here 
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+mna BFD section = .data flags = 123 size = 4
+frag here 
+writing frag .reginfo
+frag here 
+mna BFD section = .reginfo flags = 128 size = 24
+frag here 
+writing frag .pdr
+frag here 
+mna BFD section = .pdr flags = 210c size = 64
+frag here 
+writing frag .comment
+frag here 
+mna BFD section = .comment flags = 108 size = 18
+frag here 
+writing frag .gnu.attributes
+frag here 
+mna BFD section = .gnu.attributes flags = 128 size = 16
+frag here 
+specing

@@ -1,0 +1,31 @@
+#include <windows.h>
+#include <ntverp.h>
+#include "wd_ver.h"
+
+#undef  VERSION
+#define VERSION "1.00"
+#define	VER_FILETYPE	VFT_DRV
+#define	VER_FILESUBTYPE	VFT2_DRV_SYSTEM
+#undef  VER_COMPANYNAME_STR
+#define VER_COMPANYNAME_STR         "Jungo"
+#define VER_FILEDESCRIPTION_STR     "pcie_sw Device Driver " VERSION
+#define VER_INTERNALNAME_STR        "pcie_sw.sys\0"
+#define VER_ORIGINALFILENAME_STR    "pcie_sw.sys"
+#define VER_LEGALCOPYRIGHT_YEARS    "2011"
+#define VER_LEGALCOPYRIGHT_STR "Jungo Confidential. Copyright (c) " VER_LEGALCOPYRIGHT_YEARS " Jungo Ltd.  http://www.jungo.com"
+
+#undef  VER_PRODUCTNAME_STR
+#if defined(AMD64)
+        #define VER_PRODUCTNAME_STR "pcie_sw Device Driver (x64)"
+#else
+        #define VER_PRODUCTNAME_STR "pcie_sw Device Driver (x86)"
+#endif
+#undef  VER_PRODUCTVERSION
+#define VER_PRODUCTVERSION 1,0,0,0
+#undef  VER_PRODUCTVERSION_STR
+#define VER_PRODUCTVERSION_STR VERSION "\0"
+#undef  VER_LEGALTRADEMARKS_STR
+// Define any trademarks for this driver here
+#define VER_LEGALTRADEMARKS_STR  "Trademark is a legal trademark of Jungo"
+
+#include "common.ver"

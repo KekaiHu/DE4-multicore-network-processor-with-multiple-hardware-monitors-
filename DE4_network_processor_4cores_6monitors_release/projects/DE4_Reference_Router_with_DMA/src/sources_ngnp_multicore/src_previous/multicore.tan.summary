@@ -1,0 +1,116 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.497 ns
+From           : reset
+To             : ppu:ppu0|packet_queue:pq3|in_switch:in_switch|bypass_curr_port[1]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.857 ns
+From           : flow_classification:fc|wr_curr
+To             : in_rdy
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.091 ns
+From           : reg_src_in[0]
+To             : reg_src_out[0]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.645 ns
+From           : out_rdy
+To             : ppu:ppu0|packet_queue:pq1|packet_buffer_bypass:pb5|send_len[6]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'core_sp_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 20.53 MHz ( period = 48.712 ns )
+From           : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|opcode0[26]
+To             : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|pc_next:u1_pc_next|pc_reg[7]
+From Clock     : core_sp_clk
+To Clock       : core_sp_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 58.75 MHz ( period = 17.020 ns )
+From           : ppu:ppu0|packet_queue:pq2|packet_buffer:pb0|out_data[31]
+To             : ppu:ppu0|packet_queue:pq2|out_switch:out_switch|TRIG0[141]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'reset'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 64.69 MHz ( period = 15.458 ns )
+From           : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|opcode1[30]
+To             : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|take_branch0
+From Clock     : reset
+To Clock       : reset
+Failed Paths   : 0
+
+Type           : Clock Hold: 'core_sp_clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|pc_next:u1_pc_next|pc_reg[21]
+To             : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|pc_next:u1_pc_next|pc_next3[21]
+From Clock     : core_sp_clk
+To Clock       : core_sp_clk
+Failed Paths   : 10000
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ppu:ppu0|packet_queue:pq2|packet_buffer:pb0|RAM16_s36_s36_altera:pm|altsyncram:altsyncram_component|altsyncram_pq22:auto_generated|q_a[26]
+To             : ppu:ppu0|packet_queue:pq2|packet_buffer:pb0|out_data[58]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 1435
+
+Type           : Clock Hold: 'reset'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|reg_dest0[6]
+To             : ppu:ppu0|yf32_core:packet_processor|mlite_cpu:u1_cpu|reg_dest3[6]
+From Clock     : reset
+To Clock       : reset
+Failed Paths   : 1
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 11436
+
+--------------------------------------------------------------------------------------
+

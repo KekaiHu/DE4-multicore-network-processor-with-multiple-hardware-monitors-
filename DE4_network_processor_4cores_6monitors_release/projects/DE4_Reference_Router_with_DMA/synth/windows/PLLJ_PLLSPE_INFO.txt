@@ -1,0 +1,65 @@
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|stratix_iv.stratixiv_hssi_pcie_hip
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_serdes:serdes|pcie_compiler_0_serdes_alt4gxb_t27b:pcie_compiler_0_serdes_alt4gxb_t27b_component|central_clk_div0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_serdes:serdes|pcie_compiler_0_serdes_alt4gxb_t27b:pcie_compiler_0_serdes_alt4gxb_t27b_component|ch_clk_div0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_serdes:serdes|pcie_compiler_0_serdes_alt4gxb_t27b:pcie_compiler_0_serdes_alt4gxb_t27b_component|receive_pma0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_serdes:serdes|pcie_compiler_0_serdes_alt4gxb_t27b:pcie_compiler_0_serdes_alt4gxb_t27b_component|rx_cdr_pll0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_serdes:serdes|pcie_compiler_0_serdes_alt4gxb_t27b:pcie_compiler_0_serdes_alt4gxb_t27b_component|transmit_pcs0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_serdes:serdes|pcie_compiler_0_serdes_alt4gxb_t27b:pcie_compiler_0_serdes_alt4gxb_t27b_component|transmit_pma0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_serdes:serdes|pcie_compiler_0_serdes_alt4gxb_t27b:pcie_compiler_0_serdes_alt4gxb_t27b_component|tx_pll0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	DE4_SOPC:SOPC_INST|pll:the_pll|altpllpll:the_pll|altpll:altpll_component|altpll_pnf2:auto_generated|pll1
+PLLJITTER	24
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_pma_lvds_rx:the_altera_tse_pma_lvds_rx|altlvds_rx:ALTLVDS_RX_component|lvds_rx_osv3:auto_generated|pll
+PLLJITTER	29
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	PCIE_REFCLK_p~input~INSERTED_REFCLK_DIVIDER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	pll_125:pll_125_ins|altpll:altpll_component|pll_125_altpll:auto_generated|pll1
+PLLJITTER	26
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	reconfig_pll:reconfig_pll_inst|altpll:altpll_component|reconfig_pll_altpll:auto_generated|pll1
+PLLJITTER	33
+PLLSPEmax	40
+PLLSPEmin	-40
+

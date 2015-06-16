@@ -1,0 +1,538 @@
+//IP Functional Simulation Model
+//VERSION_BEGIN 9.0 cbx_mgl 2009:01:29:16:12:07:SJ cbx_simgen 2008:08:06:16:30:59:SJ  VERSION_END
+// synthesis VERILOG_INPUT_VERSION VERILOG_2001
+// altera message_off 10463
+
+
+
+// Legal Notice: (c) 2003 Altera Corporation. All rights reserved.
+// You may only use these  simulation  model  output files for simulation
+// purposes and expressly not for synthesis or any other purposes (in which
+// event  Altera disclaims all warranties of any kind). Your use of  Altera
+// Corporation's design tools, logic functions and other software and tools,
+// and its AMPP partner logic functions, and any output files any of the
+// foregoing (including device programming or simulation files), and any
+// associated documentation or information  are expressly subject to the
+// terms and conditions of the  Altera Program License Subscription Agreement
+// or other applicable license agreement, including, without limitation, that
+// your use is for the sole purpose of programming logic devices manufactured
+// by Altera and sold by Altera or its authorized distributors.  Please refer
+// to the applicable agreement for further details.
+
+//synopsys translate_off
+
+`timescale 1 ps / 1 ps
+module  altpcietb_bfm_rpvar_64b_x8_pipen1b
+        (
+        app_int_sts,
+        app_msi_ack,
+        app_msi_req,
+        app_msi_tc,
+        cfg_busdev,
+        cfg_devcsr,
+        cfg_io_bas,
+        cfg_io_lim,
+        cfg_linkcsr,
+        cfg_msicsr,
+        cfg_np_bas,
+        cfg_np_lim,
+        cfg_pmcsr,
+        cfg_pr_bas,
+        cfg_pr_lim,
+        cfg_prmcsr,
+        cfg_rootcsr,
+        cfg_secbus,
+        cfg_seccsr,
+        cfg_slotcsr,
+        cfg_subbus,
+        cfg_tcvcmap,
+        coreclk_out,
+        cpl_err,
+        cpl_pending,
+        crst,
+        dlup_exit,
+        ep_clk250_in,
+        hotrst_exit,
+        l2_exit,
+        npor,
+        pclk_in,
+        phystatus0_ext,
+        phystatus1_ext,
+        phystatus2_ext,
+        phystatus3_ext,
+        phystatus4_ext,
+        phystatus5_ext,
+        phystatus6_ext,
+        phystatus7_ext,
+        pipe_mode,
+        pm_auxpwr,
+        pme_to_cr,
+        pme_to_sr,
+        powerdown0_ext,
+        powerdown1_ext,
+        powerdown2_ext,
+        powerdown3_ext,
+        powerdown4_ext,
+        powerdown5_ext,
+        powerdown6_ext,
+        powerdown7_ext,
+        rate_ext,
+        rx_abort0,
+        rx_abort1,
+        rx_abort2,
+        rx_abort3,
+        rx_ack0,
+        rx_ack1,
+        rx_ack2,
+        rx_ack3,
+        rx_be0,
+        rx_be1,
+        rx_be2,
+        rx_be3,
+        rx_data0,
+        rx_data1,
+        rx_data2,
+        rx_data3,
+        rx_desc0,
+        rx_desc1,
+        rx_desc2,
+        rx_desc3,
+        rx_dfr0,
+        rx_dfr1,
+        rx_dfr2,
+        rx_dfr3,
+        rx_dv0,
+        rx_dv1,
+        rx_dv2,
+        rx_dv3,
+        rx_in0,
+        rx_in1,
+        rx_in2,
+        rx_in3,
+        rx_in4,
+        rx_in5,
+        rx_in6,
+        rx_in7,
+        rx_mask0,
+        rx_mask1,
+        rx_mask2,
+        rx_mask3,
+        rx_req0,
+        rx_req1,
+        rx_req2,
+        rx_req3,
+        rx_retry0,
+        rx_retry1,
+        rx_retry2,
+        rx_retry3,
+        rx_ws0,
+        rx_ws1,
+        rx_ws2,
+        rx_ws3,
+        rxdata0_ext,
+        rxdata1_ext,
+        rxdata2_ext,
+        rxdata3_ext,
+        rxdata4_ext,
+        rxdata5_ext,
+        rxdata6_ext,
+        rxdata7_ext,
+        rxdatak0_ext,
+        rxdatak1_ext,
+        rxdatak2_ext,
+        rxdatak3_ext,
+        rxdatak4_ext,
+        rxdatak5_ext,
+        rxdatak6_ext,
+        rxdatak7_ext,
+        rxelecidle0_ext,
+        rxelecidle1_ext,
+        rxelecidle2_ext,
+        rxelecidle3_ext,
+        rxelecidle4_ext,
+        rxelecidle5_ext,
+        rxelecidle6_ext,
+        rxelecidle7_ext,
+        rxpolarity0_ext,
+        rxpolarity1_ext,
+        rxpolarity2_ext,
+        rxpolarity3_ext,
+        rxpolarity4_ext,
+        rxpolarity5_ext,
+        rxpolarity6_ext,
+        rxpolarity7_ext,
+        rxstatus0_ext,
+        rxstatus1_ext,
+        rxstatus2_ext,
+        rxstatus3_ext,
+        rxstatus4_ext,
+        rxstatus5_ext,
+        rxstatus6_ext,
+        rxstatus7_ext,
+        rxvalid0_ext,
+        rxvalid1_ext,
+        rxvalid2_ext,
+        rxvalid3_ext,
+        rxvalid4_ext,
+        rxvalid5_ext,
+        rxvalid6_ext,
+        rxvalid7_ext,
+        serr_out,
+        slotcap_in,
+        slotnum_in,
+        srst,
+        swdn_out,
+        test_in,
+        test_out,
+        tx_ack0,
+        tx_ack1,
+        tx_ack2,
+        tx_ack3,
+        tx_cred0,
+        tx_cred1,
+        tx_cred2,
+        tx_cred3,
+        tx_data0,
+        tx_data1,
+        tx_data2,
+        tx_data3,
+        tx_desc0,
+        tx_desc1,
+        tx_desc2,
+        tx_desc3,
+        tx_dfr0,
+        tx_dfr1,
+        tx_dfr2,
+        tx_dfr3,
+        tx_dv0,
+        tx_dv1,
+        tx_dv2,
+        tx_dv3,
+        tx_err0,
+        tx_err1,
+        tx_err2,
+        tx_err3,
+        tx_out0,
+        tx_out1,
+        tx_out2,
+        tx_out3,
+        tx_out4,
+        tx_out5,
+        tx_out6,
+        tx_out7,
+        tx_req0,
+        tx_req1,
+        tx_req2,
+        tx_req3,
+        tx_ws0,
+        tx_ws1,
+        tx_ws2,
+        tx_ws3,
+        txcompl0_ext,
+        txcompl1_ext,
+        txcompl2_ext,
+        txcompl3_ext,
+        txcompl4_ext,
+        txcompl5_ext,
+        txcompl6_ext,
+        txcompl7_ext,
+        txdata0_ext,
+        txdata1_ext,
+        txdata2_ext,
+        txdata3_ext,
+        txdata4_ext,
+        txdata5_ext,
+        txdata6_ext,
+        txdata7_ext,
+        txdatak0_ext,
+        txdatak1_ext,
+        txdatak2_ext,
+        txdatak3_ext,
+        txdatak4_ext,
+        txdatak5_ext,
+        txdatak6_ext,
+        txdatak7_ext,
+        txdetectrx0_ext,
+        txdetectrx1_ext,
+        txdetectrx2_ext,
+        txdetectrx3_ext,
+        txdetectrx4_ext,
+        txdetectrx5_ext,
+        txdetectrx6_ext,
+        txdetectrx7_ext,
+        txelecidle0_ext,
+        txelecidle1_ext,
+        txelecidle2_ext,
+        txelecidle3_ext,
+        txelecidle4_ext,
+        txelecidle5_ext,
+        txelecidle6_ext,
+        txelecidle7_ext) /* synthesis synthesis_clearbox=1 */;
+        input   app_int_sts;
+        output   app_msi_ack;
+        input   app_msi_req;
+        input   [2:0]  app_msi_tc;
+        output   [12:0]  cfg_busdev;
+        output   [31:0]  cfg_devcsr;
+        output   [19:0]  cfg_io_bas;
+        output   [19:0]  cfg_io_lim;
+        output   [31:0]  cfg_linkcsr;
+        output   [15:0]  cfg_msicsr;
+        output   [11:0]  cfg_np_bas;
+        output   [11:0]  cfg_np_lim;
+        output   [31:0]  cfg_pmcsr;
+        output   [43:0]  cfg_pr_bas;
+        output   [43:0]  cfg_pr_lim;
+        output   [31:0]  cfg_prmcsr;
+        output   [31:0]  cfg_rootcsr;
+        output   [7:0]  cfg_secbus;
+        output   [31:0]  cfg_seccsr;
+        output   [31:0]  cfg_slotcsr;
+        output   [7:0]  cfg_subbus;
+        output   [23:0]  cfg_tcvcmap;
+        output   coreclk_out;
+        input   [2:0]  cpl_err;
+        input   cpl_pending;
+        input   crst;
+        output   dlup_exit;
+        input   ep_clk250_in;
+        output   hotrst_exit;
+        output   l2_exit;
+        input   npor;
+        input   pclk_in;
+        input   phystatus0_ext;
+        input   phystatus1_ext;
+        input   phystatus2_ext;
+        input   phystatus3_ext;
+        input   phystatus4_ext;
+        input   phystatus5_ext;
+        input   phystatus6_ext;
+        input   phystatus7_ext;
+        input   pipe_mode;
+        input   pm_auxpwr;
+        input   pme_to_cr;
+        output   pme_to_sr;
+        output   [1:0]  powerdown0_ext;
+        output   [1:0]  powerdown1_ext;
+        output   [1:0]  powerdown2_ext;
+        output   [1:0]  powerdown3_ext;
+        output   [1:0]  powerdown4_ext;
+        output   [1:0]  powerdown5_ext;
+        output   [1:0]  powerdown6_ext;
+        output   [1:0]  powerdown7_ext;
+        output   rate_ext;
+        input   rx_abort0;
+        input   rx_abort1;
+        input   rx_abort2;
+        input   rx_abort3;
+        input   rx_ack0;
+        input   rx_ack1;
+        input   rx_ack2;
+        input   rx_ack3;
+        output   [7:0]  rx_be0;
+        output   [7:0]  rx_be1;
+        output   [7:0]  rx_be2;
+        output   [7:0]  rx_be3;
+        output   [63:0]  rx_data0;
+        output   [63:0]  rx_data1;
+        output   [63:0]  rx_data2;
+        output   [63:0]  rx_data3;
+        output   [135:0]  rx_desc0;
+        output   [135:0]  rx_desc1;
+        output   [135:0]  rx_desc2;
+        output   [135:0]  rx_desc3;
+        output   rx_dfr0;
+        output   rx_dfr1;
+        output   rx_dfr2;
+        output   rx_dfr3;
+        output   rx_dv0;
+        output   rx_dv1;
+        output   rx_dv2;
+        output   rx_dv3;
+        input   rx_in0;
+        input   rx_in1;
+        input   rx_in2;
+        input   rx_in3;
+        input   rx_in4;
+        input   rx_in5;
+        input   rx_in6;
+        input   rx_in7;
+        input   rx_mask0;
+        input   rx_mask1;
+        input   rx_mask2;
+        input   rx_mask3;
+        output   rx_req0;
+        output   rx_req1;
+        output   rx_req2;
+        output   rx_req3;
+        input   rx_retry0;
+        input   rx_retry1;
+        input   rx_retry2;
+        input   rx_retry3;
+        input   rx_ws0;
+        input   rx_ws1;
+        input   rx_ws2;
+        input   rx_ws3;
+        input   [7:0]  rxdata0_ext;
+        input   [7:0]  rxdata1_ext;
+        input   [7:0]  rxdata2_ext;
+        input   [7:0]  rxdata3_ext;
+        input   [7:0]  rxdata4_ext;
+        input   [7:0]  rxdata5_ext;
+        input   [7:0]  rxdata6_ext;
+        input   [7:0]  rxdata7_ext;
+        input   rxdatak0_ext;
+        input   rxdatak1_ext;
+        input   rxdatak2_ext;
+        input   rxdatak3_ext;
+        input   rxdatak4_ext;
+        input   rxdatak5_ext;
+        input   rxdatak6_ext;
+        input   rxdatak7_ext;
+        input   rxelecidle0_ext;
+        input   rxelecidle1_ext;
+        input   rxelecidle2_ext;
+        input   rxelecidle3_ext;
+        input   rxelecidle4_ext;
+        input   rxelecidle5_ext;
+        input   rxelecidle6_ext;
+        input   rxelecidle7_ext;
+        output   rxpolarity0_ext;
+        output   rxpolarity1_ext;
+        output   rxpolarity2_ext;
+        output   rxpolarity3_ext;
+        output   rxpolarity4_ext;
+        output   rxpolarity5_ext;
+        output   rxpolarity6_ext;
+        output   rxpolarity7_ext;
+        input   [2:0]  rxstatus0_ext;
+        input   [2:0]  rxstatus1_ext;
+        input   [2:0]  rxstatus2_ext;
+        input   [2:0]  rxstatus3_ext;
+        input   [2:0]  rxstatus4_ext;
+        input   [2:0]  rxstatus5_ext;
+        input   [2:0]  rxstatus6_ext;
+        input   [2:0]  rxstatus7_ext;
+        input   rxvalid0_ext;
+        input   rxvalid1_ext;
+        input   rxvalid2_ext;
+        input   rxvalid3_ext;
+        input   rxvalid4_ext;
+        input   rxvalid5_ext;
+        input   rxvalid6_ext;
+        input   rxvalid7_ext;
+        output   serr_out;
+        input   [6:0]  slotcap_in;
+        input   [12:0]  slotnum_in;
+        input   srst;
+        output   [5:0]  swdn_out;
+        input   [31:0]  test_in;
+        output   [511:0]  test_out;
+        output   tx_ack0;
+        output   tx_ack1;
+        output   tx_ack2;
+        output   tx_ack3;
+        output   [21:0]  tx_cred0;
+        output   [21:0]  tx_cred1;
+        output   [21:0]  tx_cred2;
+        output   [21:0]  tx_cred3;
+        input   [63:0]  tx_data0;
+        input   [63:0]  tx_data1;
+        input   [63:0]  tx_data2;
+        input   [63:0]  tx_data3;
+        input   [127:0]  tx_desc0;
+        input   [127:0]  tx_desc1;
+        input   [127:0]  tx_desc2;
+        input   [127:0]  tx_desc3;
+        input   tx_dfr0;
+        input   tx_dfr1;
+        input   tx_dfr2;
+        input   tx_dfr3;
+        input   tx_dv0;
+        input   tx_dv1;
+        input   tx_dv2;
+        input   tx_dv3;
+        input   tx_err0;
+        input   tx_err1;
+        input   tx_err2;
+        input   tx_err3;
+        output   tx_out0;
+        output   tx_out1;
+        output   tx_out2;
+        output   tx_out3;
+        output   tx_out4;
+        output   tx_out5;
+        output   tx_out6;
+        output   tx_out7;
+        input   tx_req0;
+        input   tx_req1;
+        input   tx_req2;
+        input   tx_req3;
+        output   tx_ws0;
+        output   tx_ws1;
+        output   tx_ws2;
+        output   tx_ws3;
+        output   txcompl0_ext;
+        output   txcompl1_ext;
+        output   txcompl2_ext;
+        output   txcompl3_ext;
+        output   txcompl4_ext;
+        output   txcompl5_ext;
+        output   txcompl6_ext;
+        output   txcompl7_ext;
+        output   [7:0]  txdata0_ext;
+        output   [7:0]  txdata1_ext;
+        output   [7:0]  txdata2_ext;
+        output   [7:0]  txdata3_ext;
+        output   [7:0]  txdata4_ext;
+        output   [7:0]  txdata5_ext;
+        output   [7:0]  txdata6_ext;
+        output   [7:0]  txdata7_ext;
+        output   txdatak0_ext;
+        output   txdatak1_ext;
+        output   txdatak2_ext;
+        output   txdatak3_ext;
+        output   txdatak4_ext;
+        output   txdatak5_ext;
+        output   txdatak6_ext;
+        output   txdatak7_ext;
+        output   txdetectrx0_ext;
+        output   txdetectrx1_ext;
+        output   txdetectrx2_ext;
+        output   txdetectrx3_ext;
+        output   txdetectrx4_ext;
+        output   txdetectrx5_ext;
+        output   txdetectrx6_ext;
+        output   txdetectrx7_ext;
+        output   txelecidle0_ext;
+        output   txelecidle1_ext;
+        output   txelecidle2_ext;
+        output   txelecidle3_ext;
+        output   txelecidle4_ext;
+        output   txelecidle5_ext;
+        output   txelecidle6_ext;
+        output   txelecidle7_ext;
+
+
+
+initial begin
+   $display("SUCCESS: BFM model not available");
+   `ifdef VCS
+   $finish;
+   `else
+   $stop ;
+   `endif
+end
+
+always begin
+   $display("SUCCESS: BFM model not available");
+   `ifdef VCS
+   $finish;
+   `else
+   $stop ;
+   `endif
+end
+
+endmodule //altpcietb_bfm_rpvar_64b_x8_pipen1b
+//synopsys translate_on
+//VALID FILE

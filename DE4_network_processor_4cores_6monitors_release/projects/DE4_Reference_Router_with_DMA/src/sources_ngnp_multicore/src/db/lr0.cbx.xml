@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lr0">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6ie1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8ie1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_aie1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_cie1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7ie1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9ie1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_bie1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lr0|RAMB16_S4_altera:localram7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_die1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

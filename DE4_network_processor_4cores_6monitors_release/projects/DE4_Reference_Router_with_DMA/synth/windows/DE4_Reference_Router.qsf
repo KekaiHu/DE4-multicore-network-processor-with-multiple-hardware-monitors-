@@ -1,0 +1,732 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "Stratix IV"
+set_global_assignment -name DEVICE EP4SGX230KF40C2
+set_global_assignment -name TOP_LEVEL_ENTITY "DE4_Reference_Router"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
+set_global_assignment -name LAST_QUARTUS_VERSION "12.1 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:30:05 MAY 24,2010"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FPGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 1152
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 2
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_AF25 -to termination_blk0~_rup_pad
+set_location_assignment PIN_AG25 -to termination_blk0~_rdn_pad
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk0~_rup_pad
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk0~_run_pad
+
+#============================================================
+# CLOCK
+#============================================================
+set_location_assignment PIN_AC35 -to OSC_50_BANK2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK2
+set_location_assignment PIN_AV22 -to OSC_50_BANK3
+set_instance_assignment -name IO_STANDARD "1.8 V" -to OSC_50_BANK3
+set_location_assignment PIN_AV19 -to OSC_50_BANK4
+set_instance_assignment -name IO_STANDARD "1.8 V" -to OSC_50_BANK4
+set_location_assignment PIN_AC6 -to OSC_50_BANK5
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to OSC_50_BANK5
+set_location_assignment PIN_AB6 -to OSC_50_BANK6
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK6
+set_location_assignment PIN_A19 -to OSC_50_BANK7
+set_instance_assignment -name IO_STANDARD "1.8 V" -to OSC_50_BANK7
+set_location_assignment PIN_AH19 -to GCLKOUT_FPGA
+set_instance_assignment -name IO_STANDARD "1.8 V" -to GCLKOUT_FPGA
+set_location_assignment PIN_A21 -to GCLKIN
+set_instance_assignment -name IO_STANDARD "1.8 V" -to GCLKIN
+set_location_assignment PIN_B22 -to PLL_CLKIN_p
+set_instance_assignment -name IO_STANDARD LVDS -to PLL_CLKIN_p
+
+#============================================================
+# External PLL
+#============================================================
+set_location_assignment PIN_AP24 -to MAX_I2C_SCLK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to MAX_I2C_SCLK
+set_location_assignment PIN_AN22 -to MAX_I2C_SDAT
+set_instance_assignment -name IO_STANDARD "1.8 V" -to MAX_I2C_SDAT
+
+#============================================================
+# LED x 8
+#============================================================
+set_location_assignment PIN_V28 -to LED[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[0]
+set_location_assignment PIN_W28 -to LED[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[1]
+set_location_assignment PIN_R29 -to LED[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[2]
+set_location_assignment PIN_P29 -to LED[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[3]
+set_location_assignment PIN_N29 -to LED[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[4]
+set_location_assignment PIN_M29 -to LED[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[5]
+set_location_assignment PIN_M30 -to LED[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[6]
+set_location_assignment PIN_N30 -to LED[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[7]
+
+#============================================================
+# BUTTON x 4, EXT_IO and CPU_RESET_n
+#============================================================
+set_location_assignment PIN_AH5 -to BUTTON[0]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[0]
+set_location_assignment PIN_AG5 -to BUTTON[1]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[1]
+set_location_assignment PIN_AG7 -to BUTTON[2]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[2]
+set_location_assignment PIN_AG8 -to BUTTON[3]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[3]
+set_location_assignment PIN_AC11 -to EXT_IO
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to EXT_IO
+set_location_assignment PIN_V34 -to CPU_RESET_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to CPU_RESET_n
+
+#============================================================
+# DIP SWITCH x 8
+#============================================================
+set_location_assignment PIN_AB13 -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[0]
+set_location_assignment PIN_AB12 -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[1]
+set_location_assignment PIN_AB11 -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[2]
+set_location_assignment PIN_AB10 -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[3]
+set_location_assignment PIN_AB9 -to SW[4]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[4]
+set_location_assignment PIN_AC8 -to SW[5]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[5]
+set_location_assignment PIN_AH6 -to SW[6]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[6]
+set_location_assignment PIN_AG6 -to SW[7]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[7]
+
+#============================================================
+# SLIDE SWITCH x 4
+#============================================================
+set_location_assignment PIN_J7 -to SLIDE_SW[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SLIDE_SW[0]
+set_location_assignment PIN_K7 -to SLIDE_SW[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SLIDE_SW[1]
+set_location_assignment PIN_AK6 -to SLIDE_SW[2]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SLIDE_SW[2]
+set_location_assignment PIN_L7 -to SLIDE_SW[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SLIDE_SW[3]
+
+#============================================================
+# SEG7
+#============================================================
+set_location_assignment PIN_L34 -to SEG0_D[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[0]
+set_location_assignment PIN_M34 -to SEG0_D[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[1]
+set_location_assignment PIN_M33 -to SEG0_D[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[2]
+set_location_assignment PIN_H31 -to SEG0_D[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[3]
+set_location_assignment PIN_J33 -to SEG0_D[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[4]
+set_location_assignment PIN_L35 -to SEG0_D[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[5]
+set_location_assignment PIN_K32 -to SEG0_D[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[6]
+set_location_assignment PIN_AL34 -to SEG0_DP
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_DP
+set_location_assignment PIN_E31 -to SEG1_D[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[0]
+set_location_assignment PIN_F31 -to SEG1_D[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[1]
+set_location_assignment PIN_G31 -to SEG1_D[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[2]
+set_location_assignment PIN_C34 -to SEG1_D[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[3]
+set_location_assignment PIN_C33 -to SEG1_D[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[4]
+set_location_assignment PIN_D33 -to SEG1_D[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[5]
+set_location_assignment PIN_D34 -to SEG1_D[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[6]
+set_location_assignment PIN_AL35 -to SEG1_DP
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_DP
+
+#============================================================
+# Temperature
+#============================================================
+set_location_assignment PIN_AN18 -to TEMP_SMCLK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to TEMP_SMCLK
+set_location_assignment PIN_AP18 -to TEMP_SMDAT
+set_instance_assignment -name IO_STANDARD "1.8 V" -to TEMP_SMDAT
+set_location_assignment PIN_AP19 -to TEMP_INT_n
+set_instance_assignment -name IO_STANDARD "1.8 V" -to TEMP_INT_n
+
+#============================================================
+# Current
+#============================================================
+set_location_assignment PIN_AH13 -to CSENSE_SCK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_SCK
+set_location_assignment PIN_AJ13 -to CSENSE_SDI
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_SDI
+set_location_assignment PIN_AK14 -to CSENSE_SDO
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_SDO
+set_location_assignment PIN_AK13 -to CSENSE_ADC_FO
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_ADC_FO
+set_location_assignment PIN_AG14 -to CSENSE_CS_n[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_CS_n[0]
+set_location_assignment PIN_AG15 -to CSENSE_CS_n[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_CS_n[1]
+
+#============================================================
+# Fan
+#============================================================
+set_location_assignment PIN_AP20 -to FAN_CTRL
+set_instance_assignment -name IO_STANDARD "1.8 V" -to FAN_CTRL
+
+#============================================================
+# EEPROM
+#============================================================
+set_location_assignment PIN_G33 -to EEP_SCL
+set_instance_assignment -name IO_STANDARD "2.5 V" -to EEP_SCL
+set_location_assignment PIN_F33 -to EEP_SDA
+set_instance_assignment -name IO_STANDARD "2.5 V" -to EEP_SDA
+
+#============================================================
+# SDCARD
+#============================================================
+set_location_assignment PIN_AV20 -to SD_CMD
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CMD
+set_location_assignment PIN_AT19 -to SD_CLK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CLK
+set_location_assignment PIN_AH18 -to SD_WP_n
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_WP_n
+set_location_assignment PIN_AR20 -to SD_DAT[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[0]
+set_location_assignment PIN_AT20 -to SD_DAT[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[1]
+set_location_assignment PIN_AU19 -to SD_DAT[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[2]
+set_location_assignment PIN_AU20 -to SD_DAT[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[3]
+
+#============================================================
+# RS232
+#============================================================
+set_location_assignment PIN_AH32 -to UART_RXD
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_RXD
+set_location_assignment PIN_AH33 -to UART_RTS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_RTS
+set_location_assignment PIN_AN34 -to UART_TXD
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_TXD
+set_location_assignment PIN_AN35 -to UART_CTS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_CTS
+
+#============================================================
+# Ethernet x 4
+#============================================================
+set_location_assignment PIN_U31 -to ETH_RX_p[0]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[0]
+set_location_assignment PIN_T30 -to ETH_TX_p[0]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[0]
+set_location_assignment PIN_W32 -to ETH_MDIO[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[0]
+set_location_assignment PIN_R30 -to ETH_MDC[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[0]
+set_location_assignment PIN_B20 -to ETH_INT_n[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to ETH_INT_n[0]
+set_location_assignment PIN_N33 -to ETH_RX_p[1]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[1]
+set_location_assignment PIN_R32 -to ETH_TX_p[1]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[1]
+set_location_assignment PIN_J5 -to ETH_MDIO[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[1]
+set_location_assignment PIN_J6 -to ETH_MDC[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[1]
+set_location_assignment PIN_AG30 -to ETH_INT_n[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_INT_n[1]
+set_location_assignment PIN_K34 -to ETH_RX_p[2]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[2]
+set_location_assignment PIN_M32 -to ETH_TX_p[2]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[2]
+set_location_assignment PIN_K5 -to ETH_MDIO[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[2]
+set_location_assignment PIN_K6 -to ETH_MDC[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[2]
+set_location_assignment PIN_AE30 -to ETH_INT_n[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_INT_n[2]
+set_location_assignment PIN_J34 -to ETH_RX_p[3]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[3]
+set_location_assignment PIN_P31 -to ETH_TX_p[3]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[3]
+set_location_assignment PIN_N8 -to ETH_MDIO[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[3]
+set_location_assignment PIN_N7 -to ETH_MDC[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[3]
+set_location_assignment PIN_AE31 -to ETH_INT_n[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_INT_n[3]
+set_location_assignment PIN_V29 -to ETH_RST_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_RST_n
+
+#============================================================
+# Flash and SRAM Address/Data Share Bus
+#============================================================
+set_location_assignment PIN_K29 -to FSM_D[0] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[0] -disable
+set_location_assignment PIN_J30 -to FSM_D[1] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[1] -disable
+set_location_assignment PIN_K30 -to FSM_D[2] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[2] -disable
+set_location_assignment PIN_L29 -to FSM_D[3] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[3] -disable
+set_location_assignment PIN_K31 -to FSM_D[4] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[4] -disable
+set_location_assignment PIN_E32 -to FSM_D[5] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[5] -disable
+set_location_assignment PIN_F32 -to FSM_D[6] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[6] -disable
+set_location_assignment PIN_H32 -to FSM_D[7] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[7] -disable
+set_location_assignment PIN_B32 -to FSM_D[8] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[8] -disable
+set_location_assignment PIN_C32 -to FSM_D[9] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[9] -disable
+set_location_assignment PIN_C35 -to FSM_D[10] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[10] -disable
+set_location_assignment PIN_D35 -to FSM_D[11] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[11] -disable
+set_location_assignment PIN_M22 -to FSM_D[12] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[12] -disable
+set_location_assignment PIN_M28 -to FSM_D[13] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[13] -disable
+set_location_assignment PIN_C31 -to FSM_D[14] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[14] -disable
+set_location_assignment PIN_D31 -to FSM_D[15] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[15] -disable
+set_location_assignment PIN_G22 -to FSM_A[1] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[1] -disable
+set_location_assignment PIN_G23 -to FSM_A[2] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[2] -disable
+set_location_assignment PIN_A25 -to FSM_A[3] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[3] -disable
+set_location_assignment PIN_H22 -to FSM_A[4] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[4] -disable
+set_location_assignment PIN_H23 -to FSM_A[5] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[5] -disable
+set_location_assignment PIN_J22 -to FSM_A[6] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[6] -disable
+set_location_assignment PIN_K22 -to FSM_A[7] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[7] -disable
+set_location_assignment PIN_M21 -to FSM_A[8] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[8] -disable
+set_location_assignment PIN_J23 -to FSM_A[9] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[9] -disable
+set_location_assignment PIN_F34 -to FSM_A[10] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[10] -disable
+set_location_assignment PIN_G35 -to FSM_A[11] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[11] -disable
+set_location_assignment PIN_E34 -to FSM_A[12] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[12] -disable
+set_location_assignment PIN_J32 -to FSM_A[13] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[13] -disable
+set_location_assignment PIN_F35 -to FSM_A[14] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[14] -disable
+set_location_assignment PIN_C24 -to FSM_A[15] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[15] -disable
+set_location_assignment PIN_A24 -to FSM_A[16] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[16] -disable
+set_location_assignment PIN_D23 -to FSM_A[17] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[17] -disable
+set_location_assignment PIN_D24 -to FSM_A[18] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[18] -disable
+set_location_assignment PIN_T27 -to FSM_A[19] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[19] -disable
+set_location_assignment PIN_T28 -to FSM_A[20] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[20] -disable
+set_location_assignment PIN_D22 -to FSM_A[21] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[21] -disable
+set_location_assignment PIN_E23 -to FSM_A[22] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[22] -disable
+set_location_assignment PIN_N20 -to FSM_A[23] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[23] -disable
+set_location_assignment PIN_P20 -to FSM_A[24] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[24] -disable
+set_location_assignment PIN_C22 -to FSM_A[25] -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[25] -disable
+
+#============================================================
+# Flash Control
+#============================================================
+set_location_assignment PIN_G21 -to FLASH_RYBY_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_RYBY_n
+set_location_assignment PIN_E22 -to FLASH_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_CLK
+set_location_assignment PIN_D21 -to FLASH_RESET_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_RESET_n
+set_location_assignment PIN_N21 -to FLASH_OE_n -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_OE_n -disable
+set_location_assignment PIN_R20 -to FLASH_WE_n -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_WE_n -disable
+set_location_assignment PIN_F21 -to FLASH_ADV_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_ADV_n
+set_location_assignment PIN_F23 -to FLASH_CE_n -disable
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_CE_n -disable
+
+#============================================================
+# SSRAM Control
+#============================================================
+set_location_assignment PIN_R27 -to SSRAM_BWA_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_BWA_n
+set_location_assignment PIN_N31 -to SSRAM_BWB_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_BWB_n
+set_location_assignment PIN_M31 -to SSRAM_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_CLK
+set_location_assignment PIN_H34 -to SSRAM_OE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_OE_n
+set_location_assignment PIN_L31 -to SSRAM_WE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_WE_n
+set_location_assignment PIN_N28 -to SSRAM_CKE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_CKE_n
+set_location_assignment PIN_R28 -to SSRAM_CE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_CE_n
+set_location_assignment PIN_H35 -to SSRAM_ADV
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_ADV
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name GLOBAL_SIGNAL ON -to ref_clk
+set_instance_assignment -name IO_STANDARD LVDS -to ref_clk
+set_instance_assignment -name IO_STANDARD LVDS -to txp
+set_instance_assignment -name IO_STANDARD LVDS -to rxp
+set_instance_assignment -name VIRTUAL_PIN ON -to FSM_A[0]
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE signaltap3.stp
+set_location_assignment PIN_AN38 -to PCIE_REFCLK_p
+set_instance_assignment -name IO_STANDARD HCSL -to PCIE_REFCLK_p
+set_location_assignment PIN_V30 -to PCIE_PREST_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to PCIE_PREST_n
+set_location_assignment PIN_R31 -to PCIE_SMBCLK
+set_location_assignment PIN_W33 -to PCIE_SMBDAT
+set_location_assignment PIN_U35 -to PCIE_WAKE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to PCIE_WAKE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to PCIE_SMBCLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to PCIE_SMBDAT
+set_location_assignment PIN_AU38 -to PCIE_RX_p
+set_location_assignment PIN_AT36 -to PCIE_TX_p
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_RX_p
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to PCIE_TX_p
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ethernet_port_interface_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME ethernet_port_interface_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ethernet_port_interface_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ethernet_port_interface_tb -section_id ethernet_port_interface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE test/ethernet_port_interface_tb.v -section_id ethernet_port_interface_tb
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to OSC_50_BANK3 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=M9K" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=2" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=24" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=1" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_wr" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|sp_pkt_done" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_ctrl[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_rdy" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|in_wr" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|CAM_monitor:security_mon|packet_done" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|CAM_monitor:security_mon|packet_drop_signal" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|CAM_monitor:security_mon|pkt_done_sig" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|processor_reset" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|sp_pkt_done" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "DE4_SOPC:SOPC_INST|ext_clk" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=80" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=47323" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=35517" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_DE4_Reference_Router_auto_signaltap_0_1_2043," -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/rom_shared_ipv4.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/CAM_monitor_ipv4.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/pc_next_ipv4.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/small_fifo_test_72.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/common/src/udp_defines.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/common/src/registers.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/common/src/reg_defines_reference_router.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/common/src/NF_2.1_defines.v
+set_global_assignment -name HEX_FILE ../../../../lib/verilog/core/bin_cam/src/dpram.hex
+set_global_assignment -name HEX_FILE ../../../../lib/verilog/core/bin_cam/src/erase_ram.hex
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/utils/generic_regs/src/generic_cntr_regs.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/utils/src/unused_reg.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/utils/src/small_fifo_v3.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/utils/src/reg_grp.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/utils/src/pulse_synchronizer.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/utils/src/fallthrough_small_fifo_v2.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/utils/src/device_id_reg.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/user_data_path/reference_user_data_path/src/user_data_path.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/user_data_path/udp_reg_master/src/udp_reg_master.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/terasic/megafunctions/pll.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/terasic/src/gen_reset_n.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/terasic/src/EXT_PLL_CTRL.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/ter_cam/src/ram_block.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/ter_cam/src/ram_based_cam.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/ter_cam/src/cam_ram_block.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/store_pkt.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/remove_pkt.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/output_queues.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_host_iface.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_generic_reg_grp.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_eval_full.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_eval_empty.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_dual_port_ram.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_ctrl.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_reg_instances.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_header_parser.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/unencoded_cam_lut_sm_lpm.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/unencoded_cam_lut_sm.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/router_op_lut_regs_non_cntr.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/router_op_lut_regs_cntr.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/router_op_lut_regs.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/preprocess_control.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/output_port_lookup.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/op_lut_process_sm.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/op_lut_hdr_parser.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/ip_lpm.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/ip_checksum_ttl.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/ip_arp.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/eth_parser.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/src/dest_ip_filter.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/nf2/reference_core/src/nf2_reg_grp.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/src/tx_queue.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/src/rx_queue.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/src/nf2_mac_grp.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/src/mac_grp_regs.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/input_arbiter/rr_input_arbiter/src/input_arbiter.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/input_arbiter/rr_input_arbiter/src/in_arb_regs.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/bin_cam/src/prior_enc.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/bin_cam/src/multi_bit_check.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/bin_cam/src/erase_ram.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/bin_cam/src/erase_keys.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/bin_cam/src/dpram.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/bin_cam/src/decoder.v
+set_global_assignment -name VERILOG_FILE ../../../../lib/verilog/core/bin_cam/src/cam.v
+set_global_assignment -name VERILOG_FILE ../../src/nf2_core/nf2_core.v
+set_global_assignment -name VERILOG_FILE ../../src/jtag_interface/jtag_bus.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/small_async_fifo.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/nf2_dma_sync.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/nf2_dma_que_intfc.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/nf2_dma_bus_fsm.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/nf2_dma.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/cpu_dma_queue_regs.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/cpu_dma_queue_main.v
+set_global_assignment -name VERILOG_FILE ../../src/dma_queue/cpu_dma_queue.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/reg_file.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/pcim_top.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/pcie_interface.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/pci_userapp.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/n_cpci_top.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/fifo_8x32.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/fifo_4x32.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/dma_read_fifo_4x32.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/dma_engine_rr_arb.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/dma_engine_pci_xfer.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/dma_engine_ctrl.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/dma_engine_cntr.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/dma_engine_alignment.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/dma_engine.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/cpci_heartbeat.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/cpci_clock_checker.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/cnet_reprogram.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/cnet_reg_iface.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/cnet_reg_access.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/cnet_dma_bus_master.v
+set_global_assignment -name VERILOG_FILE ../../src/cpci/cfg.v
+set_global_assignment -name VERILOG_FILE ../../src/add_rm_hdr/rm_hdr.v
+set_global_assignment -name VERILOG_FILE ../../src/add_rm_hdr/add_rm_hdr.v
+set_global_assignment -name VERILOG_FILE ../../src/add_rm_hdr/add_hdr.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/reg_cam_cell.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/reg_based_cam.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/CAM_monitor.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/lr_old_IPV4.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/statemachine_shared_IPV4.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/lr_old.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/RAMB16_S4_altera.v
+set_global_assignment -name VHDL_FILE ../../src/sources_ngnp_multicore/src/plasma/mlite_pack/mlite_pack.vhd
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/alu.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/bus_mux.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/control.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/mem_ctrl.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/mlite_cpu.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/mult.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/pc_next.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/pipeline.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/reg_bank.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/shifter.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/thread_ctrl.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/in_switch.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/bb_ram.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/localram.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/lr0.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/next_hop_ram.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/flow_classification.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/packet_buffer.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/packet_buffer_bypass.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/packet_memory.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/packet_memory_block.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/packet_queue.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/out_arbiter.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/process_unit.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/stage1.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/stage2.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/stage3.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/stage4.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/out_switch.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/ppu.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/sec_monitor.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/udp_defines.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/NF_2.1_defines.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/reg_defines_reference_router.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/registers.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/yf32_define.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32/yf32_core.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/yf32_define.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/np_core.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/hash_calculation.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/statemachine.v
+set_global_assignment -name VERILOG_FILE ../../src/sources_ngnp_multicore/src/statemachine_shared.v
+set_global_assignment -name SOPC_FILE DE4_SOPC.sopc
+set_global_assignment -name VERILOG_FILE DE4_Reference_Router.v
+set_global_assignment -name SDC_FILE DE4_Reference_Router.sdc
+set_global_assignment -name SIGNALTAP_FILE signaltap3.stp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/terasic/megafunctions/reconfig_pll.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/terasic/megafunctions/pll_125.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/terasic/megafunctions/altpllpll.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/terasic/megafunctions/altgx_reconfig.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/sram_imp/megafunctions/sram.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/jtag_interface/megafunctions/pci2net_16x60.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/megafunctions/syncfifo_512x72.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/output_port_lookup/cam_router/megafunctions/syncfifo_512x36.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/megafunctions/txfifo_1024x36_to_9.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/megafunctions/txfifo_512x72_to_9.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/megafunctions/rxlengthfifo_128x13.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/megafunctions/rxfifo_8kx9_to_72.qip
+set_global_assignment -name QIP_FILE ../../../../lib/verilog/core/io_queues/ethernet_mac/megafunctions/rxfifo_8kx9_to_36.qip
+set_global_assignment -name QIP_FILE ../../src/dma_queue/megafunctions/syncfifo_512x32.qip
+set_global_assignment -name QIP_FILE ../../src/dma_queue/megafunctions/async_fifo_512x36_to_72_progfull_500.qip
+set_global_assignment -name QIP_FILE ../../src/dma_queue/megafunctions/async_fifo_256x72_to_36.qip
+set_global_assignment -name QIP_FILE ../../src/cpci/megafunctions/pci2net_dma_16x32.qip
+set_global_assignment -name QIP_FILE ../../src/cpci/megafunctions/net2pci_dma_512x32.qip
+set_global_assignment -name QIP_FILE ../../src/cpci/megafunctions/cpci_pci2net_16x60.qip
+set_global_assignment -name QIP_FILE ../../src/add_rm_hdr/megafunctions/hdr_fifo.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/small_fifo_test.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/RAM16_s36_s36_altera.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/RAMB16_S9_altera.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/RAMB16_S4_2_altera.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/rom_shared.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/cm_rom_shared.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/cm_rom_final.qip
+set_global_assignment -name QIP_FILE ../../src/sources_ngnp_multicore/src/jump_ram.qip
+set_global_assignment -name QIP_FILE DE4_SOPC.qip
+set_global_assignment -name QIP_FILE tse_mac.qip
+set_global_assignment -name QIP_FILE tse_mac1.qip
+set_global_assignment -name QIP_FILE tse_mac2.qip
+set_global_assignment -name QIP_FILE tse_mac3.qip
+set_global_assignment -name QIP_FILE pcie_compiler_0.qip

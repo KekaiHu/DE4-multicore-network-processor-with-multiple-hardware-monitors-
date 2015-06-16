@@ -1,0 +1,97 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+temp_u32            0x4               firmware.o
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000        0x0 firmware.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0000000000000000 0x0000000000001800 xr
+ram              0x0000000000001800 0x0000000000000800 xw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+TARGET(elf32-bigmips)
+
+.text           0x0000000000000000      0x2f0
+                0x0000000000000000                __text_start = .
+ *(.text)
+ .text          0x0000000000000000      0x144 crt0.o
+                0x0000000000000000                __start
+ .text          0x0000000000000144      0x1ac firmware.o
+                0x0000000000000144                YF32_ISR
+                0x000000000000014c                main
+                0x00000000000002f0                __text_end = .
+
+.rodata         0x00000000000002f0        0x0
+                0x00000000000002f0                __rodata_start = .
+ *(.rodata)
+                0x00000000000002f0                __rodata_end = .
+
+.sdata          0x00000000000002f0        0x0
+                0x00000000000002f0                __sdata_start = .
+ *(.sdata)
+                0x00000000000002f0                __sdata_end = .
+
+.pdr            0x00000000000002f0       0x60
+                0x00000000000002f0                __pdr_start = .
+ *(.pdr)
+ .pdr           0x00000000000002f0       0x20 crt0.o
+ .pdr           0x0000000000000310       0x40 firmware.o
+                0x0000000000000350                __pdr_end = .
+
+.comment        0x0000000000000350       0x12
+                0x0000000000000350                __comment_start = .
+ *(.comment)
+ .comment       0x0000000000000350       0x12 firmware.o
+                0x0000000000000362                __comment_end = .
+
+.data           0x0000000000000364      0x194
+                0x0000000000000364                __data_start = .
+ *(.data)
+ .data          0x0000000000000364        0x0 crt0.o
+ .data          0x0000000000000364      0x194 firmware.o
+                0x0000000000000364                table
+                0x00000000000004f8                __data_end = .
+
+.sbss           0x0000000000001800        0x4
+                0x0000000000001800                _fbss = .
+                0x0000000000001800                __sbss_start = .
+ *(.sbss)
+ *(.scommon)
+ .scommon       0x0000000000001800        0x4 firmware.o
+                0x0000000000001800                temp_u32
+                0x0000000000001804                __sbss_end = .
+
+.bss            0x0000000000001804        0x0
+                0x0000000000001804                __bss_start = .
+ *(.bss)
+ .bss           0x0000000000001804        0x0 crt0.o
+ .bss           0x0000000000001804        0x0 firmware.o
+ *(.bss.*)
+ *(COMMON)
+                0x0000000000001804                . = ALIGN (0x4)
+                0x0000000000001804                __bss_end = .
+                0x0000000000001804                _end = .
+                0x0000000000001800                _gp = 0x1800
+                0x0000000000001ff8                _sp = 0x1ff8
+LOAD crt0.o
+LOAD firmware.o
+OUTPUT(firmware.exe elf32-bigmips)
+
+.reginfo        0x0000000000000000       0x18
+ .reginfo       0x0000000000000000       0x18 crt0.o
+
+.mdebug.abi32   0x0000000000000000        0x0
+ .mdebug.abi32  0x0000000000000000        0x0 firmware.o
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 firmware.o

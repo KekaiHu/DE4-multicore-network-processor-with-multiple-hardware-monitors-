@@ -1,0 +1,42 @@
+The DriverWizard has created:
+* A sample diagnostics application for testing the communication with
+  your hardware from the user mode.
+* Library files, which include API for controling your hardware.
+
+  D:/pcie_config_DMA_April_18/ref_router/pcie_sw_files.txt
+         A detailed overview of all the generated files.
+
+  D:/pcie_config_DMA_April_18/ref_router/pcie_sw_lib.h
+         A library for controlling your hardware through WinDriver.
+
+  D:/pcie_config_DMA_April_18/ref_router/pcie_sw_lib.c
+         Contains the implementation of the functions used for
+         accessing each of the resources defined in the Wizard.
+
+  D:/pcie_config_DMA_April_18/ref_router/pcie_sw_diag.c
+         The sample user-mode application which diagnoses your
+         hardware using the pcie_sw_lib.h library.
+
+  D:/pcie_config_DMA_April_18/ref_router/x86/msdev_2010/pcie_sw_diag.sln
+         Microsoft Developer Studio Solution File
+         for the X86 (Win32) Platform.
+
+  D:/pcie_config_DMA_April_18/ref_router/x86/msdev_2010/pcie_sw_diag.vcxproj
+         Microsoft Developer Studio 10.0 (.NET 2010) Project File
+         for the X86 (Win32) Platform.
+
+  D:/pcie_config_DMA_April_18/ref_router/pcie_sw.inf
+         A formatted reference file for Windows that contains
+         information about installation files and devices, such as
+         filenames, version information and so on.
+
+Compiling this project:
+  For MSDEV.NET 2010, open Visual Studio 2010 .NET, load x86\msdev_2010\pcie_sw_diag.sln and compile
+
+Converting to a GUI application:
+  This sample was written as a console mode application (rather than
+  a GUI application) that uses standard input and standard output.
+  This was done in order to simplify the source code. You may change it
+  into a GUI application by removing all calls to printf() and scanf()
+  functions, and calling MessageBox() instead.
+

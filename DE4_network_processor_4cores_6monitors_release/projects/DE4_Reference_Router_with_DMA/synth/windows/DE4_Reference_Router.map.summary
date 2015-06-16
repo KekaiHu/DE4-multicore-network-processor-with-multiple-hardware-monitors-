@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Fri Feb 13 16:23:39 2015
+Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
+Revision Name : DE4_Reference_Router
+Top-level Entity Name : DE4_Reference_Router
+Family : Stratix IV
+Logic utilization : N/A
+    Combinational ALUTs : 49,624
+    Memory ALUTs : 0
+    Dedicated logic registers : 44,998
+Total registers : 44998
+Total pins : 116
+Total virtual pins : 0
+Total block memory bits : 4,098,896
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 1
+Total GXB Receiver Channel PMA : 1
+Total GXB Transmitter Channel PCS : 1
+Total GXB Transmitter Channel PMA : 1
+Total PLLs : 11
+Total DLLs : 0

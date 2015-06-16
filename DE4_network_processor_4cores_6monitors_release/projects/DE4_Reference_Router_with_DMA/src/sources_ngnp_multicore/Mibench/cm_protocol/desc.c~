@@ -1,0 +1,24 @@
+/* DESC.C - Data Encryption Standard routines for RSAREF
+     Based on "Karn/Hoey/Outerbridge" implementation (KHODES)
+ */
+
+#include "ngnp.h"
+
+
+
+
+void Pack (into, outof)
+UINT4 *into;
+unsigned char *outof;
+{
+	pkt_dbg(9,0x5555aaaa);
+  *into    = (*outof++ & 0xffL) << 24;
+  *into   |= (*outof++ & 0xffL) << 16;
+  *into   |= (*outof++ & 0xffL) << 8;
+  *into++ |= (*outof++ & 0xffL);
+  *into    = (*outof++ & 0xffL) << 24;
+  *into   |= (*outof++ & 0xffL) << 16;
+  *into   |= (*outof++ & 0xffL) << 8;
+  *into   |= (*outof   & 0xffL);
+}
+

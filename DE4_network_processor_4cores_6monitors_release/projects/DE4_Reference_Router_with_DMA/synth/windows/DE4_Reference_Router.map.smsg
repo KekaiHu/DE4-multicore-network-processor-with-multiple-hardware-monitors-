@@ -1,0 +1,38 @@
+Info (10281): Verilog HDL Declaration information at generic_cntr_regs.v(75): object "reset" differs only in case from object "RESET" in the same scope
+Info (10281): Verilog HDL Declaration information at device_id_reg.v(13): object "DEVICE_ID" differs only in case from object "device_id" in the same scope
+Info (10281): Verilog HDL Declaration information at cam_ram_block.v(58): object "ready" differs only in case from object "READY" in the same scope
+Warning (10268): Verilog HDL information at oq_regs_generic_reg_grp.v(665): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at oq_regs_ctrl.v(149): object "reset" differs only in case from object "RESET" in the same scope
+Info (10281): Verilog HDL Declaration information at oq_regs_ctrl.v(165): object "ADDR_MAX" differs only in case from object "addr_max" in the same scope
+Info (10281): Verilog HDL Declaration information at unencoded_cam_lut_sm_lpm.v(57): object "reset" differs only in case from object "RESET" in the same scope
+Info (10281): Verilog HDL Declaration information at unencoded_cam_lut_sm.v(57): object "reset" differs only in case from object "RESET" in the same scope
+Info (10281): Verilog HDL Declaration information at rx_queue.v(34): object "PORT_NUMBER" differs only in case from object "port_number" in the same scope
+Info (10281): Verilog HDL Declaration information at mac_grp_regs.v(82): object "reset" differs only in case from object "RESET" in the same scope
+Warning (10268): Verilog HDL information at nf2_core.v(687): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at nf2_core.v(716): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at pci_userapp.v(218): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at n_cpci_top.v(519): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at n_cpci_top.v(695): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at add_hdr.v(24): object "PORT_NUMBER" differs only in case from object "port_number" in the same scope
+Warning (10268): Verilog HDL information at statemachine_shared_IPV4.v(63): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at statemachine_shared_IPV4.v(282): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at mem_ctrl.v(181): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at mult.v(207): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at in_switch.v(153): object "empty_buff_grant" differs only in case from object "EMPTY_BUFF_GRANT" in the same scope
+Warning (10268): Verilog HDL information at ppu.v(1085): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at hash_calculation.v(32): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at hash_calculation.v(64): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at statemachine.v(16): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at statemachine_shared.v(66): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at statemachine_shared.v(297): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at ethernet_port_interface.v(175): extended using "x" or "z"
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(98): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(107): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(116): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(245): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(254): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(263): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(272): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at de4_sopc_clock_0.v(281): conditional expression evaluates to a constant
+Warning (10262): Verilog HDL Event Control warning at pll.v(95): event expression is a constant
+Warning (10037): Verilog HDL or VHDL warning at pll.v(97): conditional expression evaluates to a constant

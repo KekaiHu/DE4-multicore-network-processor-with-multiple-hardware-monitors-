@@ -1,0 +1,168 @@
+//
+// Designed by Qiang Wu
+//
+
+`timescale 1ns/1ps
+
+module in_switch(
+	input			clk,
+
+	input		[63:0]	in_data0,
+	input		[15:0]	in_pkt_route0,
+	input			in_wr0,
+	input			in_req0,
+	output			in_ack0,
+
+	input		[63:0]	in_data1,
+	input		[15:0]	in_pkt_route1,
+	input			in_wr1,
+	input			in_req1,
+	output			in_ack1,
+
+	input		[63:0]	in_data2,
+	input		[15:0]	in_pkt_route2,
+	input			in_wr2,
+	input			in_req2,
+	output			in_ack2,
+
+	input		[63:0]	in_data3,
+	input		[15:0]	in_pkt_route3,
+	input			in_wr3,
+	input			in_req3,
+	output			in_ack3,
+
+	output		[63:0]	pb_in_data0,
+	output		[15:0]	pb_in_pkt_route0,
+	output			pb_in_wr0,
+	input			pb_in_req0,
+	output			pb_in_ack0,
+
+	output		[63:0]	pb_in_data1,
+	output		[15:0]	pb_in_pkt_route1,
+	output			pb_in_wr1,
+	input			pb_in_req1,
+	output			pb_in_ack1,
+
+	output		[63:0]	pb_in_data2,
+	output		[15:0]	pb_in_pkt_route2,
+	output			pb_in_wr2,
+	input			pb_in_req2,
+	output			pb_in_ack2,
+
+	output		[63:0]	pb_in_data3,
+	output		[15:0]	pb_in_pkt_route3,
+	output			pb_in_wr3,
+	input			pb_in_req3,
+	output			pb_in_ack3
+);
+
+wire [3:0] in_req;
+reg [3:0] in_ack;
+reg [63:0] pb_in_data[3:0];
+reg [15:0] pb_in_pkt_route[3:0];
+reg [3:0] pb_in_wr;
+reg [3:0] pb_in_ack;
+
+assign in_req[0] = in_req0;
+assign in_req[1] = in_req1;
+assign in_req[2] = in_req2;
+assign in_req[3] = in_req3;
+
+assign in_ack0 = in_ack[0];
+assign in_ack1 = in_ack[1];
+assign in_ack2 = in_ack[2];
+assign in_ack3 = in_ack[3];
+
+assign pb_in_data0 = pb_in_data[0];
+assign pb_in_data1 = pb_in_data[1];
+assign pb_in_data2 = pb_in_data[2];
+assign pb_in_data3 = pb_in_data[3];
+
+assign pb_in_pkt_route0 = pb_in_pkt_route[0];
+assign pb_in_pkt_route1 = pb_in_pkt_route[1];
+assign pb_in_pkt_route2 = pb_in_pkt_route[2];
+assign pb_in_pkt_route3 = pb_in_pkt_route[3];
+
+assign pb_in_wr0 = pb_in_wr[0];
+assign pb_in_wr1 = pb_in_wr[1];
+assign pb_in_wr2 = pb_in_wr[2];
+assign pb_in_wr3 = pb_in_wr[3];
+
+assign pb_in_ack0 = pb_in_ack[0];
+assign pb_in_ack1 = pb_in_ack[1];
+assign pb_in_ack2 = pb_in_ack[2];
+assign pb_in_ack3 = pb_in_ack[3];
+
+reg [1:0] curr_port;
+reg [1:0] curr_port_next;
+wire [1:0] curr_port_plus_1;
+assign curr_port_plus_1 = (curr_port == 2'b11) ? 0 : curr_port + 1'b1;
+
+reg [1:0] curr_buff;
+reg [1:0] curr_buff_next;
+wire [1:0] curr_buff_plus_1;
+assign curr_buff_plus_1 = (curr_buff == 2'b11) ? 0 : curr_buff + 1'b1;
+
+reg [3:0] rx_in_progress;
+reg [1:0] rx_buff [3:0];
+
+always @(*)
+begin
+	curr_port_next = curr_port;
+	curr_buff_next = curr_buff;
+	if(rx_in_progress[curr_port]) begin
+		if(in_req[curr_port]) begin
+			curr_port_next = curr_port_plus_1;
+		end else begin
+			in_ack[curr_port] = 0;
+			rx_in_progress[curr_port] = 0;
+			pb_in_ack[rx_buff[curr_port]] = 0;
+		end
+	end else begin
+		if(in_req[curr_port]) begin
+			if(pb_in_req[curr_buff]) begin
+				in_ack[curr_port] = 1;
+				pb_in_ack[rx_buff[curr_port]] = 1;
+				rx_in_progress[curr_port] = 1;
+				rx_buff[curr_port] = curr_buff;
+			end
+			curr_buff_next = curr_buff_plus_1;
+		end else begin
+			curr_port_next = curr_port_plus_1;
+		end
+	end
+end
+
+always @(posedge clk)
+begin
+	if(reset) begin
+		curr_port <= 0;
+		curr_buff <= 0;
+	end else begin
+		curr_port <= curr_port_next;
+		curr_buff <= curr_buff_next;
+
+		if(rx_in_progress[0]) begin
+			pb_in_data[rx_buff[0]] <= in_data0;
+			pb_in_pkt_route[rx_buff[0]] <= in_pkt_route0;
+			pb_in_wr[rx_buff[0]] <= in_wr0;
+		end
+		if(rx_in_progress[1]) begin
+			pb_in_data[rx_buff[1]] <= in_data1;
+			pb_in_pkt_route[rx_buff[1]] <= in_pkt_route1;
+			pb_in_wr[rx_buff[1]] <= in_wr1;
+		end
+		if(rx_in_progress[2]) begin
+			pb_in_data[rx_buff[2]] <= in_data2;
+			pb_in_pkt_route[rx_buff[2]] <= in_pkt_route2;
+			pb_in_wr[rx_buff[2]] <= in_wr2;
+		end
+		if(rx_in_progress[3]) begin
+			pb_in_data[rx_buff[3]] <= in_data3;
+			pb_in_pkt_route[rx_buff[3]] <= in_pkt_route3;
+			pb_in_wr[rx_buff[3]] <= in_wr3;
+		end
+	end
+end
+
+endmodule

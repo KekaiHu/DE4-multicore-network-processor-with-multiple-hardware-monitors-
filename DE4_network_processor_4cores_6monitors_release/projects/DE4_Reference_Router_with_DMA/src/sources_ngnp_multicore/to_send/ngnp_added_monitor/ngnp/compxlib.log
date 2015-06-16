@@ -1,0 +1,3384 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 10.1.03 (K.39)
+   \   \         APPLICATION : compxlib
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    CREATED ON  : Mon Nov 30 16:02:26 2009
+   \___\/\___\
+
+Release 10.1.03 - COMPXLIB K.39
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Library Source => '/opt/Xilinx/10.1/ISE'
+Compilation Mode = FAST
+Scheduling library installation & compilation for VIRTEX-II Pro 
+
+Signature:-
+------------------------------------------------------------------------------
+compxlib -s mti_se
+         -arch virtex2p
+         -lib unisim
+         -lib unimacro
+         -lib xilinxcorelib
+         -lib simprim
+         -lib smartmodel
+         -l verilog
+         -dir /opt/Xilinx/10.1/ISE
+         -log compxlib.log
+         -w
+         -p /opt/modelsim/modeltech/linux
+         -smartmodel_setup
+------------------------------------------------------------------------------
+MTI => Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+
+--> Installing Xilinx smartmodel library .....
+    > Environment variable $LMC_HOME = '/opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin:/opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin'
+    > Extracting model names from '/opt/Xilinx/10.1/ISE/smartmodel/lin/image/sl_toc.dat'
+    > Creating 'model.list' at current directory
+
+Library Image directory : '/opt/Xilinx/10.1/ISE/smartmodel/lin/image'
+Installation directory : '/opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin:/opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin'
+Running installer...... 
+
+LMC_HOME Absolute Path = (/opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin)
+
+Synopsys/Logic Modeling sl_admin
+Copyright (c) 1984-2001 Synopsys Inc. ALL RIGHTS RESERVED
+Version: 02083
+
+Reading Library
+Reading Media
+Checking user selections
+Loading models....
+Loading model: dcc_fpgacore_swift, version: 03403, platform: linux
+Loading model: emac_swift, version: 02023, platform: linux
+Loading model: glogic_adv_swift, version: 02005, platform: linux
+Loading model: glogic_swift, version: 05002, platform: linux
+Loading model: gt10_swift, version: 03222, platform: linux
+Loading model: gt11_swift, version: 02017, platform: linux
+Loading model: gt_swift, version: 02603, platform: linux
+Loading model: gtp_dual_fast, version: 01014, platform: linux
+Loading model: gtp_dual_swift, version: 01013, platform: linux
+Loading model: gtx_dual_fast, version: 01009, platform: linux
+Loading model: gtx_dual_swift, version: 01008, platform: linux
+Loading model: pcie_internal_1_1_swift, version: 01023, platform: linux
+Loading model: ppc405_adv_swift, version: 02011, platform: linux
+Loading model: ppc405_swift, version: 05004, platform: linux
+Loading model: ppc440_swift, version: 01012, platform: linux
+Loading model: temac_swift, version: 01004, platform: linux
+Updating Configuration files
+Writing: /opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin:/opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin/data/linux.lmc
+Updating Library Versioned links
+Updating Documentation files
+Updating Library cache
+Install complete
+
+
+
+/bin/bash: line 0: cd: /opt/Xilinx/10.1/ISE/smartmodel/lin/installed_lin/lib: No such file or directory
+ln: creating symbolic link `x86_linux.lib' to `linux.lib': File exists
+
+
+Compiling Xilinx HDL Libraries for ModelSim SE Simulator
+Language => verilog
+Backing up setup files if any...
+ Get MODELSIM environment variable
+MODELSIM: ( => /opt/modelsim/modeltech/modelsim.ini )
+Using MODELSIM ( => /opt/modelsim/modeltech/modelsim.ini )
+    > configuring SWIFT Interface in '/opt/modelsim/modeltech/modelsim.ini' file ...
+    > SWIFT Interface configured in '/opt/modelsim/modeltech/modelsim.ini' file
+Output directory => '/opt/Xilinx/10.1/ISE/verilog/mti_se'
+
+--> Compiling verilog unisim library
+    > Unisim compiled to /opt/Xilinx/10.1/ISE/verilog/mti_se/unisims_ver
+
+==============================================================================
+START_COMPILE unisim
+
+
+Modifying /opt/modelsim/modeltech/modelsim.ini
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module AFIFO36_INTERNAL
+-- Compiling module AND2
+-- Compiling module AND2B1
+-- Compiling module AND2B2
+-- Compiling module AND3
+-- Compiling module AND3B1
+-- Compiling module AND3B2
+-- Compiling module AND3B3
+-- Compiling module AND4
+-- Compiling module AND4B1
+-- Compiling module AND4B2
+-- Compiling module AND4B3
+-- Compiling module AND4B4
+-- Compiling module AND5
+-- Compiling module AND5B1
+-- Compiling module AND5B2
+-- Compiling module AND5B3
+-- Compiling module AND5B4
+-- Compiling module AND5B5
+-- Compiling module ARAMB36_INTERNAL
+-- Compiling module BSCAN_FPGACORE
+-- Compiling module BSCAN_SPARTAN2
+-- Compiling module BSCAN_SPARTAN3
+-- Compiling module BSCAN_SPARTAN3A
+-- Compiling module BSCAN_VIRTEX
+-- Compiling module BSCAN_VIRTEX2
+-- Compiling module BSCAN_VIRTEX4
+-- Compiling module BSCAN_VIRTEX5
+-- Compiling module BUF
+-- Compiling module BUFCF
+-- Compiling module BUFE
+-- Compiling module BUFG
+-- Compiling module BUFGCE
+-- Compiling module BUFGCE_1
+-- Compiling module BUFGCTRL
+-- Compiling module BUFGDLL
+-- Compiling module BUFGMUX
+-- Compiling module BUFGMUX_1
+-- Compiling module BUFGMUX_CTRL
+-- Compiling module BUFGMUX_VIRTEX4
+-- Compiling module BUFGP
+-- Compiling module BUFIO
+-- Compiling module BUFR
+-- Compiling module BUFT
+-- Compiling module CAPTURE_FPGACORE
+-- Compiling module CAPTURE_SPARTAN2
+-- Compiling module CAPTURE_SPARTAN3
+-- Compiling module CAPTURE_SPARTAN3A
+-- Compiling module CAPTURE_VIRTEX
+-- Compiling module CAPTURE_VIRTEX2
+-- Compiling module CAPTURE_VIRTEX4
+-- Compiling module CAPTURE_VIRTEX5
+-- Compiling module CARRY4
+-- Compiling module CFGLUT5
+-- Compiling module CLKDLL
+-- Compiling module clkdll_maximum_period_check
+-- Compiling module CLKDLLE
+-- Compiling module clkdlle_maximum_period_check
+-- Compiling module CLKDLLHF
+-- Compiling module clkdllhf_maximum_period_check
+-- Compiling module CONFIG
+-- Compiling module CRC32
+-- Compiling module CRC64
+-- Compiling module DCIRESET
+-- Compiling module DCM
+-- Compiling module dcm_clock_divide_by_2
+-- Compiling module dcm_maximum_period_check
+-- Compiling module dcm_clock_lost
+-- Compiling module DCM_ADV
+-- Compiling module dcm_adv_clock_divide_by_2
+-- Compiling module dcm_adv_maximum_period_check
+-- Compiling module dcm_adv_clock_lost
+-- Compiling module DCM_BASE
+-- Compiling module DCM_PS
+-- Compiling module DCM_SP
+-- Compiling module dcm_sp_clock_divide_by_2
+-- Compiling module dcm_sp_maximum_period_check
+-- Compiling module dcm_sp_clock_lost
+-- Compiling module DNA_PORT
+-- Compiling module DSP48
+-- Compiling module DSP48A
+-- Compiling module DSP48E
+-- Compiling module FD
+-- Compiling module FDC
+-- Compiling module FDCE
+-- Compiling module FDCE_1
+-- Compiling module FDCP
+-- Compiling module FDCPE
+-- Compiling module FDCPE_1
+-- Compiling module FDCP_1
+-- Compiling module FDC_1
+-- Compiling module FDDRCPE
+-- Compiling module FDDRRSE
+-- Compiling module FDE
+-- Compiling module FDE_1
+-- Compiling module FDP
+-- Compiling module FDPE
+-- Compiling module FDPE_1
+-- Compiling module FDP_1
+-- Compiling module FDR
+-- Compiling module FDRE
+-- Compiling module FDRE_1
+-- Compiling module FDRS
+-- Compiling module FDRSE
+-- Compiling module FDRSE_1
+-- Compiling module FDRS_1
+-- Compiling module FDR_1
+-- Compiling module FDS
+-- Compiling module FDSE
+-- Compiling module FDSE_1
+-- Compiling module FDS_1
+-- Compiling module FD_1
+-- Compiling module FIFO16
+-- Compiling module FIFO18
+-- Compiling module FIFO18_36
+-- Compiling module FIFO36
+-- Compiling module FIFO36_72
+-- Compiling module FIFO36_72_EXP
+-- Compiling module FIFO36_EXP
+-- Compiling module FMAP
+-- Compiling module FRAME_ECC_VIRTEX4
+-- Compiling module FRAME_ECC_VIRTEX5
+-- Compiling module GND
+-- Compiling module IBUF
+-- Compiling module IBUFDS
+-- Compiling module IBUFDS_BLVDS_25
+-- Compiling module IBUFDS_DIFF_OUT
+-- Compiling module IBUFDS_DLY_ADJ
+-- Compiling module IBUFDS_LDT_25
+-- Compiling module IBUFDS_LVDSEXT_25
+-- Compiling module IBUFDS_LVDSEXT_25_DCI
+-- Compiling module IBUFDS_LVDSEXT_33
+-- Compiling module IBUFDS_LVDSEXT_33_DCI
+-- Compiling module IBUFDS_LVDS_25
+-- Compiling module IBUFDS_LVDS_25_DCI
+-- Compiling module IBUFDS_LVDS_33
+-- Compiling module IBUFDS_LVDS_33_DCI
+-- Compiling module IBUFDS_LVPECL_25
+-- Compiling module IBUFDS_LVPECL_33
+-- Compiling module IBUFDS_ULVDS_25
+-- Compiling module IBUFG
+-- Compiling module IBUFGDS
+-- Compiling module IBUFGDS_BLVDS_25
+-- Compiling module IBUFGDS_DIFF_OUT
+-- Compiling module IBUFGDS_LDT_25
+-- Compiling module IBUFGDS_LVDSEXT_25
+-- Compiling module IBUFGDS_LVDSEXT_25_DCI
+-- Compiling module IBUFGDS_LVDSEXT_33
+-- Compiling module IBUFGDS_LVDSEXT_33_DCI
+-- Compiling module IBUFGDS_LVDS_25
+-- Compiling module IBUFGDS_LVDS_25_DCI
+-- Compiling module IBUFGDS_LVDS_33
+-- Compiling module IBUFGDS_LVDS_33_DCI
+-- Compiling module IBUFGDS_LVPECL_25
+-- Compiling module IBUFGDS_LVPECL_33
+-- Compiling module IBUFGDS_ULVDS_25
+-- Compiling module IBUFG_AGP
+-- Compiling module IBUFG_CTT
+-- Compiling module IBUFG_GTL
+-- Compiling module IBUFG_GTLP
+-- Compiling module IBUFG_GTLP_DCI
+-- Compiling module IBUFG_GTL_DCI
+-- Compiling module IBUFG_HSTL_I
+-- Compiling module IBUFG_HSTL_II
+-- Compiling module IBUFG_HSTL_III
+-- Compiling module IBUFG_HSTL_III_18
+-- Compiling module IBUFG_HSTL_III_DCI
+-- Compiling module IBUFG_HSTL_III_DCI_18
+-- Compiling module IBUFG_HSTL_II_18
+-- Compiling module IBUFG_HSTL_II_DCI
+-- Compiling module IBUFG_HSTL_II_DCI_18
+-- Compiling module IBUFG_HSTL_IV
+-- Compiling module IBUFG_HSTL_IV_18
+-- Compiling module IBUFG_HSTL_IV_DCI
+-- Compiling module IBUFG_HSTL_IV_DCI_18
+-- Compiling module IBUFG_HSTL_I_18
+-- Compiling module IBUFG_HSTL_I_DCI
+-- Compiling module IBUFG_HSTL_I_DCI_18
+-- Compiling module IBUFG_LVCMOS12
+-- Compiling module IBUFG_LVCMOS15
+-- Compiling module IBUFG_LVCMOS18
+-- Compiling module IBUFG_LVCMOS2
+-- Compiling module IBUFG_LVCMOS25
+-- Compiling module IBUFG_LVCMOS33
+-- Compiling module IBUFG_LVDCI_15
+-- Compiling module IBUFG_LVDCI_18
+-- Compiling module IBUFG_LVDCI_25
+-- Compiling module IBUFG_LVDCI_33
+-- Compiling module IBUFG_LVDCI_DV2_15
+-- Compiling module IBUFG_LVDCI_DV2_18
+-- Compiling module IBUFG_LVDCI_DV2_25
+-- Compiling module IBUFG_LVDCI_DV2_33
+-- Compiling module IBUFG_LVDS
+-- Compiling module IBUFG_LVPECL
+-- Compiling module IBUFG_LVTTL
+-- Compiling module IBUFG_PCI33_3
+-- Compiling module IBUFG_PCI33_5
+-- Compiling module IBUFG_PCI66_3
+-- Compiling module IBUFG_PCIX
+-- Compiling module IBUFG_PCIX66_3
+-- Compiling module IBUFG_SSTL18_I
+-- Compiling module IBUFG_SSTL18_II
+-- Compiling module IBUFG_SSTL18_II_DCI
+-- Compiling module IBUFG_SSTL18_I_DCI
+-- Compiling module IBUFG_SSTL2_I
+-- Compiling module IBUFG_SSTL2_II
+-- Compiling module IBUFG_SSTL2_II_DCI
+-- Compiling module IBUFG_SSTL2_I_DCI
+-- Compiling module IBUFG_SSTL3_I
+-- Compiling module IBUFG_SSTL3_II
+-- Compiling module IBUFG_SSTL3_II_DCI
+-- Compiling module IBUFG_SSTL3_I_DCI
+-- Compiling module IBUF_AGP
+-- Compiling module IBUF_CTT
+-- Compiling module IBUF_DLY_ADJ
+-- Compiling module IBUF_GTL
+-- Compiling module IBUF_GTLP
+-- Compiling module IBUF_GTLP_DCI
+-- Compiling module IBUF_GTL_DCI
+-- Compiling module IBUF_HSTL_I
+-- Compiling module IBUF_HSTL_II
+-- Compiling module IBUF_HSTL_III
+-- Compiling module IBUF_HSTL_III_18
+-- Compiling module IBUF_HSTL_III_DCI
+-- Compiling module IBUF_HSTL_III_DCI_18
+-- Compiling module IBUF_HSTL_II_18
+-- Compiling module IBUF_HSTL_II_DCI
+-- Compiling module IBUF_HSTL_II_DCI_18
+-- Compiling module IBUF_HSTL_IV
+-- Compiling module IBUF_HSTL_IV_18
+-- Compiling module IBUF_HSTL_IV_DCI
+-- Compiling module IBUF_HSTL_IV_DCI_18
+-- Compiling module IBUF_HSTL_I_18
+-- Compiling module IBUF_HSTL_I_DCI
+-- Compiling module IBUF_HSTL_I_DCI_18
+-- Compiling module IBUF_LVCMOS12
+-- Compiling module IBUF_LVCMOS15
+-- Compiling module IBUF_LVCMOS18
+-- Compiling module IBUF_LVCMOS2
+-- Compiling module IBUF_LVCMOS25
+-- Compiling module IBUF_LVCMOS33
+-- Compiling module IBUF_LVDCI_15
+-- Compiling module IBUF_LVDCI_18
+-- Compiling module IBUF_LVDCI_25
+-- Compiling module IBUF_LVDCI_33
+-- Compiling module IBUF_LVDCI_DV2_15
+-- Compiling module IBUF_LVDCI_DV2_18
+-- Compiling module IBUF_LVDCI_DV2_25
+-- Compiling module IBUF_LVDCI_DV2_33
+-- Compiling module IBUF_LVDS
+-- Compiling module IBUF_LVPECL
+-- Compiling module IBUF_LVTTL
+-- Compiling module IBUF_PCI33_3
+-- Compiling module IBUF_PCI33_5
+-- Compiling module IBUF_PCI66_3
+-- Compiling module IBUF_PCIX
+-- Compiling module IBUF_PCIX66_3
+-- Compiling module IBUF_SSTL18_I
+-- Compiling module IBUF_SSTL18_II
+-- Compiling module IBUF_SSTL18_II_DCI
+-- Compiling module IBUF_SSTL18_I_DCI
+-- Compiling module IBUF_SSTL2_I
+-- Compiling module IBUF_SSTL2_II
+-- Compiling module IBUF_SSTL2_II_DCI
+-- Compiling module IBUF_SSTL2_I_DCI
+-- Compiling module IBUF_SSTL3_I
+-- Compiling module IBUF_SSTL3_II
+-- Compiling module IBUF_SSTL3_II_DCI
+-- Compiling module IBUF_SSTL3_I_DCI
+-- Compiling module ICAP_SPARTAN3A
+-- Compiling module ICAP_VIRTEX2
+-- Compiling module ICAP_VIRTEX4
+-- Compiling module ICAP_VIRTEX5
+-- Compiling module IDDR
+-- Compiling module IDDR2
+-- Compiling module IDDR_2CLK
+-- Compiling module IDELAY
+-- Compiling module IDELAYCTRL
+-- Compiling module IFDDRCPE
+-- Compiling module IFDDRRSE
+-- Compiling module INV
+-- Compiling module IOBUF
+-- Compiling module IOBUFDS
+-- Compiling module IOBUFDS_BLVDS_25
+-- Compiling module IOBUF_AGP
+-- Compiling module IOBUF_CTT
+-- Compiling module IOBUF_F_12
+-- Compiling module IOBUF_F_16
+-- Compiling module IOBUF_F_2
+-- Compiling module IOBUF_F_24
+-- Compiling module IOBUF_F_4
+-- Compiling module IOBUF_F_6
+-- Compiling module IOBUF_F_8
+-- Compiling module IOBUF_GTL
+-- Compiling module IOBUF_GTLP
+-- Compiling module IOBUF_GTLP_DCI
+-- Compiling module IOBUF_GTL_DCI
+-- Compiling module IOBUF_HSTL_I
+-- Compiling module IOBUF_HSTL_II
+-- Compiling module IOBUF_HSTL_III
+-- Compiling module IOBUF_HSTL_III_18
+-- Compiling module IOBUF_HSTL_II_18
+-- Compiling module IOBUF_HSTL_II_DCI
+-- Compiling module IOBUF_HSTL_II_DCI_18
+-- Compiling module IOBUF_HSTL_IV
+-- Compiling module IOBUF_HSTL_IV_18
+-- Compiling module IOBUF_HSTL_IV_DCI
+-- Compiling module IOBUF_HSTL_IV_DCI_18
+-- Compiling module IOBUF_HSTL_I_18
+-- Compiling module IOBUF_LVCMOS12
+-- Compiling module IOBUF_LVCMOS12_F_2
+-- Compiling module IOBUF_LVCMOS12_F_4
+-- Compiling module IOBUF_LVCMOS12_F_6
+-- Compiling module IOBUF_LVCMOS12_F_8
+-- Compiling module IOBUF_LVCMOS12_S_2
+-- Compiling module IOBUF_LVCMOS12_S_4
+-- Compiling module IOBUF_LVCMOS12_S_6
+-- Compiling module IOBUF_LVCMOS12_S_8
+-- Compiling module IOBUF_LVCMOS15
+-- Compiling module IOBUF_LVCMOS15_F_12
+-- Compiling module IOBUF_LVCMOS15_F_16
+-- Compiling module IOBUF_LVCMOS15_F_2
+-- Compiling module IOBUF_LVCMOS15_F_4
+-- Compiling module IOBUF_LVCMOS15_F_6
+-- Compiling module IOBUF_LVCMOS15_F_8
+-- Compiling module IOBUF_LVCMOS15_S_12
+-- Compiling module IOBUF_LVCMOS15_S_16
+-- Compiling module IOBUF_LVCMOS15_S_2
+-- Compiling module IOBUF_LVCMOS15_S_4
+-- Compiling module IOBUF_LVCMOS15_S_6
+-- Compiling module IOBUF_LVCMOS15_S_8
+-- Compiling module IOBUF_LVCMOS18
+-- Compiling module IOBUF_LVCMOS18_F_12
+-- Compiling module IOBUF_LVCMOS18_F_16
+-- Compiling module IOBUF_LVCMOS18_F_2
+-- Compiling module IOBUF_LVCMOS18_F_4
+-- Compiling module IOBUF_LVCMOS18_F_6
+-- Compiling module IOBUF_LVCMOS18_F_8
+-- Compiling module IOBUF_LVCMOS18_S_12
+-- Compiling module IOBUF_LVCMOS18_S_16
+-- Compiling module IOBUF_LVCMOS18_S_2
+-- Compiling module IOBUF_LVCMOS18_S_4
+-- Compiling module IOBUF_LVCMOS18_S_6
+-- Compiling module IOBUF_LVCMOS18_S_8
+-- Compiling module IOBUF_LVCMOS2
+-- Compiling module IOBUF_LVCMOS25
+-- Compiling module IOBUF_LVCMOS25_F_12
+-- Compiling module IOBUF_LVCMOS25_F_16
+-- Compiling module IOBUF_LVCMOS25_F_2
+-- Compiling module IOBUF_LVCMOS25_F_24
+-- Compiling module IOBUF_LVCMOS25_F_4
+-- Compiling module IOBUF_LVCMOS25_F_6
+-- Compiling module IOBUF_LVCMOS25_F_8
+-- Compiling module IOBUF_LVCMOS25_S_12
+-- Compiling module IOBUF_LVCMOS25_S_16
+-- Compiling module IOBUF_LVCMOS25_S_2
+-- Compiling module IOBUF_LVCMOS25_S_24
+-- Compiling module IOBUF_LVCMOS25_S_4
+-- Compiling module IOBUF_LVCMOS25_S_6
+-- Compiling module IOBUF_LVCMOS25_S_8
+-- Compiling module IOBUF_LVCMOS33
+-- Compiling module IOBUF_LVCMOS33_F_12
+-- Compiling module IOBUF_LVCMOS33_F_16
+-- Compiling module IOBUF_LVCMOS33_F_2
+-- Compiling module IOBUF_LVCMOS33_F_24
+-- Compiling module IOBUF_LVCMOS33_F_4
+-- Compiling module IOBUF_LVCMOS33_F_6
+-- Compiling module IOBUF_LVCMOS33_F_8
+-- Compiling module IOBUF_LVCMOS33_S_12
+-- Compiling module IOBUF_LVCMOS33_S_16
+-- Compiling module IOBUF_LVCMOS33_S_2
+-- Compiling module IOBUF_LVCMOS33_S_24
+-- Compiling module IOBUF_LVCMOS33_S_4
+-- Compiling module IOBUF_LVCMOS33_S_6
+-- Compiling module IOBUF_LVCMOS33_S_8
+-- Compiling module IOBUF_LVDCI_15
+-- Compiling module IOBUF_LVDCI_18
+-- Compiling module IOBUF_LVDCI_25
+-- Compiling module IOBUF_LVDCI_33
+-- Compiling module IOBUF_LVDCI_DV2_15
+-- Compiling module IOBUF_LVDCI_DV2_18
+-- Compiling module IOBUF_LVDCI_DV2_25
+-- Compiling module IOBUF_LVDCI_DV2_33
+-- Compiling module IOBUF_LVDS
+-- Compiling module IOBUF_LVPECL
+-- Compiling module IOBUF_LVTTL
+-- Compiling module IOBUF_LVTTL_F_12
+-- Compiling module IOBUF_LVTTL_F_16
+-- Compiling module IOBUF_LVTTL_F_2
+-- Compiling module IOBUF_LVTTL_F_24
+-- Compiling module IOBUF_LVTTL_F_4
+-- Compiling module IOBUF_LVTTL_F_6
+-- Compiling module IOBUF_LVTTL_F_8
+-- Compiling module IOBUF_LVTTL_S_12
+-- Compiling module IOBUF_LVTTL_S_16
+-- Compiling module IOBUF_LVTTL_S_2
+-- Compiling module IOBUF_LVTTL_S_24
+-- Compiling module IOBUF_LVTTL_S_4
+-- Compiling module IOBUF_LVTTL_S_6
+-- Compiling module IOBUF_LVTTL_S_8
+-- Compiling module IOBUF_PCI33_3
+-- Compiling module IOBUF_PCI33_5
+-- Compiling module IOBUF_PCI66_3
+-- Compiling module IOBUF_PCIX
+-- Compiling module IOBUF_PCIX66_3
+-- Compiling module IOBUF_SSTL18_I
+-- Compiling module IOBUF_SSTL18_II
+-- Compiling module IOBUF_SSTL18_II_DCI
+-- Compiling module IOBUF_SSTL2_I
+-- Compiling module IOBUF_SSTL2_II
+-- Compiling module IOBUF_SSTL2_II_DCI
+-- Compiling module IOBUF_SSTL3_I
+-- Compiling module IOBUF_SSTL3_II
+-- Compiling module IOBUF_SSTL3_II_DCI
+-- Compiling module IOBUF_S_12
+-- Compiling module IOBUF_S_16
+-- Compiling module IOBUF_S_2
+-- Compiling module IOBUF_S_24
+-- Compiling module IOBUF_S_4
+-- Compiling module IOBUF_S_6
+-- Compiling module IOBUF_S_8
+-- Compiling module IODELAY
+-- Compiling module ISERDES
+-- Compiling module ISERDES_NODELAY
+-- Compiling module JTAGPPC
+-- Compiling module JTAG_SIM_SPARTAN3A
+-- Compiling module JTAG_SIM_VIRTEX4
+-- Compiling module JTAG_SIM_VIRTEX5
+-- Compiling module KEEPER
+-- Compiling module KEY_CLEAR
+-- Compiling module LD
+-- Compiling module LDC
+-- Compiling module LDCE
+-- Compiling module LDCE_1
+-- Compiling module LDCP
+-- Compiling module LDCPE
+-- Compiling module LDCPE_1
+-- Compiling module LDCP_1
+-- Compiling module LDC_1
+-- Compiling module LDE
+-- Compiling module LDE_1
+-- Compiling module LDP
+-- Compiling module LDPE
+-- Compiling module LDPE_1
+-- Compiling module LDP_1
+-- Compiling module LD_1
+-- Compiling module LUT1
+-- Compiling module LUT1_D
+-- Compiling module LUT1_L
+-- Compiling module LUT2
+-- Compiling module LUT2_D
+-- Compiling module LUT2_L
+-- Compiling module LUT3
+-- Compiling module LUT3_D
+-- Compiling module LUT3_L
+-- Compiling module LUT4
+-- Compiling module LUT4_D
+-- Compiling module LUT4_L
+-- Compiling module LUT5
+-- Compiling module LUT5_D
+-- Compiling module LUT5_L
+-- Compiling module LUT6
+-- Compiling module LUT6_2
+-- Compiling module LUT6_D
+-- Compiling module LUT6_L
+-- Compiling module MULT18X18
+-- Compiling module MULT18X18S
+-- Compiling module MULT18X18SIO
+-- Compiling module MULT_AND
+-- Compiling module MUXCY
+-- Compiling module MUXCY_D
+-- Compiling module MUXCY_L
+-- Compiling module MUXF5
+-- Compiling module MUXF5_D
+-- Compiling module MUXF5_L
+-- Compiling module MUXF6
+-- Compiling module MUXF6_D
+-- Compiling module MUXF6_L
+-- Compiling module MUXF7
+-- Compiling module MUXF7_D
+-- Compiling module MUXF7_L
+-- Compiling module MUXF8
+-- Compiling module MUXF8_D
+-- Compiling module MUXF8_L
+-- Compiling module NAND2
+-- Compiling module NAND2B1
+-- Compiling module NAND2B2
+-- Compiling module NAND3
+-- Compiling module NAND3B1
+-- Compiling module NAND3B2
+-- Compiling module NAND3B3
+-- Compiling module NAND4
+-- Compiling module NAND4B1
+-- Compiling module NAND4B2
+-- Compiling module NAND4B3
+-- Compiling module NAND4B4
+-- Compiling module NAND5
+-- Compiling module NAND5B1
+-- Compiling module NAND5B2
+-- Compiling module NAND5B3
+-- Compiling module NAND5B4
+-- Compiling module NAND5B5
+-- Compiling module NOR2
+-- Compiling module NOR2B1
+-- Compiling module NOR2B2
+-- Compiling module NOR3
+-- Compiling module NOR3B1
+-- Compiling module NOR3B2
+-- Compiling module NOR3B3
+-- Compiling module NOR4
+-- Compiling module NOR4B1
+-- Compiling module NOR4B2
+-- Compiling module NOR4B3
+-- Compiling module NOR4B4
+-- Compiling module NOR5
+-- Compiling module NOR5B1
+-- Compiling module NOR5B2
+-- Compiling module NOR5B3
+-- Compiling module NOR5B4
+-- Compiling module NOR5B5
+-- Compiling module OBUF
+-- Compiling module OBUFDS
+-- Compiling module OBUFDS_BLVDS_25
+-- Compiling module OBUFDS_LDT_25
+-- Compiling module OBUFDS_LVDSEXT_25
+-- Compiling module OBUFDS_LVDSEXT_33
+-- Compiling module OBUFDS_LVDS_25
+-- Compiling module OBUFDS_LVDS_33
+-- Compiling module OBUFDS_LVPECL_25
+-- Compiling module OBUFDS_LVPECL_33
+-- Compiling module OBUFDS_ULVDS_25
+-- Compiling module OBUFT
+-- Compiling module OBUFTDS
+-- Compiling module OBUFTDS_BLVDS_25
+-- Compiling module OBUFTDS_LDT_25
+-- Compiling module OBUFTDS_LVDSEXT_25
+-- Compiling module OBUFTDS_LVDSEXT_33
+-- Compiling module OBUFTDS_LVDS_25
+-- Compiling module OBUFTDS_LVDS_33
+-- Compiling module OBUFTDS_LVPECL_25
+-- Compiling module OBUFTDS_LVPECL_33
+-- Compiling module OBUFTDS_ULVDS_25
+-- Compiling module OBUFT_AGP
+-- Compiling module OBUFT_CTT
+-- Compiling module OBUFT_F_12
+-- Compiling module OBUFT_F_16
+-- Compiling module OBUFT_F_2
+-- Compiling module OBUFT_F_24
+-- Compiling module OBUFT_F_4
+-- Compiling module OBUFT_F_6
+-- Compiling module OBUFT_F_8
+-- Compiling module OBUFT_GTL
+-- Compiling module OBUFT_GTLP
+-- Compiling module OBUFT_GTLP_DCI
+-- Compiling module OBUFT_GTL_DCI
+-- Compiling module OBUFT_HSTL_I
+-- Compiling module OBUFT_HSTL_II
+-- Compiling module OBUFT_HSTL_III
+-- Compiling module OBUFT_HSTL_III_18
+-- Compiling module OBUFT_HSTL_III_DCI
+-- Compiling module OBUFT_HSTL_III_DCI_18
+-- Compiling module OBUFT_HSTL_II_18
+-- Compiling module OBUFT_HSTL_II_DCI
+-- Compiling module OBUFT_HSTL_II_DCI_18
+-- Compiling module OBUFT_HSTL_IV
+-- Compiling module OBUFT_HSTL_IV_18
+-- Compiling module OBUFT_HSTL_IV_DCI
+-- Compiling module OBUFT_HSTL_IV_DCI_18
+-- Compiling module OBUFT_HSTL_I_18
+-- Compiling module OBUFT_HSTL_I_DCI
+-- Compiling module OBUFT_HSTL_I_DCI_18
+-- Compiling module OBUFT_LVCMOS12
+-- Compiling module OBUFT_LVCMOS12_F_2
+-- Compiling module OBUFT_LVCMOS12_F_4
+-- Compiling module OBUFT_LVCMOS12_F_6
+-- Compiling module OBUFT_LVCMOS12_F_8
+-- Compiling module OBUFT_LVCMOS12_S_2
+-- Compiling module OBUFT_LVCMOS12_S_4
+-- Compiling module OBUFT_LVCMOS12_S_6
+-- Compiling module OBUFT_LVCMOS12_S_8
+-- Compiling module OBUFT_LVCMOS15
+-- Compiling module OBUFT_LVCMOS15_F_12
+-- Compiling module OBUFT_LVCMOS15_F_16
+-- Compiling module OBUFT_LVCMOS15_F_2
+-- Compiling module OBUFT_LVCMOS15_F_4
+-- Compiling module OBUFT_LVCMOS15_F_6
+-- Compiling module OBUFT_LVCMOS15_F_8
+-- Compiling module OBUFT_LVCMOS15_S_12
+-- Compiling module OBUFT_LVCMOS15_S_16
+-- Compiling module OBUFT_LVCMOS15_S_2
+-- Compiling module OBUFT_LVCMOS15_S_4
+-- Compiling module OBUFT_LVCMOS15_S_6
+-- Compiling module OBUFT_LVCMOS15_S_8
+-- Compiling module OBUFT_LVCMOS18
+-- Compiling module OBUFT_LVCMOS18_F_12
+-- Compiling module OBUFT_LVCMOS18_F_16
+-- Compiling module OBUFT_LVCMOS18_F_2
+-- Compiling module OBUFT_LVCMOS18_F_4
+-- Compiling module OBUFT_LVCMOS18_F_6
+-- Compiling module OBUFT_LVCMOS18_F_8
+-- Compiling module OBUFT_LVCMOS18_S_12
+-- Compiling module OBUFT_LVCMOS18_S_16
+-- Compiling module OBUFT_LVCMOS18_S_2
+-- Compiling module OBUFT_LVCMOS18_S_4
+-- Compiling module OBUFT_LVCMOS18_S_6
+-- Compiling module OBUFT_LVCMOS18_S_8
+-- Compiling module OBUFT_LVCMOS2
+-- Compiling module OBUFT_LVCMOS25
+-- Compiling module OBUFT_LVCMOS25_F_12
+-- Compiling module OBUFT_LVCMOS25_F_16
+-- Compiling module OBUFT_LVCMOS25_F_2
+-- Compiling module OBUFT_LVCMOS25_F_24
+-- Compiling module OBUFT_LVCMOS25_F_4
+-- Compiling module OBUFT_LVCMOS25_F_6
+-- Compiling module OBUFT_LVCMOS25_F_8
+-- Compiling module OBUFT_LVCMOS25_S_12
+-- Compiling module OBUFT_LVCMOS25_S_16
+-- Compiling module OBUFT_LVCMOS25_S_2
+-- Compiling module OBUFT_LVCMOS25_S_24
+-- Compiling module OBUFT_LVCMOS25_S_4
+-- Compiling module OBUFT_LVCMOS25_S_6
+-- Compiling module OBUFT_LVCMOS25_S_8
+-- Compiling module OBUFT_LVCMOS33
+-- Compiling module OBUFT_LVCMOS33_F_12
+-- Compiling module OBUFT_LVCMOS33_F_16
+-- Compiling module OBUFT_LVCMOS33_F_2
+-- Compiling module OBUFT_LVCMOS33_F_24
+-- Compiling module OBUFT_LVCMOS33_F_4
+-- Compiling module OBUFT_LVCMOS33_F_6
+-- Compiling module OBUFT_LVCMOS33_F_8
+-- Compiling module OBUFT_LVCMOS33_S_12
+-- Compiling module OBUFT_LVCMOS33_S_16
+-- Compiling module OBUFT_LVCMOS33_S_2
+-- Compiling module OBUFT_LVCMOS33_S_24
+-- Compiling module OBUFT_LVCMOS33_S_4
+-- Compiling module OBUFT_LVCMOS33_S_6
+-- Compiling module OBUFT_LVCMOS33_S_8
+-- Compiling module OBUFT_LVDCI_15
+-- Compiling module OBUFT_LVDCI_18
+-- Compiling module OBUFT_LVDCI_25
+-- Compiling module OBUFT_LVDCI_33
+-- Compiling module OBUFT_LVDCI_DV2_15
+-- Compiling module OBUFT_LVDCI_DV2_18
+-- Compiling module OBUFT_LVDCI_DV2_25
+-- Compiling module OBUFT_LVDCI_DV2_33
+-- Compiling module OBUFT_LVDS
+-- Compiling module OBUFT_LVPECL
+-- Compiling module OBUFT_LVTTL
+-- Compiling module OBUFT_LVTTL_F_12
+-- Compiling module OBUFT_LVTTL_F_16
+-- Compiling module OBUFT_LVTTL_F_2
+-- Compiling module OBUFT_LVTTL_F_24
+-- Compiling module OBUFT_LVTTL_F_4
+-- Compiling module OBUFT_LVTTL_F_6
+-- Compiling module OBUFT_LVTTL_F_8
+-- Compiling module OBUFT_LVTTL_S_12
+-- Compiling module OBUFT_LVTTL_S_16
+-- Compiling module OBUFT_LVTTL_S_2
+-- Compiling module OBUFT_LVTTL_S_24
+-- Compiling module OBUFT_LVTTL_S_4
+-- Compiling module OBUFT_LVTTL_S_6
+-- Compiling module OBUFT_LVTTL_S_8
+-- Compiling module OBUFT_PCI33_3
+-- Compiling module OBUFT_PCI33_5
+-- Compiling module OBUFT_PCI66_3
+-- Compiling module OBUFT_PCIX
+-- Compiling module OBUFT_PCIX66_3
+-- Compiling module OBUFT_SSTL18_I
+-- Compiling module OBUFT_SSTL18_II
+-- Compiling module OBUFT_SSTL18_II_DCI
+-- Compiling module OBUFT_SSTL18_I_DCI
+-- Compiling module OBUFT_SSTL2_I
+-- Compiling module OBUFT_SSTL2_II
+-- Compiling module OBUFT_SSTL2_II_DCI
+-- Compiling module OBUFT_SSTL2_I_DCI
+-- Compiling module OBUFT_SSTL3_I
+-- Compiling module OBUFT_SSTL3_II
+-- Compiling module OBUFT_SSTL3_II_DCI
+-- Compiling module OBUFT_SSTL3_I_DCI
+-- Compiling module OBUFT_S_12
+-- Compiling module OBUFT_S_16
+-- Compiling module OBUFT_S_2
+-- Compiling module OBUFT_S_24
+-- Compiling module OBUFT_S_4
+-- Compiling module OBUFT_S_6
+-- Compiling module OBUFT_S_8
+-- Compiling module OBUF_AGP
+-- Compiling module OBUF_CTT
+-- Compiling module OBUF_F_12
+-- Compiling module OBUF_F_16
+-- Compiling module OBUF_F_2
+-- Compiling module OBUF_F_24
+-- Compiling module OBUF_F_4
+-- Compiling module OBUF_F_6
+-- Compiling module OBUF_F_8
+-- Compiling module OBUF_GTL
+-- Compiling module OBUF_GTLP
+-- Compiling module OBUF_GTLP_DCI
+-- Compiling module OBUF_GTL_DCI
+-- Compiling module OBUF_HSTL_I
+-- Compiling module OBUF_HSTL_II
+-- Compiling module OBUF_HSTL_III
+-- Compiling module OBUF_HSTL_III_18
+-- Compiling module OBUF_HSTL_III_DCI
+-- Compiling module OBUF_HSTL_III_DCI_18
+-- Compiling module OBUF_HSTL_II_18
+-- Compiling module OBUF_HSTL_II_DCI
+-- Compiling module OBUF_HSTL_II_DCI_18
+-- Compiling module OBUF_HSTL_IV
+-- Compiling module OBUF_HSTL_IV_18
+-- Compiling module OBUF_HSTL_IV_DCI
+-- Compiling module OBUF_HSTL_IV_DCI_18
+-- Compiling module OBUF_HSTL_I_18
+-- Compiling module OBUF_HSTL_I_DCI
+-- Compiling module OBUF_HSTL_I_DCI_18
+-- Compiling module OBUF_LVCMOS12
+-- Compiling module OBUF_LVCMOS12_F_2
+-- Compiling module OBUF_LVCMOS12_F_4
+-- Compiling module OBUF_LVCMOS12_F_6
+-- Compiling module OBUF_LVCMOS12_F_8
+-- Compiling module OBUF_LVCMOS12_S_2
+-- Compiling module OBUF_LVCMOS12_S_4
+-- Compiling module OBUF_LVCMOS12_S_6
+-- Compiling module OBUF_LVCMOS12_S_8
+-- Compiling module OBUF_LVCMOS15
+-- Compiling module OBUF_LVCMOS15_F_12
+-- Compiling module OBUF_LVCMOS15_F_16
+-- Compiling module OBUF_LVCMOS15_F_2
+-- Compiling module OBUF_LVCMOS15_F_4
+-- Compiling module OBUF_LVCMOS15_F_6
+-- Compiling module OBUF_LVCMOS15_F_8
+-- Compiling module OBUF_LVCMOS15_S_12
+-- Compiling module OBUF_LVCMOS15_S_16
+-- Compiling module OBUF_LVCMOS15_S_2
+-- Compiling module OBUF_LVCMOS15_S_4
+-- Compiling module OBUF_LVCMOS15_S_6
+-- Compiling module OBUF_LVCMOS15_S_8
+-- Compiling module OBUF_LVCMOS18
+-- Compiling module OBUF_LVCMOS18_F_12
+-- Compiling module OBUF_LVCMOS18_F_16
+-- Compiling module OBUF_LVCMOS18_F_2
+-- Compiling module OBUF_LVCMOS18_F_4
+-- Compiling module OBUF_LVCMOS18_F_6
+-- Compiling module OBUF_LVCMOS18_F_8
+-- Compiling module OBUF_LVCMOS18_S_12
+-- Compiling module OBUF_LVCMOS18_S_16
+-- Compiling module OBUF_LVCMOS18_S_2
+-- Compiling module OBUF_LVCMOS18_S_4
+-- Compiling module OBUF_LVCMOS18_S_6
+-- Compiling module OBUF_LVCMOS18_S_8
+-- Compiling module OBUF_LVCMOS2
+-- Compiling module OBUF_LVCMOS25
+-- Compiling module OBUF_LVCMOS25_F_12
+-- Compiling module OBUF_LVCMOS25_F_16
+-- Compiling module OBUF_LVCMOS25_F_2
+-- Compiling module OBUF_LVCMOS25_F_24
+-- Compiling module OBUF_LVCMOS25_F_4
+-- Compiling module OBUF_LVCMOS25_F_6
+-- Compiling module OBUF_LVCMOS25_F_8
+-- Compiling module OBUF_LVCMOS25_S_12
+-- Compiling module OBUF_LVCMOS25_S_16
+-- Compiling module OBUF_LVCMOS25_S_2
+-- Compiling module OBUF_LVCMOS25_S_24
+-- Compiling module OBUF_LVCMOS25_S_4
+-- Compiling module OBUF_LVCMOS25_S_6
+-- Compiling module OBUF_LVCMOS25_S_8
+-- Compiling module OBUF_LVCMOS33
+-- Compiling module OBUF_LVCMOS33_F_12
+-- Compiling module OBUF_LVCMOS33_F_16
+-- Compiling module OBUF_LVCMOS33_F_2
+-- Compiling module OBUF_LVCMOS33_F_24
+-- Compiling module OBUF_LVCMOS33_F_4
+-- Compiling module OBUF_LVCMOS33_F_6
+-- Compiling module OBUF_LVCMOS33_F_8
+-- Compiling module OBUF_LVCMOS33_S_12
+-- Compiling module OBUF_LVCMOS33_S_16
+-- Compiling module OBUF_LVCMOS33_S_2
+-- Compiling module OBUF_LVCMOS33_S_24
+-- Compiling module OBUF_LVCMOS33_S_4
+-- Compiling module OBUF_LVCMOS33_S_6
+-- Compiling module OBUF_LVCMOS33_S_8
+-- Compiling module OBUF_LVDCI_15
+-- Compiling module OBUF_LVDCI_18
+-- Compiling module OBUF_LVDCI_25
+-- Compiling module OBUF_LVDCI_33
+-- Compiling module OBUF_LVDCI_DV2_15
+-- Compiling module OBUF_LVDCI_DV2_18
+-- Compiling module OBUF_LVDCI_DV2_25
+-- Compiling module OBUF_LVDCI_DV2_33
+-- Compiling module OBUF_LVDS
+-- Compiling module OBUF_LVPECL
+-- Compiling module OBUF_LVTTL
+-- Compiling module OBUF_LVTTL_F_12
+-- Compiling module OBUF_LVTTL_F_16
+-- Compiling module OBUF_LVTTL_F_2
+-- Compiling module OBUF_LVTTL_F_24
+-- Compiling module OBUF_LVTTL_F_4
+-- Compiling module OBUF_LVTTL_F_6
+-- Compiling module OBUF_LVTTL_F_8
+-- Compiling module OBUF_LVTTL_S_12
+-- Compiling module OBUF_LVTTL_S_16
+-- Compiling module OBUF_LVTTL_S_2
+-- Compiling module OBUF_LVTTL_S_24
+-- Compiling module OBUF_LVTTL_S_4
+-- Compiling module OBUF_LVTTL_S_6
+-- Compiling module OBUF_LVTTL_S_8
+-- Compiling module OBUF_PCI33_3
+-- Compiling module OBUF_PCI33_5
+-- Compiling module OBUF_PCI66_3
+-- Compiling module OBUF_PCIX
+-- Compiling module OBUF_PCIX66_3
+-- Compiling module OBUF_SSTL18_I
+-- Compiling module OBUF_SSTL18_II
+-- Compiling module OBUF_SSTL18_II_DCI
+-- Compiling module OBUF_SSTL18_I_DCI
+-- Compiling module OBUF_SSTL2_I
+-- Compiling module OBUF_SSTL2_II
+-- Compiling module OBUF_SSTL2_II_DCI
+-- Compiling module OBUF_SSTL2_I_DCI
+-- Compiling module OBUF_SSTL3_I
+-- Compiling module OBUF_SSTL3_II
+-- Compiling module OBUF_SSTL3_II_DCI
+-- Compiling module OBUF_SSTL3_I_DCI
+-- Compiling module OBUF_S_12
+-- Compiling module OBUF_S_16
+-- Compiling module OBUF_S_2
+-- Compiling module OBUF_S_24
+-- Compiling module OBUF_S_4
+-- Compiling module OBUF_S_6
+-- Compiling module OBUF_S_8
+-- Compiling module ODDR
+-- Compiling module ODDR2
+-- Compiling module OFDDRCPE
+-- Compiling module OFDDRRSE
+-- Compiling module OFDDRTCPE
+-- Compiling module OFDDRTRSE
+-- Compiling module OR2
+-- Compiling module OR2B1
+-- Compiling module OR2B2
+-- Compiling module OR3
+-- Compiling module OR3B1
+-- Compiling module OR3B2
+-- Compiling module OR3B3
+-- Compiling module OR4
+-- Compiling module OR4B1
+-- Compiling module OR4B2
+-- Compiling module OR4B3
+-- Compiling module OR4B4
+-- Compiling module OR5
+-- Compiling module OR5B1
+-- Compiling module OR5B2
+-- Compiling module OR5B3
+-- Compiling module OR5B4
+-- Compiling module OR5B5
+-- Compiling module ORCY
+-- Compiling module OSERDES
+-- Compiling module PLL_ADV
+-- Compiling module PLL_BASE
+-- Compiling module PMCD
+-- Compiling module PULLDOWN
+-- Compiling module PULLUP
+-- Compiling module RAM128X1D
+-- Compiling module RAM128X1S
+-- Compiling module RAM128X1S_1
+-- Compiling module RAM16X1D
+-- Compiling module RAM16X1D_1
+-- Compiling module RAM16X1S
+-- Compiling module RAM16X1S_1
+-- Compiling module RAM16X2S
+-- Compiling module RAM16X4S
+-- Compiling module RAM16X8S
+-- Compiling module RAM256X1S
+-- Compiling module RAM32M
+-- Compiling module RAM32X1D
+-- Compiling module RAM32X1D_1
+-- Compiling module RAM32X1S
+-- Compiling module RAM32X1S_1
+-- Compiling module RAM32X2S
+-- Compiling module RAM32X4S
+-- Compiling module RAM32X8S
+-- Compiling module RAM64M
+-- Compiling module RAM64X1D
+-- Compiling module RAM64X1D_1
+-- Compiling module RAM64X1S
+-- Compiling module RAM64X1S_1
+-- Compiling module RAM64X2S
+-- Compiling module RAMB16
+-- Compiling module RAMB16BWE
+-- Compiling module RAMB16BWER
+-- Compiling module RAMB16BWE_S18
+-- Compiling module RAMB16BWE_S18_S18
+-- Compiling module RAMB16BWE_S18_S9
+-- Compiling module RAMB16BWE_S36
+-- Compiling module RAMB16BWE_S36_S18
+-- Compiling module RAMB16BWE_S36_S36
+-- Compiling module RAMB16BWE_S36_S9
+-- Compiling module RAMB16_S1
+-- Compiling module RAMB16_S18
+-- Compiling module RAMB16_S18_S18
+-- Compiling module RAMB16_S18_S36
+-- Compiling module RAMB16_S1_S1
+-- Compiling module RAMB16_S1_S18
+-- Compiling module RAMB16_S1_S2
+-- Compiling module RAMB16_S1_S36
+-- Compiling module RAMB16_S1_S4
+-- Compiling module RAMB16_S1_S9
+-- Compiling module RAMB16_S2
+-- Compiling module RAMB16_S2_S18
+-- Compiling module RAMB16_S2_S2
+-- Compiling module RAMB16_S2_S36
+-- Compiling module RAMB16_S2_S4
+-- Compiling module RAMB16_S2_S9
+-- Compiling module RAMB16_S36
+-- Compiling module RAMB16_S36_S36
+-- Compiling module RAMB16_S4
+-- Compiling module RAMB16_S4_S18
+-- Compiling module RAMB16_S4_S36
+-- Compiling module RAMB16_S4_S4
+-- Compiling module RAMB16_S4_S9
+-- Compiling module RAMB16_S9
+-- Compiling module RAMB16_S9_S18
+-- Compiling module RAMB16_S9_S36
+-- Compiling module RAMB16_S9_S9
+-- Compiling module RAMB18
+-- Compiling module RAMB18SDP
+-- Compiling module RAMB32_S64_ECC
+-- Compiling module RAMB36
+-- Compiling module RAMB36SDP
+-- Compiling module RAMB36SDP_EXP
+-- Compiling module RAMB36_EXP
+-- Compiling module RAMB4_S1
+-- Compiling module RAMB4_S16
+-- Compiling module RAMB4_S16_S16
+-- Compiling module RAMB4_S1_S1
+-- Compiling module RAMB4_S1_S16
+-- Compiling module RAMB4_S1_S2
+-- Compiling module RAMB4_S1_S4
+-- Compiling module RAMB4_S1_S8
+-- Compiling module RAMB4_S2
+-- Compiling module RAMB4_S2_S16
+-- Compiling module RAMB4_S2_S2
+-- Compiling module RAMB4_S2_S4
+-- Compiling module RAMB4_S2_S8
+-- Compiling module RAMB4_S4
+-- Compiling module RAMB4_S4_S16
+-- Compiling module RAMB4_S4_S4
+-- Compiling module RAMB4_S4_S8
+-- Compiling module RAMB4_S8
+-- Compiling module RAMB4_S8_S16
+-- Compiling module RAMB4_S8_S8
+-- Compiling module ROM128X1
+-- Compiling module ROM16X1
+-- Compiling module ROM256X1
+-- Compiling module ROM32X1
+-- Compiling module ROM64X1
+-- Compiling module SIM_CONFIG_S3A
+-- Compiling module SIM_CONFIG_V5
+-- Compiling module SPI_ACCESS
+-- Compiling module SRL16
+-- Compiling module SRL16E
+-- Compiling module SRL16E_1
+-- Compiling module SRL16_1
+-- Compiling module SRLC16
+-- Compiling module SRLC16E
+-- Compiling module SRLC16E_1
+-- Compiling module SRLC16_1
+-- Compiling module SRLC32E
+-- Compiling module STARTUP_FPGACORE
+-- Compiling module STARTUP_SPARTAN2
+-- Compiling module STARTUP_SPARTAN3
+-- Compiling module STARTUP_SPARTAN3A
+-- Compiling module STARTUP_SPARTAN3E
+-- Compiling module STARTUP_VIRTEX
+-- Compiling module STARTUP_VIRTEX2
+-- Compiling module STARTUP_VIRTEX4
+-- Compiling module STARTUP_VIRTEX5
+-- Compiling module SYSMON
+-- Compiling module TBLOCK
+-- Compiling module TIMEGRP
+-- Compiling module TIMESPEC
+-- Compiling module USR_ACCESS_VIRTEX4
+-- Compiling module USR_ACCESS_VIRTEX5
+-- Compiling module VCC
+-- Compiling module XNOR2
+-- Compiling module XNOR3
+-- Compiling module XNOR4
+-- Compiling module XNOR5
+-- Compiling module XOR2
+-- Compiling module XOR3
+-- Compiling module XOR4
+-- Compiling module XOR5
+-- Compiling module XORCY
+-- Compiling module XORCY_D
+-- Compiling module XORCY_L
+
+Top level modules:
+	AND2
+	AND2B1
+	AND2B2
+	AND3
+	AND3B1
+	AND3B2
+	AND3B3
+	AND4
+	AND4B1
+	AND4B2
+	AND4B3
+	AND4B4
+	AND5
+	AND5B1
+	AND5B2
+	AND5B3
+	AND5B4
+	AND5B5
+	BSCAN_FPGACORE
+	BSCAN_SPARTAN2
+	BSCAN_SPARTAN3
+	BSCAN_SPARTAN3A
+	BSCAN_VIRTEX
+	BSCAN_VIRTEX2
+	BSCAN_VIRTEX4
+	BSCAN_VIRTEX5
+	BUF
+	BUFCF
+	BUFE
+	BUFGCE
+	BUFGCE_1
+	BUFGDLL
+	BUFGMUX_CTRL
+	BUFGMUX_VIRTEX4
+	BUFGP
+	BUFIO
+	BUFR
+	BUFT
+	CAPTURE_FPGACORE
+	CAPTURE_SPARTAN2
+	CAPTURE_SPARTAN3
+	CAPTURE_SPARTAN3A
+	CAPTURE_VIRTEX
+	CAPTURE_VIRTEX2
+	CAPTURE_VIRTEX4
+	CAPTURE_VIRTEX5
+	CARRY4
+	CFGLUT5
+	CLKDLLE
+	CLKDLLHF
+	CONFIG
+	CRC32
+	CRC64
+	DCIRESET
+	DCM
+	DCM_BASE
+	DCM_PS
+	DCM_SP
+	DNA_PORT
+	DSP48
+	DSP48A
+	DSP48E
+	FD
+	FDC
+	FDCE
+	FDCE_1
+	FDCP
+	FDCPE_1
+	FDCP_1
+	FDC_1
+	FDE
+	FDE_1
+	FDP
+	FDPE
+	FDPE_1
+	FDP_1
+	FDR
+	FDRE
+	FDRE_1
+	FDRS
+	FDRSE_1
+	FDRS_1
+	FDR_1
+	FDS
+	FDSE
+	FDSE_1
+	FDS_1
+	FD_1
+	FIFO16
+	FIFO18
+	FIFO18_36
+	FIFO36
+	FIFO36_72
+	FIFO36_72_EXP
+	FIFO36_EXP
+	FMAP
+	FRAME_ECC_VIRTEX4
+	FRAME_ECC_VIRTEX5
+	GND
+	IBUFDS
+	IBUFDS_BLVDS_25
+	IBUFDS_DIFF_OUT
+	IBUFDS_DLY_ADJ
+	IBUFDS_LDT_25
+	IBUFDS_LVDSEXT_25
+	IBUFDS_LVDSEXT_25_DCI
+	IBUFDS_LVDSEXT_33
+	IBUFDS_LVDSEXT_33_DCI
+	IBUFDS_LVDS_25
+	IBUFDS_LVDS_25_DCI
+	IBUFDS_LVDS_33
+	IBUFDS_LVDS_33_DCI
+	IBUFDS_LVPECL_25
+	IBUFDS_LVPECL_33
+	IBUFDS_ULVDS_25
+	IBUFGDS
+	IBUFGDS_BLVDS_25
+	IBUFGDS_DIFF_OUT
+	IBUFGDS_LDT_25
+	IBUFGDS_LVDSEXT_25
+	IBUFGDS_LVDSEXT_25_DCI
+	IBUFGDS_LVDSEXT_33
+	IBUFGDS_LVDSEXT_33_DCI
+	IBUFGDS_LVDS_25
+	IBUFGDS_LVDS_25_DCI
+	IBUFGDS_LVDS_33
+	IBUFGDS_LVDS_33_DCI
+	IBUFGDS_LVPECL_25
+	IBUFGDS_LVPECL_33
+	IBUFGDS_ULVDS_25
+	IBUFG_AGP
+	IBUFG_CTT
+	IBUFG_GTL
+	IBUFG_GTLP
+	IBUFG_GTLP_DCI
+	IBUFG_GTL_DCI
+	IBUFG_HSTL_I
+	IBUFG_HSTL_II
+	IBUFG_HSTL_III
+	IBUFG_HSTL_III_18
+	IBUFG_HSTL_III_DCI
+	IBUFG_HSTL_III_DCI_18
+	IBUFG_HSTL_II_18
+	IBUFG_HSTL_II_DCI
+	IBUFG_HSTL_II_DCI_18
+	IBUFG_HSTL_IV
+	IBUFG_HSTL_IV_18
+	IBUFG_HSTL_IV_DCI
+	IBUFG_HSTL_IV_DCI_18
+	IBUFG_HSTL_I_18
+	IBUFG_HSTL_I_DCI
+	IBUFG_HSTL_I_DCI_18
+	IBUFG_LVCMOS12
+	IBUFG_LVCMOS15
+	IBUFG_LVCMOS18
+	IBUFG_LVCMOS2
+	IBUFG_LVCMOS25
+	IBUFG_LVCMOS33
+	IBUFG_LVDCI_15
+	IBUFG_LVDCI_18
+	IBUFG_LVDCI_25
+	IBUFG_LVDCI_33
+	IBUFG_LVDCI_DV2_15
+	IBUFG_LVDCI_DV2_18
+	IBUFG_LVDCI_DV2_25
+	IBUFG_LVDCI_DV2_33
+	IBUFG_LVDS
+	IBUFG_LVPECL
+	IBUFG_LVTTL
+	IBUFG_PCI33_3
+	IBUFG_PCI33_5
+	IBUFG_PCI66_3
+	IBUFG_PCIX
+	IBUFG_PCIX66_3
+	IBUFG_SSTL18_I
+	IBUFG_SSTL18_II
+	IBUFG_SSTL18_II_DCI
+	IBUFG_SSTL18_I_DCI
+	IBUFG_SSTL2_I
+	IBUFG_SSTL2_II
+	IBUFG_SSTL2_II_DCI
+	IBUFG_SSTL2_I_DCI
+	IBUFG_SSTL3_I
+	IBUFG_SSTL3_II
+	IBUFG_SSTL3_II_DCI
+	IBUFG_SSTL3_I_DCI
+	IBUF_AGP
+	IBUF_CTT
+	IBUF_DLY_ADJ
+	IBUF_GTL
+	IBUF_GTLP
+	IBUF_GTLP_DCI
+	IBUF_GTL_DCI
+	IBUF_HSTL_I
+	IBUF_HSTL_II
+	IBUF_HSTL_III
+	IBUF_HSTL_III_18
+	IBUF_HSTL_III_DCI
+	IBUF_HSTL_III_DCI_18
+	IBUF_HSTL_II_18
+	IBUF_HSTL_II_DCI
+	IBUF_HSTL_II_DCI_18
+	IBUF_HSTL_IV
+	IBUF_HSTL_IV_18
+	IBUF_HSTL_IV_DCI
+	IBUF_HSTL_IV_DCI_18
+	IBUF_HSTL_I_18
+	IBUF_HSTL_I_DCI
+	IBUF_HSTL_I_DCI_18
+	IBUF_LVCMOS12
+	IBUF_LVCMOS15
+	IBUF_LVCMOS18
+	IBUF_LVCMOS2
+	IBUF_LVCMOS25
+	IBUF_LVCMOS33
+	IBUF_LVDCI_15
+	IBUF_LVDCI_18
+	IBUF_LVDCI_25
+	IBUF_LVDCI_33
+	IBUF_LVDCI_DV2_15
+	IBUF_LVDCI_DV2_18
+	IBUF_LVDCI_DV2_25
+	IBUF_LVDCI_DV2_33
+	IBUF_LVDS
+	IBUF_LVPECL
+	IBUF_LVTTL
+	IBUF_PCI33_3
+	IBUF_PCI33_5
+	IBUF_PCI66_3
+	IBUF_PCIX
+	IBUF_PCIX66_3
+	IBUF_SSTL18_I
+	IBUF_SSTL18_II
+	IBUF_SSTL18_II_DCI
+	IBUF_SSTL18_I_DCI
+	IBUF_SSTL2_I
+	IBUF_SSTL2_II
+	IBUF_SSTL2_II_DCI
+	IBUF_SSTL2_I_DCI
+	IBUF_SSTL3_I
+	IBUF_SSTL3_II
+	IBUF_SSTL3_II_DCI
+	IBUF_SSTL3_I_DCI
+	ICAP_SPARTAN3A
+	ICAP_VIRTEX2
+	ICAP_VIRTEX4
+	ICAP_VIRTEX5
+	IDDR
+	IDDR2
+	IDDR_2CLK
+	IDELAY
+	IDELAYCTRL
+	IFDDRCPE
+	IFDDRRSE
+	IOBUF
+	IOBUFDS
+	IOBUFDS_BLVDS_25
+	IOBUF_AGP
+	IOBUF_CTT
+	IOBUF_F_12
+	IOBUF_F_16
+	IOBUF_F_2
+	IOBUF_F_24
+	IOBUF_F_4
+	IOBUF_F_6
+	IOBUF_F_8
+	IOBUF_GTL
+	IOBUF_GTLP
+	IOBUF_GTLP_DCI
+	IOBUF_GTL_DCI
+	IOBUF_HSTL_I
+	IOBUF_HSTL_II
+	IOBUF_HSTL_III
+	IOBUF_HSTL_III_18
+	IOBUF_HSTL_II_18
+	IOBUF_HSTL_II_DCI
+	IOBUF_HSTL_II_DCI_18
+	IOBUF_HSTL_IV
+	IOBUF_HSTL_IV_18
+	IOBUF_HSTL_IV_DCI
+	IOBUF_HSTL_IV_DCI_18
+	IOBUF_HSTL_I_18
+	IOBUF_LVCMOS12
+	IOBUF_LVCMOS12_F_2
+	IOBUF_LVCMOS12_F_4
+	IOBUF_LVCMOS12_F_6
+	IOBUF_LVCMOS12_F_8
+	IOBUF_LVCMOS12_S_2
+	IOBUF_LVCMOS12_S_4
+	IOBUF_LVCMOS12_S_6
+	IOBUF_LVCMOS12_S_8
+	IOBUF_LVCMOS15
+	IOBUF_LVCMOS15_F_12
+	IOBUF_LVCMOS15_F_16
+	IOBUF_LVCMOS15_F_2
+	IOBUF_LVCMOS15_F_4
+	IOBUF_LVCMOS15_F_6
+	IOBUF_LVCMOS15_F_8
+	IOBUF_LVCMOS15_S_12
+	IOBUF_LVCMOS15_S_16
+	IOBUF_LVCMOS15_S_2
+	IOBUF_LVCMOS15_S_4
+	IOBUF_LVCMOS15_S_6
+	IOBUF_LVCMOS15_S_8
+	IOBUF_LVCMOS18
+	IOBUF_LVCMOS18_F_12
+	IOBUF_LVCMOS18_F_16
+	IOBUF_LVCMOS18_F_2
+	IOBUF_LVCMOS18_F_4
+	IOBUF_LVCMOS18_F_6
+	IOBUF_LVCMOS18_F_8
+	IOBUF_LVCMOS18_S_12
+	IOBUF_LVCMOS18_S_16
+	IOBUF_LVCMOS18_S_2
+	IOBUF_LVCMOS18_S_4
+	IOBUF_LVCMOS18_S_6
+	IOBUF_LVCMOS18_S_8
+	IOBUF_LVCMOS2
+	IOBUF_LVCMOS25
+	IOBUF_LVCMOS25_F_12
+	IOBUF_LVCMOS25_F_16
+	IOBUF_LVCMOS25_F_2
+	IOBUF_LVCMOS25_F_24
+	IOBUF_LVCMOS25_F_4
+	IOBUF_LVCMOS25_F_6
+	IOBUF_LVCMOS25_F_8
+	IOBUF_LVCMOS25_S_12
+	IOBUF_LVCMOS25_S_16
+	IOBUF_LVCMOS25_S_2
+	IOBUF_LVCMOS25_S_24
+	IOBUF_LVCMOS25_S_4
+	IOBUF_LVCMOS25_S_6
+	IOBUF_LVCMOS25_S_8
+	IOBUF_LVCMOS33
+	IOBUF_LVCMOS33_F_12
+	IOBUF_LVCMOS33_F_16
+	IOBUF_LVCMOS33_F_2
+	IOBUF_LVCMOS33_F_24
+	IOBUF_LVCMOS33_F_4
+	IOBUF_LVCMOS33_F_6
+	IOBUF_LVCMOS33_F_8
+	IOBUF_LVCMOS33_S_12
+	IOBUF_LVCMOS33_S_16
+	IOBUF_LVCMOS33_S_2
+	IOBUF_LVCMOS33_S_24
+	IOBUF_LVCMOS33_S_4
+	IOBUF_LVCMOS33_S_6
+	IOBUF_LVCMOS33_S_8
+	IOBUF_LVDCI_15
+	IOBUF_LVDCI_18
+	IOBUF_LVDCI_25
+	IOBUF_LVDCI_33
+	IOBUF_LVDCI_DV2_15
+	IOBUF_LVDCI_DV2_18
+	IOBUF_LVDCI_DV2_25
+	IOBUF_LVDCI_DV2_33
+	IOBUF_LVDS
+	IOBUF_LVPECL
+	IOBUF_LVTTL
+	IOBUF_LVTTL_F_12
+	IOBUF_LVTTL_F_16
+	IOBUF_LVTTL_F_2
+	IOBUF_LVTTL_F_24
+	IOBUF_LVTTL_F_4
+	IOBUF_LVTTL_F_6
+	IOBUF_LVTTL_F_8
+	IOBUF_LVTTL_S_12
+	IOBUF_LVTTL_S_16
+	IOBUF_LVTTL_S_2
+	IOBUF_LVTTL_S_24
+	IOBUF_LVTTL_S_4
+	IOBUF_LVTTL_S_6
+	IOBUF_LVTTL_S_8
+	IOBUF_PCI33_3
+	IOBUF_PCI33_5
+	IOBUF_PCI66_3
+	IOBUF_PCIX
+	IOBUF_PCIX66_3
+	IOBUF_SSTL18_I
+	IOBUF_SSTL18_II
+	IOBUF_SSTL18_II_DCI
+	IOBUF_SSTL2_I
+	IOBUF_SSTL2_II
+	IOBUF_SSTL2_II_DCI
+	IOBUF_SSTL3_I
+	IOBUF_SSTL3_II
+	IOBUF_SSTL3_II_DCI
+	IOBUF_S_12
+	IOBUF_S_16
+	IOBUF_S_2
+	IOBUF_S_24
+	IOBUF_S_4
+	IOBUF_S_6
+	IOBUF_S_8
+	IODELAY
+	ISERDES
+	ISERDES_NODELAY
+	JTAGPPC
+	JTAG_SIM_SPARTAN3A
+	JTAG_SIM_VIRTEX4
+	JTAG_SIM_VIRTEX5
+	KEEPER
+	KEY_CLEAR
+	LD
+	LDC
+	LDCE
+	LDCE_1
+	LDCP
+	LDCPE
+	LDCPE_1
+	LDCP_1
+	LDC_1
+	LDE
+	LDE_1
+	LDP
+	LDPE
+	LDPE_1
+	LDP_1
+	LD_1
+	LUT1
+	LUT1_D
+	LUT1_L
+	LUT2
+	LUT2_D
+	LUT2_L
+	LUT3
+	LUT3_D
+	LUT3_L
+	LUT4
+	LUT4_D
+	LUT4_L
+	LUT5
+	LUT5_D
+	LUT5_L
+	LUT6
+	LUT6_2
+	LUT6_D
+	LUT6_L
+	MULT18X18
+	MULT18X18S
+	MULT18X18SIO
+	MULT_AND
+	MUXCY
+	MUXCY_D
+	MUXCY_L
+	MUXF5
+	MUXF5_D
+	MUXF5_L
+	MUXF6
+	MUXF6_D
+	MUXF6_L
+	MUXF7
+	MUXF7_D
+	MUXF7_L
+	MUXF8
+	MUXF8_D
+	MUXF8_L
+	NAND2
+	NAND2B1
+	NAND2B2
+	NAND3
+	NAND3B1
+	NAND3B2
+	NAND3B3
+	NAND4
+	NAND4B1
+	NAND4B2
+	NAND4B3
+	NAND4B4
+	NAND5
+	NAND5B1
+	NAND5B2
+	NAND5B3
+	NAND5B4
+	NAND5B5
+	NOR2
+	NOR2B1
+	NOR2B2
+	NOR3
+	NOR3B1
+	NOR3B2
+	NOR3B3
+	NOR4
+	NOR4B1
+	NOR4B2
+	NOR4B3
+	NOR4B4
+	NOR5
+	NOR5B1
+	NOR5B2
+	NOR5B3
+	NOR5B4
+	NOR5B5
+	OBUFDS
+	OBUFDS_BLVDS_25
+	OBUFDS_LDT_25
+	OBUFDS_LVDSEXT_25
+	OBUFDS_LVDSEXT_33
+	OBUFDS_LVDS_25
+	OBUFDS_LVDS_33
+	OBUFDS_LVPECL_25
+	OBUFDS_LVPECL_33
+	OBUFDS_ULVDS_25
+	OBUFTDS
+	OBUFTDS_BLVDS_25
+	OBUFTDS_LDT_25
+	OBUFTDS_LVDSEXT_25
+	OBUFTDS_LVDSEXT_33
+	OBUFTDS_LVDS_25
+	OBUFTDS_LVDS_33
+	OBUFTDS_LVPECL_25
+	OBUFTDS_LVPECL_33
+	OBUFTDS_ULVDS_25
+	OBUFT_AGP
+	OBUFT_CTT
+	OBUFT_F_12
+	OBUFT_F_16
+	OBUFT_F_2
+	OBUFT_F_24
+	OBUFT_F_4
+	OBUFT_F_6
+	OBUFT_F_8
+	OBUFT_GTL
+	OBUFT_GTLP
+	OBUFT_GTLP_DCI
+	OBUFT_GTL_DCI
+	OBUFT_HSTL_I
+	OBUFT_HSTL_II
+	OBUFT_HSTL_III
+	OBUFT_HSTL_III_18
+	OBUFT_HSTL_III_DCI
+	OBUFT_HSTL_III_DCI_18
+	OBUFT_HSTL_II_18
+	OBUFT_HSTL_II_DCI
+	OBUFT_HSTL_II_DCI_18
+	OBUFT_HSTL_IV
+	OBUFT_HSTL_IV_18
+	OBUFT_HSTL_IV_DCI
+	OBUFT_HSTL_IV_DCI_18
+	OBUFT_HSTL_I_18
+	OBUFT_HSTL_I_DCI
+	OBUFT_HSTL_I_DCI_18
+	OBUFT_LVCMOS12
+	OBUFT_LVCMOS12_F_2
+	OBUFT_LVCMOS12_F_4
+	OBUFT_LVCMOS12_F_6
+	OBUFT_LVCMOS12_F_8
+	OBUFT_LVCMOS12_S_2
+	OBUFT_LVCMOS12_S_4
+	OBUFT_LVCMOS12_S_6
+	OBUFT_LVCMOS12_S_8
+	OBUFT_LVCMOS15
+	OBUFT_LVCMOS15_F_12
+	OBUFT_LVCMOS15_F_16
+	OBUFT_LVCMOS15_F_2
+	OBUFT_LVCMOS15_F_4
+	OBUFT_LVCMOS15_F_6
+	OBUFT_LVCMOS15_F_8
+	OBUFT_LVCMOS15_S_12
+	OBUFT_LVCMOS15_S_16
+	OBUFT_LVCMOS15_S_2
+	OBUFT_LVCMOS15_S_4
+	OBUFT_LVCMOS15_S_6
+	OBUFT_LVCMOS15_S_8
+	OBUFT_LVCMOS18
+	OBUFT_LVCMOS18_F_12
+	OBUFT_LVCMOS18_F_16
+	OBUFT_LVCMOS18_F_2
+	OBUFT_LVCMOS18_F_4
+	OBUFT_LVCMOS18_F_6
+	OBUFT_LVCMOS18_F_8
+	OBUFT_LVCMOS18_S_12
+	OBUFT_LVCMOS18_S_16
+	OBUFT_LVCMOS18_S_2
+	OBUFT_LVCMOS18_S_4
+	OBUFT_LVCMOS18_S_6
+	OBUFT_LVCMOS18_S_8
+	OBUFT_LVCMOS2
+	OBUFT_LVCMOS25
+	OBUFT_LVCMOS25_F_12
+	OBUFT_LVCMOS25_F_16
+	OBUFT_LVCMOS25_F_2
+	OBUFT_LVCMOS25_F_24
+	OBUFT_LVCMOS25_F_4
+	OBUFT_LVCMOS25_F_6
+	OBUFT_LVCMOS25_F_8
+	OBUFT_LVCMOS25_S_12
+	OBUFT_LVCMOS25_S_16
+	OBUFT_LVCMOS25_S_2
+	OBUFT_LVCMOS25_S_24
+	OBUFT_LVCMOS25_S_4
+	OBUFT_LVCMOS25_S_6
+	OBUFT_LVCMOS25_S_8
+	OBUFT_LVCMOS33
+	OBUFT_LVCMOS33_F_12
+	OBUFT_LVCMOS33_F_16
+	OBUFT_LVCMOS33_F_2
+	OBUFT_LVCMOS33_F_24
+	OBUFT_LVCMOS33_F_4
+	OBUFT_LVCMOS33_F_6
+	OBUFT_LVCMOS33_F_8
+	OBUFT_LVCMOS33_S_12
+	OBUFT_LVCMOS33_S_16
+	OBUFT_LVCMOS33_S_2
+	OBUFT_LVCMOS33_S_24
+	OBUFT_LVCMOS33_S_4
+	OBUFT_LVCMOS33_S_6
+	OBUFT_LVCMOS33_S_8
+	OBUFT_LVDCI_15
+	OBUFT_LVDCI_18
+	OBUFT_LVDCI_25
+	OBUFT_LVDCI_33
+	OBUFT_LVDCI_DV2_15
+	OBUFT_LVDCI_DV2_18
+	OBUFT_LVDCI_DV2_25
+	OBUFT_LVDCI_DV2_33
+	OBUFT_LVDS
+	OBUFT_LVPECL
+	OBUFT_LVTTL
+	OBUFT_LVTTL_F_12
+	OBUFT_LVTTL_F_16
+	OBUFT_LVTTL_F_2
+	OBUFT_LVTTL_F_24
+	OBUFT_LVTTL_F_4
+	OBUFT_LVTTL_F_6
+	OBUFT_LVTTL_F_8
+	OBUFT_LVTTL_S_12
+	OBUFT_LVTTL_S_16
+	OBUFT_LVTTL_S_2
+	OBUFT_LVTTL_S_24
+	OBUFT_LVTTL_S_4
+	OBUFT_LVTTL_S_6
+	OBUFT_LVTTL_S_8
+	OBUFT_PCI33_3
+	OBUFT_PCI33_5
+	OBUFT_PCI66_3
+	OBUFT_PCIX
+	OBUFT_PCIX66_3
+	OBUFT_SSTL18_I
+	OBUFT_SSTL18_II
+	OBUFT_SSTL18_II_DCI
+	OBUFT_SSTL18_I_DCI
+	OBUFT_SSTL2_I
+	OBUFT_SSTL2_II
+	OBUFT_SSTL2_II_DCI
+	OBUFT_SSTL2_I_DCI
+	OBUFT_SSTL3_I
+	OBUFT_SSTL3_II
+	OBUFT_SSTL3_II_DCI
+	OBUFT_SSTL3_I_DCI
+	OBUFT_S_12
+	OBUFT_S_16
+	OBUFT_S_2
+	OBUFT_S_24
+	OBUFT_S_4
+	OBUFT_S_6
+	OBUFT_S_8
+	OBUF_AGP
+	OBUF_CTT
+	OBUF_F_12
+	OBUF_F_16
+	OBUF_F_2
+	OBUF_F_24
+	OBUF_F_4
+	OBUF_F_6
+	OBUF_F_8
+	OBUF_GTL
+	OBUF_GTLP
+	OBUF_GTLP_DCI
+	OBUF_GTL_DCI
+	OBUF_HSTL_I
+	OBUF_HSTL_II
+	OBUF_HSTL_III
+	OBUF_HSTL_III_18
+	OBUF_HSTL_III_DCI
+	OBUF_HSTL_III_DCI_18
+	OBUF_HSTL_II_18
+	OBUF_HSTL_II_DCI
+	OBUF_HSTL_II_DCI_18
+	OBUF_HSTL_IV
+	OBUF_HSTL_IV_18
+	OBUF_HSTL_IV_DCI
+	OBUF_HSTL_IV_DCI_18
+	OBUF_HSTL_I_18
+	OBUF_HSTL_I_DCI
+	OBUF_HSTL_I_DCI_18
+	OBUF_LVCMOS12
+	OBUF_LVCMOS12_F_2
+	OBUF_LVCMOS12_F_4
+	OBUF_LVCMOS12_F_6
+	OBUF_LVCMOS12_F_8
+	OBUF_LVCMOS12_S_2
+	OBUF_LVCMOS12_S_4
+	OBUF_LVCMOS12_S_6
+	OBUF_LVCMOS12_S_8
+	OBUF_LVCMOS15
+	OBUF_LVCMOS15_F_12
+	OBUF_LVCMOS15_F_16
+	OBUF_LVCMOS15_F_2
+	OBUF_LVCMOS15_F_4
+	OBUF_LVCMOS15_F_6
+	OBUF_LVCMOS15_F_8
+	OBUF_LVCMOS15_S_12
+	OBUF_LVCMOS15_S_16
+	OBUF_LVCMOS15_S_2
+	OBUF_LVCMOS15_S_4
+	OBUF_LVCMOS15_S_6
+	OBUF_LVCMOS15_S_8
+	OBUF_LVCMOS18
+	OBUF_LVCMOS18_F_12
+	OBUF_LVCMOS18_F_16
+	OBUF_LVCMOS18_F_2
+	OBUF_LVCMOS18_F_4
+	OBUF_LVCMOS18_F_6
+	OBUF_LVCMOS18_F_8
+	OBUF_LVCMOS18_S_12
+	OBUF_LVCMOS18_S_16
+	OBUF_LVCMOS18_S_2
+	OBUF_LVCMOS18_S_4
+	OBUF_LVCMOS18_S_6
+	OBUF_LVCMOS18_S_8
+	OBUF_LVCMOS2
+	OBUF_LVCMOS25
+	OBUF_LVCMOS25_F_12
+	OBUF_LVCMOS25_F_16
+	OBUF_LVCMOS25_F_2
+	OBUF_LVCMOS25_F_24
+	OBUF_LVCMOS25_F_4
+	OBUF_LVCMOS25_F_6
+	OBUF_LVCMOS25_F_8
+	OBUF_LVCMOS25_S_12
+	OBUF_LVCMOS25_S_16
+	OBUF_LVCMOS25_S_2
+	OBUF_LVCMOS25_S_24
+	OBUF_LVCMOS25_S_4
+	OBUF_LVCMOS25_S_6
+	OBUF_LVCMOS25_S_8
+	OBUF_LVCMOS33
+	OBUF_LVCMOS33_F_12
+	OBUF_LVCMOS33_F_16
+	OBUF_LVCMOS33_F_2
+	OBUF_LVCMOS33_F_24
+	OBUF_LVCMOS33_F_4
+	OBUF_LVCMOS33_F_6
+	OBUF_LVCMOS33_F_8
+	OBUF_LVCMOS33_S_12
+	OBUF_LVCMOS33_S_16
+	OBUF_LVCMOS33_S_2
+	OBUF_LVCMOS33_S_24
+	OBUF_LVCMOS33_S_4
+	OBUF_LVCMOS33_S_6
+	OBUF_LVCMOS33_S_8
+	OBUF_LVDCI_15
+	OBUF_LVDCI_18
+	OBUF_LVDCI_25
+	OBUF_LVDCI_33
+	OBUF_LVDCI_DV2_15
+	OBUF_LVDCI_DV2_18
+	OBUF_LVDCI_DV2_25
+	OBUF_LVDCI_DV2_33
+	OBUF_LVDS
+	OBUF_LVPECL
+	OBUF_LVTTL
+	OBUF_LVTTL_F_12
+	OBUF_LVTTL_F_16
+	OBUF_LVTTL_F_2
+	OBUF_LVTTL_F_24
+	OBUF_LVTTL_F_4
+	OBUF_LVTTL_F_6
+	OBUF_LVTTL_F_8
+	OBUF_LVTTL_S_12
+	OBUF_LVTTL_S_16
+	OBUF_LVTTL_S_2
+	OBUF_LVTTL_S_24
+	OBUF_LVTTL_S_4
+	OBUF_LVTTL_S_6
+	OBUF_LVTTL_S_8
+	OBUF_PCI33_3
+	OBUF_PCI33_5
+	OBUF_PCI66_3
+	OBUF_PCIX
+	OBUF_PCIX66_3
+	OBUF_SSTL18_I
+	OBUF_SSTL18_II
+	OBUF_SSTL18_II_DCI
+	OBUF_SSTL18_I_DCI
+	OBUF_SSTL2_I
+	OBUF_SSTL2_II
+	OBUF_SSTL2_II_DCI
+	OBUF_SSTL2_I_DCI
+	OBUF_SSTL3_I
+	OBUF_SSTL3_II
+	OBUF_SSTL3_II_DCI
+	OBUF_SSTL3_I_DCI
+	OBUF_S_12
+	OBUF_S_16
+	OBUF_S_2
+	OBUF_S_24
+	OBUF_S_4
+	OBUF_S_6
+	OBUF_S_8
+	ODDR
+	ODDR2
+	OFDDRCPE
+	OFDDRRSE
+	OFDDRTCPE
+	OFDDRTRSE
+	OR2
+	OR2B1
+	OR2B2
+	OR3
+	OR3B1
+	OR3B2
+	OR3B3
+	OR4
+	OR4B1
+	OR4B2
+	OR4B3
+	OR4B4
+	OR5
+	OR5B1
+	OR5B2
+	OR5B3
+	OR5B4
+	OR5B5
+	ORCY
+	OSERDES
+	PLL_BASE
+	PMCD
+	PULLDOWN
+	PULLUP
+	RAM128X1D
+	RAM128X1S
+	RAM128X1S_1
+	RAM16X1D
+	RAM16X1D_1
+	RAM16X1S
+	RAM16X1S_1
+	RAM16X2S
+	RAM16X4S
+	RAM16X8S
+	RAM256X1S
+	RAM32M
+	RAM32X1D
+	RAM32X1D_1
+	RAM32X1S
+	RAM32X1S_1
+	RAM32X2S
+	RAM32X4S
+	RAM32X8S
+	RAM64M
+	RAM64X1D
+	RAM64X1D_1
+	RAM64X1S
+	RAM64X1S_1
+	RAM64X2S
+	RAMB16BWER
+	RAMB16BWE_S18
+	RAMB16BWE_S18_S18
+	RAMB16BWE_S18_S9
+	RAMB16BWE_S36
+	RAMB16BWE_S36_S18
+	RAMB16BWE_S36_S36
+	RAMB16BWE_S36_S9
+	RAMB16_S1
+	RAMB16_S18
+	RAMB16_S18_S18
+	RAMB16_S18_S36
+	RAMB16_S1_S1
+	RAMB16_S1_S18
+	RAMB16_S1_S2
+	RAMB16_S1_S36
+	RAMB16_S1_S4
+	RAMB16_S1_S9
+	RAMB16_S2
+	RAMB16_S2_S18
+	RAMB16_S2_S2
+	RAMB16_S2_S36
+	RAMB16_S2_S4
+	RAMB16_S2_S9
+	RAMB16_S36
+	RAMB16_S36_S36
+	RAMB16_S4
+	RAMB16_S4_S18
+	RAMB16_S4_S36
+	RAMB16_S4_S4
+	RAMB16_S4_S9
+	RAMB16_S9
+	RAMB16_S9_S18
+	RAMB16_S9_S36
+	RAMB16_S9_S9
+	RAMB18
+	RAMB18SDP
+	RAMB32_S64_ECC
+	RAMB36
+	RAMB36SDP
+	RAMB36SDP_EXP
+	RAMB36_EXP
+	RAMB4_S1
+	RAMB4_S16
+	RAMB4_S16_S16
+	RAMB4_S1_S1
+	RAMB4_S1_S16
+	RAMB4_S1_S2
+	RAMB4_S1_S4
+	RAMB4_S1_S8
+	RAMB4_S2
+	RAMB4_S2_S16
+	RAMB4_S2_S2
+	RAMB4_S2_S4
+	RAMB4_S2_S8
+	RAMB4_S4
+	RAMB4_S4_S16
+	RAMB4_S4_S4
+	RAMB4_S4_S8
+	RAMB4_S8
+	RAMB4_S8_S16
+	RAMB4_S8_S8
+	ROM128X1
+	ROM16X1
+	ROM256X1
+	ROM32X1
+	ROM64X1
+	SIM_CONFIG_S3A
+	SIM_CONFIG_V5
+	SPI_ACCESS
+	SRL16
+	SRL16E
+	SRL16E_1
+	SRL16_1
+	SRLC16
+	SRLC16E
+	SRLC16E_1
+	SRLC16_1
+	SRLC32E
+	STARTUP_FPGACORE
+	STARTUP_SPARTAN2
+	STARTUP_SPARTAN3
+	STARTUP_SPARTAN3A
+	STARTUP_SPARTAN3E
+	STARTUP_VIRTEX
+	STARTUP_VIRTEX2
+	STARTUP_VIRTEX4
+	STARTUP_VIRTEX5
+	SYSMON
+	TBLOCK
+	TIMEGRP
+	TIMESPEC
+	USR_ACCESS_VIRTEX4
+	USR_ACCESS_VIRTEX5
+	VCC
+	XNOR2
+	XNOR3
+	XNOR4
+	XNOR5
+	XOR2
+	XOR3
+	XOR4
+	XOR5
+	XORCY
+	XORCY_D
+	XORCY_L
+
+END_COMPILE:unisim
+
+==============================================================================
+
+    > Log file /opt/Xilinx/10.1/ISE/verilog/mti_se/unisims_ver/cxl_unisim.log generated
+    > Library mapping successful, setup file(s) modelsim.ini updated
+
+compxlib[unisims_ver]: No error(s), no warning(s)
+
+--> Compiling verilog unimacro library
+    > unimacro compiled to /opt/Xilinx/10.1/ISE/verilog/mti_se/unimacro_ver
+
+==============================================================================
+START_COMPILE unimacro
+
+
+Modifying /opt/modelsim/modeltech/modelsim.ini
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module BRAM_SDP_MACRO
+
+Top level modules:
+	BRAM_SDP_MACRO
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module BRAM_SINGLE_MACRO
+
+Top level modules:
+	BRAM_SINGLE_MACRO
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module BRAM_TDP_MACRO
+
+Top level modules:
+	BRAM_TDP_MACRO
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module FIFO_DUALCLOCK_MACRO
+
+Top level modules:
+	FIFO_DUALCLOCK_MACRO
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module FIFO_SYNC_MACRO
+
+Top level modules:
+	FIFO_SYNC_MACRO
+
+END_COMPILE:unimacro
+
+==============================================================================
+
+    > Log file /opt/Xilinx/10.1/ISE/verilog/mti_se/unimacro_ver/cxl_unimacro.log generated
+    > Library mapping successful, setup file(s) modelsim.ini updated
+
+compxlib[unimacro_ver]: No error(s), no warning(s)
+
+--> Compiling verilog XilinxCoreLib library
+    > XilinxCoreLib compiled to /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver
+
+==============================================================================
+START_COMPILE XilinxCoreLib
+
+
+Modifying /opt/modelsim/modeltech/modelsim.ini
+
+Modifying /opt/modelsim/modeltech/modelsim.ini
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module BLK_MEM_GEN_V2_2_xst
+-- Compiling module BLK_MEM_GEN_V2_2_output_stage
+-- Compiling module BLK_MEM_GEN_V2_2
+-- Compiling module DIST_MEM_GEN_V3_1
+-- Compiling module CAM_V6_1
+-- Compiling module FIFO_GENERATOR_V4_2_XST
+-- Compiling module FIFO_GENERATOR_V4_2
+-- Compiling module fifo_generator_v4_2_bhv_ver_as
+-- Compiling module fifo_generator_v4_2_bhv_ver_ss
+-- Compiling module fifo_generator_v4_2_bhv_ver_preload0
+-- Compiling module PIPELINE_V6_0
+-- Compiling module C_REG_LD_V6_0
+-- Compiling module C_ACCUM_V6_0
+-- Compiling module C_SHIFT_FD_V6_0
+-- Compiling module C_GATE_BUS_V6_0
+-- Compiling module C_ADDSUB_V6_0
+-- Compiling module C_MUX_BIT_V6_0
+-- Compiling module C_SHIFT_RAM_V6_0
+-- Compiling module C_MUX_SLICE_BUFT_V6_0
+-- Compiling module C_REG_FD_V6_0
+-- Compiling module C_COMPARE_V6_0
+-- Compiling module C_DECODE_BINARY_V6_0
+-- Compiling module C_MUX_BUS_V6_0
+-- Compiling module C_MUX_SLICE_BUFE_V6_0
+-- Compiling module C_COUNTER_BINARY_V6_0
+-- Compiling module C_TWOS_COMP_V6_0
+-- Compiling module C_GATE_BIT_BUS_V6_0
+-- Compiling module C_GATE_BIT_V6_0
+-- Compiling module ASYNC_FIFO_V6_1
+-- Compiling module C_DIST_MEM_V7_0
+-- Compiling module BLK_MEM_GEN_V2_3_xst
+-- Compiling module BLK_MEM_GEN_V2_3_output_stage
+-- Compiling module BLK_MEM_GEN_V2_3
+-- Compiling module BLKMEMDP_V6_0
+-- Compiling module family
+-- Compiling module MULT_GEN_V5_0_NON_SEQ
+-- Compiling module MULT_GEN_V5_0_SEQ
+-- Compiling module MULT_GEN_V5_0
+-- Compiling module BLK_MEM_GEN_V2_7_xst
+-- Compiling module BLK_MEM_GEN_V2_7_output_stage
+-- Compiling module BLK_MEM_GEN_V2_7
+-- Compiling module FIFO_GENERATOR_V2_0
+-- Compiling module fifo_generator_v2_0_bhv_ver_as
+-- Compiling module fifo_generator_v2_0_bhv_ver_ss
+-- Compiling module fifo_generator_v2_0_bhv_ver_fifo16
+-- Compiling module BLKMEMSP_V5_0
+-- Compiling module C_DIST_MEM_V6_0
+-- Compiling module BLKMEMDP_V5_0
+-- Compiling module BLK_MEM_GEN_V2_4_xst
+-- Compiling module BLK_MEM_GEN_V2_4_output_stage
+-- Compiling module BLK_MEM_GEN_V2_4
+-- Compiling module CAM_V5_0
+-- Compiling module CAM_V4_0
+-- Compiling module FIFO_GENERATOR_V3_1
+-- Compiling module fifo_generator_v3_1_bhv_ver_as
+-- Compiling module fifo_generator_v3_1_bhv_ver_ss
+-- Compiling module fifo_generator_v3_1_bhv_ver_preload0
+-- Compiling module FIFO_GENERATOR_V3_1_XST
+-- Compiling module C_DIST_MEM_V5_1
+-- Compiling module BLKMEMSP_V6_1
+-- Compiling module C_COUNTER_BINARY_V4_0
+-- Compiling module C_ADDSUB_V4_0
+-- Compiling module C_SHIFT_FD_V4_0
+-- Compiling module C_REG_FD_V4_0
+-- Compiling module PIPELINE_V4_0
+-- Compiling module C_ACCUM_V4_0
+-- Compiling module C_TWOS_COMP_V4_0
+-- Compiling module C_MUX_BUS_V4_0
+-- Compiling module C_GATE_BUS_V4_0
+-- Compiling module C_SHIFT_RAM_V4_0
+-- Compiling module C_COMPARE_V4_0
+-- Compiling module C_MUX_SLICE_BUFT_V4_0
+-- Compiling module C_MUX_BIT_V4_0
+-- Compiling module C_REG_LD_V4_0
+-- Compiling module C_MUX_SLICE_BUFE_V4_0
+-- Compiling module C_DECODE_BINARY_V4_0
+-- Compiling module C_GATE_BIT_BUS_V4_0
+-- Compiling module C_GATE_BIT_V4_0
+-- Compiling module FIFO_GENERATOR_V2_2
+-- Compiling module fifo_generator_v2_2_bhv_ver_as
+-- Compiling module fifo_generator_v2_2_bhv_ver_ss
+-- Compiling module fifo_generator_v2_2_bhv_ver_fifo16
+-- Compiling module fifo_generator_v2_2_bhv_ver_preload0
+-- Compiling module ASYNC_FIFO_V5_0
+-- Compiling module BLKMEMSP_V3_2
+-- Compiling module C_GATE_BIT_BUS_V7_0
+-- Compiling module C_SHIFT_RAM_V7_0
+-- Compiling module C_MUX_SLICE_BUFT_V7_0
+-- Compiling module C_MUX_BUS_V7_0
+-- Compiling module C_REG_FD_V7_0
+-- Compiling module C_MUX_BIT_V7_0
+-- Compiling module C_TWOS_COMP_V7_0
+-- Compiling module C_DECODE_BINARY_V7_0
+-- Compiling module C_GATE_BIT_V7_0
+-- Compiling module C_SHIFT_FD_V7_0
+-- Compiling module C_REG_LD_V7_0
+-- Compiling module C_COMPARE_V7_0
+-- Compiling module C_COUNTER_BINARY_V7_0
+-- Compiling module C_MUX_SLICE_BUFE_V7_0
+-- Compiling module PIPELINE_V7_0
+-- Compiling module C_ACCUM_V7_0
+-- Compiling module C_ADDSUB_V7_0
+-- Compiling module C_GATE_BUS_V7_0
+-- Compiling module LFSR_V3_0
+-- Compiling module LFSR_V3_0_DVUNIT_VER
+-- Compiling module SYNC_FIFO_V4_0
+-- Compiling module MEM_BLK_V4_0
+-- Compiling module FIFO_GENERATOR_V3_2
+-- Compiling module fifo_generator_v3_2_bhv_ver_as
+-- Compiling module fifo_generator_v3_2_bhv_ver_ss
+-- Compiling module fifo_generator_v3_2_bhv_ver_preload0
+-- Compiling module FIFO_GENERATOR_V3_2_XST
+-- Compiling module FIFO_GENERATOR_V1_0
+-- Compiling module fifo_generator_v1_0_bhv_ver_as
+-- Compiling module fifo_generator_v1_0_bhv_ver_ss
+-- Compiling module fifo_generator_v1_0_bhv_ver_fifo16
+-- Compiling module DIST_MEM_GEN_V1_1
+-- Compiling module C_DIST_MEM_V7_1
+-- Compiling module LFSR_V2_0
+-- Compiling module LFSR_V2_0_DVUNIT_VER
+-- Compiling module BLK_MEM_GEN_V2_6_xst
+-- Compiling module BLK_MEM_GEN_V2_6_output_stage
+-- Compiling module BLK_MEM_GEN_V2_6
+-- Compiling module FIFO_GENERATOR_V2_3
+-- Compiling module fifo_generator_v2_3_bhv_ver_as
+-- Compiling module fifo_generator_v2_3_bhv_ver_ss
+-- Compiling module fifo_generator_v2_3_bhv_ver_fifo16
+-- Compiling module fifo_generator_v2_3_bhv_ver_preload0
+-- Compiling module FIFO_GENERATOR_V4_3_XST
+-- Compiling module FIFO_GENERATOR_V4_3
+-- Compiling module fifo_generator_v4_3_bhv_ver_as
+-- Compiling module fifo_generator_v4_3_bhv_ver_ss
+-- Compiling module fifo_generator_v4_3_bhv_ver_preload0
+-- Compiling module BLKMEMSP_V6_2
+-- Compiling module C_MUX_SLICE_BUFT_V3_0
+-- Compiling module C_ACCUM_V3_0
+-- Compiling module C_REG_LD_V3_0
+-- Compiling module C_DIST_MEM_V3_0
+-- Compiling module PIPELINE_V3_0
+-- Compiling module C_GATE_BUS_V3_0
+-- Compiling module C_TWOS_COMP_V3_0
+-- Compiling module C_ADDSUB_V3_0
+-- Compiling module C_COUNTER_BINARY_V3_0
+-- Compiling module C_MUX_BUS_V3_0
+-- Compiling module C_GATE_BIT_BUS_V3_0
+-- Compiling module C_DECODE_BINARY_V3_0
+-- Compiling module C_GATE_BIT_V3_0
+-- Compiling module C_MUX_BIT_V3_0
+-- Compiling module C_SHIFT_FD_V3_0
+-- Compiling module C_COMPARE_V3_0
+-- Compiling module C_SHIFT_RAM_V3_0
+-- Compiling module C_MUX_SLICE_BUFE_V3_0
+-- Compiling module C_REG_FD_V3_0
+-- Compiling module BLKMEMDP_V6_3
+-- Compiling module FIFO_GENERATOR_V4_4
+-- Compiling module fifo_generator_v4_4_bhv_ver_as
+-- Compiling module fifo_generator_v4_4_bhv_ver_ss
+-- Compiling module fifo_generator_v4_4_bhv_ver_preload0
+-- Compiling module FIFO_GENERATOR_V4_4_XST
+-- Compiling module BLKMEMDP_V6_1
+-- Compiling module C_DIST_MEM_V4_1
+-- Compiling module MULT_GEN_V6_0_SEQ
+-- Compiling module MULT_GEN_V6_0
+-- Compiling module MULT_GEN_V6_0_NON_SEQ
+-- Compiling module ASYNC_FIFO_V5_1
+-- Compiling module BLKMEMDP_V3_2
+-- Compiling module C_DIST_MEM_V4_0
+-- Compiling module DIST_MEM_GEN_V3_3
+-- Compiling module ASYNC_FIFO_V4_0
+-- Compiling module fifoctlr_ns_v4
+-- Compiling module memory_v4
+-- Compiling module bcount_up_ainit_v4
+-- Compiling module binary_to_gray_v4
+-- Compiling module eq_compare_v4
+-- Compiling module reg_ainit_v4
+-- Compiling module and_a_notb_v4
+-- Compiling module and_a_notb_fd_v4
+-- Compiling module nand_a_notb_fd_v4
+-- Compiling module and_a_b_notc_v4
+-- Compiling module and_a_b_c_notd_v4
+-- Compiling module or_fd_v4
+-- Compiling module and_fd_v4
+-- Compiling module nand_fd_v4
+-- Compiling module almost_reg_v4
+-- Compiling module and_a_b_v4
+-- Compiling module or3_fd_v4
+-- Compiling module count_sub_reg_v4
+-- Compiling module or_a_b_v4
+-- Compiling module xor_gate_bit_v4
+-- Compiling module gray_to_binary_v4
+-- Compiling module full_flag_reg_v4
+-- Compiling module empty_flag_reg_v4
+-- Compiling module almst_full_v4
+-- Compiling module almst_empty_v4
+-- Compiling module MULT_GEN_V4_0
+-- Compiling module C_COUNTER_BINARY_V2_0
+-- Compiling module C_MUX_BIT_V2_0
+-- Compiling module C_DIST_MEM_V2_0
+-- Compiling module C_REG_FD_V2_0
+-- Compiling module C_TWOS_COMP_V2_0
+-- Compiling module C_GATE_BIT_V2_0
+-- Compiling module PIPELINE_V2_0
+-- Compiling module C_GATE_BUS_V2_0
+-- Compiling module C_ACCUM_V2_0
+-- Compiling module C_DECODE_BINARY_V2_0
+-- Compiling module C_MUX_BUS_V2_0
+-- Compiling module C_REG_LD_V2_0
+-- Compiling module C_MUX_SLICE_BUFT_V2_0
+-- Compiling module C_SHIFT_RAM_V2_0
+-- Compiling module C_ADDSUB_V2_0
+-- Compiling module C_COMPARE_V2_0
+-- Compiling module C_GATE_BIT_BUS_V2_0
+-- Compiling module C_MUX_SLICE_BUFE_V2_0
+-- Compiling module C_SHIFT_FD_V2_0
+-- Compiling module BLK_MEM_GEN_V2_5_xst
+-- Compiling module BLK_MEM_GEN_V2_5_output_stage
+-- Compiling module BLK_MEM_GEN_V2_5
+-- Compiling module BLK_MEM_GEN_V2_1_xst
+-- Compiling module BLK_MEM_GEN_V2_1_output_stage
+-- Compiling module BLK_MEM_GEN_V2_1
+-- Compiling module FIFO_GENERATOR_V2_1
+-- Compiling module fifo_generator_v2_1_bhv_ver_as
+-- Compiling module fifo_generator_v2_1_bhv_ver_ss
+-- Compiling module fifo_generator_v2_1_bhv_ver_fifo16
+-- Compiling module fifo_generator_v2_1_bhv_ver_preload0
+-- Compiling module SYNC_FIFO_V3_0
+-- Compiling module MEM_BLK
+-- Compiling module FIFO_GENERATOR_V1_1
+-- Compiling module fifo_generator_v1_1_bhv_ver_as
+-- Compiling module fifo_generator_v1_1_bhv_ver_ss
+-- Compiling module fifo_generator_v1_1_bhv_ver_fifo16
+-- Compiling module DIST_MEM_GEN_V3_4_XST
+-- Compiling module DIST_MEM_GEN_V3_4
+-- Compiling module BLKMEMDP_V4_0
+-- Compiling module BLKMEMSP_V6_0
+-- Compiling module BLK_MEM_GEN_V1_1_xst
+-- Compiling module BLK_MEM_GEN_V1_1_output_stage
+-- Compiling module BLK_MEM_GEN_V1_1
+-- Compiling module DIST_MEM_GEN_V2_1
+-- Compiling module CAM_V5_1
+-- Compiling module BLK_MEM_GEN_V2_8_output_stage
+-- Compiling module BLK_MEM_GEN_V2_8
+-- Compiling module BLK_MEM_GEN_V2_8_xst
+-- Compiling module FIFO_GENERATOR_V4_1_XST
+-- Compiling module FIFO_GENERATOR_V4_1
+-- Compiling module fifo_generator_v4_1_bhv_ver_as
+-- Compiling module fifo_generator_v4_1_bhv_ver_ss
+-- Compiling module fifo_generator_v4_1_bhv_ver_preload0
+-- Compiling module MULT_GEN_V7_0
+-- Compiling module MULT_GEN_V7_0_SEQ
+-- Compiling module MULT_GEN_V7_0_NON_SEQ
+-- Compiling module ASYNC_FIFO_V6_0
+-- Compiling module BLKMEMDP_V6_2
+-- Compiling module C_COMPARE_V5_0
+-- Compiling module C_GATE_BIT_BUS_V5_0
+-- Compiling module C_DECODE_BINARY_V5_0
+-- Compiling module C_TWOS_COMP_V5_0
+-- Compiling module C_SHIFT_RAM_V5_0
+-- Compiling module C_GATE_BIT_V5_0
+-- Compiling module C_MUX_SLICE_BUFE_V5_0
+-- Compiling module C_ADDSUB_V5_0
+-- Compiling module C_MUX_BIT_V5_0
+-- Compiling module C_ACCUM_V5_1
+-- Compiling module C_ACCUM_V5_0
+-- Compiling module PIPELINE_V5_0
+-- Compiling module C_SHIFT_FD_V5_0
+-- Compiling module C_REG_LD_V5_0
+-- Compiling module C_REG_FD_V5_0
+-- Compiling module C_COUNTER_BINARY_V5_0
+-- Compiling module C_MUX_SLICE_BUFT_V5_0
+-- Compiling module C_MUX_BUS_V5_0
+-- Compiling module C_GATE_BUS_V5_0
+-- Compiling module BLKMEMSP_V4_0
+-- Compiling module SYNC_FIFO_V5_0
+-- Compiling module MEM_BLK_V5_0
+-- Compiling module C_DIST_MEM_V5_0
+-- Compiling module DIST_MEM_GEN_V3_2
+-- Compiling module FIFO_GENERATOR_V3_3_XST
+-- Compiling module FIFO_GENERATOR_V3_3
+-- Compiling module fifo_generator_v3_3_bhv_ver_as
+-- Compiling module fifo_generator_v3_3_bhv_ver_ss
+-- Compiling module fifo_generator_v3_3_bhv_ver_preload0
+-- Compiling module DECODE_8B10B_V5_0
+-- Compiling module decode_8b10b_v5_0_base
+-- Compiling module pci_exp_4_lane_64b_dsport
+-- Compiling module pci_exp_1_lane_64b_dsport
+-- Compiling module DECODE_8B10B_V7_0
+-- Compiling module decode_8b10b_v7_0_base
+-- Compiling module DECODE_8B10B_V7_1
+-- Compiling module decode_8b10b_v7_1_base
+-- Compiling module DECODE_8B10B_V6_0
+-- Compiling module decode_8b10b_v6_0_base
+-- Compiling module ENCODE_8B10B_V4_0
+-- Compiling module encode_8b10b_v4_0_base
+-- Compiling module ENCODE_8B10B_V5_0
+-- Compiling module encode_8b10b_v5_0_base
+-- Compiling module TRIG_TABLE_V4_0
+-- Compiling module C_SIN_COS_V4_0
+-- Compiling module PIPE_BHV_V4_0
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(509561): `define true 1'b1
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(509561): [TMREN] - Redefinition of macro: true.
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(509562): `define false 1'b0
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(509562): [TMREN] - Redefinition of macro: false.
+-- Compiling module C_DA_FIR_V7_0
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(510725): `define allXs {C_WIDTH{1'bx}}
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(510725): [TMREN] - Redefinition of macro: allXs.
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(510726): `define all1s {C_WIDTH{1'b1}}
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(510726): [TMREN] - Redefinition of macro: all1s.
+-- Compiling module PIPE_BHV_V5_1
+-- Compiling module TRIG_TABLE_V5_1
+-- Compiling module C_SIN_COS_V5_1
+-- Compiling module DITHER_ADD_V4_0
+-- Compiling module C_DDS_V4_0
+-- Compiling module DITHER_V4_0
+-- Compiling module XFFT1024_V1_1
+-- Compiling module PE1
+-- Compiling module PE0
+-- Compiling module unbias_round
+-- Compiling module arithmetic_shift
+-- Compiling module cmplx_mult
+-- Compiling module signed_mult
+-- Compiling module dragonfly
+-- Compiling module butterfly
+-- Compiling module inverter
+-- Compiling module DDS_ROUND_V4_1
+-- Compiling module DITHER_ADD_V4_1
+-- Compiling module DITHER_V4_1
+-- Compiling module C_EFF_V4_1
+-- Compiling module C_DDS_V4_1
+-- Compiling module C_BIT_CORRELATOR_V3_0
+-- Compiling module TRIG_TABLE_V4_2
+-- Compiling module PIPE_BHV_V4_2
+-- Compiling module C_SIN_COS_V4_2
+-- Compiling module C_CIC_V3_0
+-- Compiling module C_SIN_COS_V5_0
+-- Compiling module PIPE_BHV_V5_0
+-- Compiling module TRIG_TABLE_V5_0
+-- Compiling module C_DA_1D_DCT_V2_1
+-- Compiling module C_DA_FIR_V8_0
+-- Compiling module C_DA_FIR_V6_0
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(519001): `define all0s 'b0
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(519001): [TMREN] - Redefinition of macro: all0s.
+-- Compiling module C_DA_2D_DCT_V2_0
+-- Compiling module C_DA_FIR_V9_0
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(520382): `define all0s {C_RESULT_WIDTH{1'b0}}
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(520382): [TMREN] - Redefinition of macro: all0s.
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(520384): `define MAX_NUMBER_SAMPLES 8          // Maximum number of samples that can be stored in the last input FIFO  
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(520384): [TMREN] - Redefinition of macro: MAX_NUMBER_SAMPLES.
+-- Compiling module TRIG_TABLE_V4_1
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(521544): `define allXs {C_WIDTH{1'bx}}
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(521544): [TMREN] - Redefinition of macro: allXs.
+###### /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(521545): `define all1s {C_WIDTH{1'b1}}
+** Warning: /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/XilinxCoreLib_ver_source.v(521545): [TMREN] - Redefinition of macro: all1s.
+-- Compiling module PIPE_BHV_V4_1
+-- Compiling module C_SIN_COS_V4_1
+
+Top level modules:
+	BLK_MEM_GEN_V2_2_xst
+	DIST_MEM_GEN_V3_1
+	CAM_V6_1
+	FIFO_GENERATOR_V4_2_XST
+	PIPELINE_V6_0
+	C_REG_LD_V6_0
+	C_ACCUM_V6_0
+	C_GATE_BUS_V6_0
+	C_SHIFT_RAM_V6_0
+	C_MUX_SLICE_BUFT_V6_0
+	C_DECODE_BINARY_V6_0
+	C_MUX_SLICE_BUFE_V6_0
+	C_COUNTER_BINARY_V6_0
+	C_TWOS_COMP_V6_0
+	C_GATE_BIT_BUS_V6_0
+	C_GATE_BIT_V6_0
+	ASYNC_FIFO_V6_1
+	C_DIST_MEM_V7_0
+	BLK_MEM_GEN_V2_3_xst
+	BLKMEMDP_V6_0
+	family
+	BLK_MEM_GEN_V2_7_xst
+	FIFO_GENERATOR_V2_0
+	BLKMEMSP_V5_0
+	C_DIST_MEM_V6_0
+	BLKMEMDP_V5_0
+	BLK_MEM_GEN_V2_4_xst
+	CAM_V5_0
+	CAM_V4_0
+	FIFO_GENERATOR_V3_1_XST
+	C_DIST_MEM_V5_1
+	BLKMEMSP_V6_1
+	C_SHIFT_FD_V4_0
+	PIPELINE_V4_0
+	C_TWOS_COMP_V4_0
+	C_GATE_BUS_V4_0
+	C_SHIFT_RAM_V4_0
+	C_MUX_SLICE_BUFT_V4_0
+	C_REG_LD_V4_0
+	C_MUX_SLICE_BUFE_V4_0
+	C_DECODE_BINARY_V4_0
+	C_GATE_BIT_BUS_V4_0
+	FIFO_GENERATOR_V2_2
+	ASYNC_FIFO_V5_0
+	BLKMEMSP_V3_2
+	C_GATE_BIT_BUS_V7_0
+	C_SHIFT_RAM_V7_0
+	C_MUX_SLICE_BUFT_V7_0
+	C_TWOS_COMP_V7_0
+	C_DECODE_BINARY_V7_0
+	C_GATE_BIT_V7_0
+	C_REG_LD_V7_0
+	C_COUNTER_BINARY_V7_0
+	C_MUX_SLICE_BUFE_V7_0
+	PIPELINE_V7_0
+	C_ACCUM_V7_0
+	C_GATE_BUS_V7_0
+	LFSR_V3_0
+	SYNC_FIFO_V4_0
+	FIFO_GENERATOR_V3_2_XST
+	FIFO_GENERATOR_V1_0
+	DIST_MEM_GEN_V1_1
+	C_DIST_MEM_V7_1
+	LFSR_V2_0
+	BLK_MEM_GEN_V2_6_xst
+	FIFO_GENERATOR_V2_3
+	FIFO_GENERATOR_V4_3_XST
+	BLKMEMSP_V6_2
+	C_MUX_SLICE_BUFT_V3_0
+	C_ACCUM_V3_0
+	C_REG_LD_V3_0
+	C_DIST_MEM_V3_0
+	PIPELINE_V3_0
+	C_GATE_BUS_V3_0
+	C_TWOS_COMP_V3_0
+	C_COUNTER_BINARY_V3_0
+	C_GATE_BIT_BUS_V3_0
+	C_DECODE_BINARY_V3_0
+	C_GATE_BIT_V3_0
+	C_SHIFT_FD_V3_0
+	C_SHIFT_RAM_V3_0
+	C_MUX_SLICE_BUFE_V3_0
+	BLKMEMDP_V6_3
+	FIFO_GENERATOR_V4_4_XST
+	BLKMEMDP_V6_1
+	C_DIST_MEM_V4_1
+	MULT_GEN_V6_0
+	ASYNC_FIFO_V5_1
+	BLKMEMDP_V3_2
+	C_DIST_MEM_V4_0
+	DIST_MEM_GEN_V3_3
+	ASYNC_FIFO_V4_0
+	eq_compare_v4
+	and_a_b_notc_v4
+	and_a_b_c_notd_v4
+	or_fd_v4
+	almost_reg_v4
+	xor_gate_bit_v4
+	MULT_GEN_V4_0
+	C_COUNTER_BINARY_V2_0
+	C_DIST_MEM_V2_0
+	C_TWOS_COMP_V2_0
+	C_GATE_BIT_V2_0
+	PIPELINE_V2_0
+	C_GATE_BUS_V2_0
+	C_ACCUM_V2_0
+	C_DECODE_BINARY_V2_0
+	C_REG_LD_V2_0
+	C_MUX_SLICE_BUFT_V2_0
+	C_SHIFT_RAM_V2_0
+	C_GATE_BIT_BUS_V2_0
+	C_MUX_SLICE_BUFE_V2_0
+	C_SHIFT_FD_V2_0
+	BLK_MEM_GEN_V2_5_xst
+	BLK_MEM_GEN_V2_1_xst
+	FIFO_GENERATOR_V2_1
+	SYNC_FIFO_V3_0
+	FIFO_GENERATOR_V1_1
+	DIST_MEM_GEN_V3_4_XST
+	BLKMEMSP_V6_0
+	BLK_MEM_GEN_V1_1_xst
+	DIST_MEM_GEN_V2_1
+	CAM_V5_1
+	BLK_MEM_GEN_V2_8_xst
+	FIFO_GENERATOR_V4_1_XST
+	MULT_GEN_V7_0
+	ASYNC_FIFO_V6_0
+	BLKMEMDP_V6_2
+	C_GATE_BIT_BUS_V5_0
+	C_DECODE_BINARY_V5_0
+	C_GATE_BIT_V5_0
+	C_MUX_SLICE_BUFE_V5_0
+	C_ACCUM_V5_1
+	PIPELINE_V5_0
+	C_REG_LD_V5_0
+	C_COUNTER_BINARY_V5_0
+	C_MUX_SLICE_BUFT_V5_0
+	C_GATE_BUS_V5_0
+	BLKMEMSP_V4_0
+	SYNC_FIFO_V5_0
+	DIST_MEM_GEN_V3_2
+	FIFO_GENERATOR_V3_3_XST
+	DECODE_8B10B_V5_0
+	pci_exp_4_lane_64b_dsport
+	pci_exp_1_lane_64b_dsport
+	DECODE_8B10B_V7_0
+	DECODE_8B10B_V7_1
+	DECODE_8B10B_V6_0
+	ENCODE_8B10B_V4_0
+	ENCODE_8B10B_V5_0
+	C_DA_FIR_V7_0
+	C_SIN_COS_V5_1
+	C_DDS_V4_0
+	XFFT1024_V1_1
+	C_DDS_V4_1
+	C_BIT_CORRELATOR_V3_0
+	C_SIN_COS_V4_2
+	C_CIC_V3_0
+	C_SIN_COS_V5_0
+	C_DA_FIR_V8_0
+	C_DA_FIR_V6_0
+	C_DA_2D_DCT_V2_0
+	C_DA_FIR_V9_0
+
+END_COMPILE:XilinxCoreLib
+
+==============================================================================
+
+    > Log file /opt/Xilinx/10.1/ISE/verilog/mti_se/XilinxCoreLib_ver/cxl_XilinxCoreLib.log generated
+    > Library mapping successful, setup file(s) modelsim.ini updated
+
+compxlib[XilinxCoreLib_ver]: No error(s), 9 warning(s)
+
+--> Compiling verilog simprim library
+    > Simprim compiled to /opt/Xilinx/10.1/ISE/verilog/mti_se/simprims_ver
+
+==============================================================================
+START_COMPILE simprim
+
+
+Modifying /opt/modelsim/modeltech/modelsim.ini
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module X_AFIFO36_INTERNAL
+-- Compiling module X_AND16
+-- Compiling module X_AND2
+-- Compiling module X_AND3
+-- Compiling module X_AND32
+-- Compiling module X_AND4
+-- Compiling module X_AND5
+-- Compiling module X_AND6
+-- Compiling module X_AND7
+-- Compiling module X_AND8
+-- Compiling module X_AND9
+-- Compiling module X_ARAMB36_INTERNAL
+-- Compiling module X_BPAD
+-- Compiling module X_BSCAN_FPGACORE
+-- Compiling module X_BSCAN_SPARTAN2
+-- Compiling module X_BSCAN_SPARTAN3
+-- Compiling module X_BSCAN_SPARTAN3A
+-- Compiling module X_BSCAN_VIRTEX
+-- Compiling module X_BSCAN_VIRTEX2
+-- Compiling module X_BSCAN_VIRTEX4
+-- Compiling module X_BSCAN_VIRTEX5
+-- Compiling module X_BUF
+-- Compiling module X_BUFGCTRL
+-- Compiling module X_BUFGMUX
+-- Compiling module X_BUFGMUX_1
+-- Compiling module X_BUFR
+-- Compiling module X_CARRY4
+-- Compiling module X_CKBUF
+-- Compiling module X_CLKDLL
+-- Compiling module x_clkdll_maximum_period_check
+-- Compiling module X_CLKDLLE
+-- Compiling module x_clkdlle_maximum_period_check
+-- Compiling module X_CLK_DIV
+-- Compiling module X_CRC32
+-- Compiling module X_CRC64
+-- Compiling module X_DCM
+-- Compiling module x_dcm_clock_divide_by_2
+-- Compiling module x_dcm_maximum_period_check
+-- Compiling module x_dcm_clock_lost
+-- Compiling module X_DCM_ADV
+-- Compiling module x_dcm_adv_clock_divide_by_2
+-- Compiling module x_dcm_adv_maximum_period_check
+-- Compiling module x_dcm_adv_clock_lost
+-- Compiling module X_DCM_SP
+-- Compiling module x_dcm_sp_clock_divide_by_2
+-- Compiling module x_dcm_sp_maximum_period_check
+-- Compiling module x_dcm_sp_clock_lost
+-- Compiling module X_DNA_PORT
+-- Compiling module X_DSP48
+-- Compiling module X_DSP48A
+-- Compiling module X_DSP48E
+-- Compiling module X_FDD
+-- Compiling UDP ffsrced
+-- Compiling module X_FDDRCPE
+-- Compiling module X_FDDRRSE
+-- Compiling module X_FF
+-- Compiling UDP ffsrce
+-- Compiling module X_FF_CPLD
+-- Compiling UDP ffsrcecpld
+-- Compiling module X_FIFO16
+-- Compiling module X_FIFO18
+-- Compiling module X_FIFO18_36
+-- Compiling module X_FIFO36_72_EXP
+-- Compiling module X_FIFO36_EXP
+-- Compiling module X_IBUFDS
+-- Compiling module X_IBUFDS_DLY_ADJ
+-- Compiling module X_IBUF_DLY_ADJ
+-- Compiling module X_IDDR
+-- Compiling module X_IDDR2
+-- Compiling module X_IDDR_2CLK
+-- Compiling module X_IDELAY
+-- Compiling module X_IDELAYCTRL
+-- Compiling module X_INV
+-- Compiling module X_IODELAY
+-- Compiling module X_IPAD
+-- Compiling module X_ISERDES
+-- Compiling module X_ISERDES_NODELAY
+-- Compiling module X_KEEPER
+-- Compiling module X_LATCH
+-- Compiling UDP latchsr
+-- Compiling module X_LATCHE
+-- Compiling UDP latchsre
+-- Compiling module X_LATCH_CPLD
+-- Compiling UDP latchsrcpld
+-- Compiling module X_LUT2
+-- Compiling UDP x_lut2_mux4
+-- Compiling module X_LUT3
+-- Compiling UDP x_lut3_mux4
+-- Compiling module X_LUT4
+-- Compiling module X_LUT5
+-- Compiling module X_LUT6
+-- Compiling module X_LUT6_2
+-- Compiling module X_LUT7
+-- Compiling UDP x_lut7_mux4
+-- Compiling module X_LUT8
+-- Compiling UDP x_lut8_mux4
+-- Compiling module X_MULT18X18
+-- Compiling module X_MULT18X18S
+-- Compiling module X_MULT18X18SIO
+-- Compiling module X_MUX2
+-- Compiling UDP mux
+-- Compiling module X_OBUF
+-- Compiling module X_OBUFDS
+-- Compiling module X_OBUFT
+-- Compiling module X_OBUFTDS
+-- Compiling module X_ODDR
+-- Compiling module X_ODDR2
+-- Compiling module X_ONE
+-- Compiling module X_OPAD
+-- Compiling module X_OR16
+-- Compiling module X_OR2
+-- Compiling module X_OR3
+-- Compiling module X_OR32
+-- Compiling module X_OR4
+-- Compiling module X_OR5
+-- Compiling module X_OR6
+-- Compiling module X_OR7
+-- Compiling module X_OR8
+-- Compiling module X_OR9
+-- Compiling module X_OSERDES
+-- Compiling module X_PD
+-- Compiling module X_PLL_ADV
+-- Compiling module X_PMCD
+-- Compiling module X_PU
+-- Compiling module X_RAM32M
+-- Compiling module X_RAM64M
+-- Compiling module X_RAMB16
+-- Compiling module X_RAMB16BWE
+-- Compiling module X_RAMB16BWER
+-- Compiling module X_RAMB16_S1
+-- Compiling module X_RAMB16_S18
+-- Compiling module X_RAMB16_S18_S18
+-- Compiling module X_RAMB16_S18_S36
+-- Compiling module X_RAMB16_S1_S1
+-- Compiling module X_RAMB16_S1_S18
+-- Compiling module X_RAMB16_S1_S2
+-- Compiling module X_RAMB16_S1_S36
+-- Compiling module X_RAMB16_S1_S4
+-- Compiling module X_RAMB16_S1_S9
+-- Compiling module X_RAMB16_S2
+-- Compiling module X_RAMB16_S2_S18
+-- Compiling module X_RAMB16_S2_S2
+-- Compiling module X_RAMB16_S2_S36
+-- Compiling module X_RAMB16_S2_S4
+-- Compiling module X_RAMB16_S2_S9
+-- Compiling module X_RAMB16_S36
+-- Compiling module X_RAMB16_S36_S36
+-- Compiling module X_RAMB16_S4
+-- Compiling module X_RAMB16_S4_S18
+-- Compiling module X_RAMB16_S4_S36
+-- Compiling module X_RAMB16_S4_S4
+-- Compiling module X_RAMB16_S4_S9
+-- Compiling module X_RAMB16_S9
+-- Compiling module X_RAMB16_S9_S18
+-- Compiling module X_RAMB16_S9_S36
+-- Compiling module X_RAMB16_S9_S9
+-- Compiling module X_RAMB18
+-- Compiling module X_RAMB18SDP
+-- Compiling module X_RAMB36SDP_EXP
+-- Compiling module X_RAMB36_EXP
+-- Compiling module X_RAMB4_S1
+-- Compiling module X_RAMB4_S16
+-- Compiling module X_RAMB4_S16_S16
+-- Compiling module X_RAMB4_S1_S1
+-- Compiling module X_RAMB4_S1_S16
+-- Compiling module X_RAMB4_S1_S2
+-- Compiling module X_RAMB4_S1_S4
+-- Compiling module X_RAMB4_S1_S8
+-- Compiling module X_RAMB4_S2
+-- Compiling module X_RAMB4_S2_S16
+-- Compiling module X_RAMB4_S2_S2
+-- Compiling module X_RAMB4_S2_S4
+-- Compiling module X_RAMB4_S2_S8
+-- Compiling module X_RAMB4_S4
+-- Compiling module X_RAMB4_S4_S16
+-- Compiling module X_RAMB4_S4_S4
+-- Compiling module X_RAMB4_S4_S8
+-- Compiling module X_RAMB4_S8
+-- Compiling module X_RAMB4_S8_S16
+-- Compiling module X_RAMB4_S8_S8
+-- Compiling module X_RAMD128
+-- Compiling module X_RAMD16
+-- Compiling module X_RAMD32
+-- Compiling module X_RAMD64
+-- Compiling module X_RAMD64_ADV
+-- Compiling module X_RAMS128
+-- Compiling module X_RAMS16
+-- Compiling module X_RAMS256
+-- Compiling module X_RAMS32
+-- Compiling module X_RAMS64
+-- Compiling module X_RAMS64_ADV
+-- Compiling module X_SFF
+-- Compiling UDP sffsrce
+-- Compiling module X_SIM_CONFIG_S3A
+-- Compiling module X_SIM_CONFIG_V5
+-- Compiling module X_SPI_ACCESS
+-- Compiling module X_SRL16E
+-- Compiling module X_SRLC16E
+-- Compiling module X_SRLC32E
+-- Compiling module X_SUH
+-- Compiling module X_SYSMON
+-- Compiling module X_TRI
+-- Compiling module X_UPAD
+-- Compiling module X_XOR16
+-- Compiling module X_XOR2
+-- Compiling module X_XOR3
+-- Compiling module X_XOR32
+-- Compiling module X_XOR4
+-- Compiling module X_XOR5
+-- Compiling module X_XOR6
+-- Compiling module X_XOR7
+-- Compiling module X_XOR8
+-- Compiling module X_ZERO
+
+Top level modules:
+	X_AND16
+	X_AND2
+	X_AND3
+	X_AND32
+	X_AND4
+	X_AND5
+	X_AND6
+	X_AND7
+	X_AND8
+	X_AND9
+	X_BPAD
+	X_BSCAN_FPGACORE
+	X_BSCAN_SPARTAN2
+	X_BSCAN_SPARTAN3
+	X_BSCAN_SPARTAN3A
+	X_BSCAN_VIRTEX
+	X_BSCAN_VIRTEX2
+	X_BSCAN_VIRTEX4
+	X_BSCAN_VIRTEX5
+	X_BUF
+	X_BUFGCTRL
+	X_BUFGMUX
+	X_BUFGMUX_1
+	X_BUFR
+	X_CARRY4
+	X_CKBUF
+	X_CLKDLL
+	X_CLKDLLE
+	X_CLK_DIV
+	X_CRC32
+	X_CRC64
+	X_DCM
+	X_DCM_ADV
+	X_DCM_SP
+	X_DNA_PORT
+	X_DSP48
+	X_DSP48A
+	X_DSP48E
+	X_FDD
+	X_FDDRCPE
+	X_FDDRRSE
+	X_FF
+	X_FF_CPLD
+	X_FIFO16
+	X_FIFO18
+	X_FIFO18_36
+	X_FIFO36_72_EXP
+	X_FIFO36_EXP
+	X_IBUFDS
+	X_IBUFDS_DLY_ADJ
+	X_IBUF_DLY_ADJ
+	X_IDDR
+	X_IDDR2
+	X_IDDR_2CLK
+	X_IDELAY
+	X_IDELAYCTRL
+	X_INV
+	X_IODELAY
+	X_IPAD
+	X_ISERDES
+	X_ISERDES_NODELAY
+	X_KEEPER
+	X_LATCH
+	X_LATCHE
+	X_LATCH_CPLD
+	X_LUT2
+	X_LUT3
+	X_LUT4
+	X_LUT5
+	X_LUT6
+	X_LUT6_2
+	X_LUT7
+	X_LUT8
+	X_MULT18X18
+	X_MULT18X18S
+	X_MULT18X18SIO
+	X_MUX2
+	X_OBUF
+	X_OBUFDS
+	X_OBUFT
+	X_OBUFTDS
+	X_ODDR
+	X_ODDR2
+	X_ONE
+	X_OPAD
+	X_OR16
+	X_OR2
+	X_OR3
+	X_OR32
+	X_OR4
+	X_OR5
+	X_OR6
+	X_OR7
+	X_OR8
+	X_OR9
+	X_OSERDES
+	X_PD
+	X_PLL_ADV
+	X_PMCD
+	X_PU
+	X_RAM32M
+	X_RAM64M
+	X_RAMB16
+	X_RAMB16BWE
+	X_RAMB16BWER
+	X_RAMB16_S1
+	X_RAMB16_S18
+	X_RAMB16_S18_S18
+	X_RAMB16_S18_S36
+	X_RAMB16_S1_S1
+	X_RAMB16_S1_S18
+	X_RAMB16_S1_S2
+	X_RAMB16_S1_S36
+	X_RAMB16_S1_S4
+	X_RAMB16_S1_S9
+	X_RAMB16_S2
+	X_RAMB16_S2_S18
+	X_RAMB16_S2_S2
+	X_RAMB16_S2_S36
+	X_RAMB16_S2_S4
+	X_RAMB16_S2_S9
+	X_RAMB16_S36
+	X_RAMB16_S36_S36
+	X_RAMB16_S4
+	X_RAMB16_S4_S18
+	X_RAMB16_S4_S36
+	X_RAMB16_S4_S4
+	X_RAMB16_S4_S9
+	X_RAMB16_S9
+	X_RAMB16_S9_S18
+	X_RAMB16_S9_S36
+	X_RAMB16_S9_S9
+	X_RAMB18
+	X_RAMB18SDP
+	X_RAMB36SDP_EXP
+	X_RAMB36_EXP
+	X_RAMB4_S1
+	X_RAMB4_S16
+	X_RAMB4_S16_S16
+	X_RAMB4_S1_S1
+	X_RAMB4_S1_S16
+	X_RAMB4_S1_S2
+	X_RAMB4_S1_S4
+	X_RAMB4_S1_S8
+	X_RAMB4_S2
+	X_RAMB4_S2_S16
+	X_RAMB4_S2_S2
+	X_RAMB4_S2_S4
+	X_RAMB4_S2_S8
+	X_RAMB4_S4
+	X_RAMB4_S4_S16
+	X_RAMB4_S4_S4
+	X_RAMB4_S4_S8
+	X_RAMB4_S8
+	X_RAMB4_S8_S16
+	X_RAMB4_S8_S8
+	X_RAMD128
+	X_RAMD16
+	X_RAMD32
+	X_RAMD64
+	X_RAMD64_ADV
+	X_RAMS128
+	X_RAMS16
+	X_RAMS256
+	X_RAMS32
+	X_RAMS64
+	X_RAMS64_ADV
+	X_SFF
+	X_SIM_CONFIG_S3A
+	X_SIM_CONFIG_V5
+	X_SPI_ACCESS
+	X_SRL16E
+	X_SRLC16E
+	X_SRLC32E
+	X_SUH
+	X_SYSMON
+	X_TRI
+	X_UPAD
+	X_XOR16
+	X_XOR2
+	X_XOR3
+	X_XOR32
+	X_XOR4
+	X_XOR5
+	X_XOR6
+	X_XOR7
+	X_XOR8
+	X_ZERO
+
+END_COMPILE:simprim
+
+==============================================================================
+
+    > Log file /opt/Xilinx/10.1/ISE/verilog/mti_se/simprims_ver/cxl_simprim.log generated
+    > Library mapping successful, setup file(s) modelsim.ini updated
+
+compxlib[simprims_ver]: No error(s), no warning(s)
+MTI => Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+
+--> Compiling verilog smartmodel(unisim) library
+    > configuring SWIFT Interface in '/opt/modelsim/modeltech/modelsim.ini' file ...
+    > SWIFT Interface configured in '/opt/modelsim/modeltech/modelsim.ini' file
+    > Unisim Smart-Models compiled to /opt/Xilinx/10.1/ISE/verilog/mti_se/unisims_ver
+
+==============================================================================
+Modifying /opt/modelsim/modeltech/modelsim.ini
+
+START_COMPILE:smartmodel(unisim)
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module DCC_FPGACORE_SWIFT
+-- Compiling module DCC_FPGACORE_SWIFT_BIT
+-- Compiling module EMAC_SWIFT
+-- Compiling module EMAC_SWIFT_BIT
+-- Compiling module GT10_SWIFT
+-- Compiling module GT10_SWIFT_BIT
+-- Compiling module GT11_SWIFT
+-- Compiling module GT11_SWIFT_BIT
+-- Compiling module GTP_DUAL_FAST
+-- Compiling module GTP_DUAL_FAST_BIT
+-- Compiling module GTP_DUAL_SWIFT
+-- Compiling module GTP_DUAL_SWIFT_BIT
+-- Compiling module GTX_DUAL_FAST
+-- Compiling module GTX_DUAL_FAST_BIT
+-- Compiling module GTX_DUAL_SWIFT
+-- Compiling module GTX_DUAL_SWIFT_BIT
+-- Compiling module GT_SWIFT
+-- Compiling module GT_SWIFT_BIT
+-- Compiling module PCIE_INTERNAL_1_1_SWIFT
+-- Compiling module PCIE_INTERNAL_1_1_SWIFT_BIT
+-- Compiling module PPC405_ADV_SWIFT
+-- Compiling module PPC405_ADV_SWIFT_BIT
+-- Compiling module PPC405_SWIFT
+-- Compiling module PPC405_SWIFT_BIT
+-- Compiling module PPC440_SWIFT
+-- Compiling module PPC440_SWIFT_BIT
+-- Compiling module TEMAC_SWIFT
+-- Compiling module TEMAC_SWIFT_BIT
+
+Top level modules:
+	DCC_FPGACORE_SWIFT
+	EMAC_SWIFT
+	GT10_SWIFT
+	GT11_SWIFT
+	GTP_DUAL_FAST
+	GTP_DUAL_SWIFT
+	GTX_DUAL_FAST
+	GTX_DUAL_SWIFT
+	GT_SWIFT
+	PCIE_INTERNAL_1_1_SWIFT
+	PPC405_ADV_SWIFT
+	PPC405_SWIFT
+	PPC440_SWIFT
+	TEMAC_SWIFT
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module DCC_FPGACORE
+-- Compiling module EMAC
+-- Compiling module GT
+-- Compiling module GT10
+-- Compiling module GT10_10GE_4
+-- Compiling module GT10_10GE_8
+-- Compiling module GT10_10GFC_4
+-- Compiling module GT10_10GFC_8
+-- Compiling module GT10_AURORAX_4
+-- Compiling module GT10_AURORAX_8
+-- Compiling module GT10_AURORA_1
+-- Compiling module GT10_AURORA_2
+-- Compiling module GT10_AURORA_4
+-- Compiling module GT10_CUSTOM
+-- Compiling module GT10_INFINIBAND_1
+-- Compiling module GT10_INFINIBAND_2
+-- Compiling module GT10_INFINIBAND_4
+-- Compiling module GT10_OC192_4
+-- Compiling module GT10_OC192_8
+-- Compiling module GT10_OC48_1
+-- Compiling module GT10_OC48_2
+-- Compiling module GT10_OC48_4
+-- Compiling module GT10_PCI_EXPRESS_1
+-- Compiling module GT10_PCI_EXPRESS_2
+-- Compiling module GT10_PCI_EXPRESS_4
+-- Compiling module GT10_XAUI_1
+-- Compiling module GT10_XAUI_2
+-- Compiling module GT10_XAUI_4
+-- Compiling module GT11
+-- Compiling module GT11CLK
+-- Compiling module GT11CLK_MGT
+-- Compiling module GT11_CUSTOM
+-- Compiling module GT11_DUAL
+-- Compiling module GTP_DUAL
+-- Compiling module GTX_DUAL
+-- Compiling module GT_AURORA_1
+-- Compiling module GT_AURORA_2
+-- Compiling module GT_AURORA_4
+-- Compiling module GT_CUSTOM
+-- Compiling module GT_ETHERNET_1
+-- Compiling module GT_ETHERNET_2
+-- Compiling module GT_ETHERNET_4
+-- Compiling module GT_FIBRE_CHAN_1
+-- Compiling module GT_FIBRE_CHAN_2
+-- Compiling module GT_FIBRE_CHAN_4
+-- Compiling module GT_INFINIBAND_1
+-- Compiling module GT_INFINIBAND_2
+-- Compiling module GT_INFINIBAND_4
+-- Compiling module GT_XAUI_1
+-- Compiling module GT_XAUI_2
+-- Compiling module GT_XAUI_4
+-- Compiling module JTAGPPC440
+-- Compiling module PCIE_EP
+-- Compiling module PCIE_INTERNAL_1_1
+-- Compiling module PPC405
+-- Compiling module FPGA_startup
+-- Compiling module PPC405_ADV
+-- Compiling module FPGA_startup_VIRTEX4
+-- Compiling module PPC440
+-- Compiling module TEMAC
+
+Top level modules:
+	DCC_FPGACORE
+	EMAC
+	GT10_10GE_4
+	GT10_10GE_8
+	GT10_10GFC_4
+	GT10_10GFC_8
+	GT10_AURORAX_4
+	GT10_AURORAX_8
+	GT10_AURORA_1
+	GT10_AURORA_2
+	GT10_AURORA_4
+	GT10_CUSTOM
+	GT10_INFINIBAND_1
+	GT10_INFINIBAND_2
+	GT10_INFINIBAND_4
+	GT10_OC192_4
+	GT10_OC192_8
+	GT10_OC48_1
+	GT10_OC48_2
+	GT10_OC48_4
+	GT10_PCI_EXPRESS_1
+	GT10_PCI_EXPRESS_2
+	GT10_PCI_EXPRESS_4
+	GT10_XAUI_1
+	GT10_XAUI_2
+	GT10_XAUI_4
+	GT11CLK
+	GT11CLK_MGT
+	GT11_CUSTOM
+	GT11_DUAL
+	GTP_DUAL
+	GTX_DUAL
+	GT_AURORA_1
+	GT_AURORA_2
+	GT_AURORA_4
+	GT_CUSTOM
+	GT_ETHERNET_1
+	GT_ETHERNET_2
+	GT_ETHERNET_4
+	GT_FIBRE_CHAN_1
+	GT_FIBRE_CHAN_2
+	GT_FIBRE_CHAN_4
+	GT_INFINIBAND_1
+	GT_INFINIBAND_2
+	GT_INFINIBAND_4
+	GT_XAUI_1
+	GT_XAUI_2
+	GT_XAUI_4
+	JTAGPPC440
+	PCIE_EP
+	PPC405
+	PPC405_ADV
+	PPC440
+	TEMAC
+
+END_COMPILE:smartmodel(unisim)
+
+==============================================================================
+
+    > Log file /opt/Xilinx/10.1/ISE/verilog/mti_se/unisims_ver/cxl_smartmodel.log generated
+    > Library mapping successful, setup file(s) modelsim.ini updated
+
+compxlib[smartmodel]: No error(s), no warning(s)
+
+--> Compiling verilog smartmodel(simprim) library
+    > configuring SWIFT Interface in '/opt/modelsim/modeltech/modelsim.ini' file ...
+    > SWIFT Interface configured in '/opt/modelsim/modeltech/modelsim.ini' file
+    > Simprim Smart-Models compiled to /opt/Xilinx/10.1/ISE/verilog/mti_se/simprims_ver
+
+==============================================================================
+Modifying /opt/modelsim/modeltech/modelsim.ini
+
+START_COMPILE:smartmodel(simprim)
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module DCC_FPGACORE_SWIFT
+-- Compiling module DCC_FPGACORE_SWIFT_BIT
+-- Compiling module EMAC_SWIFT
+-- Compiling module EMAC_SWIFT_BIT
+-- Compiling module GT10_SWIFT
+-- Compiling module GT10_SWIFT_BIT
+-- Compiling module GT11_SWIFT
+-- Compiling module GT11_SWIFT_BIT
+-- Compiling module GTP_DUAL_FAST
+-- Compiling module GTP_DUAL_FAST_BIT
+-- Compiling module GTP_DUAL_SWIFT
+-- Compiling module GTP_DUAL_SWIFT_BIT
+-- Compiling module GTX_DUAL_FAST
+-- Compiling module GTX_DUAL_FAST_BIT
+-- Compiling module GTX_DUAL_SWIFT
+-- Compiling module GTX_DUAL_SWIFT_BIT
+-- Compiling module GT_SWIFT
+-- Compiling module GT_SWIFT_BIT
+-- Compiling module PCIE_INTERNAL_1_1_SWIFT
+-- Compiling module PCIE_INTERNAL_1_1_SWIFT_BIT
+-- Compiling module PPC405_ADV_SWIFT
+-- Compiling module PPC405_ADV_SWIFT_BIT
+-- Compiling module PPC405_SWIFT
+-- Compiling module PPC405_SWIFT_BIT
+-- Compiling module PPC440_SWIFT
+-- Compiling module PPC440_SWIFT_BIT
+-- Compiling module TEMAC_SWIFT
+-- Compiling module TEMAC_SWIFT_BIT
+
+Top level modules:
+	DCC_FPGACORE_SWIFT
+	EMAC_SWIFT
+	GT10_SWIFT
+	GT11_SWIFT
+	GTP_DUAL_FAST
+	GTP_DUAL_SWIFT
+	GTX_DUAL_FAST
+	GTX_DUAL_SWIFT
+	GT_SWIFT
+	PCIE_INTERNAL_1_1_SWIFT
+	PPC405_ADV_SWIFT
+	PPC405_SWIFT
+	PPC440_SWIFT
+	TEMAC_SWIFT
+
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module X_EMAC
+-- Compiling module X_GT
+-- Compiling module X_GT10
+-- Compiling module X_GT11
+-- Compiling module X_GT11CLK
+-- Compiling module X_GTP_DUAL
+-- Compiling module X_GTX_DUAL
+-- Compiling module X_PCIE_INTERNAL_1_1
+-- Compiling module X_PPC405
+-- Compiling module FPGA_startup
+-- Compiling module X_PPC405_ADV
+-- Compiling module FPGA_startup_VIRTEX4
+-- Compiling module X_PPC440
+-- Compiling module X_TEMAC
+
+Top level modules:
+	X_EMAC
+	X_GT
+	X_GT10
+	X_GT11
+	X_GT11CLK
+	X_GTP_DUAL
+	X_GTX_DUAL
+	X_PCIE_INTERNAL_1_1
+	X_PPC405
+	X_PPC405_ADV
+	X_PPC440
+	X_TEMAC
+
+END_COMPILE:smartmodel(simprim)
+
+==============================================================================
+
+    > Log file /opt/Xilinx/10.1/ISE/verilog/mti_se/simprims_ver/cxl_smartmodel.log generated
+    > Library mapping successful, setup file(s) modelsim.ini updated
+
+compxlib[smartmodel]: No error(s), no warning(s)
+
+**************************************************************************
+*                         COMPILATION SUMMARY                            *
+*                                                                        *
+*  Simulator used: mti_se                                                *
+*  Compiled on: Mon Nov 30 16:03:55 2009                                 *
+*                                                                        *
+**************************************************************************
+*     Library      |  Lang   |  Mapped Name(s)   | Err#(s)  |  Warn#(s)  *
+*------------------------------------------------------------------------*
+*  unisim          | verilog | unisims_ver       | 0        | 0          *
+*------------------------------------------------------------------------*
+*  unimacro        | verilog | unimacro_ver      | 0        | 0          *
+*------------------------------------------------------------------------*
+*  XilinxCoreLib   | verilog | XilinxCoreLib_ver | 0        | 9          *
+*------------------------------------------------------------------------*
+*  simprim         | verilog | simprims_ver      | 0        | 0          *
+*------------------------------------------------------------------------*
+*  smartmodel      | verilog | unisims_ver       | 0        | 0          *
+*------------------------------------------------------------------------*
+*  smartmodel      | verilog | simprims_ver      | 0        | 0          *
+*------------------------------------------------------------------------*

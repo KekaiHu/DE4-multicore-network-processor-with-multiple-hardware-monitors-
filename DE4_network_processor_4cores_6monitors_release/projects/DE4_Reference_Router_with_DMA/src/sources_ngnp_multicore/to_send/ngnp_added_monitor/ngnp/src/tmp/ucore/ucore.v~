@@ -1,0 +1,731 @@
+/////////////////////////////////////////////////////////////////////
+////  Author: Zhangfeifei                                        ////
+////                                                             ////
+////  Advance Test Technology Laboratory,                        ////
+////  Institute of Computing Technology,                         ////
+////  Chinese Academy of Sciences                                ////
+////                                                             ////
+////  If you encountered any problem, please contact :           ////
+////  Email: zhangfeifei@ict.ac.cn or whitewill@opencores.org    ////
+////  Tel: +86-10-6256 5533 ext. 5673                            ////
+////                                                             ////
+////  Downloaded from:                                           ////
+////     http://www.opencores.org/pdownloads.cgi/list/ucore      ////
+/////////////////////////////////////////////////////////////////////
+////                                                             ////
+//// Copyright (C) 2005-2006 Zhangfeifei                         ////
+////                         zhangfeifei@ict.ac.cn               ////
+////                                                             ////
+////                                                             ////
+//// This source file may be used and distributed freely without ////
+//// restriction provided that this copyright statement is not   ////
+//// removed from the file and any derivative work contains the  ////
+//// original copyright notice and the associated disclaimer.    ////
+////                                                             ////
+//// Please let the author know if it is used                    ////
+//// for commercial purpose.                                     ////
+////                                                             ////
+////     THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY     ////
+//// EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED   ////
+//// TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS   ////
+//// FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL THE AUTHOR      ////
+//// OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,         ////
+//// INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES    ////
+//// (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE   ////
+//// GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR        ////
+//// BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF  ////
+//// LIABILITY, WHETHER IN  CONTRACT, STRICT LIABILITY, OR TORT  ////
+//// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT  ////
+//// OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE         ////
+//// POSSIBILITY OF SUCH DAMAGE.                                 ////
+////                                                             ////
+/////////////////////////////////////////////////////////////////////
+////                                                             ////
+////                                                             ////
+//// Date of Creation: 2005.12.3                                 ////
+////                                                             ////
+//// Version: 0.0.1                                              ////
+////                                                             ////
+//// Description: top level module of ucore processor            ////
+////                                                             ////
+/////////////////////////////////////////////////////////////////////
+////                                                             ////
+//// Change log:                                                 ////
+////                                                             ////
+/////////////////////////////////////////////////////////////////////
+
+
+`include "ucore_defines.v"
+ 
+module ucore 
+  (
+   clk_i,rst_i,
+
+   //with inst mem
+   imem_cyc_o,imem_stb_o,imem_addr_o,imem_ack_i,imem_inst_i,
+ 
+   //with data mem
+   dmem_cyc_o,dmem_stb_o,dmem_we_o,dmem_bwsel_o,dmem_raddr_o,
+   dmem_waddr_o,dmem_data_o,dmem_data_i,dmem_ack_i, 
+   
+   // Hardware interruption
+   it_hw_i,
+   // unmaskable hardware interruption
+   nmi_i
+   `ifdef DEBUG
+   ,
+   ena,porta,douta,
+   enb,portb,doutb,
+   enc,portc,dinc
+   `endif
+   );
+ 
+  input clk_i;
+  input rst_i;
+  
+  //with inst mem
+  output        imem_cyc_o; 
+  output        imem_stb_o; 
+  output [31:0] imem_addr_o; 
+  input         imem_ack_i; 
+  input  [31:0] imem_inst_i;
+  
+  //with data mem
+  output        dmem_cyc_o; 
+  output        dmem_stb_o; 
+  output        dmem_we_o; 
+  output [3:0]  dmem_bwsel_o; 
+  output [31:0] dmem_raddr_o; 
+  output [31:0] dmem_waddr_o; 
+  output [31:0] dmem_data_o; 
+  input  [31:0] dmem_data_i;
+  input         dmem_ack_i; 
+  
+  // Hardware interruption
+  input  [`HW_IT_NUM-1:0] it_hw_i;
+  // unmaskable hardware interruption
+  input         nmi_i;
+  
+  `ifdef DEBUG
+   output       ena,enb,enc;
+   output [5:0]  porta,portb,portc;
+   output [31:0] douta,doutb,dinc; 
+  `endif
+  //signals gererated by if stage
+  wire        F2C_req;
+  wire [31:0] F2C_addr;                 // Address to read in memory
+  wire [31:0] IF_addr;                  // Address from the read instruction
+  wire        IF_it_ok;                 // Allow hardware interruptions
+  wire        IF_bra_target;
+  
+  //signals gererated by id stage
+  wire        ID_inst_valid;
+  wire        ID_bra_target;
+  wire [31:0] ID_inst;
+  wire [31:0] ID_addr;
+  wire        ID_bra;
+  wire        ID_jmp;
+  wire        ID_jr;
+  wire        ID_link;      // A link for that instruction
+  wire [`ALU_CTRL_WIDTH-1:0] ID_alu_code;     // Alu operation 
+  wire ID_imm_sela,ID_use_rega,ID_cop_rega,ID_imm_selb,ID_use_regb,ID_cop_regb;
+  wire [`REG_ADDR_WIDTH-1:0] ID_reg_waddr;// Addr of the desti register of the result
+  wire ID_reg_we;          // Effective writing of the result                       
+  wire ID_op_mem;           // Memory operation request                              
+  wire ID_mem_we;              // Type of memory operation (reading or writing)
+  wire [6:0] ID_mem_optype;
+  wire [`EXC_TYPE_WIDTH-1:0] ID_exc_type;    // Potential exception detected
+  wire [1:0] ID_level;       // Availability of the result for the data bypass        
+  wire ID_it_ok;            // Allow hardware interruptions
+  wire ID_ds;
+  //asynthonous signals to bypass
+  wire [`REG_ADDR_WIDTH-1:0] ID_reg_addra,ID_reg_addrb;
+  wire ID_use_rega_AS,ID_use_regb_AS;
+ 
+  //signals generate by rf stage
+  wire [31:0] RF_inst;
+  wire [31:0] RF_addr;
+  wire [31:0] RF_addrA4;
+  wire RF_bra;              // Branch decoded
+  wire RF_jmp;
+  wire RF_jr;
+  wire RF_link;             // A link for that instruction                           
+  wire [`ALU_CTRL_WIDTH-1:0] RF_alu_code;     // Alu operation 
+  wire [31:0] RF_op1;                  // operand 1 for alu
+  wire [31:0] RF_op2;                  // operand 2 for alu 
+  wire [`REG_ADDR_WIDTH-1:0] RF_reg_waddr;//Addr of the dest register of the result
+  wire RF_reg_we;          // Effective writing of the result                       
+  wire [1:0] RF_level;      // Availability of the result for the data bypass        
+  wire RF_op_mem;           // Memory operation request                              
+  wire RF_mem_we;              // Type of memory operation (reading or writing)
+  wire [6:0] RF_mem_optype;
+  wire [1:0] RF_mem_baddr;
+  wire [`EXC_TYPE_WIDTH-1:0] RF_exc_type;         // Potential exception detected
+  wire RF_it_ok;            // Allow hardware interruptions
+  wire RF_ds;
+  wire RF_depra,RF_deprb;
+  
+  //signals generateed by EX
+  wire [31:0] EX_inst;
+  wire [31:0] EX_addr;
+  wire        EX_bra_confirm;
+  wire [31:0] EX_bra_addr;
+  
+  wire [31:0] EX_reg_data;
+  wire [`REG_ADDR_WIDTH-1:0] EX_reg_waddr;
+  wire        EX_reg_we;
+  wire [`LEVEL_TYPE_WIDTH-1:0] EX_level;
+ 
+  wire        EX_mem_req;
+  wire        EX_mem_we;
+  wire [6:0]  EX_mem_optype;
+  wire [31:0] EX_mem_data;
+  wire [31:0] EX_mem_addr;
+  wire [3:0]  EX_mem_bwsel;
+  wire [1:0]  EX_mem_baddr;
+  wire [31:0] EX_op2;
+  wire [`EXC_TYPE_WIDTH-1:0]  EX_exc_type;
+  wire        EX_it_ok;
+  wire        EX_ds;
+  wire        EX_rdy;
+  wire        EX_depra,EX_deprb,EX_reg_rdy;
+ 
+  //signals generateed by MEM
+  wire [31:0] MEM_inst;
+  wire [31:0] MEM_addr;
+  wire        MEM_mem_req;
+  wire        MEM_mem_we;
+  wire [31:0] MEM_mem_data;
+  wire [31:0] MEM_mem_addr;
+  wire [3:0]  MEM_mem_bwsel;
+
+  wire        MEM_op_mem;
+  wire [6:0]  M2W_mem_optype;
+  wire [1:0]  MEM_mem_baddr;
+  wire [31:0] MEM_op2;
+  wire [31:0] MEM_reg_data;
+  wire [`REG_ADDR_WIDTH-1:0] MEM_reg_waddr;
+  wire        MEM_reg_we;
+  wire [`LEVEL_TYPE_WIDTH-1:0] MEM_level;
+  wire [`EXC_TYPE_WIDTH-1:0]  MEM_exc_type;
+  wire        MEM_it_ok;
+  wire        MEM_depra,MEM_deprb,MEM_reg_rdy;
+  wire        M2C_mem_we;
+  wire        MEM_ds;
+  
+  //signals generated by wb stage
+  wire [31:0] WB_reg_data;
+  wire [`REG_ADDR_WIDTH-1:0] WB_reg_waddr;
+  wire        WB_reg_we;
+  wire        WB_depra,WB_deprb;
+  
+  //signals generted by mem ctrl module
+  wire        CTRL_dmem_rdy;
+  wire        CTRL_imem_rdy;
+  wire [31:0] CTRL_mem_data;
+  wire [31:0] CTRL_inst;               // Instruction from the memory
+
+  //signals generated by cop0
+  wire        COP0_interrupt;
+  wire        COP0_interrupt_confirm;
+  wire [31:0] COP0_interrupt_vect;
+  wire [31:0] COP0_reg_wdata;
+  wire [`REG_ADDR_WIDTH-1-1:0]  COP0_reg_waddr;
+  wire        COP0_reg_we;
+  wire [`REG_ADDR_WIDTH-1-1:0]  COP0_reg_raddr;
+  wire        COP0_reg_re;
+    
+  //signals generated by bypass
+  wire [`REG_ADDR_WIDTH-1:0] BP_reg_raddra;
+  wire [`REG_ADDR_WIDTH-1:0] BP_reg_raddrb;
+  wire        BP_use_rega;
+  wire        BP_use_regb;
+  
+  wire [31:0] BP2COP0_data; 
+  wire [31:0] BP_dataa,BP_datab;
+  wire        alea ;         // Unresolved hazards detected    
+ 
+  //register bank signal
+  wire        ena,enb,enc;
+  wire [5:0]  porta,portb,portc;                // Address of the first register to read
+  wire [31:0] douta,doutb,dinc;          // Value of operand 1 from the internal registers
+ 
+  //wire PR_bra_cmd;                     // Defined a branch
+  //wire PR_bra_bad;                     // Defined a branch to restore from a bad prediction
+  //wire [31:0] PR_bra_adr; // New PC
+  //wire PR_clear_IF;                       // Clear the pipeline stage : IF
+  //wire PR_clear_ID;                       // Clear the pipeline stage : ID
+  
+  pps_if my_if 
+    (
+     .clk_i      (clk_i),
+     .rst_i      (rst_i),
+     .alea_i     (alea),           // Unresolved detected : send nop in the pipeline
+ 
+     .dmem_rdy_i (CTRL_dmem_rdy),
+     .imem_rdy_i (CTRL_imem_rdy),
+     .EX_rdy_i   (EX_rdy),
+ 
+     .bra_i      (EX_bra_confirm),
+     .bra_addr_i (EX_bra_addr),        // Branch
+     
+     .exc_i      (COP0_interrupt),     // Exception occur
+     .exc_confirm_i(COP0_interrupt_confirm),//Exception vector send
+     .exc_addr_i (COP0_interrupt_vect),// Exception vector
+     
+     // interface Controler - IF
+     .CTRL_addr_o(F2C_addr),           // Address to read in memory                     
+     .CTRL_req_o (F2C_req),
+     
+     // Synchronous outputs to ID stage
+     .ID_addr_o  (IF_addr),           // Address from the read instruction
+     .ID_it_ok_o (IF_it_ok),        // Allow hardware interruptions
+     .ID_bra_target_o (IF_bra_target)
+     );
+   
+  pps_id my_id
+    (
+     .clk_i         (clk_i),
+     .rst_i         (rst_i),
+ 
+     .alea_i        (alea),           // Unresolved detected : send nop in the pipeline
+     .dmem_rdy_i    (CTRL_dmem_rdy),
+     .imem_rdy_i    (CTRL_imem_rdy),
+     .EX_rdy_i      (EX_rdy),
+      
+     // Datas from IF stage
+     .IF_addr_i     (IF_addr),                   // Address of the instruction
+     .IF_it_ok_i    (IF_it_ok),               // Allow hardware interruptions
+     .IF_bra_target_i(IF_bra_target),
+     .CTRL_inst_i   (CTRL_inst),               // The instruction to decode
+     
+     // Synchronous output to EX stage
+     .RF_bra_target_o(ID_bra_target),
+     .RF_inst_valid_o(ID_inst_valid),
+     .RF_inst_o     (ID_inst),
+     .RF_addr_o     (ID_addr),
+          
+     //reg access signal
+     .RF_imm_sela_o (ID_imm_sela),
+     .RF_use_rega_o (ID_use_rega),
+     .RF_cop_rega_o (ID_cop_rega),
+     .RF_imm_selb_o (ID_imm_selb),
+     .RF_use_regb_o (ID_use_regb),
+     .RF_cop_regb_o (ID_cop_regb),
+     .RF_reg_waddr_o(ID_reg_waddr),
+     .RF_reg_we_o   (ID_reg_we),
+     .RF_level_o    (ID_level),
+     //other signals
+     .RF_bra_o      (ID_bra),
+     .RF_jmp_o      (ID_jmp),
+     .RF_jr_o       (ID_jr),
+     .RF_link_o     (ID_link),
+     .RF_alu_code_o (ID_alu_code),
+     .RF_op_mem_o   (ID_op_mem),
+     .RF_mem_we_o   (ID_mem_we),
+     .RF_mem_optype_o(ID_mem_optype),
+     .RF_exc_type_o (ID_exc_type),
+     .RF_it_ok_o    (ID_it_ok),
+     .RF_ds_o       (ID_ds),
+     
+     //to bypass
+     .BP_reg_addra_o(ID_reg_addra),
+     .BP_reg_addrb_o(ID_reg_addrb),
+     .BP_use_rega_o (ID_use_rega_AS),
+     .BP_use_regb_o (ID_use_regb_AS)
+     );
+  
+  pps_rf my_rf
+    (
+     .clk_i           (clk_i),
+     .rst_i           (rst_i),
+ 
+     .alea_i          (alea),           // Unresolved detected : send nop in the pipeline
+     .dmem_rdy_i      (CTRL_dmem_rdy),
+     .EX_rdy_i        (EX_rdy),
+ 
+     .COP0_interrupt_i(COP0_interrupt),
+     .EX_bra_confirm_i(EX_bra_confirm),
+     
+     //Synchronous input from id stage
+     .ID_bra_target_i (ID_bra_target),
+     .ID_inst_valid_i (ID_inst_valid),
+     .ID_addr_i       (ID_addr),
+     .ID_inst_i       (ID_inst),
+          
+     //reg access signal
+     .ID_imm_sela_i   (ID_imm_sela),
+     .ID_use_rega_i   (ID_use_rega),
+     .ID_cop_rega_i   (ID_cop_rega),
+     .ID_imm_selb_i   (ID_imm_selb),
+     .ID_use_regb_i   (ID_use_regb),
+     .ID_cop_regb_i   (ID_cop_regb),
+     .ID_reg_waddr_i  (ID_reg_waddr),
+     .ID_reg_we_i     (ID_reg_we),
+     .ID_level_i      (ID_level),
+     
+     //other signals
+     .ID_bra_i        (ID_bra),
+     .ID_jmp_i        (ID_jmp),
+     .ID_jr_i         (ID_jr),
+     .ID_link_i       (ID_link),
+     .ID_alu_code_i   (ID_alu_code),
+     .ID_op_mem_i     (ID_op_mem),
+     .ID_mem_we_i     (ID_mem_we),
+     .ID_mem_optype_i (ID_mem_optype),
+     .ID_exc_type_i   (ID_exc_type),
+     .ID_it_ok_i      (ID_it_ok),
+     .ID_ds_i         (ID_ds),
+     
+     // Synchronous output to EX stage
+     .EX_inst_o       (RF_inst),
+     .EX_addr_o       (RF_addr),                   // Address of the decoded instruction
+     .EX_addrA4_o     (RF_addrA4),
+     
+     .EX_bra_o        (RF_bra),                   // Branch decoded
+     .EX_jmp_o        (RF_jmp),
+     .EX_jr_o         (RF_jr),
+     .EX_link_o       (RF_link),                 // A link for that instruction
+     .EX_op1_o        (RF_op1),                   // operand 1 for alu
+     .EX_op2_o        (RF_op2),                   // operand 2 for alu
+     .EX_alu_code_o   (RF_alu_code),         // Alu operation
+     .EX_reg_waddr_o  (RF_reg_waddr), // Address of the destination register of the result
+     .EX_reg_we_o     (RF_reg_we),           // Effective writing of the 
+     .EX_level_o      (RF_level),       // Availability of the result for the data bypass
+     .EX_op_mem_o     (RF_op_mem),             // Memory operation request
+     .EX_mem_we_o     (RF_mem_we),        // Type of memory operation (reading or writing)
+     .EX_mem_optype_o (RF_mem_optype),
+     .EX_mem_baddr_o  (RF_mem_baddr),
+     .EX_exc_type_o   (RF_exc_type),       // Potential exception detected
+     .EX_it_ok_o      (RF_it_ok),                // Allow hardware interruptions
+     .EX_ds_o         (RF_ds),
+     
+     .BP_depra_o     (RF_depra),
+     .BP_deprb_o     (RF_deprb),
+     // Asynchronous connexion with the register management and data bypass unit
+     .BP_reg_raddra_i(BP_reg_raddra),
+     .BP_reg_raddrb_i(BP_reg_raddrb),
+     .BP_use_rega_i  (BP_use_rega),
+     .BP_use_regb_i  (BP_use_regb),
+     
+     .BP_dataa_i     (BP_dataa),
+     .BP_datab_i     (BP_datab)
+     );
+  
+  pps_ex my_ex
+    (
+     .clk_i           (clk_i),
+     .rst_i           (rst_i),
+     .dmem_rdy_i      (CTRL_dmem_rdy),
+          
+     // Datas from RF stage
+     .RF_inst_i       (RF_inst),
+     .RF_addr_i       (RF_addr),
+     .RF_addrA4_i     (RF_addrA4),
+     
+     .RF_bra_i        (RF_bra),       // Branch instruction
+     .RF_jmp_i        (RF_jmp),
+     .RF_jr_i         (RF_jr),
+     .RF_link_i       (RF_link),      // Branch with link
+     .RF_op1_i        (RF_op1),       // Operand 1 for alu
+     .RF_op2_i        (RF_op2),       // Operand 2 for alu
+     .RF_reg_waddr_i  (RF_reg_waddr), // Destination register address for the result
+     .RF_reg_we_i     (RF_reg_we),    // Effective writing of the result
+     .RF_level_i      (RF_level),     // Availability stage of the result for bypassing
+     .RF_alu_code_i   (RF_alu_code),  // Alu operation
+     .RF_op_mem_i     (RF_op_mem),    // Memory operation
+     .RF_mem_we_i     (RF_mem_we),    // Type of memory operation (read or write)
+     .RF_mem_optype_i (RF_mem_optype),
+     .RF_mem_baddr_i  (RF_mem_baddr),
+     .RF_exc_type_i   (RF_exc_type),  // Potential cause exception
+     .RF_it_ok_i      (RF_it_ok),     // Allow hardware interruptions
+     .RF_ds_i         (RF_ds),
+     
+     //branch signals to IF stage
+     .IF_bra_confirm_o(EX_bra_confirm),
+     .IF_bra_addr_o   (EX_bra_addr),//branch signals
+ 
+     //signals to mem stage
+     .MEM_inst_o      (EX_inst),
+     .MEM_addr_o      (EX_addr),// instruction and it's addr
+     
+     .MEM_reg_data_o  (EX_reg_data),
+     .MEM_reg_waddr_o (EX_reg_waddr),
+     .MEM_reg_we_o    (EX_reg_we),
+     .MEM_level_o     (EX_level),//reg request signals
+     .MEM_mem_req_o   (EX_mem_req),
+     .MEM_mem_we_o    (EX_mem_we),
+     .MEM_mem_optype_o(EX_mem_optype),//mem op signals
+     .MEM_mem_data_o  (EX_mem_data),
+     .MEM_mem_addr_o  (EX_mem_addr),
+     .MEM_mem_bwsel_o (EX_mem_bwsel),
+     .MEM_mem_baddr_o (EX_mem_baddr),
+     .MEM_op2_o       (EX_op2),
+     .MEM_exc_type_o  (EX_exc_type),
+     .MEM_it_ok_o     (EX_it_ok),
+     .MEM_ds_o        (EX_ds),
+     
+     .rdy_o           (EX_rdy),
+ 
+     .BP_depra_o     (EX_depra),
+     .BP_deprb_o     (EX_deprb),
+     .BP_reg_rdy_o   (EX_reg_rdy),
+     // Asynchronous connexion with the register management and data bypass unit
+     .BP_reg_raddra_i(BP_reg_raddra),
+     .BP_reg_raddrb_i(BP_reg_raddrb),
+     .BP_use_rega_i  (BP_use_rega),
+     .BP_use_regb_i  (BP_use_regb)
+     
+     );
+  
+ 
+  pps_mem my_mem
+    (
+     .clk_i            (clk_i),
+     .rst_i            (rst_i),
+     .dmem_rdy_i       (CTRL_dmem_rdy),
+     
+     // Datas from EX stage
+     .EX_inst_i        (EX_inst),
+     .EX_addr_i        (EX_addr),                   // Instruction address
+          
+     .EX_reg_waddr_i   (EX_reg_waddr), // Destination register address for the result
+     .EX_reg_data_i    (EX_reg_data), // Result of alu operation
+     .EX_reg_we_i      (EX_reg_we),   // Effective writing of the result
+     .EX_level_i       (EX_level),    // Availability stage for the result for bypassing
+     
+     .EX_mem_req_i     (EX_mem_req),
+     .EX_mem_we_i      (EX_mem_we),
+     .EX_mem_optype_i  (EX_mem_optype),
+     .EX_mem_data_i    (EX_mem_data),
+     .EX_mem_addr_i    (EX_mem_addr),
+     .EX_mem_bwsel_i   (EX_mem_bwsel),
+     .EX_mem_baddr_i   (EX_mem_baddr),
+     .EX_op2_i         (EX_op2),
+     .EX_exc_type_i    (EX_exc_type),       // Potential exception cause
+     .EX_it_ok_i       (EX_it_ok),               // Allow hardware interruptions
+     .EX_ds_i          (EX_ds),
+     
+     //signals to mem_ctrl   
+     .CTRL_mem_req_o   (MEM_mem_req),
+     .CTRL_mem_we_o    (MEM_mem_we),
+     .CTRL_mem_data_o  (MEM_mem_data),
+     .CTRL_mem_addr_o  (MEM_mem_addr),
+     .CTRL_mem_bwsel_o (MEM_mem_bwsel),
+     
+     //signals to WB stage
+     .WB_op_mem_o      (MEM_op_mem),
+     .WB_mem_optype_o  (M2W_mem_optype),
+     .WB_mem_baddr_o   (MEM_mem_baddr),
+     .WB_op2_o         (MEM_op2),
+     .WB_reg_waddr_o   (MEM_reg_waddr),
+     .WB_reg_we_o      (MEM_reg_we),
+     .WB_reg_data_o    (MEM_reg_data),
+     .WB_level_o       (MEM_level),
+ 
+     .COP0_interrupt_i (COP0_interrupt),
+     .COP0_addr_o      (MEM_addr),
+     .COP0_inst_o      (MEM_inst),
+     .COP0_exc_type_o  (MEM_exc_type),
+     .COP0_it_ok_o     (MEM_it_ok),
+     .COP0_mem_we_o    (M2C_mem_we),
+     .COP0_ds_o        (MEM_ds),
+     
+     .BP_depra_o      (MEM_depra),
+     .BP_deprb_o      (MEM_deprb),
+     .BP_reg_rdy_o    (MEM_reg_rdy),
+     // Asynchronous connexion with the register management and data bypass unit
+     .BP_reg_raddra_i (BP_reg_raddra),
+     .BP_reg_raddrb_i (BP_reg_raddrb),
+     .BP_use_rega_i   (BP_use_rega),
+     .BP_use_regb_i   (BP_use_regb)
+     );
+ 
+  pps_wb my_wb
+    (
+     .clk_i            (clk_i),
+     .rst_i            (rst_i),
+                    
+     .CTRL_data_i      (CTRL_mem_data),
+     .MEM_op_mem_i     (MEM_op_mem),
+     .MEM_mem_optype_i (M2W_mem_optype),
+     .MEM_mem_baddr_i  (MEM_mem_baddr),
+     .MEM_op2_i        (MEM_op2),
+     .MEM_reg_waddr_i  (MEM_reg_waddr),
+     .MEM_reg_we_i     (MEM_reg_we),
+     .MEM_reg_data_i   (MEM_reg_data),
+      
+     // Synchronous outputs for bypass unit
+     .BP_reg_waddr_o  (WB_reg_waddr),
+     .BP_reg_we_o     (WB_reg_we),
+     .BP_reg_data_o   (WB_reg_data),
+ 
+     .BP_depra_o      (WB_depra),
+     .BP_deprb_o      (WB_deprb),
+ 
+     // Asynchronous connexion with the register management and data bypass unit
+     .BP_reg_raddra_i (BP_reg_raddra),
+     .BP_reg_raddrb_i (BP_reg_raddrb),
+     .BP_use_rega_i   (BP_use_rega),
+     .BP_use_regb_i   (BP_use_regb)
+     );
+  
+  mem_ctrl my_ctrl
+    (
+     .clk_i(clk_i),
+ 
+     //Interface with IF stage
+     .IF_req_i    (F2C_req),
+     .IF_addr_i   (F2C_addr),          // The address of the data to read
+     .ID_inst_o   (CTRL_inst),        // Instruction from the memory
+
+     // Interface with the MEM Stage
+     .MEM_req_i   (MEM_mem_req),       // Request to access the ram
+     .MEM_we_i    (MEM_mem_we),        // Read/Write request
+     .MEM_addr_i  (MEM_mem_addr),      // Address in ram
+     .MEM_data_i  (MEM_mem_data),      // Data to write in ram
+     .MEM_bwsel_i (MEM_mem_bwsel),
+     
+     // Interface with the WB Stage
+     .WB_data_o   (CTRL_mem_data),     // Data from the ram to the MEM stage
+ 
+     //RAM interface signals
+     .dmem_cyc_o  (dmem_cyc_o),          // Request to ram
+     .dmem_stb_o  (dmem_stb_o),          // Request to ram
+     .dmem_waddr_o(dmem_waddr_o),     // Address of the data to write
+     .dmem_raddr_o(dmem_raddr_o),     // Address of the data to read
+     .dmem_we_o   (dmem_we_o),          // Read/Write request
+     .dmem_bwsel_o(dmem_bwsel_o),
+     .dmem_ack_i  (dmem_ack_i),          // Acknowledge from the memory
+     .dmem_data_i (dmem_data_i),         // Data from/to the memory
+     .dmem_data_o (dmem_data_o),         // Data from/to the memory
+      
+     .imem_cyc_o (imem_cyc_o), 
+     .imem_stb_o (imem_stb_o), 
+     .imem_addr_o(imem_addr_o), 
+     .imem_ack_i (imem_ack_i), 
+     .imem_inst_i(imem_inst_i),
+     
+     // Pipeline progress control signal
+     .dmem_rdy_o (CTRL_dmem_rdy),
+     .imem_rdy_o (CTRL_imem_rdy)
+     );
+    
+  bypass my_bypass
+    (
+     .clk_i           (clk_i),
+     .rst_i           (rst_i),
+          
+     // Register access signals
+     .ID_reg_raddra_i (ID_reg_addra),                   // Operand 1 address
+     .ID_usea_i       (ID_use_rega_AS),                       // Operand 1 utilisation
+     .ID_reg_raddrb_i (ID_reg_addrb),                   // Operand 2 address
+     .ID_useb_i       (ID_use_regb_AS),                       // Operand 2 utilisation
+      
+     .RF_dataa_o      (BP_dataa),                     // First register value
+     .RF_datab_o      (BP_datab),                     // Second register value
+     .alea_o          (alea),                       // Unresolved hazards detected
+      
+     // Bypass signals of the intermediary datas
+     .RF_depra_i      (RF_depra),
+     .RF_deprb_i      (RF_deprb),
+          	
+     .EX_depra_i      (EX_depra),
+     .EX_deprb_i      (EX_deprb),
+     .EX_reg_rdy_i    (EX_reg_rdy),
+     .EX_reg_data_i   (EX_reg_data),
+     .MEM_depra_i     (MEM_depra),
+     .MEM_deprb_i     (MEM_deprb),
+     .MEM_reg_rdy_i   (MEM_reg_rdy),
+     .MEM_reg_data_i  (MEM_reg_data),
+
+     .WB_depra_i      (WB_depra),
+     .WB_deprb_i      (WB_deprb),
+     .WB_reg_waddr_i  (WB_reg_waddr),
+     .WB_reg_we_i     (WB_reg_we),
+     .WB_reg_data_i   (WB_reg_data),
+ 
+     .BP_reg_raddra_o (BP_reg_raddra),
+     .BP_use_rega_o   (BP_use_rega),
+     .BP_reg_raddrb_o (BP_reg_raddrb),
+     .BP_use_regb_o   (BP_use_regb),
+     
+     .COP0_reg_waddr_i(COP0_reg_waddr),
+     .COP0_reg_wdata_i(COP0_reg_wdata),
+     .COP0_reg_we_i   (COP0_reg_we),
+     .COP0_reg_raddr_i(COP0_reg_raddr),
+     .COP0_reg_rdata_o(BP2COP0_data),
+     .COP0_reg_re_i   (COP0_reg_re),
+     
+     // Writing commands for writing in the registers
+     .doutc           (dinc),           // Data to write
+     .portc           (portc),             // Address of the register to write
+     .enc             (enc),             // Selection in the internal registers
+      
+     // Reading commands for Reading in the registers
+     .ena             (ena),     
+     .porta           (porta),     
+     .dina            (douta),
+     
+     .enb             (enb),
+     .portb           (portb),
+     .dinb            (doutb)
+     );
+  
+  
+  regfile my_regfile
+    (
+     //sys signal   
+     .clk_i (clk_i),
+     .rst_i (rst_i), 
+ 
+     // Write signal,reg address to write ,its data and byte selection
+     .enc   (enc),
+     .portc (portc),
+     .dinc  (dinc),
+      
+     //read porta
+     .ena   (ena),
+     .porta (porta),
+     .douta (douta),
+ 
+     //read portb
+     .enb   (enb),
+     .portb (portb),
+     .doutb (doutb)
+     );
+
+
+  syscop my_cop0
+    (
+     .clk_i           (clk_i),
+     .rst_i           (rst_i),
+     
+     .MEM_addr_i      (MEM_addr),
+     .MEM_inst_i      (MEM_inst),
+     .MEM_exc_type_i  (MEM_exc_type),
+     .MEM_it_ok_i     (MEM_it_ok),
+     .MEM_mem_we_i    (M2C_mem_we),
+     .MEM_ds_i        (MEM_ds),
+ 
+     .nmi_i           (nmi_i),
+     .it_hw_i         (it_hw_i),
+     .interrupt_o     (COP0_interrupt),
+     .interrupt_confirm_o(COP0_interrupt_confirm),
+     .interrupt_vect_o(COP0_interrupt_vect),
+  
+     .BP_reg_wdata_o (COP0_reg_wdata),
+     .BP_reg_waddr_o (COP0_reg_waddr),
+     .BP_reg_we_o    (COP0_reg_we),
+ 
+     .BP_reg_raddr_o (COP0_reg_raddr),
+     .BP_reg_re_o    (COP0_reg_re),
+     .BP_reg_rdata_i (BP2COP0_data),
+ 
+     //signals for cop0 to maintain a right it mask
+     .MEM_reg_waddr_i (MEM_reg_waddr),
+     .MEM_reg_we_i    (MEM_reg_we),
+     .MEM_reg_wdata_i (MEM_reg_data)
+     );
+  
+endmodule

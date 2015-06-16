@@ -1,0 +1,431 @@
+//
+// Designed by Qiang Wu
+//
+`timescale 1ns/1ps
+
+module np_core
+    #(parameter DATA_WIDTH = 64,
+      parameter CTRL_WIDTH=DATA_WIDTH/8,
+      parameter UDP_REG_SRC_WIDTH = 2,
+      parameter INPUT_ARBITER_STAGE_NUM = 2,
+      parameter IO_QUEUE_STAGE_NUM = `IO_QUEUE_STAGE_NUM,
+      parameter NUM_OUTPUT_QUEUES = 8,
+      parameter NUM_IQ_BITS = 3,
+      parameter STAGE_NUM = 4,
+      parameter CPU_QUEUE_NUM = 0)
+
+   (// --- data path interface
+    output     [DATA_WIDTH-1:0]        out_data,
+    output     [CTRL_WIDTH-1:0]        out_ctrl,
+    output                             out_wr,
+    input                              out_rdy,
+
+    input  [DATA_WIDTH-1:0]            in_data,
+    input  [CTRL_WIDTH-1:0]            in_ctrl,
+    input                              in_wr,
+    output                             in_rdy,
+
+    // --- Register interface
+    input                              reg_req_in,
+    input                              reg_ack_in,
+    input                              reg_rd_wr_L_in,
+    input  [`UDP_REG_ADDR_WIDTH-1:0]   reg_addr_in,
+    input  [`CPCI_NF2_DATA_WIDTH-1:0]  reg_data_in,
+    input  [UDP_REG_SRC_WIDTH-1:0]     reg_src_in,
+
+    output                             reg_req_out,
+    output                             reg_ack_out,
+    output                             reg_rd_wr_L_out,
+    output  [`UDP_REG_ADDR_WIDTH-1:0]  reg_addr_out,
+    output  [`CPCI_NF2_DATA_WIDTH-1:0] reg_data_out,
+    output  [UDP_REG_SRC_WIDTH-1:0]    reg_src_out,
+
+    // --- Misc
+    input                              clk,
+    input                              core_sp_clk,
+    input                              reset
+);
+
+assign reg_req_out = reg_req_in;
+assign reg_ack_out = reg_ack_in;
+assign reg_rd_wr_L_out = reg_rd_wr_L_in;
+assign reg_addr_out = reg_addr_in;
+assign reg_data_out = reg_data_in;
+assign reg_src_out = reg_src_in;
+
+wire [63:0] fc_out_data0;
+wire [15:0] fc_out_pkt_route0;
+wire fc_out_wr0;
+wire fc_out_req0;
+wire fc_out_ack0;
+
+wire [63:0] fc_out_data1;
+wire [15:0] fc_out_pkt_route1;
+wire fc_out_wr1;
+wire fc_out_req1;
+wire fc_out_ack1;
+
+wire [63:0] pg_out_data2;
+wire [15:0] pg_out_pkt_route2;
+wire pg_out_wr2;
+wire pg_out_req2;
+wire pg_out_ack2;
+wire pg_out_bop2;
+wire pg_out_eop2;
+
+wire [63:0] pg_out_data3;
+wire [15:0] pg_out_pkt_route3;
+wire pg_out_wr3;
+wire pg_out_req3;
+wire pg_out_ack3;
+wire pg_out_bop3;
+wire pg_out_eop3;
+
+wire [63:0] ic_data01;
+wire [15:0] ic_pkt_route01;
+wire ic_wr01;
+wire ic_req01;
+wire ic_ack01;
+
+wire [63:0] ic_data02;
+wire [15:0] ic_pkt_route02;
+wire ic_wr02;
+wire ic_req02;
+wire ic_ack02;
+
+wire [63:0] ic_data10;
+wire [15:0] ic_pkt_route10;
+wire ic_wr10;
+wire ic_req10;
+wire ic_ack10;
+
+wire [63:0] ic_data13;
+wire [15:0] ic_pkt_route13;
+wire ic_wr13;
+wire ic_req13;
+wire ic_ack13;
+
+wire [63:0] ic_data20;
+wire [15:0] ic_pkt_route20;
+wire ic_wr20;
+wire ic_req20;
+wire ic_ack20;
+
+wire [63:0] ic_data23;
+wire [15:0] ic_pkt_route23;
+wire ic_wr23;
+wire ic_req23;
+wire ic_ack23;
+
+wire [63:0] ic_data31;
+wire [15:0] ic_pkt_route31;
+wire ic_wr31;
+wire ic_req31;
+wire ic_ack31;
+
+wire [63:0] ic_data32;
+wire [15:0] ic_pkt_route32;
+wire ic_wr32;
+wire ic_req32;
+wire ic_ack32;
+
+flow_classification fc(
+.out_data0	(fc_out_data0),
+.out_pkt_route0	(fc_out_pkt_route0),
+.out_wr0	(fc_out_wr0),
+.out_req0	(fc_out_req0),
+.out_ack0	(fc_out_ack0),
+
+.out_data1	(fc_out_data1),
+.out_pkt_route1	(fc_out_pkt_route1),
+.out_wr1	(fc_out_wr1),
+.out_req1	(fc_out_req1),
+.out_ack1	(fc_out_ack1),
+
+.in_data	(in_data),
+.in_ctrl	(in_ctrl),
+.in_wr		(in_wr),
+.in_rdy		(in_rdy),
+
+.clk		(clk),
+.reset		(reset)
+);
+
+ppu ppu0(
+.clk		(clk),
+.core_sp_clk	(core_sp_clk),
+.reset		(reset),
+
+.in_data0	(ic_data10),
+.in_pkt_route0	(ic_pkt_route10),
+.in_wr0		(ic_wr10),
+.in_req0	(ic_req10),
+.in_ack0	(ic_ack10),
+
+.in_data1	(fc_out_data0),
+.in_pkt_route1	(fc_out_pkt_route0),
+.in_wr1		(fc_out_wr0),
+.in_req1	(fc_out_req0),
+.in_ack1	(fc_out_ack0),
+
+.in_data2	(),
+.in_pkt_route2	(),
+.in_wr2		(),
+.in_req2	(),
+.in_ack2	(),
+
+.in_data3	(ic_data20),
+.in_pkt_route3	(ic_pkt_route20),
+.in_wr3		(ic_wr20),
+.in_req3	(ic_req20),
+.in_ack3	(ic_ack20),
+
+.out_data0	(ic_data01),
+.out_pkt_route0	(ic_pkt_route01),
+.out_wr0	(ic_wr01),
+.out_req0	(ic_req01),
+.out_ack0	(ic_ack01),
+.out_bop0	(),
+.out_eop0	(),
+
+.out_data1	(),
+.out_pkt_route1	(),
+.out_wr1	(),
+.out_req1	(),
+.out_ack1	(),
+.out_bop1	(),
+.out_eop1	(),
+
+.out_data2	(),
+.out_pkt_route2	(),
+.out_wr2	(),
+.out_req2	(),
+.out_ack2	(),
+.out_bop2	(),
+.out_eop2	(),
+
+.out_data3	(ic_data02),
+.out_pkt_route3	(ic_pkt_route02),
+.out_wr3	(ic_wr02),
+.out_req3	(ic_req02),
+.out_ack3	(ic_ack02),
+.out_bop3	(),
+.out_eop3	()
+	
+);
+
+ppu ppu1(
+.clk		(clk),
+.core_sp_clk	(core_sp_clk),
+.reset		(reset),
+
+.in_data0	(),
+.in_pkt_route0	(),
+.in_wr0		(),
+.in_req0	(),
+.in_ack0	(),
+
+.in_data1	(fc_out_data1),
+.in_pkt_route1	(fc_out_pkt_route1),
+.in_wr1		(fc_out_wr1),
+.in_req1	(fc_out_req1),
+.in_ack1	(fc_out_ack1),
+
+.in_data2	(ic_data01),
+.in_pkt_route2	(ic_pkt_route01),
+.in_wr2		(ic_wr01),
+.in_req2	(ic_req01),
+.in_ack2	(ic_ack01),
+
+.in_data3	(in_data31),
+.in_pkt_route3	(in_pkt_route31),
+.in_wr3		(in_wr31),
+.in_req3	(in_req31),
+.in_ack3	(in_ack31),
+
+.out_data0	(),
+.out_pkt_route0	(),
+.out_wr0	(),
+.out_req0	(),
+.out_ack0	(),
+.out_bop0	(),
+.out_eop0	(),
+
+.out_data1	(),
+.out_pkt_route1	(),
+.out_wr1	(),
+.out_req1	(),
+.out_ack1	(),
+.out_bop1	(),
+.out_eop1	(),
+
+.out_data2	(ic_date10),
+.out_pkt_route2	(ic_pkt_route10),
+.out_wr2	(ic_wr10),
+.out_req2	(ic_req10),
+.out_ack2	(ic_ack10),
+.out_bop2	(),
+.out_eop2	(),
+
+.out_data3	(ic_data13),
+.out_pkt_route3	(ic_pkt_route13),
+.out_wr3	(ic_wr13),
+.out_req3	(ic_req13),
+.out_ack3	(ic_ack13),
+.out_bop3	(),
+.out_eop3	()
+	
+);
+
+ppu ppu2(
+.clk		(clk),
+.core_sp_clk	(core_sp_clk),
+.reset		(reset),
+
+.in_data0	(ic_data32),
+.in_pkt_route0	(ic_pkt_route32),
+.in_wr0		(ic_wr32),
+.in_req0	(ic_req32),
+.in_ack0	(ic_ack32),
+
+.in_data1	(ic_data02),
+.in_pkt_route1	(ic_pkt_route02),
+.in_wr1		(ic_wr02),
+.in_req1	(ic_req02),
+.in_ack1	(ic_ack02),
+
+.in_data2	(),
+.in_pkt_route2	(),
+.in_wr2		(),
+.in_req2	(),
+.in_ack2	(),
+
+.in_data3	(),
+.in_pkt_route3	(),
+.in_wr3		(),
+.in_req3	(),
+.in_ack3	(),
+
+.out_data0	(ic_data23),
+.out_pkt_route0	(ic_pkt_route23),
+.out_wr0	(ic_wr23),
+.out_req0	(ic_req23),
+.out_ack0	(ic_ack23),
+.out_bop0	(),
+.out_eop0	(),
+
+.out_data1	(ic_data20),
+.out_pkt_route1	(ic_pkt_route20),
+.out_wr1	(ic_wr20),
+.out_req1	(ic_req20),
+.out_ack1	(ic_ack20),
+.out_bop1	(),
+.out_eop1	(),
+
+.out_data2	(),
+.out_pkt_route2	(),
+.out_wr2	(),
+.out_req2	(),
+.out_ack2	(),
+.out_bop2	(),
+.out_eop2	(),
+
+.out_data3	(pg_out_data2),
+.out_pkt_route3	(pg_out_pkt_route2),
+.out_wr3	(pg_out_wr2),
+.out_req3	(pg_out_req2),
+.out_ack3	(pg_out_ack2),
+.out_bop3	(pg_out_bop2),
+.out_eop3	(pg_out_eop2)
+	
+);
+
+ppu ppu3(
+.clk		(clk),
+.core_sp_clk	(core_sp_clk),
+.reset		(reset),
+
+.in_data0	(),
+.in_pkt_route0	(),
+.in_wr0		(),
+.in_req0	(),
+.in_ack0	(),
+
+.in_data1	(ic_data13),
+.in_pkt_route1	(ic_pkt_route13),
+.in_wr1		(ic_wr13),
+.in_req1	(ic_req13),
+.in_ack1	(ic_ack13),
+
+.in_data2	(ic_data23),
+.in_pkt_route2	(ic_pkt_route23),
+.in_wr2		(ic_wr23),
+.in_req2	(ic_req23),
+.in_ack2	(ic_ack23),
+
+.in_data3	(),
+.in_pkt_route3	(),
+.in_wr3		(),
+.in_req3	(),
+.in_ack3	(),
+
+.out_data0	(),
+.out_pkt_route0	(),
+.out_wr0	(),
+.out_req0	(),
+.out_ack0	(),
+.out_bop0	(),
+.out_eop0	(),
+
+.out_data1	(ic_data31),
+.out_pkt_route1	(ic_pkt_route31),
+.out_wr1	(ic_wr31),
+.out_req1	(ic_req31),
+.out_ack1	(ic_ack31),
+.out_bop1	(),
+.out_eop1	(),
+
+.out_data2	(ic_data32),
+.out_pkt_route2	(ic_pkt_route32),
+.out_wr2	(ic_wr32),
+.out_req2	(ic_req32),
+.out_ack2	(ic_ack32),
+.out_bop2	(),
+.out_eop2	(),
+
+.out_data3	(pg_out_data3),
+.out_pkt_route3	(pg_out_pkt_route3),
+.out_wr3	(pg_out_wr3),
+.out_req3	(pg_out_req3),
+.out_ack3	(pg_out_ack3),
+.out_bop3	(pg_out_bop3),
+.out_eop3	(pg_out_eop3)
+	
+);
+
+
+out_arbiter oa(
+.out_data	(out_data),
+.out_ctrl	(out_ctrl),
+.out_wr		(out_wr),
+.out_rdy	(out_rdy),
+
+.in_data0	(pg_out_data2),
+.in_wr0		(pg_out_wr2),
+.in_req0	(pg_out_req2),
+.in_ack0	(pg_out_ack2),
+.in_bop0	(pg_out_bop2),
+.in_eop0	(pg_out_eop2),
+
+.in_data1	(pg_out_data3),
+.in_wr1		(pg_out_wr3),
+.in_req1	(pg_out_req3),
+.in_ack1	(pg_out_ack3),
+.in_bop1	(pg_out_bop3),
+.in_eop1	(pg_out_eop3),
+
+.clk		(clk),
+.reset		(reset)
+);
+
+endmodule

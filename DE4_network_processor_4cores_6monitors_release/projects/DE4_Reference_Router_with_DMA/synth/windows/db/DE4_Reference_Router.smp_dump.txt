@@ -1,0 +1,2733 @@
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_lvds_reset_sequencer:the_altera_tse_lvds_reset_sequencer|state
+Name state.stm_rx_cda_reset state.stm_rx_reset state.stm_idle state.stm_pll_areset state.stm_word_alignment 
+state.stm_pll_areset 0 0 0 0 0 
+state.stm_idle 0 0 1 1 0 
+state.stm_rx_reset 0 1 0 1 0 
+state.stm_rx_cda_reset 1 0 0 1 0 
+state.stm_word_alignment 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_lvds_reset_sequencer:the_altera_tse_lvds_reset_sequencer|state
+Name state.stm_rx_cda_reset state.stm_rx_reset state.stm_idle state.stm_pll_areset state.stm_word_alignment 
+state.stm_pll_areset 0 0 0 0 0 
+state.stm_idle 0 0 1 1 0 
+state.stm_rx_reset 0 1 0 1 0 
+state.stm_rx_cda_reset 1 0 0 1 0 
+state.stm_word_alignment 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_lvds_reset_sequencer:the_altera_tse_lvds_reset_sequencer|state
+Name state.stm_rx_cda_reset state.stm_rx_reset state.stm_idle state.stm_pll_areset state.stm_word_alignment 
+state.stm_pll_areset 0 0 0 0 0 
+state.stm_idle 0 0 1 1 0 
+state.stm_rx_reset 0 1 0 1 0 
+state.stm_rx_cda_reset 1 0 0 1 0 
+state.stm_word_alignment 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_lvds_reset_sequencer:the_altera_tse_lvds_reset_sequencer|state
+Name state.stm_rx_cda_reset state.stm_rx_reset state.stm_idle state.stm_pll_areset state.stm_word_alignment 
+state.stm_pll_areset 0 0 0 0 0 
+state.stm_idle 0 0 1 1 0 
+state.stm_rx_reset 0 1 0 1 0 
+state.stm_rx_cda_reset 1 0 0 1 0 
+state.stm_word_alignment 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_multifunc_confctrl:multifunc_confctrl|c2t_sm
+Name c2t_sm.ack 
+c2t_sm.idle 0 
+c2t_sm.ack 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_multifunc_confctrl:multifunc_confctrl|pciexp_multifunc_powermgt:multi_power_mgt|lpm_sm
+Name lpm_sm.l2l3_rdy lpm_sm.l2l3_in1 lpm_sm.l2l3_in0 lpm_sm.l0_in_wt lpm_sm.l0_in lpm_sm.l1 lpm_sm.l1_in1 lpm_sm.l1_in0 lpm_sm.aspm_l1_out lpm_sm.aspm_l1_in1 lpm_sm.aspm_l1_in0 lpm_sm.l0 lpm_sm.l0_rst 
+lpm_sm.l0_rst 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lpm_sm.l0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+lpm_sm.aspm_l1_in0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+lpm_sm.aspm_l1_in1 0 0 0 0 0 0 0 0 0 1 0 0 1 
+lpm_sm.aspm_l1_out 0 0 0 0 0 0 0 0 1 0 0 0 1 
+lpm_sm.l1_in0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+lpm_sm.l1_in1 0 0 0 0 0 0 1 0 0 0 0 0 1 
+lpm_sm.l1 0 0 0 0 0 1 0 0 0 0 0 0 1 
+lpm_sm.l0_in 0 0 0 0 1 0 0 0 0 0 0 0 1 
+lpm_sm.l0_in_wt 0 0 0 1 0 0 0 0 0 0 0 0 1 
+lpm_sm.l2l3_in0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+lpm_sm.l2l3_in1 0 1 0 0 0 0 0 0 0 0 0 0 1 
+lpm_sm.l2l3_rdy 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc7_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc7_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc7_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc7_|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc7_|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc6_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc6_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc6_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc6_|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc6_|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc5_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc5_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc5_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc5_|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc5_|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc4_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc4_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc4_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc4_|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc4_|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc3_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc3_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc3_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc3_|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc3_|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc2_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc2_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc2_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc2_|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc2_|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc1_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc1_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc1_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc1_|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc1_|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc0|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc0|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc0|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc0|pciexp_sopc_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_rxtl:rxtl|pciexp64_sopc_rxvc:rxvc0|pciexp_sopc_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc7_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc6_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc5_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc4_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc3_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc2_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc1_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_sopc_trans:trans|pciexp64_sopc_txtl:txtl|pciexp64_sopc_txvc:txvc0|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_multifunc_confctrl:multifunc_confctrl|c2t_sm
+Name c2t_sm.ack 
+c2t_sm.idle 0 
+c2t_sm.ack 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_multifunc_confctrl:multifunc_confctrl|pciexp_multifunc_powermgt:multi_power_mgt|lpm_sm
+Name lpm_sm.l2l3_rdy lpm_sm.l2l3_in1 lpm_sm.l2l3_in0 lpm_sm.l0_in_wt lpm_sm.l0_in lpm_sm.l1 lpm_sm.l1_in1 lpm_sm.l1_in0 lpm_sm.aspm_l1_out lpm_sm.aspm_l1_in1 lpm_sm.aspm_l1_in0 lpm_sm.l0 lpm_sm.l0_rst 
+lpm_sm.l0_rst 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lpm_sm.l0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+lpm_sm.aspm_l1_in0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+lpm_sm.aspm_l1_in1 0 0 0 0 0 0 0 0 0 1 0 0 1 
+lpm_sm.aspm_l1_out 0 0 0 0 0 0 0 0 1 0 0 0 1 
+lpm_sm.l1_in0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+lpm_sm.l1_in1 0 0 0 0 0 0 1 0 0 0 0 0 1 
+lpm_sm.l1 0 0 0 0 0 1 0 0 0 0 0 0 1 
+lpm_sm.l0_in 0 0 0 0 1 0 0 0 0 0 0 0 1 
+lpm_sm.l0_in_wt 0 0 0 1 0 0 0 0 0 0 0 0 1 
+lpm_sm.l2l3_in0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+lpm_sm.l2l3_in1 0 1 0 0 0 0 0 0 0 0 0 0 1 
+lpm_sm.l2l3_rdy 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc7_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc7_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc7_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc7_|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc7_|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc6_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc6_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc6_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc6_|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc6_|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc5_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc5_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc5_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc5_|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc5_|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc4_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc4_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc4_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc4_|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc4_|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc3_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc3_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc3_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc3_|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc3_|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc2_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc2_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc2_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc2_|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc2_|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc1_|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc1_|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc1_|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc1_|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc1_|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc0|ct_sm
+Name ct_sm.ct_proceed 
+ct_sm.idle_ct_state 0 
+ct_sm.ct_proceed 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc0|data_sm
+Name data_sm.data_last data_sm.data_next data_sm.data_first data_sm.idle_data_state data_sm.data_cfg 
+data_sm.idle_data_state 0 0 0 0 0 
+data_sm.data_first 0 0 1 1 0 
+data_sm.data_next 0 1 0 1 0 
+data_sm.data_last 1 0 0 1 0 
+data_sm.data_cfg 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc0|desc_sm
+Name desc_sm.desc1_ro desc_sm.desc_wt desc_sm.desc2 desc_sm.desc1 desc_sm.desc0 desc_sm.idle 
+desc_sm.idle 0 0 0 0 0 0 
+desc_sm.desc0 0 0 0 0 1 1 
+desc_sm.desc1 0 0 0 1 0 1 
+desc_sm.desc2 0 0 1 0 0 1 
+desc_sm.desc_wt 0 1 0 0 0 1 
+desc_sm.desc1_ro 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc0|pciexp_rxfc:rxfc|snd_typ_fc
+Name snd_typ_fc.00 snd_typ_fc.10 snd_typ_fc.01 
+snd_typ_fc.00 0 0 0 
+snd_typ_fc.01 1 0 1 
+snd_typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_rxtl:rxtl|pciexp64_rxvc:rxvc0|pciexp_rxfc:rxfc|typ_fc
+Name typ_fc.00 typ_fc.10 typ_fc.01 
+typ_fc.00 0 0 0 
+typ_fc.01 1 0 1 
+typ_fc.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc7_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc6_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc5_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc4_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc3_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc2_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc1_|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|pciexp64_trans:dummy|pciexp64_txtl:txtl|pciexp64_txvc:txvc0|txbk_sm
+Name txbk_sm.config0 txbk_sm.data_last txbk_sm.data_shft txbk_sm.data_norm txbk_sm.desc3dw_shft txbk_sm.desc3dw_norm txbk_sm.desc4dw txbk_sm.idle txbk_sm.config1 
+txbk_sm.idle 0 0 0 0 0 0 0 0 0 
+txbk_sm.desc4dw 0 0 0 0 0 0 1 1 0 
+txbk_sm.desc3dw_norm 0 0 0 0 0 1 0 1 0 
+txbk_sm.desc3dw_shft 0 0 0 0 1 0 0 1 0 
+txbk_sm.data_norm 0 0 0 1 0 0 0 1 0 
+txbk_sm.data_shft 0 0 1 0 0 0 0 1 0 
+txbk_sm.data_last 0 1 0 0 0 0 0 1 0 
+txbk_sm.config0 1 0 0 0 0 0 0 1 0 
+txbk_sm.config1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpciexpav_tlbp_app:tl_bypass_hip_sopc.tlbp_app|altpciexpav_control_register:cntrl_reg|altpciexpav_cr_avalon:i_avalon|avalon_state_reg
+Name avalon_state_reg.CRA_PIPE avalon_state_reg.CRA_READ_ACK avalon_state_reg.CRA_READ_WAIT avalon_state_reg.CRA_READ_FIRST avalon_state_reg.CRA_WRITE_ACK avalon_state_reg.CRA_IDLE 
+avalon_state_reg.CRA_IDLE 0 0 0 0 0 0 
+avalon_state_reg.CRA_WRITE_ACK 0 0 0 0 1 1 
+avalon_state_reg.CRA_READ_FIRST 0 0 0 1 0 1 
+avalon_state_reg.CRA_READ_WAIT 0 0 1 0 0 1 
+avalon_state_reg.CRA_READ_ACK 0 1 0 0 0 1 
+avalon_state_reg.CRA_PIPE 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpcie_pcie_reconfig_bridge:altpcie_pcie_reconfig_bridge0|mdio_cycle
+Name mdio_cycle.MDIO_END mdio_cycle.MDIO_READ mdio_cycle.MDIO_WRITE mdio_cycle.MDIO_ADDR 
+mdio_cycle.MDIO_ADDR 0 0 0 0 
+mdio_cycle.MDIO_WRITE 0 0 1 1 
+mdio_cycle.MDIO_READ 0 1 0 1 
+mdio_cycle.MDIO_END 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|altpcie_pcie_reconfig_bridge:altpcie_pcie_reconfig_bridge0|cstate
+Name cstate.CLEAR_WAITREQ_ST cstate.MDIO_FRAME_ST cstate.MDIO_PRE_ST cstate.MDIO_CLR_ST cstate.ERR_ST cstate.CTRL_RD_ST cstate.CTRL_WR_ST cstate.MDIO_START_ST cstate.CHECK_ADDR_ST cstate.IDLE_ST 
+cstate.IDLE_ST 0 0 0 0 0 0 0 0 0 0 
+cstate.CHECK_ADDR_ST 0 0 0 0 0 0 0 0 1 1 
+cstate.MDIO_START_ST 0 0 0 0 0 0 0 1 0 1 
+cstate.CTRL_WR_ST 0 0 0 0 0 0 1 0 0 1 
+cstate.CTRL_RD_ST 0 0 0 0 0 1 0 0 0 1 
+cstate.ERR_ST 0 0 0 0 1 0 0 0 0 1 
+cstate.MDIO_CLR_ST 0 0 0 1 0 0 0 0 0 1 
+cstate.MDIO_PRE_ST 0 0 1 0 0 0 0 0 0 1 
+cstate.MDIO_FRAME_ST 0 1 0 0 0 0 0 0 0 1 
+cstate.CLEAR_WAITREQ_ST 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|pcie_compiler_0_core:wrapper|altpcie_hip_pipen1b:altpcie_hip_pipen1b_inst|alt4gxb_reset_controller:g_reset_controller.alt4gxb_reset_controller0|rst_ctrl_sm
+Name rst_ctrl_sm~5 rst_ctrl_sm~4 
+rst_ctrl_sm.strobe_txpll_locked 0 0 
+rst_ctrl_sm.idle 0 1 
+rst_ctrl_sm.stable_tx_pll 1 1 
+rst_ctrl_sm.wait_state 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|pcie_compiler_0:the_pcie_compiler_0|altpcie_rs_serdes:rs_serdes|serdes_rst_state
+Name serdes_rst_state~5 serdes_rst_state~4 
+serdes_rst_state.STROBE_TXPLL_LOCKED_SD_CNT 0 0 
+serdes_rst_state.IDLE_ST_CNT 0 1 
+serdes_rst_state.STABLE_TX_PLL_ST_CNT 1 0 
+serdes_rst_state.WAIT_STATE_ST_CNT 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|master_0:the_master_0|master_0_master_0:master_0_inst|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|state
+Name state.READ_SEND_WAIT state.READ_SEND_ISSUE state.READ_DATA_WAIT state.READ_CMD_WAIT state.READ_ASSERT state.RETURN_PACKET state.WRITE_WAIT state.GET_WRITE_DATA state.GET_ADDR4 state.GET_ADDR3 state.GET_ADDR2 state.GET_ADDR1 state.GET_SIZE2 state.GET_SIZE1 state.GET_EXTRA state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.GET_EXTRA 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.GET_SIZE1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.GET_SIZE2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.GET_ADDR1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.GET_ADDR2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.GET_ADDR3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.GET_ADDR4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.GET_WRITE_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.WRITE_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RETURN_PACKET 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.READ_ASSERT 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_CMD_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DATA_WAIT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_ISSUE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|master_0:the_master_0|master_0_master_0:master_0_inst|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|read_state
+Name read_state.ST_HEADER read_state.ST_READ_DATA read_state.ST_PADDED 
+read_state.ST_HEADER 0 0 0 
+read_state.ST_PADDED 1 0 1 
+read_state.ST_READ_DATA 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|master_0:the_master_0|master_0_master_0:master_0_inst|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|write_state
+Name write_state.ST_WRITE_DATA write_state.ST_HEADER_2 write_state.ST_HEADER_1 write_state.ST_BYPASS 
+write_state.ST_BYPASS 0 0 0 0 
+write_state.ST_HEADER_1 0 0 1 1 
+write_state.ST_HEADER_2 0 1 0 1 
+write_state.ST_WRITE_DATA 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|state_wait
+Name state_wait.READ_STATE_WAIT state_wait.WRITE_STATE_WAIT2 state_wait.WRITE_STATE_WAIT state_wait.IDLE_STATE_WAIT 
+state_wait.IDLE_STATE_WAIT 0 0 0 0 
+state_wait.WRITE_STATE_WAIT 0 0 1 1 
+state_wait.WRITE_STATE_WAIT2 0 1 0 1 
+state_wait.READ_STATE_WAIT 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|state_RD_ACK
+Name state_RD_ACK.READ_RD_ACK 
+state_RD_ACK.IDLE_RD_ACK 0 
+state_RD_ACK.READ_RD_ACK 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|state_WR_ACK
+Name state_WR_ACK.WRITE_WR_ACK 
+state_WR_ACK.IDLE_WR_ACK 0 
+state_WR_ACK.WRITE_WR_ACK 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_dma:nf2_dma|nf2_dma_que_intfc:nf2_dma_que_intfc|state
+Name state.RX_STATE state.TX_PAD_STATE state.TX_STATE state.IDLE_STATE state.RX_PAD_STATE 
+state.IDLE_STATE 0 0 0 0 0 
+state.TX_STATE 0 0 1 1 0 
+state.TX_PAD_STATE 0 1 0 1 0 
+state.RX_STATE 1 0 0 1 0 
+state.RX_PAD_STATE 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_dma:nf2_dma|nf2_dma_bus_fsm:nf2_dma_bus_fsm|state
+Name state.TRANSF_N2C_DONE_STATE state.TRANSF_N2C_DATA_DEQ_STATE state.TRANSF_N2C_LEN_STATE state.TRANSF_N2C_DATA_ENQ_STATE state.TRANSF_N2C_QID_STATE state.TRANSF_C2N_DONE_STATE state.TRANSF_C2N_DATA_STATE state.TRANSF_C2N_LEN_STATE state.TRANSF_C2N_QID_STATE state.QUERY_STATE state.IDLE_STATE 
+state.IDLE_STATE 0 0 0 0 0 0 0 0 0 0 0 
+state.QUERY_STATE 0 0 0 0 0 0 0 0 0 1 1 
+state.TRANSF_C2N_QID_STATE 0 0 0 0 0 0 0 0 1 0 1 
+state.TRANSF_C2N_LEN_STATE 0 0 0 0 0 0 0 1 0 0 1 
+state.TRANSF_C2N_DATA_STATE 0 0 0 0 0 0 1 0 0 0 1 
+state.TRANSF_C2N_DONE_STATE 0 0 0 0 0 1 0 0 0 0 1 
+state.TRANSF_N2C_QID_STATE 0 0 0 0 1 0 0 0 0 0 1 
+state.TRANSF_N2C_DATA_ENQ_STATE 0 0 0 1 0 0 0 0 0 0 1 
+state.TRANSF_N2C_LEN_STATE 0 0 1 0 0 0 0 0 0 0 1 
+state.TRANSF_N2C_DATA_DEQ_STATE 0 1 0 0 0 0 0 0 0 0 1 
+state.TRANSF_N2C_DONE_STATE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_reg_grp:nf2_reg_grp_u|state
+Name state.IDLE_STATE state.WAIT_ACK_STATE state.GET_REQ_STATE 
+state.IDLE_STATE 0 0 0 
+state.GET_REQ_STATE 1 0 1 
+state.WAIT_ACK_STATE 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|udp_reg_master:udp_reg_master|state
+Name state.WAIT state.DONE state.PROCESSING 
+state.WAIT 0 0 0 
+state.PROCESSING 1 0 1 
+state.DONE 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_queues:output_queues|oq_regs:oq_regs|oq_regs_ctrl:oq_regs_ctrl|state
+Name state.CLEAR_COUNTERS state.READ_HI_LO_ADDR state.NORMAL_OPERATION state.RESET state.INITIALIZE_PAUSE 
+state.RESET 0 0 0 0 0 
+state.NORMAL_OPERATION 0 0 1 1 0 
+state.READ_HI_LO_ADDR 0 1 0 1 0 
+state.CLEAR_COUNTERS 1 0 0 1 0 
+state.INITIALIZE_PAUSE 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_queues:output_queues|remove_pkt:remove_pkt|remove_state
+Name remove_state.RM_MOVE_PKT remove_state.RM_WAIT_PKT_LEN remove_state.RM_LATCH_ADDR remove_state.RM_IDLE 
+remove_state.RM_IDLE 0 0 0 0 
+remove_state.RM_LATCH_ADDR 0 0 1 1 
+remove_state.RM_WAIT_PKT_LEN 0 1 0 1 
+remove_state.RM_MOVE_PKT 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_queues:output_queues|store_pkt:store_pkt|store_state
+Name store_state.ST_DROP_PKT store_state.ST_WAIT_EOP store_state.ST_WAIT_FOR_DATA store_state.ST_MOVE_PKT store_state.ST_LATCH_ADDR store_state.ST_READ_ADDR store_state.ST_WAIT_DST_PORT 
+store_state.ST_WAIT_DST_PORT 0 0 0 0 0 0 0 
+store_state.ST_READ_ADDR 0 0 0 0 0 1 1 
+store_state.ST_LATCH_ADDR 0 0 0 0 1 0 1 
+store_state.ST_MOVE_PKT 0 0 0 1 0 0 1 
+store_state.ST_WAIT_FOR_DATA 0 0 1 0 0 0 1 
+store_state.ST_WAIT_EOP 0 1 0 0 0 0 1 
+store_state.ST_DROP_PKT 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_queues:output_queues|oq_header_parser:oq_header_parser|input_state
+Name input_state.IN_WAIT_EOP input_state.IN_WAIT_PKT_DATA input_state.IN_WAIT_DST_PORT_LENGTH 
+input_state.IN_WAIT_DST_PORT_LENGTH 0 0 0 
+input_state.IN_WAIT_PKT_DATA 0 1 1 
+input_state.IN_WAIT_EOP 1 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|yf32_core:service_processor|mlite_cpu:u1_cpu|mem_ctrl:u2_mem_ctrl|mem_state_reg
+Name mem_state_reg.STATE_PAUSE mem_state_reg.STATE_WRITE mem_state_reg.STATE_ADDR mem_state_reg.STATE_FETCH 
+mem_state_reg.STATE_FETCH 0 0 0 0 
+mem_state_reg.STATE_ADDR 0 0 1 1 
+mem_state_reg.STATE_WRITE 0 1 0 1 
+mem_state_reg.STATE_PAUSE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|packet_buffer_bypass:pb5|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|packet_buffer_bypass:pb4|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|packet_buffer:pb3|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|packet_buffer:pb2|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|packet_buffer:pb1|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|packet_buffer:pb0|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|out_switch:out_switch|os_state3
+Name os_state3.OS_CANCEL os_state3.OS_TX os_state3.OS_PORT_REQ os_state3.OS_LOOKUP_BUFF os_state3.OS_IDLE os_state3.000 
+os_state3.000 0 0 0 0 0 0 
+os_state3.OS_IDLE 0 0 0 0 1 1 
+os_state3.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state3.OS_PORT_REQ 0 0 1 0 0 1 
+os_state3.OS_TX 0 1 0 0 0 1 
+os_state3.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|out_switch:out_switch|os_state2
+Name os_state2.OS_CANCEL os_state2.OS_TX os_state2.OS_PORT_REQ os_state2.OS_LOOKUP_BUFF os_state2.OS_IDLE os_state2.000 
+os_state2.000 0 0 0 0 0 0 
+os_state2.OS_IDLE 0 0 0 0 1 1 
+os_state2.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state2.OS_PORT_REQ 0 0 1 0 0 1 
+os_state2.OS_TX 0 1 0 0 0 1 
+os_state2.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|out_switch:out_switch|os_state1
+Name os_state1.OS_CANCEL os_state1.OS_TX os_state1.OS_PORT_REQ os_state1.OS_LOOKUP_BUFF os_state1.OS_IDLE os_state1.000 
+os_state1.000 0 0 0 0 0 0 
+os_state1.OS_IDLE 0 0 0 0 1 1 
+os_state1.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state1.OS_PORT_REQ 0 0 1 0 0 1 
+os_state1.OS_TX 0 1 0 0 0 1 
+os_state1.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|out_switch:out_switch|os_state0
+Name os_state0.OS_CANCEL os_state0.OS_TX os_state0.OS_PORT_REQ os_state0.OS_LOOKUP_BUFF os_state0.OS_IDLE os_state0.000 
+os_state0.000 0 0 0 0 0 0 
+os_state0.OS_IDLE 0 0 0 0 1 1 
+os_state0.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state0.OS_PORT_REQ 0 0 1 0 0 1 
+os_state0.OS_TX 0 1 0 0 0 1 
+os_state0.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state
+Name bypass_empty_buff_state.BYPASS_BUFF_WAIT2 bypass_empty_buff_state.BYPASS_BUFF_WAIT1 bypass_empty_buff_state.BYPASS_BUFF_GRANT bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 
+bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 0 0 0 0 
+bypass_empty_buff_state.BYPASS_BUFF_GRANT 0 0 1 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT1 0 1 0 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|in_switch:in_switch|empty_buff_state
+Name empty_buff_state.EMPTY_BUFF_WAIT2 empty_buff_state.EMPTY_BUFF_WAIT1 empty_buff_state.EMPTY_BUFF_GRANT empty_buff_state.EMPTY_BUFF_LOOKUP 
+empty_buff_state.EMPTY_BUFF_LOOKUP 0 0 0 0 
+empty_buff_state.EMPTY_BUFF_GRANT 0 0 1 1 
+empty_buff_state.EMPTY_BUFF_WAIT1 0 1 0 1 
+empty_buff_state.EMPTY_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|in_switch:in_switch|port_state3
+Name port_state3.PORT_STATE_CANCEL_BUFF_REQ port_state3.PORT_STATE_TX port_state3.PORT_STATE_BUFF_REQ port_state3.PORT_STATE_BUFF_LOOKUP port_state3.PORT_STATE_IDLE port_state3.000 
+port_state3.000 0 0 0 0 0 0 
+port_state3.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state3.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state3.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state3.PORT_STATE_TX 0 1 0 0 0 1 
+port_state3.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|in_switch:in_switch|port_state2
+Name port_state2.PORT_STATE_CANCEL_BUFF_REQ port_state2.PORT_STATE_TX port_state2.PORT_STATE_BUFF_REQ port_state2.PORT_STATE_BUFF_LOOKUP port_state2.PORT_STATE_IDLE port_state2.000 
+port_state2.000 0 0 0 0 0 0 
+port_state2.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state2.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state2.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state2.PORT_STATE_TX 0 1 0 0 0 1 
+port_state2.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|in_switch:in_switch|port_state1
+Name port_state1.PORT_STATE_CANCEL_BUFF_REQ port_state1.PORT_STATE_TX port_state1.PORT_STATE_BUFF_REQ port_state1.PORT_STATE_BUFF_LOOKUP port_state1.PORT_STATE_IDLE port_state1.000 
+port_state1.000 0 0 0 0 0 0 
+port_state1.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state1.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state1.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state1.PORT_STATE_TX 0 1 0 0 0 1 
+port_state1.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu3|in_switch:in_switch|port_state0
+Name port_state0.PORT_STATE_CANCEL_BUFF_REQ port_state0.PORT_STATE_TX port_state0.PORT_STATE_BUFF_REQ port_state0.PORT_STATE_BUFF_LOOKUP port_state0.PORT_STATE_IDLE port_state0.000 
+port_state0.000 0 0 0 0 0 0 
+port_state0.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state0.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state0.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state0.PORT_STATE_TX 0 1 0 0 0 1 
+port_state0.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|yf32_core:service_processor|mlite_cpu:u1_cpu|mem_ctrl:u2_mem_ctrl|mem_state_reg
+Name mem_state_reg.STATE_PAUSE mem_state_reg.STATE_WRITE mem_state_reg.STATE_ADDR mem_state_reg.STATE_FETCH 
+mem_state_reg.STATE_FETCH 0 0 0 0 
+mem_state_reg.STATE_ADDR 0 0 1 1 
+mem_state_reg.STATE_WRITE 0 1 0 1 
+mem_state_reg.STATE_PAUSE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|packet_buffer_bypass:pb5|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|packet_buffer_bypass:pb4|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|packet_buffer:pb3|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|packet_buffer:pb2|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|packet_buffer:pb1|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|packet_buffer:pb0|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|out_switch:out_switch|os_state3
+Name os_state3.OS_CANCEL os_state3.OS_TX os_state3.OS_PORT_REQ os_state3.OS_LOOKUP_BUFF os_state3.OS_IDLE os_state3.000 
+os_state3.000 0 0 0 0 0 0 
+os_state3.OS_IDLE 0 0 0 0 1 1 
+os_state3.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state3.OS_PORT_REQ 0 0 1 0 0 1 
+os_state3.OS_TX 0 1 0 0 0 1 
+os_state3.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|out_switch:out_switch|os_state2
+Name os_state2.OS_CANCEL os_state2.OS_TX os_state2.OS_PORT_REQ os_state2.OS_LOOKUP_BUFF os_state2.OS_IDLE os_state2.000 
+os_state2.000 0 0 0 0 0 0 
+os_state2.OS_IDLE 0 0 0 0 1 1 
+os_state2.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state2.OS_PORT_REQ 0 0 1 0 0 1 
+os_state2.OS_TX 0 1 0 0 0 1 
+os_state2.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|out_switch:out_switch|os_state1
+Name os_state1.OS_CANCEL os_state1.OS_TX os_state1.OS_PORT_REQ os_state1.OS_LOOKUP_BUFF os_state1.OS_IDLE os_state1.000 
+os_state1.000 0 0 0 0 0 0 
+os_state1.OS_IDLE 0 0 0 0 1 1 
+os_state1.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state1.OS_PORT_REQ 0 0 1 0 0 1 
+os_state1.OS_TX 0 1 0 0 0 1 
+os_state1.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|out_switch:out_switch|os_state0
+Name os_state0.OS_CANCEL os_state0.OS_TX os_state0.OS_PORT_REQ os_state0.OS_LOOKUP_BUFF os_state0.OS_IDLE os_state0.000 
+os_state0.000 0 0 0 0 0 0 
+os_state0.OS_IDLE 0 0 0 0 1 1 
+os_state0.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state0.OS_PORT_REQ 0 0 1 0 0 1 
+os_state0.OS_TX 0 1 0 0 0 1 
+os_state0.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state
+Name bypass_empty_buff_state.BYPASS_BUFF_WAIT2 bypass_empty_buff_state.BYPASS_BUFF_WAIT1 bypass_empty_buff_state.BYPASS_BUFF_GRANT bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 
+bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 0 0 0 0 
+bypass_empty_buff_state.BYPASS_BUFF_GRANT 0 0 1 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT1 0 1 0 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|in_switch:in_switch|empty_buff_state
+Name empty_buff_state.EMPTY_BUFF_WAIT2 empty_buff_state.EMPTY_BUFF_WAIT1 empty_buff_state.EMPTY_BUFF_GRANT empty_buff_state.EMPTY_BUFF_LOOKUP 
+empty_buff_state.EMPTY_BUFF_LOOKUP 0 0 0 0 
+empty_buff_state.EMPTY_BUFF_GRANT 0 0 1 1 
+empty_buff_state.EMPTY_BUFF_WAIT1 0 1 0 1 
+empty_buff_state.EMPTY_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|in_switch:in_switch|port_state3
+Name port_state3.PORT_STATE_CANCEL_BUFF_REQ port_state3.PORT_STATE_TX port_state3.PORT_STATE_BUFF_REQ port_state3.PORT_STATE_BUFF_LOOKUP port_state3.PORT_STATE_IDLE port_state3.000 
+port_state3.000 0 0 0 0 0 0 
+port_state3.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state3.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state3.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state3.PORT_STATE_TX 0 1 0 0 0 1 
+port_state3.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|in_switch:in_switch|port_state2
+Name port_state2.PORT_STATE_CANCEL_BUFF_REQ port_state2.PORT_STATE_TX port_state2.PORT_STATE_BUFF_REQ port_state2.PORT_STATE_BUFF_LOOKUP port_state2.PORT_STATE_IDLE port_state2.000 
+port_state2.000 0 0 0 0 0 0 
+port_state2.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state2.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state2.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state2.PORT_STATE_TX 0 1 0 0 0 1 
+port_state2.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|in_switch:in_switch|port_state1
+Name port_state1.PORT_STATE_CANCEL_BUFF_REQ port_state1.PORT_STATE_TX port_state1.PORT_STATE_BUFF_REQ port_state1.PORT_STATE_BUFF_LOOKUP port_state1.PORT_STATE_IDLE port_state1.000 
+port_state1.000 0 0 0 0 0 0 
+port_state1.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state1.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state1.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state1.PORT_STATE_TX 0 1 0 0 0 1 
+port_state1.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu2|in_switch:in_switch|port_state0
+Name port_state0.PORT_STATE_CANCEL_BUFF_REQ port_state0.PORT_STATE_TX port_state0.PORT_STATE_BUFF_REQ port_state0.PORT_STATE_BUFF_LOOKUP port_state0.PORT_STATE_IDLE port_state0.000 
+port_state0.000 0 0 0 0 0 0 
+port_state0.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state0.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state0.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state0.PORT_STATE_TX 0 1 0 0 0 1 
+port_state0.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|yf32_core:service_processor|mlite_cpu:u1_cpu|mem_ctrl:u2_mem_ctrl|mem_state_reg
+Name mem_state_reg.STATE_PAUSE mem_state_reg.STATE_WRITE mem_state_reg.STATE_ADDR mem_state_reg.STATE_FETCH 
+mem_state_reg.STATE_FETCH 0 0 0 0 
+mem_state_reg.STATE_ADDR 0 0 1 1 
+mem_state_reg.STATE_WRITE 0 1 0 1 
+mem_state_reg.STATE_PAUSE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|packet_buffer_bypass:pb5|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|packet_buffer_bypass:pb4|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|packet_buffer:pb3|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|packet_buffer:pb2|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|packet_buffer:pb1|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|packet_buffer:pb0|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|out_switch:out_switch|os_state3
+Name os_state3.OS_CANCEL os_state3.OS_TX os_state3.OS_PORT_REQ os_state3.OS_LOOKUP_BUFF os_state3.OS_IDLE os_state3.000 
+os_state3.000 0 0 0 0 0 0 
+os_state3.OS_IDLE 0 0 0 0 1 1 
+os_state3.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state3.OS_PORT_REQ 0 0 1 0 0 1 
+os_state3.OS_TX 0 1 0 0 0 1 
+os_state3.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|out_switch:out_switch|os_state2
+Name os_state2.OS_CANCEL os_state2.OS_TX os_state2.OS_PORT_REQ os_state2.OS_LOOKUP_BUFF os_state2.OS_IDLE os_state2.000 
+os_state2.000 0 0 0 0 0 0 
+os_state2.OS_IDLE 0 0 0 0 1 1 
+os_state2.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state2.OS_PORT_REQ 0 0 1 0 0 1 
+os_state2.OS_TX 0 1 0 0 0 1 
+os_state2.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|out_switch:out_switch|os_state1
+Name os_state1.OS_CANCEL os_state1.OS_TX os_state1.OS_PORT_REQ os_state1.OS_LOOKUP_BUFF os_state1.OS_IDLE os_state1.000 
+os_state1.000 0 0 0 0 0 0 
+os_state1.OS_IDLE 0 0 0 0 1 1 
+os_state1.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state1.OS_PORT_REQ 0 0 1 0 0 1 
+os_state1.OS_TX 0 1 0 0 0 1 
+os_state1.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|out_switch:out_switch|os_state0
+Name os_state0.OS_CANCEL os_state0.OS_TX os_state0.OS_PORT_REQ os_state0.OS_LOOKUP_BUFF os_state0.OS_IDLE os_state0.000 
+os_state0.000 0 0 0 0 0 0 
+os_state0.OS_IDLE 0 0 0 0 1 1 
+os_state0.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state0.OS_PORT_REQ 0 0 1 0 0 1 
+os_state0.OS_TX 0 1 0 0 0 1 
+os_state0.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state
+Name bypass_empty_buff_state.BYPASS_BUFF_WAIT2 bypass_empty_buff_state.BYPASS_BUFF_WAIT1 bypass_empty_buff_state.BYPASS_BUFF_GRANT bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 
+bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 0 0 0 0 
+bypass_empty_buff_state.BYPASS_BUFF_GRANT 0 0 1 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT1 0 1 0 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|in_switch:in_switch|empty_buff_state
+Name empty_buff_state.EMPTY_BUFF_WAIT2 empty_buff_state.EMPTY_BUFF_WAIT1 empty_buff_state.EMPTY_BUFF_GRANT empty_buff_state.EMPTY_BUFF_LOOKUP 
+empty_buff_state.EMPTY_BUFF_LOOKUP 0 0 0 0 
+empty_buff_state.EMPTY_BUFF_GRANT 0 0 1 1 
+empty_buff_state.EMPTY_BUFF_WAIT1 0 1 0 1 
+empty_buff_state.EMPTY_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|in_switch:in_switch|port_state3
+Name port_state3.PORT_STATE_CANCEL_BUFF_REQ port_state3.PORT_STATE_TX port_state3.PORT_STATE_BUFF_REQ port_state3.PORT_STATE_BUFF_LOOKUP port_state3.PORT_STATE_IDLE port_state3.000 
+port_state3.000 0 0 0 0 0 0 
+port_state3.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state3.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state3.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state3.PORT_STATE_TX 0 1 0 0 0 1 
+port_state3.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|in_switch:in_switch|port_state2
+Name port_state2.PORT_STATE_CANCEL_BUFF_REQ port_state2.PORT_STATE_TX port_state2.PORT_STATE_BUFF_REQ port_state2.PORT_STATE_BUFF_LOOKUP port_state2.PORT_STATE_IDLE port_state2.000 
+port_state2.000 0 0 0 0 0 0 
+port_state2.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state2.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state2.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state2.PORT_STATE_TX 0 1 0 0 0 1 
+port_state2.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|in_switch:in_switch|port_state1
+Name port_state1.PORT_STATE_CANCEL_BUFF_REQ port_state1.PORT_STATE_TX port_state1.PORT_STATE_BUFF_REQ port_state1.PORT_STATE_BUFF_LOOKUP port_state1.PORT_STATE_IDLE port_state1.000 
+port_state1.000 0 0 0 0 0 0 
+port_state1.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state1.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state1.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state1.PORT_STATE_TX 0 1 0 0 0 1 
+port_state1.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu1|in_switch:in_switch|port_state0
+Name port_state0.PORT_STATE_CANCEL_BUFF_REQ port_state0.PORT_STATE_TX port_state0.PORT_STATE_BUFF_REQ port_state0.PORT_STATE_BUFF_LOOKUP port_state0.PORT_STATE_IDLE port_state0.000 
+port_state0.000 0 0 0 0 0 0 
+port_state0.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state0.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state0.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state0.PORT_STATE_TX 0 1 0 0 0 1 
+port_state0.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|router_op_lut_regs_non_cntr:router_op_lut_regs_non_cntr|state
+Name state.DONE state.READ_FROM_DEST_IP_FILTER state.WRITE_TO_DEST_IP_FILTER state.READ_FROM_RT_LUT state.WRITE_TO_RT_LUT state.READ_FROM_ARP_LUT state.WRITE_TO_ARP_LUT state.WAIT_FOR_REQ 
+state.WAIT_FOR_REQ 0 0 0 0 0 0 0 0 
+state.WRITE_TO_ARP_LUT 0 0 0 0 0 0 1 1 
+state.READ_FROM_ARP_LUT 0 0 0 0 0 1 0 1 
+state.WRITE_TO_RT_LUT 0 0 0 0 1 0 0 1 
+state.READ_FROM_RT_LUT 0 0 0 1 0 0 0 1 
+state.WRITE_TO_DEST_IP_FILTER 0 0 1 0 0 0 0 1 
+state.READ_FROM_DEST_IP_FILTER 0 1 0 0 0 0 0 1 
+state.DONE 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor_ipv4:security_mon_5|pkt_done_state
+Name pkt_done_state.01 
+pkt_done_state.00 0 
+pkt_done_state.01 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor_ipv4:security_mon_5|drop_state
+Name drop_state.101 drop_state.100 drop_state.011 drop_state.010 drop_state.001 drop_state.000 
+drop_state.000 0 0 0 0 0 0 
+drop_state.001 0 0 0 0 1 1 
+drop_state.010 0 0 0 1 0 1 
+drop_state.011 0 0 1 0 0 1 
+drop_state.100 0 1 0 0 0 1 
+drop_state.101 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor_ipv4:security_mon_4|pkt_done_state
+Name pkt_done_state.01 
+pkt_done_state.00 0 
+pkt_done_state.01 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor_ipv4:security_mon_4|drop_state
+Name drop_state.101 drop_state.100 drop_state.011 drop_state.010 drop_state.001 drop_state.000 
+drop_state.000 0 0 0 0 0 0 
+drop_state.001 0 0 0 0 1 1 
+drop_state.010 0 0 0 1 0 1 
+drop_state.011 0 0 1 0 0 1 
+drop_state.100 0 1 0 0 0 1 
+drop_state.101 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_3|pkt_done_state
+Name pkt_done_state.11 pkt_done_state.10 pkt_done_state.01 pkt_done_state.00 
+pkt_done_state.00 0 0 0 0 
+pkt_done_state.01 0 0 1 1 
+pkt_done_state.10 0 1 0 1 
+pkt_done_state.11 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_3|drop_state
+Name drop_state.101 drop_state.100 drop_state.011 drop_state.010 drop_state.001 drop_state.000 
+drop_state.000 0 0 0 0 0 0 
+drop_state.001 0 0 0 0 1 1 
+drop_state.010 0 0 0 1 0 1 
+drop_state.011 0 0 1 0 0 1 
+drop_state.100 0 1 0 0 0 1 
+drop_state.101 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_2|pkt_done_state
+Name pkt_done_state.11 pkt_done_state.10 pkt_done_state.01 pkt_done_state.00 
+pkt_done_state.00 0 0 0 0 
+pkt_done_state.01 0 0 1 1 
+pkt_done_state.10 0 1 0 1 
+pkt_done_state.11 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_2|drop_state
+Name drop_state.101 drop_state.100 drop_state.011 drop_state.010 drop_state.001 drop_state.000 
+drop_state.000 0 0 0 0 0 0 
+drop_state.001 0 0 0 0 1 1 
+drop_state.010 0 0 0 1 0 1 
+drop_state.011 0 0 1 0 0 1 
+drop_state.100 0 1 0 0 0 1 
+drop_state.101 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_1|pkt_done_state
+Name pkt_done_state.11 pkt_done_state.10 pkt_done_state.01 pkt_done_state.00 
+pkt_done_state.00 0 0 0 0 
+pkt_done_state.01 0 0 1 1 
+pkt_done_state.10 0 1 0 1 
+pkt_done_state.11 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_1|drop_state
+Name drop_state.101 drop_state.100 drop_state.011 drop_state.010 drop_state.001 drop_state.000 
+drop_state.000 0 0 0 0 0 0 
+drop_state.001 0 0 0 0 1 1 
+drop_state.010 0 0 0 1 0 1 
+drop_state.011 0 0 1 0 0 1 
+drop_state.100 0 1 0 0 0 1 
+drop_state.101 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_0|pkt_done_state
+Name pkt_done_state.11 pkt_done_state.10 pkt_done_state.01 pkt_done_state.00 
+pkt_done_state.00 0 0 0 0 
+pkt_done_state.01 0 0 1 1 
+pkt_done_state.10 0 1 0 1 
+pkt_done_state.11 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|CAM_monitor:security_mon_0|drop_state
+Name drop_state.101 drop_state.100 drop_state.011 drop_state.010 drop_state.001 drop_state.000 
+drop_state.000 0 0 0 0 0 0 
+drop_state.001 0 0 0 0 1 1 
+drop_state.010 0 0 0 1 0 1 
+drop_state.011 0 0 1 0 0 1 
+drop_state.100 0 1 0 0 0 1 
+drop_state.101 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|yf32_core:service_processor|mlite_cpu:u1_cpu|mem_ctrl:u2_mem_ctrl|mem_state_reg
+Name mem_state_reg.STATE_PAUSE mem_state_reg.STATE_WRITE mem_state_reg.STATE_ADDR mem_state_reg.STATE_FETCH 
+mem_state_reg.STATE_FETCH 0 0 0 0 
+mem_state_reg.STATE_ADDR 0 0 1 1 
+mem_state_reg.STATE_WRITE 0 1 0 1 
+mem_state_reg.STATE_PAUSE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|packet_buffer_bypass:pb5|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|packet_buffer_bypass:pb4|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|packet_buffer:pb3|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|packet_buffer:pb2|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|packet_buffer:pb1|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|packet_buffer:pb0|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|out_switch:out_switch|os_state3
+Name os_state3.OS_CANCEL os_state3.OS_TX os_state3.OS_PORT_REQ os_state3.OS_LOOKUP_BUFF os_state3.OS_IDLE os_state3.000 
+os_state3.000 0 0 0 0 0 0 
+os_state3.OS_IDLE 0 0 0 0 1 1 
+os_state3.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state3.OS_PORT_REQ 0 0 1 0 0 1 
+os_state3.OS_TX 0 1 0 0 0 1 
+os_state3.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|out_switch:out_switch|os_state2
+Name os_state2.OS_CANCEL os_state2.OS_TX os_state2.OS_PORT_REQ os_state2.OS_LOOKUP_BUFF os_state2.OS_IDLE os_state2.000 
+os_state2.000 0 0 0 0 0 0 
+os_state2.OS_IDLE 0 0 0 0 1 1 
+os_state2.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state2.OS_PORT_REQ 0 0 1 0 0 1 
+os_state2.OS_TX 0 1 0 0 0 1 
+os_state2.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|out_switch:out_switch|os_state1
+Name os_state1.OS_CANCEL os_state1.OS_TX os_state1.OS_PORT_REQ os_state1.OS_LOOKUP_BUFF os_state1.OS_IDLE os_state1.000 
+os_state1.000 0 0 0 0 0 0 
+os_state1.OS_IDLE 0 0 0 0 1 1 
+os_state1.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state1.OS_PORT_REQ 0 0 1 0 0 1 
+os_state1.OS_TX 0 1 0 0 0 1 
+os_state1.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|out_switch:out_switch|os_state0
+Name os_state0.OS_CANCEL os_state0.OS_TX os_state0.OS_PORT_REQ os_state0.OS_LOOKUP_BUFF os_state0.OS_IDLE os_state0.000 
+os_state0.000 0 0 0 0 0 0 
+os_state0.OS_IDLE 0 0 0 0 1 1 
+os_state0.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state0.OS_PORT_REQ 0 0 1 0 0 1 
+os_state0.OS_TX 0 1 0 0 0 1 
+os_state0.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state
+Name bypass_empty_buff_state.BYPASS_BUFF_WAIT2 bypass_empty_buff_state.BYPASS_BUFF_WAIT1 bypass_empty_buff_state.BYPASS_BUFF_GRANT bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 
+bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 0 0 0 0 
+bypass_empty_buff_state.BYPASS_BUFF_GRANT 0 0 1 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT1 0 1 0 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|in_switch:in_switch|empty_buff_state
+Name empty_buff_state.EMPTY_BUFF_WAIT2 empty_buff_state.EMPTY_BUFF_WAIT1 empty_buff_state.EMPTY_BUFF_GRANT empty_buff_state.EMPTY_BUFF_LOOKUP 
+empty_buff_state.EMPTY_BUFF_LOOKUP 0 0 0 0 
+empty_buff_state.EMPTY_BUFF_GRANT 0 0 1 1 
+empty_buff_state.EMPTY_BUFF_WAIT1 0 1 0 1 
+empty_buff_state.EMPTY_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|in_switch:in_switch|port_state3
+Name port_state3.PORT_STATE_CANCEL_BUFF_REQ port_state3.PORT_STATE_TX port_state3.PORT_STATE_BUFF_REQ port_state3.PORT_STATE_BUFF_LOOKUP port_state3.PORT_STATE_IDLE port_state3.000 
+port_state3.000 0 0 0 0 0 0 
+port_state3.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state3.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state3.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state3.PORT_STATE_TX 0 1 0 0 0 1 
+port_state3.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|in_switch:in_switch|port_state2
+Name port_state2.PORT_STATE_CANCEL_BUFF_REQ port_state2.PORT_STATE_TX port_state2.PORT_STATE_BUFF_REQ port_state2.PORT_STATE_BUFF_LOOKUP port_state2.PORT_STATE_IDLE port_state2.000 
+port_state2.000 0 0 0 0 0 0 
+port_state2.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state2.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state2.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state2.PORT_STATE_TX 0 1 0 0 0 1 
+port_state2.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|in_switch:in_switch|port_state1
+Name port_state1.PORT_STATE_CANCEL_BUFF_REQ port_state1.PORT_STATE_TX port_state1.PORT_STATE_BUFF_REQ port_state1.PORT_STATE_BUFF_LOOKUP port_state1.PORT_STATE_IDLE port_state1.000 
+port_state1.000 0 0 0 0 0 0 
+port_state1.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state1.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state1.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state1.PORT_STATE_TX 0 1 0 0 0 1 
+port_state1.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|ppu:ppu0|in_switch:in_switch|port_state0
+Name port_state0.PORT_STATE_CANCEL_BUFF_REQ port_state0.PORT_STATE_TX port_state0.PORT_STATE_BUFF_REQ port_state0.PORT_STATE_BUFF_LOOKUP port_state0.PORT_STATE_IDLE port_state0.000 
+port_state0.000 0 0 0 0 0 0 
+port_state0.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state0.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state0.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state0.PORT_STATE_TX 0 1 0 0 0 1 
+port_state0.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|state_protocol
+Name state_protocol.PRO_FIND3 state_protocol.PRO_FIND2 state_protocol.PRO_FIND1 state_protocol.PRO_IDLE state_protocol.PRO_FIND4 
+state_protocol.PRO_IDLE 0 0 0 0 0 
+state_protocol.PRO_FIND1 0 0 1 1 0 
+state_protocol.PRO_FIND2 0 1 0 1 0 
+state_protocol.PRO_FIND3 1 0 0 1 0 
+state_protocol.PRO_FIND4 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|np_core:np_core|flow_classification:fc|state
+Name state.FC_WAIT_ACK state.FC_CANCEL_REQ state.FC_TX state.FC_ACK state.FC_REQ state.FC_LOOKUP_ROUTE state.FC_IDLE state.000 
+state.000 0 0 0 0 0 0 0 0 
+state.FC_IDLE 0 0 0 0 0 0 1 1 
+state.FC_LOOKUP_ROUTE 0 0 0 0 0 1 0 1 
+state.FC_REQ 0 0 0 0 1 0 0 1 
+state.FC_ACK 0 0 0 1 0 0 0 1 
+state.FC_TX 0 0 1 0 0 0 0 1 
+state.FC_CANCEL_REQ 0 1 0 0 0 0 0 1 
+state.FC_WAIT_ACK 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|jtag_bus:jtag_bus|p2n_state
+Name p2n_state.P2N_IDLE p2n_state.P2N_RD_DONE p2n_state.READING 
+p2n_state.P2N_IDLE 0 0 0 
+p2n_state.READING 1 0 1 
+p2n_state.P2N_RD_DONE 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|add_rm_hdr:cpu_queues[3].add_rm_hdr|add_hdr:add_hdr|state
+Name state.WRITE state.READ state.READ_HDR 
+state.WRITE 0 0 0 
+state.READ_HDR 1 0 1 
+state.READ 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|add_rm_hdr:cpu_queues[2].add_rm_hdr|add_hdr:add_hdr|state
+Name state.WRITE state.READ state.READ_HDR 
+state.WRITE 0 0 0 
+state.READ_HDR 1 0 1 
+state.READ 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|add_rm_hdr:cpu_queues[1].add_rm_hdr|add_hdr:add_hdr|state
+Name state.WRITE state.READ state.READ_HDR 
+state.WRITE 0 0 0 
+state.READ_HDR 1 0 1 
+state.READ 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|add_rm_hdr:cpu_queues[0].add_rm_hdr|add_hdr:add_hdr|state
+Name state.WRITE state.READ state.READ_HDR 
+state.WRITE 0 0 0 
+state.READ_HDR 1 0 1 
+state.READ 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[3].nf2_mac_grp|tx_queue:tx_queue|tx_mac_state
+Name tx_mac_state.WAIT_FOR_BYTE_COUNT tx_mac_state.WAIT_FOR_EOP tx_mac_state.WAIT_FOR_ACK tx_mac_state.IDLE 
+tx_mac_state.IDLE 0 0 0 0 
+tx_mac_state.WAIT_FOR_ACK 0 0 1 1 
+tx_mac_state.WAIT_FOR_EOP 0 1 0 1 
+tx_mac_state.WAIT_FOR_BYTE_COUNT 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[3].nf2_mac_grp|rx_queue:rx_queue|rx_state
+Name rx_state.RX_DROP_PKT rx_state.RX_ADD_PAD rx_state.RX_WAIT_GOOD_OR_BAD rx_state.RX_RCV_PKT rx_state.RX_IDLE 
+rx_state.RX_IDLE 0 0 0 0 0 
+rx_state.RX_RCV_PKT 0 0 0 1 1 
+rx_state.RX_WAIT_GOOD_OR_BAD 0 0 1 0 1 
+rx_state.RX_ADD_PAD 0 1 0 0 1 
+rx_state.RX_DROP_PKT 1 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[3].nf2_mac_grp|rx_queue:rx_queue|out_state
+Name out_state.OUT_WAIT_PKT_AVAIL out_state.OUT_WAIT_PKT_DONE out_state.OUT_LENGTH 
+out_state.OUT_WAIT_PKT_AVAIL 0 0 0 
+out_state.OUT_LENGTH 1 0 1 
+out_state.OUT_WAIT_PKT_DONE 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[2].nf2_mac_grp|tx_queue:tx_queue|tx_mac_state
+Name tx_mac_state.WAIT_FOR_BYTE_COUNT tx_mac_state.WAIT_FOR_EOP tx_mac_state.WAIT_FOR_ACK tx_mac_state.IDLE 
+tx_mac_state.IDLE 0 0 0 0 
+tx_mac_state.WAIT_FOR_ACK 0 0 1 1 
+tx_mac_state.WAIT_FOR_EOP 0 1 0 1 
+tx_mac_state.WAIT_FOR_BYTE_COUNT 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[2].nf2_mac_grp|rx_queue:rx_queue|rx_state
+Name rx_state.RX_DROP_PKT rx_state.RX_ADD_PAD rx_state.RX_WAIT_GOOD_OR_BAD rx_state.RX_RCV_PKT rx_state.RX_IDLE 
+rx_state.RX_IDLE 0 0 0 0 0 
+rx_state.RX_RCV_PKT 0 0 0 1 1 
+rx_state.RX_WAIT_GOOD_OR_BAD 0 0 1 0 1 
+rx_state.RX_ADD_PAD 0 1 0 0 1 
+rx_state.RX_DROP_PKT 1 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[2].nf2_mac_grp|rx_queue:rx_queue|out_state
+Name out_state.OUT_WAIT_PKT_AVAIL out_state.OUT_WAIT_PKT_DONE out_state.OUT_LENGTH 
+out_state.OUT_WAIT_PKT_AVAIL 0 0 0 
+out_state.OUT_LENGTH 1 0 1 
+out_state.OUT_WAIT_PKT_DONE 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[1].nf2_mac_grp|tx_queue:tx_queue|tx_mac_state
+Name tx_mac_state.WAIT_FOR_BYTE_COUNT tx_mac_state.WAIT_FOR_EOP tx_mac_state.WAIT_FOR_ACK tx_mac_state.IDLE 
+tx_mac_state.IDLE 0 0 0 0 
+tx_mac_state.WAIT_FOR_ACK 0 0 1 1 
+tx_mac_state.WAIT_FOR_EOP 0 1 0 1 
+tx_mac_state.WAIT_FOR_BYTE_COUNT 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[1].nf2_mac_grp|rx_queue:rx_queue|rx_state
+Name rx_state.RX_DROP_PKT rx_state.RX_ADD_PAD rx_state.RX_WAIT_GOOD_OR_BAD rx_state.RX_RCV_PKT rx_state.RX_IDLE 
+rx_state.RX_IDLE 0 0 0 0 0 
+rx_state.RX_RCV_PKT 0 0 0 1 1 
+rx_state.RX_WAIT_GOOD_OR_BAD 0 0 1 0 1 
+rx_state.RX_ADD_PAD 0 1 0 0 1 
+rx_state.RX_DROP_PKT 1 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[1].nf2_mac_grp|rx_queue:rx_queue|out_state
+Name out_state.OUT_WAIT_PKT_AVAIL out_state.OUT_WAIT_PKT_DONE out_state.OUT_LENGTH 
+out_state.OUT_WAIT_PKT_AVAIL 0 0 0 
+out_state.OUT_LENGTH 1 0 1 
+out_state.OUT_WAIT_PKT_DONE 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[0].nf2_mac_grp|tx_queue:tx_queue|tx_mac_state
+Name tx_mac_state.WAIT_FOR_BYTE_COUNT tx_mac_state.WAIT_FOR_EOP tx_mac_state.WAIT_FOR_ACK tx_mac_state.IDLE 
+tx_mac_state.IDLE 0 0 0 0 
+tx_mac_state.WAIT_FOR_ACK 0 0 1 1 
+tx_mac_state.WAIT_FOR_EOP 0 1 0 1 
+tx_mac_state.WAIT_FOR_BYTE_COUNT 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[0].nf2_mac_grp|rx_queue:rx_queue|rx_state
+Name rx_state.RX_DROP_PKT rx_state.RX_ADD_PAD rx_state.RX_WAIT_GOOD_OR_BAD rx_state.RX_RCV_PKT rx_state.RX_IDLE 
+rx_state.RX_IDLE 0 0 0 0 0 
+rx_state.RX_RCV_PKT 0 0 0 1 1 
+rx_state.RX_WAIT_GOOD_OR_BAD 0 0 1 0 1 
+rx_state.RX_ADD_PAD 0 1 0 0 1 
+rx_state.RX_DROP_PKT 1 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|nf2_mac_grp:mac_groups[0].nf2_mac_grp|rx_queue:rx_queue|out_state
+Name out_state.OUT_WAIT_PKT_AVAIL out_state.OUT_WAIT_PKT_DONE out_state.OUT_LENGTH 
+out_state.OUT_WAIT_PKT_AVAIL 0 0 0 
+out_state.OUT_LENGTH 1 0 1 
+out_state.OUT_WAIT_PKT_DONE 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|dma_engine:dma_engine|dma_engine_pci_xfer:dma_engine_pci_xfer|xfer_state
+Name xfer_state.101 xfer_state.100 xfer_state.011 xfer_state.010 xfer_state.001 xfer_state.000 
+xfer_state.000 0 0 0 0 0 0 
+xfer_state.001 0 0 0 0 1 1 
+xfer_state.010 0 0 0 1 0 1 
+xfer_state.011 0 0 1 0 0 1 
+xfer_state.100 0 1 0 0 0 1 
+xfer_state.101 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|dma_engine:dma_engine|dma_engine_ctrl:dma_engine_ctrl|curr_state
+Name curr_state.1111 curr_state.1010 curr_state.1001 curr_state.1000 curr_state.0101 curr_state.0100 curr_state.0011 curr_state.0010 curr_state.0001 curr_state.0000 
+curr_state.0000 0 0 0 0 0 0 0 0 0 0 
+curr_state.0001 0 0 0 0 0 0 0 0 1 1 
+curr_state.0010 0 0 0 0 0 0 0 1 0 1 
+curr_state.0011 0 0 0 0 0 0 1 0 0 1 
+curr_state.0100 0 0 0 0 0 1 0 0 0 1 
+curr_state.0101 0 0 0 0 1 0 0 0 0 1 
+curr_state.1000 0 0 0 1 0 0 0 0 0 1 
+curr_state.1001 0 0 1 0 0 0 0 0 0 1 
+curr_state.1010 0 1 0 0 0 0 0 0 0 1 
+curr_state.1111 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|cnet_dma_bus_master:cnet_dma_bus_master|cpci_state
+Name cpci_state.TRANSF_CPCI_2_NETFPGA_LEN_DATA_STATE cpci_state.TRANSF_CPCI_2_NETFPGA_REQ_STATE cpci_state.TRANSF_NETFPGA_2_CPCI_DATA_STATE cpci_state.TRANSF_NETFPGA_2_CPCI_LEN_STATE cpci_state.TRANSF_NETFPGA_2_CPCI_REQ_STATE cpci_state.QUERY_ACK_STATE cpci_state.QUERY_REQ_STATE 
+cpci_state.QUERY_REQ_STATE 0 0 0 0 0 0 0 
+cpci_state.QUERY_ACK_STATE 0 0 0 0 0 1 1 
+cpci_state.TRANSF_NETFPGA_2_CPCI_REQ_STATE 0 0 0 0 1 0 1 
+cpci_state.TRANSF_NETFPGA_2_CPCI_LEN_STATE 0 0 0 1 0 0 1 
+cpci_state.TRANSF_NETFPGA_2_CPCI_DATA_STATE 0 0 1 0 0 0 1 
+cpci_state.TRANSF_CPCI_2_NETFPGA_REQ_STATE 0 1 0 0 0 0 1 
+cpci_state.TRANSF_CPCI_2_NETFPGA_LEN_DATA_STATE 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|cnet_reprogram:cnet_reprogram|curr_state
+Name curr_state.011 curr_state.010 curr_state.001 curr_state.000 curr_state.100 
+curr_state.000 0 0 0 0 0 
+curr_state.001 0 0 1 1 0 
+curr_state.010 0 1 0 1 0 
+curr_state.011 1 0 0 1 0 
+curr_state.100 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|cnet_reg_iface:cnet_reg_iface|curr_state
+Name curr_state.00 curr_state.10 curr_state.01 
+curr_state.00 0 0 0 
+curr_state.01 1 0 1 
+curr_state.10 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|cnet_reg_access:cnet_reg_access|rd_state
+Name rd_state.11 rd_state.10 rd_state.01 rd_state.00 
+rd_state.00 0 0 0 0 
+rd_state.01 0 0 1 1 
+rd_state.10 0 1 0 1 
+rd_state.11 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|pcie_interface:pcie_i|i_state
+Name i_state.I_WRITE_WAIT2 i_state.I_WRITE_WAIT i_state.I_WRITE i_state.I_READ_WAIT i_state.I_READ i_state.I_ADDRESS i_state.I_IDLE 
+i_state.I_IDLE 0 0 0 0 0 0 0 
+i_state.I_ADDRESS 0 0 0 0 0 1 1 
+i_state.I_READ 0 0 0 0 1 0 1 
+i_state.I_READ_WAIT 0 0 0 1 0 0 1 
+i_state.I_WRITE 0 0 1 0 0 0 1 
+i_state.I_WRITE_WAIT 0 1 0 0 0 0 1 
+i_state.I_WRITE_WAIT2 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|pcie_interface:pcie_i|r_state
+Name r_state.R_IDLE r_state.R_FIN r_state.R_WAIT 
+r_state.R_IDLE 0 0 0 
+r_state.R_WAIT 1 0 1 
+r_state.R_FIN 1 1 0 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|ethernet_port_interface_0:the_ethernet_port_interface_0|ethernet_port_interface:ethernet_port_interface_0|n_cpci_top:cpci_top|cpci_clock_checker:cc|state
+Name state.CHECK state.WAIT1 state.COUNT state.START 
+state.START 0 0 0 0 
+state.COUNT 0 0 1 1 
+state.WAIT1 0 1 0 1 
+state.CHECK 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|DE4_SOPC_clock_0:the_DE4_SOPC_clock_0|DE4_SOPC_clock_0_master_FSM:master_FSM|master_state
+Name master_state.100 master_state.010 master_state.001 
+master_state.001 0 0 0 
+master_state.010 0 1 1 
+master_state.100 1 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|DE4_SOPC_clock_0:the_DE4_SOPC_clock_0|DE4_SOPC_clock_0_slave_FSM:slave_FSM|slave_state
+Name slave_state.100 slave_state.010 slave_state.001 
+slave_state.001 0 0 0 
+slave_state.010 0 1 1 
+slave_state.100 1 0 1 
+
+State Machine - |DE4_Reference_Router|altgx_reconfig:altgx_reconfig_inst|altgx_reconfig_alt2gxb_reconfig_v3p:altgx_reconfig_alt2gxb_reconfig_v3p_component|alt_cal:calibration|ret_state
+Name ret_state.TESTBUS_OFF_WR ret_state.TESTBUS_OFF_RD ret_state.TESTBUS_ON_WR ret_state.KICK_PAUSE ret_state.KICK_START_WR ret_state.CH_ADV ret_state.DPRIO_WAIT ret_state.CAL_RX_WR ret_state.CAL_RX_RD ret_state.CAL_PD_WR ret_state.OFFSETS_PDEN_WR ret_state.OFFSETS_PDEN_RD ret_state.IDLE 
+ret_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ret_state.OFFSETS_PDEN_RD 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ret_state.OFFSETS_PDEN_WR 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ret_state.CAL_PD_WR 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ret_state.CAL_RX_RD 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ret_state.CAL_RX_WR 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ret_state.DPRIO_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ret_state.CH_ADV 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ret_state.KICK_START_WR 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ret_state.KICK_PAUSE 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ret_state.TESTBUS_ON_WR 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ret_state.TESTBUS_OFF_RD 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ret_state.TESTBUS_OFF_WR 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|altgx_reconfig:altgx_reconfig_inst|altgx_reconfig_alt2gxb_reconfig_v3p:altgx_reconfig_alt2gxb_reconfig_v3p_component|alt_cal:calibration|state
+Name state.TESTBUS_OFF_WR state.TESTBUS_OFF_RD state.TESTBUS_ON_WR state.TESTBUS_ON_RD state.KICK_DELAY_OC state.KICK_PAUSE state.KICK_START_WR state.DPRIO_WRITE state.DPRIO_READ state.KICK_START_RD state.CH_ADV state.KICK_SETWAIT state.TEST_INPUT state.SAMPLE_TB state.DPRIO_WAIT state.CAL_RX_WR state.CAL_RX_RD state.CAL_PD_WR state.OFFSETS_PDEN_WR state.OFFSETS_PDEN_RD state.TESTBUS_SET state.CH_WAIT state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.CH_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.TESTBUS_SET 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.OFFSETS_PDEN_RD 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.OFFSETS_PDEN_WR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.CAL_PD_WR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.CAL_RX_RD 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.CAL_RX_WR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.DPRIO_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.SAMPLE_TB 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.TEST_INPUT 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.KICK_SETWAIT 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.CH_ADV 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.KICK_START_RD 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.DPRIO_READ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.DPRIO_WRITE 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.KICK_START_WR 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.KICK_PAUSE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.KICK_DELAY_OC 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.TESTBUS_ON_RD 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.TESTBUS_ON_WR 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.TESTBUS_OFF_RD 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.TESTBUS_OFF_WR 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|altera_tse_retransmit_cntl:U_RETR|state
+Name state.STM_TYP_WAIT_COL state.STM_TYP_BACK_OFF state.STM_TYP_RETRANSMIT_SHORT state.STM_TYP_RETRANSMIT state.STM_TYP_FLUSH state.STM_TYP_WAIT_END state.STM_TYP_COPY state.STM_TYP_IDLE state.STM_TYP_WAIT_COL_1 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COPY 0 0 0 0 0 0 1 1 0 
+state.STM_TYP_WAIT_END 0 0 0 0 0 1 0 1 0 
+state.STM_TYP_FLUSH 0 0 0 0 1 0 0 1 0 
+state.STM_TYP_RETRANSMIT 0 0 0 1 0 0 0 1 0 
+state.STM_TYP_RETRANSMIT_SHORT 0 0 1 0 0 0 0 1 0 
+state.STM_TYP_BACK_OFF 0 1 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL 1 0 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL_1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_rx_min_ff:U_RXFF|state
+Name state.LOC_STATE_FF_DATA_FLUSH_WAIT state.LOC_STATE_RST_DONE state.LOC_STATE_SHIFT_WAIT state.LOC_STATE_FF_FLUSH_WAIT state.LOC_STATE_FF_DATA_FLUSH state.LOC_STATE_END_FRM state.LOC_STATE_SHIFT state.LOC_STATE_WAIT state.LOC_STATE_DATA state.LOC_STATE_IDLE 
+state.LOC_STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.LOC_STATE_DATA 0 0 0 0 0 0 0 0 1 1 
+state.LOC_STATE_WAIT 0 0 0 0 0 0 0 1 0 1 
+state.LOC_STATE_SHIFT 0 0 0 0 0 0 1 0 0 1 
+state.LOC_STATE_END_FRM 0 0 0 0 0 1 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH 0 0 0 0 1 0 0 0 0 1 
+state.LOC_STATE_FF_FLUSH_WAIT 0 0 0 1 0 0 0 0 0 1 
+state.LOC_STATE_SHIFT_WAIT 0 0 1 0 0 0 0 0 0 1 
+state.LOC_STATE_RST_DONE 0 1 0 0 0 0 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH_WAIT 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_magic_detection:U_MAGIC|state
+Name state.STM_TYP_WAKE_DONE state.STM_TYP_WAKE state.STM_TYP_PAT5 state.STM_TYP_PAT4 state.STM_TYP_PAT3 state.STM_TYP_PAT2 state.STM_TYP_PAT1 state.STM_TYP_PAT0 state.STM_TYP_PBL state.STM_TYP_WAIT_PBL state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_WAIT_PBL 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_PBL 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_PAT0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_PAT1 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_PAT2 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_PAT3 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_PAT4 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_PAT5 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE_DONE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_rx_stat_extract:U_RXSTAT|state
+Name state.stm_typ_end_frm state.stm_typ_frm state.stm_typ_sfd state.stm_typ_idle 
+state.stm_typ_idle 0 0 0 0 
+state.stm_typ_sfd 0 0 1 1 
+state.stm_typ_frm 0 1 0 1 
+state.stm_typ_end_frm 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_mii_rx_if:U_MRX|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_mdio:U_MDIO|altera_tse_mdio_cntl:U_CNTL|state
+Name state.STM_TYP_HOST_RD_END state.STM_TYP_HOST_RD_REG_WAIT state.STM_TYP_HOST_RD_REG state.STM_TYP_HOST_RD_WAIT2 state.STM_TYP_HOST_RD_WAIT1 state.STM_TYP_HOST_RD_WAIT state.STM_TYP_HOST_RD_WR_ADDR state.STM_TYP_HOST_WR_END state.STM_TYP_HOST_WR_WAIT state.STM_TYP_HOST_WR_WAIT2 state.STM_TYP_HOST_WR_WAIT1 state.STM_TYP_HOST_WR_WR_DATA state.STM_TYP_HOST_WR_WR_ADDR state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_HOST_WR_WR_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_HOST_WR_WR_DATA 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_HOST_WR_WAIT1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_HOST_WR_WAIT2 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_HOST_WR_WAIT 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_HOST_WR_END 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WR_ADDR 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT2 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG_WAIT 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_END 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_host_control:U_CTRL|state
+Name state.STM_TYPE_STAT_READ state.STM_TYPE_WAIT_BUSY state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_MDIO_WRITE state.STM_TYPE_MDIO_READ state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 0 0 
+state.STM_TYPE_MDIO_READ 0 0 0 0 0 0 1 1 
+state.STM_TYPE_MDIO_WRITE 0 0 0 0 0 1 0 1 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 0 0 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 0 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 0 0 1 
+state.STM_TYPE_WAIT_BUSY 0 1 0 0 0 0 0 1 
+state.STM_TYPE_STAT_READ 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_tx_counter_cntl:U_TXCNT|state
+Name state.STM_TYPE_WR_CNT_DONE state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_WR_CNT_DONE 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_rx_counter_cntl:U_RXCNT|state
+Name state.STM_TYPE_DELAY state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_DELAY 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_tx_converter:U_TXCV|state
+Name state.STM_TYP_FF_READ state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_READ 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_mii_rx_if_pcs:U_MII_IF|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_rx_converter:U_RXCV|altera_tse_rx_converter:U_RXC|state
+Name state.STM_TYP_FF_WRITE state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_WRITE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_tx:U_TX|altera_tse_tx_encapsulation:U_FRM|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_sync:U_SYNC|state
+Name state.STM_TYP_SYNC_ACQU_4A state.STM_TYP_SYNC_ACQU_3A state.STM_TYP_SYNC_ACQU_2A state.STM_TYP_SYNC_ACQU_4 state.STM_TYP_SYNC_ACQU_3 state.STM_TYP_SYNC_ACQU_2 state.STM_TYP_SYNC_ACQU_1 state.STM_TYP_ACQU_SYNC_2 state.STM_TYP_ACQU_SYNC_1 state.STM_TYP_COMMA_3 state.STM_TYP_COMMA_2 state.STM_TYP_COMMA_1 state.STM_TYP_LOSS_OF_SYNC 
+state.STM_TYP_LOSS_OF_SYNC 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COMMA_1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_COMMA_2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_COMMA_3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_ACQU_SYNC_1 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_ACQU_SYNC_2 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_1 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2A 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3A 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4A 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_encapsulation:U_FRM|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac:the_tse_mac|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|altera_tse_retransmit_cntl:U_RETR|state
+Name state.STM_TYP_WAIT_COL state.STM_TYP_BACK_OFF state.STM_TYP_RETRANSMIT_SHORT state.STM_TYP_RETRANSMIT state.STM_TYP_FLUSH state.STM_TYP_WAIT_END state.STM_TYP_COPY state.STM_TYP_IDLE state.STM_TYP_WAIT_COL_1 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COPY 0 0 0 0 0 0 1 1 0 
+state.STM_TYP_WAIT_END 0 0 0 0 0 1 0 1 0 
+state.STM_TYP_FLUSH 0 0 0 0 1 0 0 1 0 
+state.STM_TYP_RETRANSMIT 0 0 0 1 0 0 0 1 0 
+state.STM_TYP_RETRANSMIT_SHORT 0 0 1 0 0 0 0 1 0 
+state.STM_TYP_BACK_OFF 0 1 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL 1 0 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL_1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_rx_min_ff:U_RXFF|state
+Name state.LOC_STATE_FF_DATA_FLUSH_WAIT state.LOC_STATE_RST_DONE state.LOC_STATE_SHIFT_WAIT state.LOC_STATE_FF_FLUSH_WAIT state.LOC_STATE_FF_DATA_FLUSH state.LOC_STATE_END_FRM state.LOC_STATE_SHIFT state.LOC_STATE_WAIT state.LOC_STATE_DATA state.LOC_STATE_IDLE 
+state.LOC_STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.LOC_STATE_DATA 0 0 0 0 0 0 0 0 1 1 
+state.LOC_STATE_WAIT 0 0 0 0 0 0 0 1 0 1 
+state.LOC_STATE_SHIFT 0 0 0 0 0 0 1 0 0 1 
+state.LOC_STATE_END_FRM 0 0 0 0 0 1 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH 0 0 0 0 1 0 0 0 0 1 
+state.LOC_STATE_FF_FLUSH_WAIT 0 0 0 1 0 0 0 0 0 1 
+state.LOC_STATE_SHIFT_WAIT 0 0 1 0 0 0 0 0 0 1 
+state.LOC_STATE_RST_DONE 0 1 0 0 0 0 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH_WAIT 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_magic_detection:U_MAGIC|state
+Name state.STM_TYP_WAKE_DONE state.STM_TYP_WAKE state.STM_TYP_PAT5 state.STM_TYP_PAT4 state.STM_TYP_PAT3 state.STM_TYP_PAT2 state.STM_TYP_PAT1 state.STM_TYP_PAT0 state.STM_TYP_PBL state.STM_TYP_WAIT_PBL state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_WAIT_PBL 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_PBL 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_PAT0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_PAT1 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_PAT2 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_PAT3 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_PAT4 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_PAT5 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE_DONE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_rx_stat_extract:U_RXSTAT|state
+Name state.stm_typ_end_frm state.stm_typ_frm state.stm_typ_sfd state.stm_typ_idle 
+state.stm_typ_idle 0 0 0 0 
+state.stm_typ_sfd 0 0 1 1 
+state.stm_typ_frm 0 1 0 1 
+state.stm_typ_end_frm 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_mii_rx_if:U_MRX|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_mdio:U_MDIO|altera_tse_mdio_cntl:U_CNTL|state
+Name state.STM_TYP_HOST_RD_END state.STM_TYP_HOST_RD_REG_WAIT state.STM_TYP_HOST_RD_REG state.STM_TYP_HOST_RD_WAIT2 state.STM_TYP_HOST_RD_WAIT1 state.STM_TYP_HOST_RD_WAIT state.STM_TYP_HOST_RD_WR_ADDR state.STM_TYP_HOST_WR_END state.STM_TYP_HOST_WR_WAIT state.STM_TYP_HOST_WR_WAIT2 state.STM_TYP_HOST_WR_WAIT1 state.STM_TYP_HOST_WR_WR_DATA state.STM_TYP_HOST_WR_WR_ADDR state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_HOST_WR_WR_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_HOST_WR_WR_DATA 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_HOST_WR_WAIT1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_HOST_WR_WAIT2 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_HOST_WR_WAIT 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_HOST_WR_END 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WR_ADDR 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT2 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG_WAIT 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_END 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_host_control:U_CTRL|state
+Name state.STM_TYPE_STAT_READ state.STM_TYPE_WAIT_BUSY state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_MDIO_WRITE state.STM_TYPE_MDIO_READ state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 0 0 
+state.STM_TYPE_MDIO_READ 0 0 0 0 0 0 1 1 
+state.STM_TYPE_MDIO_WRITE 0 0 0 0 0 1 0 1 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 0 0 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 0 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 0 0 1 
+state.STM_TYPE_WAIT_BUSY 0 1 0 0 0 0 0 1 
+state.STM_TYPE_STAT_READ 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_tx_counter_cntl:U_TXCNT|state
+Name state.STM_TYPE_WR_CNT_DONE state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_WR_CNT_DONE 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_rx_counter_cntl:U_RXCNT|state
+Name state.STM_TYPE_DELAY state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_DELAY 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_tx_converter:U_TXCV|state
+Name state.STM_TYP_FF_READ state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_READ 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_mii_rx_if_pcs:U_MII_IF|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_rx_converter:U_RXCV|altera_tse_rx_converter:U_RXC|state
+Name state.STM_TYP_FF_WRITE state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_WRITE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_tx:U_TX|altera_tse_tx_encapsulation:U_FRM|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_sync:U_SYNC|state
+Name state.STM_TYP_SYNC_ACQU_4A state.STM_TYP_SYNC_ACQU_3A state.STM_TYP_SYNC_ACQU_2A state.STM_TYP_SYNC_ACQU_4 state.STM_TYP_SYNC_ACQU_3 state.STM_TYP_SYNC_ACQU_2 state.STM_TYP_SYNC_ACQU_1 state.STM_TYP_ACQU_SYNC_2 state.STM_TYP_ACQU_SYNC_1 state.STM_TYP_COMMA_3 state.STM_TYP_COMMA_2 state.STM_TYP_COMMA_1 state.STM_TYP_LOSS_OF_SYNC 
+state.STM_TYP_LOSS_OF_SYNC 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COMMA_1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_COMMA_2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_COMMA_3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_ACQU_SYNC_1 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_ACQU_SYNC_2 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_1 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2A 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3A 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4A 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_encapsulation:U_FRM|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac1:the_tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|altera_tse_retransmit_cntl:U_RETR|state
+Name state.STM_TYP_WAIT_COL state.STM_TYP_BACK_OFF state.STM_TYP_RETRANSMIT_SHORT state.STM_TYP_RETRANSMIT state.STM_TYP_FLUSH state.STM_TYP_WAIT_END state.STM_TYP_COPY state.STM_TYP_IDLE state.STM_TYP_WAIT_COL_1 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COPY 0 0 0 0 0 0 1 1 0 
+state.STM_TYP_WAIT_END 0 0 0 0 0 1 0 1 0 
+state.STM_TYP_FLUSH 0 0 0 0 1 0 0 1 0 
+state.STM_TYP_RETRANSMIT 0 0 0 1 0 0 0 1 0 
+state.STM_TYP_RETRANSMIT_SHORT 0 0 1 0 0 0 0 1 0 
+state.STM_TYP_BACK_OFF 0 1 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL 1 0 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL_1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_rx_min_ff:U_RXFF|state
+Name state.LOC_STATE_FF_DATA_FLUSH_WAIT state.LOC_STATE_RST_DONE state.LOC_STATE_SHIFT_WAIT state.LOC_STATE_FF_FLUSH_WAIT state.LOC_STATE_FF_DATA_FLUSH state.LOC_STATE_END_FRM state.LOC_STATE_SHIFT state.LOC_STATE_WAIT state.LOC_STATE_DATA state.LOC_STATE_IDLE 
+state.LOC_STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.LOC_STATE_DATA 0 0 0 0 0 0 0 0 1 1 
+state.LOC_STATE_WAIT 0 0 0 0 0 0 0 1 0 1 
+state.LOC_STATE_SHIFT 0 0 0 0 0 0 1 0 0 1 
+state.LOC_STATE_END_FRM 0 0 0 0 0 1 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH 0 0 0 0 1 0 0 0 0 1 
+state.LOC_STATE_FF_FLUSH_WAIT 0 0 0 1 0 0 0 0 0 1 
+state.LOC_STATE_SHIFT_WAIT 0 0 1 0 0 0 0 0 0 1 
+state.LOC_STATE_RST_DONE 0 1 0 0 0 0 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH_WAIT 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_magic_detection:U_MAGIC|state
+Name state.STM_TYP_WAKE_DONE state.STM_TYP_WAKE state.STM_TYP_PAT5 state.STM_TYP_PAT4 state.STM_TYP_PAT3 state.STM_TYP_PAT2 state.STM_TYP_PAT1 state.STM_TYP_PAT0 state.STM_TYP_PBL state.STM_TYP_WAIT_PBL state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_WAIT_PBL 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_PBL 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_PAT0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_PAT1 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_PAT2 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_PAT3 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_PAT4 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_PAT5 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE_DONE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_rx_stat_extract:U_RXSTAT|state
+Name state.stm_typ_end_frm state.stm_typ_frm state.stm_typ_sfd state.stm_typ_idle 
+state.stm_typ_idle 0 0 0 0 
+state.stm_typ_sfd 0 0 1 1 
+state.stm_typ_frm 0 1 0 1 
+state.stm_typ_end_frm 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_mii_rx_if:U_MRX|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_mdio:U_MDIO|altera_tse_mdio_cntl:U_CNTL|state
+Name state.STM_TYP_HOST_RD_END state.STM_TYP_HOST_RD_REG_WAIT state.STM_TYP_HOST_RD_REG state.STM_TYP_HOST_RD_WAIT2 state.STM_TYP_HOST_RD_WAIT1 state.STM_TYP_HOST_RD_WAIT state.STM_TYP_HOST_RD_WR_ADDR state.STM_TYP_HOST_WR_END state.STM_TYP_HOST_WR_WAIT state.STM_TYP_HOST_WR_WAIT2 state.STM_TYP_HOST_WR_WAIT1 state.STM_TYP_HOST_WR_WR_DATA state.STM_TYP_HOST_WR_WR_ADDR state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_HOST_WR_WR_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_HOST_WR_WR_DATA 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_HOST_WR_WAIT1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_HOST_WR_WAIT2 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_HOST_WR_WAIT 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_HOST_WR_END 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WR_ADDR 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT2 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG_WAIT 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_END 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_host_control:U_CTRL|state
+Name state.STM_TYPE_STAT_READ state.STM_TYPE_WAIT_BUSY state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_MDIO_WRITE state.STM_TYPE_MDIO_READ state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 0 0 
+state.STM_TYPE_MDIO_READ 0 0 0 0 0 0 1 1 
+state.STM_TYPE_MDIO_WRITE 0 0 0 0 0 1 0 1 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 0 0 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 0 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 0 0 1 
+state.STM_TYPE_WAIT_BUSY 0 1 0 0 0 0 0 1 
+state.STM_TYPE_STAT_READ 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_tx_counter_cntl:U_TXCNT|state
+Name state.STM_TYPE_WR_CNT_DONE state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_WR_CNT_DONE 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_rx_counter_cntl:U_RXCNT|state
+Name state.STM_TYPE_DELAY state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_DELAY 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_tx_converter:U_TXCV|state
+Name state.STM_TYP_FF_READ state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_READ 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_mii_rx_if_pcs:U_MII_IF|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_rx_converter:U_RXCV|altera_tse_rx_converter:U_RXC|state
+Name state.STM_TYP_FF_WRITE state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_WRITE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_tx:U_TX|altera_tse_tx_encapsulation:U_FRM|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_sync:U_SYNC|state
+Name state.STM_TYP_SYNC_ACQU_4A state.STM_TYP_SYNC_ACQU_3A state.STM_TYP_SYNC_ACQU_2A state.STM_TYP_SYNC_ACQU_4 state.STM_TYP_SYNC_ACQU_3 state.STM_TYP_SYNC_ACQU_2 state.STM_TYP_SYNC_ACQU_1 state.STM_TYP_ACQU_SYNC_2 state.STM_TYP_ACQU_SYNC_1 state.STM_TYP_COMMA_3 state.STM_TYP_COMMA_2 state.STM_TYP_COMMA_1 state.STM_TYP_LOSS_OF_SYNC 
+state.STM_TYP_LOSS_OF_SYNC 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COMMA_1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_COMMA_2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_COMMA_3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_ACQU_SYNC_1 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_ACQU_SYNC_2 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_1 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2A 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3A 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4A 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_encapsulation:U_FRM|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac2:the_tse_mac2|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|altera_tse_retransmit_cntl:U_RETR|state
+Name state.STM_TYP_WAIT_COL state.STM_TYP_BACK_OFF state.STM_TYP_RETRANSMIT_SHORT state.STM_TYP_RETRANSMIT state.STM_TYP_FLUSH state.STM_TYP_WAIT_END state.STM_TYP_COPY state.STM_TYP_IDLE state.STM_TYP_WAIT_COL_1 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COPY 0 0 0 0 0 0 1 1 0 
+state.STM_TYP_WAIT_END 0 0 0 0 0 1 0 1 0 
+state.STM_TYP_FLUSH 0 0 0 0 1 0 0 1 0 
+state.STM_TYP_RETRANSMIT 0 0 0 1 0 0 0 1 0 
+state.STM_TYP_RETRANSMIT_SHORT 0 0 1 0 0 0 0 1 0 
+state.STM_TYP_BACK_OFF 0 1 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL 1 0 0 0 0 0 0 1 0 
+state.STM_TYP_WAIT_COL_1 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_rx_min_ff:U_RXFF|state
+Name state.LOC_STATE_FF_DATA_FLUSH_WAIT state.LOC_STATE_RST_DONE state.LOC_STATE_SHIFT_WAIT state.LOC_STATE_FF_FLUSH_WAIT state.LOC_STATE_FF_DATA_FLUSH state.LOC_STATE_END_FRM state.LOC_STATE_SHIFT state.LOC_STATE_WAIT state.LOC_STATE_DATA state.LOC_STATE_IDLE 
+state.LOC_STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.LOC_STATE_DATA 0 0 0 0 0 0 0 0 1 1 
+state.LOC_STATE_WAIT 0 0 0 0 0 0 0 1 0 1 
+state.LOC_STATE_SHIFT 0 0 0 0 0 0 1 0 0 1 
+state.LOC_STATE_END_FRM 0 0 0 0 0 1 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH 0 0 0 0 1 0 0 0 0 1 
+state.LOC_STATE_FF_FLUSH_WAIT 0 0 0 1 0 0 0 0 0 1 
+state.LOC_STATE_SHIFT_WAIT 0 0 1 0 0 0 0 0 0 1 
+state.LOC_STATE_RST_DONE 0 1 0 0 0 0 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH_WAIT 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_magic_detection:U_MAGIC|state
+Name state.STM_TYP_WAKE_DONE state.STM_TYP_WAKE state.STM_TYP_PAT5 state.STM_TYP_PAT4 state.STM_TYP_PAT3 state.STM_TYP_PAT2 state.STM_TYP_PAT1 state.STM_TYP_PAT0 state.STM_TYP_PBL state.STM_TYP_WAIT_PBL state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_WAIT_PBL 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_PBL 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_PAT0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_PAT1 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_PAT2 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_PAT3 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_PAT4 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_PAT5 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_WAKE_DONE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_rx_stat_extract:U_RXSTAT|state
+Name state.stm_typ_end_frm state.stm_typ_frm state.stm_typ_sfd state.stm_typ_idle 
+state.stm_typ_idle 0 0 0 0 
+state.stm_typ_sfd 0 0 1 1 
+state.stm_typ_frm 0 1 0 1 
+state.stm_typ_end_frm 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_mii_rx_if:U_MRX|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_top_mdio:U_MDIO|altera_tse_mdio_cntl:U_CNTL|state
+Name state.STM_TYP_HOST_RD_END state.STM_TYP_HOST_RD_REG_WAIT state.STM_TYP_HOST_RD_REG state.STM_TYP_HOST_RD_WAIT2 state.STM_TYP_HOST_RD_WAIT1 state.STM_TYP_HOST_RD_WAIT state.STM_TYP_HOST_RD_WR_ADDR state.STM_TYP_HOST_WR_END state.STM_TYP_HOST_WR_WAIT state.STM_TYP_HOST_WR_WAIT2 state.STM_TYP_HOST_WR_WAIT1 state.STM_TYP_HOST_WR_WR_DATA state.STM_TYP_HOST_WR_WR_ADDR state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_HOST_WR_WR_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_HOST_WR_WR_DATA 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_HOST_WR_WAIT1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_HOST_WR_WAIT2 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_HOST_WR_WAIT 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_HOST_WR_END 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WR_ADDR 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_WAIT2 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_REG_WAIT 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_HOST_RD_END 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_host_control:U_CTRL|state
+Name state.STM_TYPE_STAT_READ state.STM_TYPE_WAIT_BUSY state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_MDIO_WRITE state.STM_TYPE_MDIO_READ state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 0 0 
+state.STM_TYPE_MDIO_READ 0 0 0 0 0 0 1 1 
+state.STM_TYPE_MDIO_WRITE 0 0 0 0 0 1 0 1 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 0 0 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 0 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 0 0 1 
+state.STM_TYPE_WAIT_BUSY 0 1 0 0 0 0 0 1 
+state.STM_TYPE_STAT_READ 1 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_tx_counter_cntl:U_TXCNT|state
+Name state.STM_TYPE_WR_CNT_DONE state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_WR_CNT_DONE 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_gen_host:top_gen_host_inst|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_rx_counter_cntl:U_RXCNT|state
+Name state.STM_TYPE_DELAY state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
+state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
+state.STM_TYPE_RD_CNT 0 0 0 0 0 1 1 
+state.STM_TYPE_INC_CNT 0 0 0 0 1 0 1 
+state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1 
+state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
+state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
+state.STM_TYPE_DELAY 1 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_tx_converter:U_TXCV|state
+Name state.STM_TYP_FF_READ state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_READ 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_tx_converter:U_TXCV|altera_tse_mii_rx_if_pcs:U_MII_IF|state
+Name state.STM_TYP_NEXT_FRM state.STM_TYP_NEG state.STM_TYP_POS state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_POS 0 0 1 1 
+state.STM_TYP_NEG 0 1 0 1 
+state.STM_TYP_NEXT_FRM 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_rx_converter:U_RXCV|altera_tse_rx_converter:U_RXC|state
+Name state.STM_TYP_FF_WRITE state.STM_TYP_WAIT_RD state.STM_TYP_GIGA_MODE state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 
+state.STM_TYP_GIGA_MODE 0 0 1 1 
+state.STM_TYP_WAIT_RD 0 1 0 1 
+state.STM_TYP_FF_WRITE 1 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_tx:U_TX|altera_tse_tx_encapsulation:U_FRM|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_sync:U_SYNC|state
+Name state.STM_TYP_SYNC_ACQU_4A state.STM_TYP_SYNC_ACQU_3A state.STM_TYP_SYNC_ACQU_2A state.STM_TYP_SYNC_ACQU_4 state.STM_TYP_SYNC_ACQU_3 state.STM_TYP_SYNC_ACQU_2 state.STM_TYP_SYNC_ACQU_1 state.STM_TYP_ACQU_SYNC_2 state.STM_TYP_ACQU_SYNC_1 state.STM_TYP_COMMA_3 state.STM_TYP_COMMA_2 state.STM_TYP_COMMA_1 state.STM_TYP_LOSS_OF_SYNC 
+state.STM_TYP_LOSS_OF_SYNC 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_COMMA_1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_COMMA_2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_COMMA_3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_ACQU_SYNC_1 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_ACQU_SYNC_2 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_1 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_2A 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_3A 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_SYNC_ACQU_4A 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_rx:U_RX|altera_tse_rx_encapsulation:U_FRM|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE4_Reference_Router|DE4_SOPC:SOPC_INST|tse_mac3:the_tse_mac3|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_mac_pcs_pma_ena:altera_tse_mac_pcs_pma_ena_inst|altera_tse_top_1000_base_x:top_1000_base_x_inst|altera_tse_top_sgmii:U_SGMII|altera_tse_top_pcs:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 

@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Mon Sep 19 23:25:23 2011
+Quartus II Version : 10.1 Build 197 01/19/2011 SP 1 SJ Full Version
+Revision Name : np_core
+Top-level Entity Name : np_core
+Family : Stratix IV
+Logic utilization : N/A
+    Combinational ALUTs : 3,430
+    Memory ALUTs : 0
+    Dedicated logic registers : 1,994
+Total registers : 1994
+Total pins : 368
+Total virtual pins : 0
+Total block memory bits : 197,184
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
+Total DLLs : 0

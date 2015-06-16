@@ -1,0 +1,173 @@
+//
+// Designed by Qiang Wu
+//
+//	2048 bytes, 64bit interface
+
+`timescale 1ns/1ps
+
+module packet_memory(
+	clk,
+	input_mode,
+	addr64,
+	data_in64,
+	data_out64,
+	byte_we8,
+	addr32,
+	data_in32,
+	data_out32,
+	byte_we4
+);
+
+input clk;
+input input_mode; //1 for 64, 0 for 32
+input [10:3] addr64;
+input [63:0] data_in64;
+output [63:0] data_out64;
+input [7:0] byte_we8;
+input [10:2] addr32;
+input [31:0] data_in32;
+output [31:0] data_out32;
+input [3:0] byte_we4;
+
+wire [31:0] data_in[7:0];
+wire [63:0] data_out64;
+wire [31:0] data_out32;
+
+wire [31:0] data_out[7:0];
+
+wire [3:0] we[7:0];
+wire [3:0] we64[7:0];
+wire [3:0] we32[7:0];
+
+wire [10:2] addr;
+
+assign we64[0] = (addr64[4:3] == 2'b00) ? byte_we8[3:0] : 0;
+assign we64[1] = (addr64[4:3] == 2'b00) ? byte_we8[7:4] : 0;
+assign we64[2] = (addr64[4:3] == 2'b01) ? byte_we8[3:0] : 0;
+assign we64[3] = (addr64[4:3] == 2'b01) ? byte_we8[7:4] : 0;
+assign we64[4] = (addr64[4:3] == 2'b10) ? byte_we8[3:0] : 0;
+assign we64[5] = (addr64[4:3] == 2'b10) ? byte_we8[7:4] : 0;
+assign we64[6] = (addr64[4:3] == 2'b11) ? byte_we8[3:0] : 0;
+assign we64[7] = (addr64[4:3] == 2'b11) ? byte_we8[7:4] : 0;
+
+assign we32[0] = (addr32[4:2] == 3'b000) ? byte_we4 : 0;
+assign we32[1] = (addr32[4:2] == 3'b001) ? byte_we4 : 0;
+assign we32[2] = (addr32[4:2] == 3'b010) ? byte_we4 : 0;
+assign we32[3] = (addr32[4:2] == 3'b011) ? byte_we4 : 0;
+assign we32[4] = (addr32[4:2] == 3'b100) ? byte_we4 : 0;
+assign we32[5] = (addr32[4:2] == 3'b101) ? byte_we4 : 0;
+assign we32[6] = (addr32[4:2] == 3'b110) ? byte_we4 : 0;
+assign we32[7] = (addr32[4:2] == 3'b111) ? byte_we4 : 0;
+
+assign addr[10:5] = (input_mode == 1) ? addr64[10:5] : addr32[10:5];
+assign addr[4:3] = (input_mode == 1) ? addr64[4:3] : addr32[4:3];
+
+assign data_in[0] = (addr[4:3] != 2'b00) ? data_in[0] : 
+	(input_mode == 1) ? data_in64[31:0] : 
+	(addr32[2] == 0) ? data_in32[31:0] : data_in[0];
+assign data_in[1] = (addr[4:3] != 2'b00) ? data_in[1] : 
+	(input_mode == 1) ? data_in64[63:32] : 
+	(addr32[2] == 1) ? data_in32[31:0] : data_in[1];
+assign data_in[2] = (addr[4:3] != 2'b01) ? data_in[2] : 
+	(input_mode == 1) ? data_in64[31:0] : 
+	(addr32[2] == 0) ? data_in32[31:0] : data_in[2];
+assign data_in[3] = (addr[4:3] != 2'b01) ? data_in[3] : 
+	(input_mode == 1) ? data_in64[63:32] : 
+	(addr32[2] == 1) ? data_in32[31:0] : data_in[3];
+assign data_in[4] = (addr[4:3] != 2'b10) ? data_in[4] : 
+	(input_mode == 1) ? data_in64[31:0] : 
+	(addr32[2] == 0) ? data_in32[31:0] : data_in[4];
+assign data_in[5] = (addr[4:3] != 2'b10) ? data_in[5] : 
+	(input_mode == 1) ? data_in64[63:32] : 
+	(addr32[2] == 1) ? data_in32[31:0] : data_in[5];
+assign data_in[6] = (addr[4:3] != 2'b11) ? data_in[6] : 
+	(input_mode == 1) ? data_in64[31:0] : 
+	(addr32[2] == 0) ? data_in32[31:0] : data_in[6];
+assign data_in[7] = (addr[4:3] != 2'b11) ? data_in[7] : 
+	(input_mode == 1) ? data_in64[63:32] : 
+	(addr32[2] == 1) ? data_in32[31:0] : data_in[7];
+
+assign we[0] = (input_mode == 1) ? we64[0] : we32[0];
+assign we[1] = (input_mode == 1) ? we64[1] : we32[1];
+assign we[2] = (input_mode == 1) ? we64[2] : we32[2];
+assign we[3] = (input_mode == 1) ? we64[3] : we32[3];
+assign we[4] = (input_mode == 1) ? we64[4] : we32[4];
+assign we[5] = (input_mode == 1) ? we64[5] : we32[5];
+assign we[6] = (input_mode == 1) ? we64[6] : we32[6];
+assign we[7] = (input_mode == 1) ? we64[7] : we32[7];
+
+assign data_out64[31:0] = (addr64[4:3] == 2'b00) ? data_out[0] :
+			  (addr64[4:3] == 2'b01) ? data_out[2] :
+			  (addr64[4:3] == 2'b10) ? data_out[4] :
+			  (addr64[4:3] == 2'b11) ? data_out[6] : 0;
+assign data_out64[63:32] = (addr64[4:3] == 2'b00) ? data_out[1] :
+			   (addr64[4:3] == 2'b01) ? data_out[3] :
+			   (addr64[4:3] == 2'b10) ? data_out[5] :
+			   (addr64[4:3] == 2'b11) ? data_out[7] : 0;
+assign data_out32[31:0] = (addr32[4:2] == 3'b000) ? data_out[0] :
+			  (addr32[4:2] == 3'b001) ? data_out[1] :
+			  (addr32[4:2] == 3'b010) ? data_out[2] :
+			  (addr32[4:2] == 3'b011) ? data_out[3] :
+			  (addr32[4:2] == 3'b100) ? data_out[4] :
+			  (addr32[4:2] == 3'b101) ? data_out[5] :
+			  (addr32[4:2] == 3'b110) ? data_out[6] :
+			  (addr32[4:2] == 3'b111) ? data_out[7] : 0;
+
+	packet_memory_block pmb0(
+		.clk		(clk),
+		.we		(we[0]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[0]),
+		.data_out	(data_out[0])
+	);
+	packet_memory_block pmb1(
+		.clk		(clk),
+		.we		(we[1]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[1]),
+		.data_out	(data_out[1])
+	);
+	packet_memory_block pmb2(
+		.clk		(clk),
+		.we		(we[2]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[2]),
+		.data_out	(data_out[2])
+	);
+	packet_memory_block pmb3(
+		.clk		(clk),
+		.we		(we[3]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[3]),
+		.data_out	(data_out[3])
+	);
+	packet_memory_block pmb4(
+		.clk		(clk),
+		.we		(we[4]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[4]),
+		.data_out	(data_out[4])
+	);
+	packet_memory_block pmb5(
+		.clk		(clk),
+		.we		(we[5]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[5]),
+		.data_out	(data_out[5])
+	);
+	packet_memory_block pmb6(
+		.clk		(clk),
+		.we		(we[6]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[6]),
+		.data_out	(data_out[6])
+	);
+	packet_memory_block pmb7(
+		.clk		(clk),
+		.we		(we[7]),
+		.addr		(addr[10:5]),
+		.data_in	(data_in[7]),
+		.data_out	(data_out[7])
+	);
+
+endmodule

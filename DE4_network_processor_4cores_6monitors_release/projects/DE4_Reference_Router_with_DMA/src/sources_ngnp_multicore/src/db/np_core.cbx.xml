@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="np_core">
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|out_arbiter:oa|small_fifo_test:input_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ls31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_l5h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_t5h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|packet_buffer:pb1|RAM16_s36_s36_altera:pm|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3g62.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|packet_buffer_bypass:pb4|RAM16_s36_s36_altera:pm|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3g62.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_n5h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_v5h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|packet_buffer:pb2|RAM16_s36_s36_altera:pm|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3g62.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|packet_buffer_bypass:pb5|RAM16_s36_s36_altera:pm|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3g62.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_p5h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_16h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|packet_buffer:pb3|RAM16_s36_s36_altera:pm|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3g62.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_r5h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|lr0:lr0|RAMB16_S4_altera:localram7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_36h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|np_core|ppu:ppu0|packet_buffer:pb0|RAM16_s36_s36_altera:pm|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3g62.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

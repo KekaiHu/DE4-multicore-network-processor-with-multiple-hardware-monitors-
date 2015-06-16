@@ -1,0 +1,33 @@
+##################################################################
+# Rules
+#
+# Note: all necessary variables should be set before including this file
+#
+
+all:	$(SOPC_SYS_NAME).sopcinfo $(TOP)_time_limited.sof $(NF2_DE4_ROOT)/bitfiles/$(TOP)_time_limited.sof
+	
+
+#Generate SOPC system
+$(SOPC_SYS_NAME).sopcinfo:
+	-sopc_builder --generate $(SOPC_SYS_NAME).sopc
+	@echo Generated SOPC
+
+# Generate Bit Stream
+%.sof: 
+	quartus_sh --flow compile $(TOP).qpf > compile.out
+	@echo Generated Bit Stream
+
+
+# Copy the bitstream to the bitfiles directory
+$(NF2_DE4_ROOT)/bitfiles/$(TOP)_time_limited.sof: 
+	@cp $(TOP)_time_limited.sof $(NF2_DE4_ROOT)/bitfiles/$(TOP)_time_limited.sof
+	@echo Copied Bit Stream into bitfiles directory
+
+.PHONY: clean
+clean::
+	rm -rf *
+	$(shell echo "cp ../project_files_backup/* ./")
+	rm -rf $(NF2_DE4_ROOT)/bitfiles/$(TOP)_time_limited.sof
+	@echo Clean done
+
+

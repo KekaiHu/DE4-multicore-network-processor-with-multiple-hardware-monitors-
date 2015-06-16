@@ -1,0 +1,48 @@
+TARGET = firmware
+SDK_DIR = ./
+LD_SCRIPT = $(SDK_DIR)/YF32.ld
+CRT0_SRC = $(SDK_DIR)/crt0.asm
+# YF32_SRC = $(SDK_DIR)/lib/yf32.c
+OBJDUMP = mips-elf-objdump
+# CONV = sde-conv 
+#MLITE = $(SDK_DIR)/bin/mlite
+#MCONV = $(SDK_DIR)/bin/convert
+#FL2MEM = $(SDK_DIR)/bin/fl2mem
+# INC = $(SDK_DIR)/lib
+#
+CC = mips-elf-gcc -EB -mips1 -O4 -Wall
+AS = mips-elf-as -EB -mips1
+LD = mips-elf-ld -EB -n  -belf32-bigmips -T$(LD_SCRIPT) 
+#
+$(TARGET): clean crt0.o 
+	@echo "====== $@ ======="
+	$(CC) -s -c $@.c -o $@.o
+	$(LD) -Map $@.map -N -o $@.exe crt0.o $@.o
+	$(OBJDUMP) -D $@.exe > $@.lst
+	mips-elf-objcopy -O binary $@.exe $@.bin
+	./z $@.bin > localram.v
+	rm -f /root/NF2/projects/ngnp/src/localram.v
+	mv ./localram.v /root/NF2/projects/ngnp/src/
+
+crt0.o: $(CRT0_SRC)
+	@echo "====== $@ ======="
+	$(AS) -o crt0.o $(CRT0_SRC)
+
+clean:
+	@rm -rf *.o
+	@rm -rf *.lst
+	@rm -rf *.srec
+	@rm -rf *.map
+	@rm -rf *.fl
+	@rm -rf *.bin
+	@rm -rf *.exe
+	@rm firmware.elf firmware.bin -f
+
+#	zpu-elf-gcc -Os -phi microcode.c -o firmware -Wl,--relax -Wl,--gc-sections
+#	zpu-elf-gcc -Os -phi microcode.c -o firmware.elf -Wl,--relax -Wl,--gc-sections
+#	zpu-elf-strip ./firmware.elf
+#	zpu-elf-objcopy -O binary ./firmware.elf ./firmware.bin
+#	./z ./firmware.bin > localram.v
+#	rm -f /root/NF2/projects/ngnp/src/localram.v
+#	mv ./localram.v /root/NF2/projects/ngnp/src/
+

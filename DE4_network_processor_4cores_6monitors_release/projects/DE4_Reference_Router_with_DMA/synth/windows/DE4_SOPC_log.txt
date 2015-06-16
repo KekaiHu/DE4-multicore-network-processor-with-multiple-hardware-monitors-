@@ -1,0 +1,83 @@
+Altera SOPC Builder Version 11.10 Build 173
+Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
+
+
+No .sopc_builder configuration file(!)
+# 2013.03.05 15:24:06 (*) mk_custom_sdk starting
+# 2013.03.05 15:24:06 (*) Reading project D:/kekai_jan29/Mar5_4core_switch/projects/DE4_Reference_Router_with_DMA/synth/windows/DE4_SOPC.ptf.
+
+# 2013.03.05 15:24:07 (*) Finding all CPUs
+
+# 2013.03.05 15:24:07 (*) Finding all peripherals
+
+# 2013.03.05 15:24:07 (*) Finding software components
+# 2013.03.05 15:24:07 (*) (Legacy SDK Generation Skipped)
+# 2013.03.05 15:24:07 (*) (All TCL Script Generation Skipped)
+# 2013.03.05 15:24:07 (*) (No Libraries Built)
+# 2013.03.05 15:24:07 (*) (Contents Generation Skipped)
+# 2013.03.05 15:24:07 (*) mk_custom_sdk finishing
+
+# 2013.03.05 15:24:07 (*) Starting generation for system: DE4_SOPC.
+
+.
+.
+.
+..
+.
+....
+.
+....
+
+# 2013.03.05 15:24:08 (*) Running Generator Program for pll
+
+# 2013.03.05 15:24:13 (*) Running Generator Program for sysid
+
+# 2013.03.05 15:24:15 (*) Running Generator Program for jtag_uart
+
+# 2013.03.05 15:24:16 (*) Running Generator Program for high_res_timer
+
+# 2013.03.05 15:24:18 (*) Running Generator Program for sys_timer
+
+# 2013.03.05 15:24:19 (*) Running Generator Program for led_pio
+
+# 2013.03.05 15:24:21 (*) Running Generator Program for sw_pio
+
+# 2013.03.05 15:24:22 (*) Running Generator Program for pb_pio
+
+# 2013.03.05 15:24:23 (*) Running Generator Program for seven_seg_pio
+
+# 2013.03.05 15:24:25 (*) Running Generator Program for DE4_SOPC_clock_0
+
+# 2013.03.05 15:24:26 (*) Running Generator Program for DE4_SOPC_burst_0
+
+# 2013.03.05 15:24:28 (*) Running Generator Program for DE4_SOPC_burst_1
+
+# 2013.03.05 15:24:30 (*) Running Generator Program for DE4_SOPC_burst_2
+
+# 2013.03.05 15:24:32 (*) Running Generator Program for DE4_SOPC_burst_3
+
+# 2013.03.05 15:24:33 (*) Running Generator Program for peripheral_clock_crossing
+
+
+# 2013.03.05 15:24:34 (*) Making arbitration and system (top) modules.
+
+# 2013.03.05 15:24:53 (*) Generating Quartus symbol for top level: DE4_SOPC
+
+# 2013.03.05 15:24:54 (*) Generating Symbol D:/kekai_jan29/Mar5_4core_switch/projects/DE4_Reference_Router_with_DMA/synth/windows/DE4_SOPC.bsf
+
+# 2013.03.05 15:24:54 (*) Creating command-line system-generation script: D:/kekai_jan29/Mar5_4core_switch/projects/DE4_Reference_Router_with_DMA/synth/windows/DE4_SOPC_generation_script
+
+# 2013.03.05 15:24:54 (*) Running setup for HDL simulator: modelsim
+
+
+# 2013.03.05 15:24:55 (*) Completed generation for system: DE4_SOPC.
+# 2013.03.05 15:24:55 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : D:/kekai_jan29/Mar5_4core_switch/projects/DE4_Reference_Router_with_DMA/synth/windows/DE4_SOPC.ptf 
+  System HDL Model : D:/kekai_jan29/Mar5_4core_switch/projects/DE4_Reference_Router_with_DMA/synth/windows/DE4_SOPC.v 
+  System Generation Script : D:/kekai_jan29/Mar5_4core_switch/projects/DE4_Reference_Router_with_DMA/synth/windows/DE4_SOPC_generation_script 
+
+
+# 2013.03.05 15:24:55 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.

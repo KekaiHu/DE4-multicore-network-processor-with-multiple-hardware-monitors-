@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="Default">
+  <columns>
+   <opcodeName visible="0" />
+   <connections preferredWidth="255" />
+   <irq preferredWidth="34" />
+   <export visible="0" />
+   <name preferredWidth="272" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="306" />
+   <clocksource preferredWidth="305" />
+   <frequency preferredWidth="290" />
+  </columns>
+ </clocktable>
+ <window width="1402" height="880" x="0" y="25" />
+ <library
+   expandedCategories="Library/Interface Protocols/Ethernet,Library/Interface Protocols,Library/Configuration &amp; Programming,Library/Bridges,Library/Peripherals,Library/Peripherals/Microcontroller Peripherals,Project,Library/Peripherals/Debug and Performance,Library/DSP,Library" />
+</preferences>

@@ -1,0 +1,12 @@
+# The sources for the pcie_sw device driver:
+
+TARGETNAME=pcie_sw
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+NO_SAFESEH=1
+INCLUDES=$(WD_BASEDIR)\include;$(WD_BASEDIR)
+TARGETLIBS= \
+    C:\WinDriver\lib\windrvr6.lib \
+    $(DDK_LIB_PATH)\ntoskrnl.lib \
+$(DDK_LIB_PATH)\usbd.lib
+SOURCES= pcie_sw.rc

@@ -1,0 +1,162 @@
+
+State Machine - |np_core|ppu:ppu0|yf32_core:service_processor|mlite_cpu:u1_cpu|mem_ctrl:u2_mem_ctrl|mem_state_reg
+Name mem_state_reg.STATE_PAUSE mem_state_reg.STATE_WRITE mem_state_reg.STATE_ADDR mem_state_reg.STATE_FETCH 
+mem_state_reg.STATE_FETCH 0 0 0 0 
+mem_state_reg.STATE_ADDR 0 0 1 1 
+mem_state_reg.STATE_WRITE 0 1 0 1 
+mem_state_reg.STATE_PAUSE 1 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|packet_buffer_bypass:pb5|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|packet_buffer_bypass:pb4|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 1 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|packet_buffer:pb3|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|packet_buffer:pb2|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|packet_buffer:pb1|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|packet_buffer:pb0|buff_state
+Name buff_state.BUFF_SEND_CANCEL buff_state.BUFF_SEND_PKT buff_state.BUFF_SEND_REQ buff_state.BUFF_PROC_PKT buff_state.BUFF_RECV_PKT buff_state.BUFF_EMPTY buff_state.000 
+buff_state.000 0 0 0 0 0 0 0 
+buff_state.BUFF_EMPTY 0 0 0 0 0 1 1 
+buff_state.BUFF_RECV_PKT 0 0 0 0 1 0 1 
+buff_state.BUFF_PROC_PKT 0 0 0 1 0 0 1 
+buff_state.BUFF_SEND_REQ 0 0 1 0 0 0 1 
+buff_state.BUFF_SEND_PKT 0 1 0 0 0 0 1 
+buff_state.BUFF_SEND_CANCEL 1 0 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|out_switch:out_switch|os_state3
+Name os_state3.OS_CANCEL os_state3.OS_TX os_state3.OS_PORT_REQ os_state3.OS_LOOKUP_BUFF os_state3.OS_IDLE os_state3.000 
+os_state3.000 0 0 0 0 0 0 
+os_state3.OS_IDLE 0 0 0 0 1 1 
+os_state3.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state3.OS_PORT_REQ 0 0 1 0 0 1 
+os_state3.OS_TX 0 1 0 0 0 1 
+os_state3.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|out_switch:out_switch|os_state2
+Name os_state2.OS_CANCEL os_state2.OS_TX os_state2.OS_PORT_REQ os_state2.OS_LOOKUP_BUFF os_state2.OS_IDLE os_state2.000 
+os_state2.000 0 0 0 0 0 0 
+os_state2.OS_IDLE 0 0 0 0 1 1 
+os_state2.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state2.OS_PORT_REQ 0 0 1 0 0 1 
+os_state2.OS_TX 0 1 0 0 0 1 
+os_state2.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|out_switch:out_switch|os_state1
+Name os_state1.OS_CANCEL os_state1.OS_TX os_state1.OS_PORT_REQ os_state1.OS_LOOKUP_BUFF os_state1.OS_IDLE os_state1.000 
+os_state1.000 0 0 0 0 0 0 
+os_state1.OS_IDLE 0 0 0 0 1 1 
+os_state1.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state1.OS_PORT_REQ 0 0 1 0 0 1 
+os_state1.OS_TX 0 1 0 0 0 1 
+os_state1.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|out_switch:out_switch|os_state0
+Name os_state0.OS_CANCEL os_state0.OS_TX os_state0.OS_PORT_REQ os_state0.OS_LOOKUP_BUFF os_state0.OS_IDLE os_state0.000 
+os_state0.000 0 0 0 0 0 0 
+os_state0.OS_IDLE 0 0 0 0 1 1 
+os_state0.OS_LOOKUP_BUFF 0 0 0 1 0 1 
+os_state0.OS_PORT_REQ 0 0 1 0 0 1 
+os_state0.OS_TX 0 1 0 0 0 1 
+os_state0.OS_CANCEL 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state
+Name bypass_empty_buff_state.BYPASS_BUFF_WAIT2 bypass_empty_buff_state.BYPASS_BUFF_WAIT1 bypass_empty_buff_state.BYPASS_BUFF_GRANT bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 
+bypass_empty_buff_state.BYPASS_BUFF_LOOKUP 0 0 0 0 
+bypass_empty_buff_state.BYPASS_BUFF_GRANT 0 0 1 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT1 0 1 0 1 
+bypass_empty_buff_state.BYPASS_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|in_switch:in_switch|empty_buff_state
+Name empty_buff_state.EMPTY_BUFF_WAIT2 empty_buff_state.EMPTY_BUFF_WAIT1 empty_buff_state.EMPTY_BUFF_GRANT empty_buff_state.EMPTY_BUFF_LOOKUP 
+empty_buff_state.EMPTY_BUFF_LOOKUP 0 0 0 0 
+empty_buff_state.EMPTY_BUFF_GRANT 0 0 1 1 
+empty_buff_state.EMPTY_BUFF_WAIT1 0 1 0 1 
+empty_buff_state.EMPTY_BUFF_WAIT2 1 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|in_switch:in_switch|port_state3
+Name port_state3.PORT_STATE_CANCEL_BUFF_REQ port_state3.PORT_STATE_TX port_state3.PORT_STATE_BUFF_REQ port_state3.PORT_STATE_BUFF_LOOKUP port_state3.PORT_STATE_IDLE port_state3.000 
+port_state3.000 0 0 0 0 0 0 
+port_state3.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state3.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state3.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state3.PORT_STATE_TX 0 1 0 0 0 1 
+port_state3.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|in_switch:in_switch|port_state2
+Name port_state2.PORT_STATE_CANCEL_BUFF_REQ port_state2.PORT_STATE_TX port_state2.PORT_STATE_BUFF_REQ port_state2.PORT_STATE_BUFF_LOOKUP port_state2.PORT_STATE_IDLE port_state2.000 
+port_state2.000 0 0 0 0 0 0 
+port_state2.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state2.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state2.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state2.PORT_STATE_TX 0 1 0 0 0 1 
+port_state2.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|in_switch:in_switch|port_state1
+Name port_state1.PORT_STATE_CANCEL_BUFF_REQ port_state1.PORT_STATE_TX port_state1.PORT_STATE_BUFF_REQ port_state1.PORT_STATE_BUFF_LOOKUP port_state1.PORT_STATE_IDLE port_state1.000 
+port_state1.000 0 0 0 0 0 0 
+port_state1.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state1.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state1.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state1.PORT_STATE_TX 0 1 0 0 0 1 
+port_state1.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |np_core|ppu:ppu0|in_switch:in_switch|port_state0
+Name port_state0.PORT_STATE_CANCEL_BUFF_REQ port_state0.PORT_STATE_TX port_state0.PORT_STATE_BUFF_REQ port_state0.PORT_STATE_BUFF_LOOKUP port_state0.PORT_STATE_IDLE port_state0.000 
+port_state0.000 0 0 0 0 0 0 
+port_state0.PORT_STATE_IDLE 0 0 0 0 1 1 
+port_state0.PORT_STATE_BUFF_LOOKUP 0 0 0 1 0 1 
+port_state0.PORT_STATE_BUFF_REQ 0 0 1 0 0 1 
+port_state0.PORT_STATE_TX 0 1 0 0 0 1 
+port_state0.PORT_STATE_CANCEL_BUFF_REQ 1 0 0 0 0 1 
+
+State Machine - |np_core|flow_classification:fc|state
+Name state.FC_WAIT_ACK state.FC_CANCEL_REQ state.FC_TX state.FC_ACK state.FC_REQ state.FC_LOOKUP_ROUTE state.FC_IDLE state.000 
+state.000 0 0 0 0 0 0 0 0 
+state.FC_IDLE 0 0 0 0 0 0 1 1 
+state.FC_LOOKUP_ROUTE 0 0 0 0 0 1 0 1 
+state.FC_REQ 0 0 0 0 1 0 0 1 
+state.FC_ACK 0 0 0 1 0 0 0 1 
+state.FC_TX 0 0 1 0 0 0 0 1 
+state.FC_CANCEL_REQ 0 1 0 0 0 0 0 1 
+state.FC_WAIT_ACK 1 0 0 0 0 0 0 1 

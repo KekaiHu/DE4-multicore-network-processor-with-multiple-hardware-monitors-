@@ -1,0 +1,893 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 900mV 85C Model Setup 'core_sp_clk'
+Slack : -6.408
+TNS   : -19976.746
+
+Type  : Slow 900mV 85C Model Setup 'clk'
+Slack : -5.554
+TNS   : -1914.429
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : -3.402
+TNS   : -3.402
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : -3.199
+TNS   : -3.199
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : -3.096
+TNS   : -10.527
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : -3.068
+TNS   : -3.068
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : -3.036
+TNS   : -8.507
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : -2.971
+TNS   : -5.706
+
+Type  : Slow 900mV 85C Model Setup 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : -2.934
+TNS   : -2.934
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : -2.570
+TNS   : -2.570
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -2.278
+TNS   : -2.278
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -2.242
+TNS   : -2.242
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : -2.230
+TNS   : -2.230
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -2.072
+TNS   : -2.072
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -1.408
+TNS   : -1.408
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : -0.614
+TNS   : -0.614
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : -0.522
+TNS   : -0.522
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.514
+TNS   : -0.514
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.403
+TNS   : -0.403
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.354
+TNS   : -0.354
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.235
+TNS   : -0.235
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : -0.081
+TNS   : -0.081
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'clk'
+Slack : -2.189
+TNS   : -39.052
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : -0.989
+TNS   : -0.989
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : -0.508
+TNS   : -0.508
+
+Type  : Slow 900mV 85C Model Hold 'core_sp_clk'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.638
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.731
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : 0.745
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.745
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.794
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.840
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 1.620
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 2.113
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 2.136
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : 2.150
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : 2.285
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : 2.402
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 2.443
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : 2.663
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : 2.717
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : 2.831
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : 3.138
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : 3.157
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Hold 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : 3.229
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Recovery 'core_sp_clk'
+Slack : -2.245
+TNS   : -2590.756
+
+Type  : Slow 900mV 85C Model Removal 'core_sp_clk'
+Slack : 2.476
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'clk'
+Slack : -1.105
+TNS   : -1118.793
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'core_sp_clk'
+Slack : -0.250
+TNS   : -1857.422
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.439
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.449
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.463
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 900mV 85C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Setup 'core_sp_clk'
+Slack : -6.218
+TNS   : -19165.070
+
+Type  : Slow 900mV 0C Model Setup 'clk'
+Slack : -5.443
+TNS   : -1828.495
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : -3.264
+TNS   : -3.264
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : -3.120
+TNS   : -3.120
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : -3.010
+TNS   : -10.237
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : -2.938
+TNS   : -2.938
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : -2.923
+TNS   : -8.240
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : -2.865
+TNS   : -5.500
+
+Type  : Slow 900mV 0C Model Setup 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : -2.820
+TNS   : -2.820
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : -2.473
+TNS   : -2.473
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -2.220
+TNS   : -2.220
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : -2.175
+TNS   : -2.175
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -2.165
+TNS   : -2.165
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -2.014
+TNS   : -2.014
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : -0.595
+TNS   : -0.595
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : -0.495
+TNS   : -0.495
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.486
+TNS   : -0.486
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.377
+TNS   : -0.377
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.320
+TNS   : -0.320
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.217
+TNS   : -0.217
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : -0.182
+TNS   : -0.182
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : -0.074
+TNS   : -0.074
+
+Type  : Slow 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'clk'
+Slack : -2.153
+TNS   : -37.991
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : -0.833
+TNS   : -0.833
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : -0.395
+TNS   : -0.395
+
+Type  : Slow 900mV 0C Model Hold 'core_sp_clk'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.645
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.722
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.741
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : 0.745
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.782
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.832
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 1.616
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 2.092
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 2.114
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : 2.163
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : 2.257
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : 2.369
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 2.399
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : 2.566
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : 2.649
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : 2.760
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : 3.035
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : 3.052
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Hold 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : 3.135
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Recovery 'core_sp_clk'
+Slack : -2.111
+TNS   : -2437.663
+
+Type  : Slow 900mV 0C Model Removal 'core_sp_clk'
+Slack : 2.373
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'clk'
+Slack : -1.105
+TNS   : -1123.844
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'core_sp_clk'
+Slack : -0.250
+TNS   : -1870.598
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.439
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.443
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Slow 900mV 0C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Setup 'core_sp_clk'
+Slack : -3.219
+TNS   : -9619.936
+
+Type  : Fast 900mV 0C Model Setup 'clk'
+Slack : -2.842
+TNS   : -871.195
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : -1.581
+TNS   : -1.581
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : -1.564
+TNS   : -5.129
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : -1.548
+TNS   : -4.207
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : -1.517
+TNS   : -2.887
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : -1.512
+TNS   : -1.512
+
+Type  : Fast 900mV 0C Model Setup 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : -1.478
+TNS   : -1.478
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : -1.354
+TNS   : -1.354
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : -1.278
+TNS   : -1.278
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : -1.055
+TNS   : -1.055
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -0.843
+TNS   : -0.843
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -0.823
+TNS   : -0.823
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -0.716
+TNS   : -0.716
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : -0.303
+TNS   : -0.303
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : -0.090
+TNS   : -0.090
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : -0.045
+TNS   : -0.045
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : -0.033
+TNS   : -0.033
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.025
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.055
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.111
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Setup 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'clk'
+Slack : -1.303
+TNS   : -22.629
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : -0.512
+TNS   : -0.512
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : -0.242
+TNS   : -0.242
+
+Type  : Fast 900mV 0C Model Hold 'core_sp_clk'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.580
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.621
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.642
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : 0.647
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.663
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.869
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 1.177
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 1.199
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 1.371
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : 1.379
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : 1.473
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : 1.556
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : 1.598
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : 1.812
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : 1.856
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : 1.872
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : 2.062
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Hold 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : 2.089
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Recovery 'core_sp_clk'
+Slack : -0.931
+TNS   : -1068.358
+
+Type  : Fast 900mV 0C Model Removal 'core_sp_clk'
+Slack : 1.468
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'clk'
+Slack : -1.105
+TNS   : -973.786
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'core_sp_clk'
+Slack : -0.213
+TNS   : -883.051
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_wr[5]'
+Slack : 0.439
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.462
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.475
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_wr[5]'
+Slack : 0.475
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.477
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|pb_in_ack[4]'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_grant2'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu3|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_grant1'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|out_switch:out_switch|os_state0.OS_CANCEL'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'flow_classification:fc|state.FC_LOOKUP_ROUTE'
+Slack : 0.486
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_grant0'
+Slack : 0.486
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.488
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu1|in_switch:in_switch|pb_in_wr[4]'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu2|in_switch:in_switch|bypass_empty_buff_state.BYPASS_BUFF_LOOKUP'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Fast 900mV 0C Model Minimum Pulse Width 'ppu:ppu0|in_switch:in_switch|port_state3.PORT_STATE_CANCEL_BUFF_REQ'
+Slack : 0.497
+TNS   : 0.000
+
+------------------------------------------------------------

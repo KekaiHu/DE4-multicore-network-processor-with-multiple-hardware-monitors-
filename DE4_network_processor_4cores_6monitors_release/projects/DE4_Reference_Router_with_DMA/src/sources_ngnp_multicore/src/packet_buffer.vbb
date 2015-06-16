@@ -1,0 +1,291 @@
+//
+// Designed by Qiang Wu
+//
+
+`timescale 1ns/1ps
+
+module packet_buffer(
+	input			clk,
+
+	input		[63:0]	in_data0,
+	input			in_wr0,
+	input			in_req0,
+	output			in_ack0,
+
+	input		[63:0]	in_data1,
+	input			in_wr1,
+	input			in_req1,
+	output			in_ack1,
+
+	input		[63:0]	in_data2,
+	input			in_wr2,
+	input			in_req2,
+	output			in_ack2,
+
+	input		[63:0]	in_data3,
+	input			in_wr3,
+	input			in_req3,
+	output			in_ack3,
+
+	output	reg	[63:0]	out_data0,
+	output			out_wr0,
+	output			out_req0,
+	input			out_ack0,
+
+	output	reg	[63:0]	out_data1,
+	output			out_wr1,
+	output			out_req1,
+	input			out_ack1,
+
+	output	reg	[63:0]	out_data2,
+	output			out_wr2,
+	output			out_req2,
+	input			out_ack2,
+
+	output	reg	[63:0]	out_data3,
+	output			out_wr3,
+	output			out_req3,
+	input			out_ack3,
+
+	input		[10:2]	proc_addr,
+	input		[31:0]	proc_data_in,
+	output	reg	[31:0]	proc_data_out,
+	input		[3:0]	proc_we,
+	output			proc_stall
+);
+wire	[63:0]	in_data[3:0];
+wire		in_wr[3:0];
+wire		in_req[3:0];
+wire		in_ack[3:0];
+
+assign in_data[0]	=	in_data0;
+assign in_wr[0]		=	in_wr0;
+assign in_req[0]	=	in_req0;
+
+assign in_data[1]	=	in_data1;
+assign in_wr[1]		=	in_wr1;
+assign in_req[1]	=	in_req1;
+
+assign in_data[2]	=	in_data2;
+assign in_wr[2]		=	in_wr2;
+assign in_req[2]	=	in_req2;
+
+assign in_data[3]	=	in_data3;
+assign in_wr[3]		=	in_wr3;
+assign in_req[3]	=	in_req3;
+
+
+parameter NUM_INPUT_PORTS = 4;
+parameter NUM_OUTPUT_PORTS = 4;
+parameter NUM_PKT_BUFF = 4;
+reg [NUM_PKT_BUFF-1:0] bs_empty;
+reg [NUM_PKT_BUFF-1:0] bs_empty_next;
+reg [NUM_PKT_BUFF-1:0] bs_recv;
+reg [NUM_PKT_BUFF-1:0] bs_recv_next;
+reg [NUM_PKT_BUFF-1:0] bs_recv_done;
+reg [NUM_PKT_BUFF-1:0] bs_recv_done_next;
+reg [NUM_PKT_BUFF-1:0] bs_proc;
+reg [NUM_PKT_BUFF-1:0] bs_proc_next;
+reg [NUM_PKT_BUFF-1:0] bs_proc_done;
+reg [NUM_PKT_BUFF-1:0] bs_proc_done_next;
+reg [NUM_PKT_BUFF-1:0] bs_send;
+reg [NUM_PKT_BUFF-1:0] bs_send_next;
+reg [NUM_PKT_BUFF-1:0] bs_send_done;
+reg [NUM_PKT_BUFF-1:0] bs_send_done_next;
+
+reg		rx_enable [NUM_PKT_BUFF-1:0];
+reg	[1:0]	rx_port [NUM_PKT_BUFF-1:0];
+
+always @(*)
+begin
+	bs_empty_next		=	bs_empty;
+	bs_recv_next		=	bs_recv;
+	bs_recv_done_next	=	bs_recv_done;
+	bs_proc_next		=	bs_proc;
+	bs_proc_done_next	=	bs_proc_done;
+	bs_send_next		=	bs_send;
+	bs_send_done_next	=	bs_send_done;
+
+	if(bs_empty[0] && in_req[0]) begin
+		rx_enable[0] = 1'b1;
+		rx_port[0] = 2'b00;
+	end
+	if(bs_empty[1] && in_req[1]) begin
+		rx_enable[1] = 1'b1;
+		rx_port[1] = 2'b01;
+	end
+	if(bs_empty[2] && in_req[2]) begin
+		rx_enable[2] = 1'b1;
+		rx_port[2] = 2'b10;
+	end
+	if(bs_empty[3] && in_req[3]) begin
+		rx_enable[3] = 1'b1;
+		rx_port[3] = 2'b11;
+	end
+end
+
+always @(posedge clk)
+begin
+	if(reset) begin
+		bs_empty	<= 4'b1111;
+		bs_recv		<= 0;
+		bs_recv_done	<= 0;
+		bs_proc		<= 0;
+		bs_proc_done	<= 0;
+		bs_send		<= 0;
+		bs_send_done	<= 0;
+	end else begin
+		bs_empty	<= bs_empty_next;
+		bs_recv		<= bs_recv_next;
+		bs_recv_done	<= bs_recv_done_next;
+		bs_proc		<= bs_proc_next;
+		bs_proc_done	<= bs_proc_done_next;
+		bs_send		<= bs_send_next;
+		bs_send_done	<= bs_send_done_next;
+	end
+end
+
+			{dia[curr_buff_recv], dib[curr_buff_recv]} = in_data[curr_port_recv];
+input clk;
+input input_mode; //1 for 64, 0 for 32
+input [10:3] addr64;
+input [63:0] data_in64;
+output [63:0] data_out64;
+input [7:0] byte_we8;
+input [10:2] addr32;
+input [31:0] data_in32;
+output [31:0] data_out32;
+input [3:0] byte_we4;
+
+reg [63:0] data_out64;
+reg [31:0] data_out32;
+reg wea0;
+reg web0;
+
+reg [8:0] addra0;
+reg [8:0] addrb0;
+
+reg [31:0] dia0;
+reg [31:0] dib0;
+
+wire [31:0] doa0;
+wire [31:0] dob0;
+
+
+always @(*) begin
+	wea0 = 0;
+	web0 = 0;
+	if(input_mode == 1) begin
+		addra0[8:0] = {addr64[10:3], 1'b0};
+		addrb0[8:0] = {addr64[10:3], 1'b1};
+		dia0 = data_in64[31:0];
+		dib0 = data_in64[63:32];
+		data_out64 = {dob0, doa0};
+		if(byte_we8) begin
+			wea0 = 1;
+			web0 = 1;
+		end else begin
+			wea0 = 0;
+			web0 = 0;
+		end
+	end else begin
+		addra0[8:0] = addr32[10:2];
+		dia0 = data_in32[31:0];
+		data_out32 = doa0;
+		if(byte_we4) begin
+			wea0 = 1;
+		end else begin
+			wea0 = 0;
+		end
+	end
+end
+
+wire [3:0]  dipa;
+wire [3:0]  dipb;
+
+RAMB16_S36_S36 pm0(
+	.DOA	(doa0),
+	.DOB	(dob0),
+	.DOPA	(),
+	.DOPB	(),
+	.ADDRA	(addra0),
+	.ADDRB	(addrb0),
+	.CLKA	(clk),
+	.CLKB	(clk),
+	.DIA	(dia0),
+	.DIB	(dib0),
+	.DIPA	(dipa),
+	.DIPB	(dipb),
+	.ENA	(1'b1),
+	.ENB	(1'b1),
+	.SSRA	(reset),
+	.SSRB	(reset),
+	.WEA	(wea0),
+	.WEB	(web0)
+); 
+
+RAMB16_S36_S36 pm1(
+	.DOA	(doa1),
+	.DOB	(dob1),
+	.DOPA	(),
+	.DOPB	(),
+	.ADDRA	(addra1),
+	.ADDRB	(addrb1),
+	.CLKA	(clk),
+	.CLKB	(clk),
+	.DIA	(dia1),
+	.DIB	(dib1),
+	.DIPA	(dipa),
+	.DIPB	(dipb),
+	.ENA	(1'b1),
+	.ENB	(1'b1),
+	.SSRA	(reset),
+	.SSRB	(reset),
+	.WEA	(wea1),
+	.WEB	(web1)
+); 
+
+RAMB16_S36_S36 pm2(
+	.DOA	(doa2),
+	.DOB	(dob2),
+	.DOPA	(),
+	.DOPB	(),
+	.ADDRA	(addra2),
+	.ADDRB	(addrb2),
+	.CLKA	(clk),
+	.CLKB	(clk),
+	.DIA	(dia2),
+	.DIB	(dib2),
+	.DIPA	(dipa),
+	.DIPB	(dipb),
+	.ENA	(1'b1),
+	.ENB	(1'b1),
+	.SSRA	(reset),
+	.SSRB	(reset),
+	.WEA	(wea2),
+	.WEB	(web2)
+); 
+
+RAMB16_S36_S36 pm3(
+	.DOA	(doa3),
+	.DOB	(dob3),
+	.DOPA	(),
+	.DOPB	(),
+	.ADDRA	(addra3),
+	.ADDRB	(addrb3),
+	.CLKA	(clk),
+	.CLKB	(clk),
+	.DIA	(dia3),
+	.DIB	(dib3),
+	.DIPA	(dipa),
+	.DIPB	(dipb),
+	.ENA	(1'b1),
+	.ENB	(1'b1),
+	.SSRA	(reset),
+	.SSRB	(reset),
+	.WEA	(wea3),
+	.WEB	(web3)
+); 
+
+
+endmodule

@@ -1,0 +1,206 @@
+/****************************************************************************
+          AddSub unit
+- Should perform ADD, ADDU, SUBU, SUB, SLT, SLTU
+
+  is_slt signext addsub
+    op[2] op[1] op[0]  |  Operation
+0     0     0     0         SUBU
+2     0     1     0         SUB
+1     0     0     1         ADDU
+3     0     1     1         ADD
+4     1     0     0         SLTU
+6     1     1     0         SLT
+
+****************************************************************************/
+module addersub (
+            opA, opB,
+            op, 
+            result,
+            result_slt );
+
+parameter WIDTH=32;
+
+
+input [WIDTH-1:0] opA;
+input [WIDTH-1:0] opB;
+//input carry_in;
+input [3-1:0] op;
+
+output [WIDTH-1:0] result;
+output result_slt;
+
+wire carry_out;
+wire [WIDTH:0] sum;
+
+// Mux between sum, and slt
+wire is_slt;
+wire signext;
+wire addsub;
+
+assign is_slt=op[2];
+assign signext=op[1];
+assign addsub=op[0];
+
+assign result=sum[WIDTH-1:0];
+//assign result_slt[WIDTH-1:1]={31{1'b0}};
+//assign result_slt[0]=sum[WIDTH];
+assign result_slt=sum[WIDTH];
+
+
+
+wire [WIDTH-1:0] oA;
+wire [WIDTH-1:0] oB;
+wire [WIDTH-1:0] o_B;
+assign oA = {signext&opA[WIDTH-1],opA};
+assign oB = {signext&opB[WIDTH-1],opB};
+assign o_B = ~{signext&opB[WIDTH-1],opB} + 1'b1;
+/*
+add_ahead32 aa0(
+	.sum	(o_B),
+	.cout	(),
+	.a	(0),
+	.b	(~{signext&opB[WIDTH-1],opB}),
+	.cin	(1'b1)
+);
+add_ahead32 aa1(
+	.sum	(sum),
+	.cout	(),
+	.a	(oA),
+	.b	(oB),
+	.cin	(0)
+);
+
+blocked_CLA_32bit bcla0(
+	.sum		(o_B),
+	.carryout	(),
+	.A_in		(0),
+	.B_in		(~{signext&opB[WIDTH-1],opB}),
+	.carryin	(1'b1)
+);
+blocked_CLA_32bit bcla1(
+	.sum		(sum),
+	.carryout	(),
+	.A_in		(oA),
+	.B_in		(oB),
+	.carryin	(0)
+);*/
+assign sum = (addsub == 1'b1) ? oA + oB : oA + o_B;
+/*
+always @(*) begin
+	if(addsub == 1'b1) begin
+		sum = oA + oB;
+	end else begin
+		sum = oA + o_B;
+	end
+end
+*/
+/*
+lpm_add_sub adder_inst(
+    .dataa({signext&opA[WIDTH-1],opA}),
+    .datab({signext&opB[WIDTH-1],opB}),
+    .cin(~addsub),
+    .add_sub(addsub),
+    .result(sum)
+        // synopsys translate_off
+        ,
+        .cout (),
+        .clken (),
+        .clock (),
+        .overflow (),
+        .aclr ()
+        // synopsys translate_on
+    );
+defparam 
+    adder_inst.lpm_width=WIDTH+1,
+    adder_inst.lpm_representation="SIGNED";
+*/
+assign carry_out=sum[WIDTH];
+
+
+endmodule
+
+module add_ahead32(sum,cout,a,b,cin);
+output[31:0] sum;
+output cout;
+input[31:0] a,b;
+input cin;
+wire[31:0] G,P;
+wire[31:0] C,sum;
+
+assign G[0]=a[0]&b[0];
+assign P[0]=a[0]|b[0];
+assign C[0]=cin;
+assign sum[0]=G[0]^P[0]^C[0];
+
+assign G[1]=a[1]&b[1];
+assign P[1]=a[1]|b[1];
+assign C[1]=G[0]|(P[0]&cin);
+assign sum[1]=G[1]^P[1]^C[1];
+
+genvar i;
+generate
+for(i = 2; i < 32; i = i + 1) begin:aaa
+	assign G[i]=a[i]&b[i];
+	assign P[i]=a[i]|b[i];
+	assign C[i]=G[i-1]|(P[i-1]&C[i-1]);
+	assign sum[i]=G[i]^P[i]^C[i];
+end
+endgenerate
+
+assign cout=G[31]|(P[31]&C[31]);
+
+endmodule
+
+module carry_lookahead_4bit(s, cout, i1, i2, c0);
+
+output s;
+output cout;
+input i1;
+input i2;
+input c0;
+wire [3:0] s;
+wire cout;
+wire [3:0] i1;
+wire [3:0] i2;
+wire c0;
+
+wire [3:0] g;
+wire [3:0] p;
+wire [3:1] c;
+
+assign g[3:0]=i1[3:0] & i2[3:0]; //carry generation
+assign p[3:0]=i1[3:0] ^ i2[3:0];
+assign c[1]=g[0] | (p[0] & c0);
+assign c[2]=g[1] | (g[0] & p[1]) | (p[0] & p[1] & c0);
+assign c[3]=g[2] | (g[1] & p[2]) | (g[0] & p[1] & p[2]) | (p[0] & p[1] & p[2] & c0);
+assign cout=g[3] | (g[2] & p[3]) | (g[1] & p[2] & p[3]) | (g[0] & p[1] & p[2] & p[3]) | (p[0] & p[1] & p[2] & p[3] & c0);
+assign s[0]=p[0]^c0;
+assign s[3:1]=p[3:1]^c[3:1];
+
+endmodule 
+
+module blocked_CLA_32bit(sum, carryout, A_in, B_in, carryin);
+
+output sum;
+output carryout;
+input A_in;
+input B_in;
+input carryin;
+wire [31:0] sum;
+wire carryout;
+wire [31:0] A_in;
+wire [31:0] B_in;
+wire carryin;
+wire [6:0] carry;
+
+carry_lookahead_4bit  c1 (.s(sum[3:0]), .cout(carry[0]), .i1(A_in[3:0]), .i2(B_in[3:0]), .c0(carryin));
+carry_lookahead_4bit  c2 (.s(sum[7:4]), .cout(carry[1]), .i1(A_in[7:4]), .i2(B_in[7:4]), .c0(carry[0]));
+carry_lookahead_4bit  c3 (.s(sum[11:8]), .cout(carry[2]), .i1(A_in[11:8]), .i2(B_in[11:8]), .c0(carry[1]));
+carry_lookahead_4bit  c4 (.s(sum[15:12]), .cout(carry[3]), .i1(A_in[15:12]), .i2(B_in[15:12]), .c0(carry[2]));
+carry_lookahead_4bit  c5 (.s(sum[19:16]), .cout(carry[4]), .i1(A_in[19:16]), .i2(B_in[19:16]), .c0(carry[3]));
+carry_lookahead_4bit  c6 (.s(sum[23:20]), .cout(carry[5]), .i1(A_in[23:20]), .i2(B_in[23:20]), .c0(carry[4]));
+carry_lookahead_4bit  c7 (.s(sum[27:24]), .cout(carry[6]), .i1(A_in[27:24]), .i2(B_in[27:24]), .c0(carry[5]));
+carry_lookahead_4bit  c8 (.s(sum[31:28]), .cout(carryout), .i1(A_in[31:28]), .i2(B_in[31:28]), .c0(carry[6]));
+
+endmodule
+

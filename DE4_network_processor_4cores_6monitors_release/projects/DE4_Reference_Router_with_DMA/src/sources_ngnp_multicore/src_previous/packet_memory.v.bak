@@ -1,0 +1,99 @@
+//
+// Designed by Qiang Wu
+//
+//	2048 bytes, 64bit interface
+
+`timescale 1ns/1ps
+
+module packet_memory(
+	clk,
+	input_mode,
+	addr64,
+	data_in64,
+	data_out64,
+	byte_we8,
+	addr32,
+	data_in32,
+	data_out32,
+	byte_we4
+);
+
+input clk;
+input input_mode; //1 for 64, 0 for 32
+input [10:3] addr64;
+input [63:0] data_in64;
+output [63:0] data_out64;
+input [7:0] byte_we8;
+input [10:2] addr32;
+input [31:0] data_in32;
+output [31:0] data_out32;
+input [3:0] byte_we4;
+
+reg [63:0] data_out64;
+reg [31:0] data_out32;
+reg wea0;
+reg web0;
+
+reg [8:0] addra0;
+reg [8:0] addrb0;
+
+reg [31:0] dia0;
+reg [31:0] dib0;
+
+wire [31:0] doa0;
+wire [31:0] dob0;
+
+
+always @(*) begin
+	wea0 = 0;
+	web0 = 0;
+	if(input_mode == 1) begin
+		addra0[8:0] = {addr64[10:3], 1'b0};
+		addrb0[8:0] = {addr64[10:3], 1'b1};
+		dia0 = data_in64[31:0];
+		dib0 = data_in64[63:32];
+		data_out64 = {dob0, doa0};
+		if(byte_we8) begin
+			wea0 = 1;
+			web0 = 1;
+		end else begin
+			wea0 = 0;
+			web0 = 0;
+		end
+	end else begin
+		addra0[8:0] = addr32[10:2];
+		dia0 = data_in32[31:0];
+		data_out32 = doa0;
+		if(byte_we4) begin
+			wea0 = 1;
+		end else begin
+			wea0 = 0;
+		end
+	end
+end
+
+//wire [3:0]  dipa;
+//wire [3:0]  dipb;
+
+
+
+//assign data_in_a = {dipa, dia0};
+//assign data_in_b = {dipb, dib0};
+
+RAM16_s36_ts36_altera pm0(
+	.aclr_a (reset),
+	.aclr_b (reset),
+	.address_a (addra0),
+	.address_b (addrb0),
+	.clock_a (clk),
+	.clock_b (clk),
+	.data_a (dia0),
+	.data_b (dib0),
+	.wren_a (wea0),
+	.wren_b (web0),
+	.q_a (doa0),
+	.q_b (dob0) 
+	);
+
+
+endmodule

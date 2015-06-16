@@ -1,0 +1,399 @@
+//
+// Designed by Qiang Wu
+//
+`timescale 1ns/1ps
+
+module process_unit
+    #(parameter DATA_WIDTH = 64,
+      parameter CTRL_WIDTH=DATA_WIDTH/8,
+      parameter UDP_REG_SRC_WIDTH = 2,
+      parameter INPUT_ARBITER_STAGE_NUM = 2,
+      parameter IO_QUEUE_STAGE_NUM = `IO_QUEUE_STAGE_NUM,
+      parameter NUM_OUTPUT_QUEUES = 8,
+      parameter NUM_IQ_BITS = 3,
+      parameter STAGE_NUM = 4,
+      parameter CPU_QUEUE_NUM = 0)
+
+   (// --- data path interface
+    output     [DATA_WIDTH-1:0]        out_data,
+    output     [CTRL_WIDTH-1:0]        out_ctrl,
+    output                             out_wr,
+    input                              out_rdy,
+
+    input  [DATA_WIDTH-1:0]            in_data,
+    input  [CTRL_WIDTH-1:0]            in_ctrl,
+    input                              in_wr,
+    output                             in_rdy,
+
+    // --- Register interface
+    input                              reg_req_in,
+    input                              reg_ack_in,
+    input                              reg_rd_wr_L_in,
+    input  [`UDP_REG_ADDR_WIDTH-1:0]   reg_addr_in,
+    input  [`CPCI_NF2_DATA_WIDTH-1:0]  reg_data_in,
+    input  [UDP_REG_SRC_WIDTH-1:0]     reg_src_in,
+
+    output                             reg_req_out,
+    output                             reg_ack_out,
+    output                             reg_rd_wr_L_out,
+    output  [`UDP_REG_ADDR_WIDTH-1:0]  reg_addr_out,
+    output  [`CPCI_NF2_DATA_WIDTH-1:0] reg_data_out,
+    output  [UDP_REG_SRC_WIDTH-1:0]    reg_src_out,
+
+    // --- Misc
+    input                              clk,
+	    input core_sp_clk,
+    input                              reset
+);
+
+reg in_rdy_reg;
+assign in_rdy = in_rdy_reg;
+assign reg_req_out = reg_req_in;
+assign reg_ack_out = reg_ack_in;
+assign reg_rd_wr_L_out = reg_rd_wr_L_in;
+assign reg_addr_out = reg_addr_in;
+assign reg_data_out = reg_data_in;
+assign reg_src_out = reg_src_in;
+
+reg sp_pkt_done;
+
+parameter MAX_STORAGE_BITS = 8; // 2**8 * 8 = 2048 bytes
+
+//reg [DATA_WIDTH-1:0] storage [2**MAX_STORAGE_BITS-1:0];
+reg [MAX_STORAGE_BITS-1:0] rd_ptr;
+reg [MAX_STORAGE_BITS-1:0] wr_ptr;
+reg [MAX_STORAGE_BITS-1:0] depth;
+
+reg end_of_in_pkt;
+reg end_of_out_pkt;
+reg in_ctrl_prev_is_0;
+reg in_ctrl_curr_is_0;
+
+parameter IDLE = 4'b0000, REV_PKT = 4'b0001, PROC_PKT = 4'b0010, SNT_PKT = 4'b0100;
+
+reg [3:0] state;
+reg [3:0] state_next;
+
+reg [CTRL_WIDTH-1:0] first_ctrl_word;
+reg [CTRL_WIDTH-1:0] last_ctrl_word;
+
+reg [7:0] pm_addr;
+reg [7:0] pm_byte_we;
+reg [63:0] pm_data_in;
+wire [63:0] pm_data_out;
+reg [10:2] pm_addr32;
+reg [3:0] pm_byte_we4;
+reg [31:0] pm_data_in32;
+wire [31:0] pm_data_out32;
+
+reg [CTRL_WIDTH-1:0] out_ctrl_reg;
+reg [DATA_WIDTH-1:0] out_data_reg;
+reg out_wr_reg;
+assign out_data = out_data_reg;
+assign out_ctrl = out_ctrl_reg;
+assign out_wr = out_wr_reg;
+
+reg pm_input_mode;
+
+reg sp_ack;
+
+packet_memory pkt_mem(
+	.clk		(clk),
+	.input_mode	(pm_input_mode),
+	.addr64		(pm_addr),
+	.data_in64	(pm_data_in),
+	.data_out64	(pm_data_out),
+	.byte_we8	(pm_byte_we),
+	.addr32		(pm_addr32),
+	.data_in32	(pm_data_in32),
+	.data_out32	(pm_data_out32),
+	.byte_we4	(pm_byte_we4)
+);
+
+wire [35:0] CONTROL0;
+wire [239:0] TRIG0;
+
+chipscope_icon_v1_03_a cs_icon (
+	    .CONTROL0(CONTROL0)
+    );
+
+chipscope_ila_v1_02_a cs_ila (
+	    .CONTROL(CONTROL0),
+	        .CLK(clk),
+		    .TRIG0(TRIG0)
+	    );
+//assign TRIG0 = {pm_input_mode, state, pm_addr, pm_data_in, pm_data_out, pm_byte_we, pm_addr32, pm_data_in32, pm_data_out32, pm_byte_we4, 'b0};
+assign TRIG0[239:236] = state;
+assign TRIG0[235] = pm_input_mode;
+assign TRIG0[234:227] = pm_addr;
+assign TRIG0[226:163] = pm_data_in;
+assign TRIG0[162:99] = pm_data_out;
+assign TRIG0[98:91] = pm_byte_we;
+assign TRIG0[90:82] = pm_addr32;
+assign TRIG0[81:50] = pm_data_in32;
+assign TRIG0[49:18] = pm_data_out32;
+assign TRIG0[17:14] = pm_byte_we4;
+assign TRIG0[13] = in_wr;
+assign TRIG0[12] = out_wr;
+assign TRIG0[11:0] = 12'b0;
+
+
+always @(*)
+begin
+	state_next = state;
+	in_rdy_reg = 0;
+	case(state)
+		IDLE: begin
+	//		in_ctrl_prev_is_0 = 1;
+	//		in_ctrl_curr_is_0 = 0;
+	//		if(!in_fifo_empty) begin
+				state_next = REV_PKT;
+	//		end
+	//		
+			pm_input_mode = 1;
+			sp_ack = 0;
+		end
+		REV_PKT: begin
+			pm_input_mode = 1;
+			sp_ack = 0;
+	/*		if(end_of_in_pkt) begin
+				state_next = SNT_PKT;//PROC_PKT;
+			end
+			if((end_of_in_pkt != 'h1) & !in_fifo_empty) begin
+				in_fifo_rd_en = 1;
+	//			in_ctrl_prev_is_0 = in_ctrl_curr_is_0;
+	//			in_ctrl_curr_is_0 = (in_fifo_out_ctrl == 0);
+			end*/
+			if((in_ctrl_curr_is_0 != 1) & in_ctrl_prev_is_0) begin
+				in_rdy_reg = 0;
+				state_next = PROC_PKT;
+			end else begin
+				in_rdy_reg = 1;
+			end
+		end
+		PROC_PKT: begin
+			sp_ack = 1;
+			pm_input_mode = 0;
+	//		pm_addr = pm_addr_state_2;
+	//		pm_byte_we = pm_byte_we_state_2;
+	//		pm_data_in = pm_data_in_state_2;
+	//		pm_data_out_state_2 = pm_data_out;
+			if(sp_pkt_done) begin
+				state_next = SNT_PKT;
+			end
+		end
+		SNT_PKT: begin
+			sp_ack = 0;
+			pm_input_mode = 1;
+			if(end_of_out_pkt) begin
+				state_next = IDLE;
+			end
+		end
+		default: begin
+			sp_ack = 0;
+			pm_input_mode = 1;
+			state_next = IDLE;
+		end
+	endcase
+end
+
+//assign end_of_in_pkt = (in_ctrl_curr_is_0 != 1) && in_ctrl_prev_is_0;
+//wire aaa = (in_fifo_out_ctrl == 0);
+/*
+always @(*) begin
+	if((in_ctrl_curr_is_0 != 1) & in_ctrl_prev_is_0 & (state == REV_PKT)) begin
+		in_rdy = 1;
+	end else begin
+		in_rdy = 0;
+	end
+end
+*/
+always @(posedge clk)
+begin
+	if(reset) begin
+		state <= IDLE;
+		in_ctrl_prev_is_0 <= 0;
+		in_ctrl_curr_is_0 <= 0;
+		rd_ptr <= 8'b00000000;
+		wr_ptr <= 8'b00000000;
+		end_of_out_pkt <= 0;
+		//sp_pkt_done <= 0;
+		depth <= 0;
+	end else begin
+		first_ctrl_word <= 8'b11111111;
+		last_ctrl_word <= 8'b00000001;
+		state <= state_next;
+		case(state)
+			IDLE: begin
+				in_ctrl_curr_is_0 <= 0;
+				in_ctrl_prev_is_0 <= 0;
+				rd_ptr <= 8'b00000000;
+				wr_ptr <= 8'b00000000;
+				depth <= 8'b00000000;
+				end_of_out_pkt <= 0;
+				//sp_pkt_done <= 0;
+				out_wr_reg <= 0;
+			end
+			REV_PKT: begin
+				if(in_wr) begin
+					in_ctrl_curr_is_0 <= (in_ctrl == 0);
+					in_ctrl_prev_is_0 <= in_ctrl_curr_is_0;
+					pm_addr <= wr_ptr;
+					pm_data_in <= in_data;
+					pm_byte_we <= 8'b11111111;
+					wr_ptr <= wr_ptr + 'h1;
+					depth <= depth + 'h1;
+				end
+			end
+			PROC_PKT: begin
+				// memory selection
+				// 	0x00000000 - 0x00000800 localram
+				// 	0x10000000 - 0x10000000 packetmem
+				// 	0x20000000 - 0x20000000 packet_done
+	/*			case(zmemaddr[29:28])
+					2'b00: begin
+						lr_addr <= zmemaddr[12:2];
+						lr_we <= zmw ? zbs : 4'b0000;
+						lr_data_in <= zdata_out;
+						zdata_in <= lr_data_out;
+					end
+					2'b01: begin
+						pm_addr <= zmemaddr[11:3];
+						pm_byte_we <= (zmw == 1'b0) ? 8'b00000000 : 
+						       (zmemaddr[2] == 1'b1) ? {4'b0000, zbs} : {zbs, 4'b0000};
+						pm_data_in <= zmemaddr[2] ? {32'h00000000, zdata_out} : {zdata_out, 32'h00000000};
+						zdata_in <= zmemaddr[2] ? pm_data_out[31:0] : pm_data_out[63:32];
+					end
+					2'b10: begin
+						sp_pkt_done <= 1;
+					end
+					default: begin
+					end
+				endcase
+	*/		end 
+			SNT_PKT: begin
+				pm_byte_we <= 8'b00000000;
+				if(out_rdy) begin
+					if(rd_ptr <= depth+1) begin
+						if(rd_ptr == 2) begin
+							out_ctrl_reg <= first_ctrl_word;
+							out_data_reg <= pm_data_out | 'h0004000000000000;
+						end else begin
+							out_data_reg <= pm_data_out;
+							if(rd_ptr == depth+1) begin
+								out_ctrl_reg <= last_ctrl_word;
+								end_of_out_pkt <= 1;
+							end else begin
+								out_ctrl_reg <= 'b00000000;
+							end
+						end
+						pm_addr <= rd_ptr;
+			//			out_data_reg <= pm_data_out_state_3;
+						rd_ptr <= rd_ptr + 'h1;
+					end
+					if((rd_ptr > 1) & (rd_ptr <= depth+1)) begin
+						out_wr_reg <= 1;
+					end else begin
+						out_wr_reg <= 0;
+					end
+				end else begin
+					out_wr_reg <= 0;
+				end
+			end
+		endcase
+
+	end
+end
+
+
+
+reg [31:0] sp_data_in;
+wire [31:0] sp_data_out;
+//wire sp_ack;
+//assign sp_ack = 1;
+wire [31:0] sp_mem_addr;
+wire [3:0] sp_bs;
+wire sp_we;
+
+wire [31:0] inst_mem_addr;
+reg [31:0] inst_mem_data_in;
+wire [31:0] inst_mem_data_out;
+reg [31:0] data_mem_addr;
+reg [3:0] data_mem_bs;
+//wire [3:0] data_mem_byteena;
+//wire d_wr;
+//assign data_mem_bs = (d_wr == 1'b1) ? data_mem_byteena : 4'b0000;
+//wire [31:0] data_mem_raddr;
+//wire [31:0] data_mem_waddr;
+wire data_mem_we;
+//assign data_mem_addr = (data_mem_we == 1) ? data_mem_waddr : data_mem_raddr;
+reg [31:0] data_mem_data_in;
+wire [31:0] data_mem_data_out;
+wire data_mem_en;
+assign data_mem_en = 1'b1;
+wire inst_mem_en;
+assign inst_mem_en = 1'b1;
+wire [3:0] inst_mem_we;
+assign inst_mem_we = 4'b0000;
+localram data_mem(
+	.clk		(clk), 
+	.addr		(data_mem_addr[12:2]), 
+	.data_in	(data_mem_data_in), 
+	.data_out	(data_mem_data_out), 
+	.we		(data_mem_bs), 
+	.en		(data_mem_en), 
+	.reset		(reset)
+);
+// memory selection
+// 	0x00000000 - 0x00000800 localram
+// 	0x10000000 - 0x10000000 packetmem
+// 	0x20000000 - 0x20000000 packet_done
+always @(*) begin
+	data_mem_bs = 0;
+	pm_byte_we4 = 0;
+	case(sp_mem_addr[29:28])
+		2'b00: begin
+			data_mem_addr[12:2] = sp_mem_addr[12:2];
+			data_mem_data_in = sp_data_out;
+			data_mem_bs = (sp_we == 1) ? sp_bs : 0;
+			sp_data_in = data_mem_data_out;
+		end
+		2'b01: begin
+			pm_addr32[10:2] = sp_mem_addr[10:2];
+			pm_data_in32 = sp_data_out;
+			pm_byte_we4 = (sp_we == 1) ? sp_bs : 0;
+			sp_data_in = pm_data_out32;
+		end
+	//	2'b10: begin
+	//		sp_pkt_done = 1;
+	//	end
+		default: begin
+	//		sp_pkt_done = 0;
+		end
+	endcase
+end
+always @(posedge core_sp_clk) begin
+	if(sp_mem_addr[29:28] == 2'b10) begin
+		sp_pkt_done <= 1;
+	end else begin
+		sp_pkt_done <= 0;
+	end
+end
+//assign sp_ack = 1;
+wire sp_int;
+assign sp_int = 0;
+yf32_core yf_core(
+	.CLK_I		(core_sp_clk),
+	.RST_I		(reset),
+	.ADR_O		(sp_mem_addr),
+	.DAT_I		(sp_data_in),
+	.DAT_O		(sp_data_out),
+	.WE_O		(sp_we),
+	.SEL_O		(sp_bs),
+	.STB_O		(sp_stb),
+	.ACK_I		(sp_ack),
+	.CYC_O		(sp_cyc),
+	.INT_I		(sp_int)
+);
+
+endmodule

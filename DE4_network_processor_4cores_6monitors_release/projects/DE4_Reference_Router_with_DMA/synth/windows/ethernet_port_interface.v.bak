@@ -1,0 +1,447 @@
+
+module ethernet_port_interface
+(
+		input  wire        clk,                           
+		input  wire        reset,                          
+		
+		input  wire [26:0]  control_port_address,     
+		input  wire         control_port_read,        
+		output wire [31:0]  control_port_readdata,    
+		input  wire         control_port_write,       
+		input  wire [31:0]  control_port_writedata,   
+		output wire         control_port_waitrequest, 
+		
+		input  wire [7:0]  sink_data0,             
+		output wire        sink_ready0,            
+		input  wire        sink_valid0,           
+		input  wire [5:0]  sink_error0,            
+		input  wire        sink_startofpacket0,    
+		input  wire        sink_endofpacket0,      
+		
+		output wire [7:0]  source_data0,             
+		input  wire        source_ready0,               
+		output wire        source_valid0,              
+		output wire        source_error0,              
+		output wire        source_startofpacket0,       
+		output wire        source_endofpacket0,         
+		
+		input  wire [7:0]  sink_data1,             
+		output wire        sink_ready1,           
+		input  wire        sink_valid1,            
+		input  wire [5:0]  sink_error1,            
+		input  wire        sink_startofpacket1,  
+		input  wire        sink_endofpacket1,      
+		
+		output wire [7:0]  source_data1,                
+		input  wire        source_ready1,               
+		output wire        source_valid1,               
+		output wire        source_error1,              
+		output wire        source_startofpacket1,       
+		output wire        source_endofpacket1,         
+		
+		input  wire [7:0]  sink_data2,             
+		output wire        sink_ready2,            
+		input  wire        sink_valid2,            
+		input  wire [5:0]  sink_error2,           
+		input  wire        sink_startofpacket2,  
+		input  wire        sink_endofpacket2,      
+		
+		output wire [7:0]  source_data2,                
+		input  wire        source_ready2,               
+		output wire        source_valid2,               
+		output wire        source_error2,               
+		output wire        source_startofpacket2,     
+		output wire        source_endofpacket2,  
+		
+		input  wire [7:0]  sink_data3,             
+		output wire        sink_ready3,            
+		input  wire        sink_valid3,            
+		input  wire [5:0]  sink_error3,            
+		input  wire        sink_startofpacket3,   
+		input  wire        sink_endofpacket3,      
+		
+		output wire [7:0]  source_data3,               
+		input  wire        source_ready3,              
+		output wire        source_valid3,            
+		output wire        source_error3,           
+		output wire        source_startofpacket3,       
+		output wire        source_endofpacket3,        
+		
+		output  wire	   	txs_chip_select,
+		output  wire		txs_read,
+		output  wire 		txs_write,
+		output  wire [31:0]	txs_address,
+		output  wire [9:0]	txs_burst_count,
+		output  wire [31:0]	txs_writedata,
+		output  wire [3:0]	txs_byteenable,
+		input 	wire 		txs_read_valid,
+		input 	wire [31:0]	txs_readdata,
+		input 	wire 		txs_wait_request,
+		
+		input wire 			user_sw,
+		
+		input 	wire 		rxm_read_bar_0_1,
+		input 	wire     	rxm_write_bar_0_1,
+		input 	wire [26:0] rxm_address_bar_0_1,
+		input 	wire [31:0]	rxm_writedata_bar_0_1,
+		output  	wire 		rxm_wait_request_bar_0_1,
+		output  	wire [31:0] rxm_readdata_bar_0_1,
+		output  	wire 		rxm_read_valid_bar_0_1,
+		
+		
+		input 	wire 		rxm_read_bar_1,
+		input 	wire     	rxm_write_bar_1,
+		input 	wire [26:0] rxm_address_bar_1,
+		input 	wire [31:0]	rxm_writedata_bar_1,
+		output  	wire 		rxm_wait_request_bar_1,
+		output  	wire [31:0] rxm_readdata_bar_1,
+		output  	wire 		rxm_read_valid_bar_1,
+		
+		output	wire 		rxm_read_bar_1_out,
+		output	wire     	rxm_write_bar_1_out,
+		output	wire [31:0] rxm_address_bar_1_out,
+		output	wire [31:0] rxm_writedata_bar_1_out,
+		input 	wire 		rxm_wait_request_bar_1_in,
+		input  	wire [31:0] rxm_readdata_bar_1_in,
+		input 	wire 	    rxm_read_valid_bar_1_in,
+		
+		output  	wire 		interrupt_request
+		
+);
+
+		
+	wire [28:0]		rxm_address_bar_1_out_shift;
+	wire [26:0] 	MM_port_address;
+	wire 			MM_port_read;
+	wire [31:0] 	MM_port_readdata;
+	wire 			MM_port_write;
+	wire [31:0]		MM_port_writedata;
+	wire 			MM_port_waitrequest;
+	wire 			MM_port_readdata_valid;	
+	wire [31:0] 	control_port_address_rxm_shift;	
+	wire [31:0] 	rxm_port_readdata;
+	wire [31:0] 	cpci_input_address;
+	reg 			sink_error0_in_reg;
+	reg 			sink_error1_in_reg;
+	reg 			sink_error2_in_reg;
+	reg 			sink_error3_in_reg;
+	reg 			sink_ready0_reg;
+	reg 			sink_ready1_reg;
+	reg 			sink_ready2_reg;
+	reg 			sink_ready3_reg;
+	reg [31:0] test_txs_readdata_reg;
+	wire [31:0] control_port_readdata_txs_reg;
+	
+	//signal generation for the cpci
+	wire phy_int_b;
+	assign phy_int_b = 1'b1; //active low signal?
+	wire cnet_err;
+	assign cnet_err = 1'b0;
+	wire cpci_jmpr;
+	assign cpci_jmpr = 1'b0;
+	wire [3:0] cpci_id;
+	assign cpci_id = 4'b0000;
+	
+	wire cpci_read, cpci_write;
+	wire cpci_rd_wr_L, cpci_req, cpci_rd_rdy;
+	wire [31:0] cpci_addr, cpci_data;
+	assign cpci_read = (cpci_req) ? cpci_rd_wr_L : 1'b0;
+	assign cpci_write = (cpci_req) ? !cpci_rd_wr_L : 1'b0;
+	
+	wire [1:0] dma_op_code_req, dma_op_code_ack;
+	wire [`DMA_DATA_WIDTH-1:0] dma_data;
+	wire [3:0] dma_op_queue_id;
+	
+	assign rxm_address_bar_1_out_shift 							= (rxm_address_bar_1 << 2);
+	assign rxm_read_bar_1_out 										= rxm_read_bar_1;
+	assign rxm_write_bar_1_out 									= rxm_write_bar_1;
+	assign rxm_address_bar_1_out 									= ({1'b1,2'b00,rxm_address_bar_1_out_shift[28:4],2'b00});
+	assign rxm_writedata_bar_1_out 								= rxm_writedata_bar_1;
+	assign rxm_wait_request_bar_1 								= rxm_wait_request_bar_1_in;
+	assign rxm_readdata_bar_1 										= rxm_readdata_bar_1_in;
+	assign rxm_read_valid_bar_1 									= rxm_read_valid_bar_1_in;	
+	
+	assign control_port_address_rxm_shift 						= (rxm_address_bar_0_1 << 2);	
+	assign cpci_input_address                          = ({2'b00,control_port_address_rxm_shift[31:4],2'b00});
+		
+	assign MM_port_address 										= (user_sw)?(control_port_address):cpci_addr;
+	assign MM_port_read 											= (user_sw)?control_port_read:cpci_read;
+	assign MM_port_write 										= (user_sw)?control_port_write:cpci_write;
+	assign MM_port_writedata 									= (user_sw)?control_port_writedata:cpci_data;
+	
+	//assign cpci_data = (!user_sw && MM_port_readdata_valid) ? MM_port_readdata : 32'bz;
+	assign cpci_data = (!user_sw && cpci_rd_rdy) ? MM_port_readdata : 32'bz;
+	
+	assign  control_port_readdata 								= MM_port_readdata;
+	assign  control_port_waitrequest 							= MM_port_waitrequest;
+		
+	//assign rxm_readdata_bar_0_1 								= (user_sw)?32'b0:rxm_port_readdata;
+	//assign rxm_read_valid_bar_0_1 								= (user_sw)?1'b0:MM_port_readdata_valid;
+	//assign rxm_wait_request_bar_0_1 							= (user_sw)?1'b0:MM_port_waitrequest;
+	
+	//assign interrupt_request = txs_read;
+	
+	n_cpci_top cpci_top
+  (
+			.txs_chip_select(txs_chip_select),
+			.txs_read(txs_read),
+			.txs_write(txs_write),
+			.txs_address(txs_address),
+			.txs_burst_count(txs_burst_count),
+			.txs_writedata(txs_writedata),
+			.txs_byteenable(txs_byteenable),
+			.txs_read_valid(txs_read_valid),
+			.txs_readdata(txs_readdata),
+			.txs_wait_request(txs_wait_request),				
+			
+			.rxm_read_bar_1(rxm_read_bar_0_1),
+			.rxm_write_bar_1(rxm_write_bar_0_1),
+			.rxm_address_bar_1(cpci_input_address),
+			.rxm_writedata_bar_1(rxm_writedata_bar_0_1),
+			.rxm_wait_request_bar_1(rxm_wait_request_bar_0_1),
+			.rxm_readdata_bar_1(rxm_readdata_bar_0_1),
+			.rxm_read_valid_bar_1(rxm_read_valid_bar_0_1),
+			
+			.interrupt_request (interrupt_request), // interrupt_request
+
+			.nclk (clk),
+			.cnet_reset (),
+			.phy_int_b (phy_int_b),
+
+			.cpci_rd_wr_L (cpci_rd_wr_L),
+			.cpci_req (cpci_req),
+			.cpci_addr (cpci_addr),
+			.cpci_data (cpci_data),
+			.cpci_wr_rdy(cpci_wr_rdy),
+			.cpci_rd_rdy(cpci_rd_rdy),
+			.cnet_err (1'b0),
+			
+			.cpci_dma_op_code_req ( dma_op_code_req ),
+			.cpci_dma_op_queue_id ( dma_op_queue_id ),
+			.cpci_dma_op_code_ack ( dma_op_code_ack ),
+
+			.cpci_dma_vld_c2n ( dma_vld_c2n ),
+			.cpci_dma_vld_n2c ( dma_vld_n2c ),
+			.cpci_dma_data ( dma_data ),
+			.cpci_dma_q_nearly_full_n2c ( dma_q_nearly_full_n2c ),
+			.cpci_dma_q_nearly_full_c2n ( dma_q_nearly_full_c2n ),
+
+			.cnet_clk_sel(),
+
+			.cpci_jmpr(cpci_jmpr),
+			.cpci_id(cpci_id),
+			.reset(reset)
+	 );
+	 
+	 // --- DMA data tri-state
+
+   wire   dma_data_tri_en;
+   wire [`DMA_DATA_WIDTH-1:0] dma_data_n2c;
+   wire [5:0] usedw_sig_txs;
+   assign dma_data = dma_data_tri_en ? dma_data_n2c : {`DMA_DATA_WIDTH {1'b z}};
+
+   // --- end of DMA data tri-state
+
+		
+		
+	nf2_core nf2_core
+   (	
+		.control_port_address(MM_port_address),   
+		.control_port_read(MM_port_read),       
+		.control_port_readdata(MM_port_readdata),    
+		.control_port_write(MM_port_write),      
+		.control_port_writedata(MM_port_writedata),  
+		.control_port_waitrequest(MM_port_waitrequest), 
+		.control_port_read_datavalid(MM_port_readdata_valid),
+		.rxm_port_readdata(rxm_port_readdata),
+	
+		.gmac_tx_data_1_out(source_data1),
+		.gmac_tx_dvld_1_out(source_valid1),
+		.gmac_tx_ack_1_out(source_ready1),
+		.end_of_packet_1_out(source_endofpacket1),
+		.start_of_packet_1_out(source_startofpacket1),
+		  
+		.gmac_rx_data_1_in(sink_data1),
+		.gmac_rx_dvld_1_in(sink_valid1),
+		.gmac_rx_frame_error_1_in(sink_error1_in), 
+		
+		.gmac_tx_data_2_out(source_data2),
+		.gmac_tx_dvld_2_out(source_valid2),
+		.gmac_tx_ack_2_out(source_ready2),
+		.end_of_packet_2_out(source_endofpacket2),
+		.start_of_packet_2_out(source_startofpacket2),
+		  
+		.gmac_rx_data_2_in(sink_data2),
+		.gmac_rx_dvld_2_in(sink_valid2),
+		.gmac_rx_frame_error_2_in(sink_error2_in),
+		
+		.gmac_tx_data_3_out(source_data3),
+		.gmac_tx_dvld_3_out(source_valid3),
+		.gmac_tx_ack_3_out(source_ready3),
+		.end_of_packet_3_out(source_endofpacket3),
+		.start_of_packet_3_out(source_startofpacket3),
+		  
+		.gmac_rx_data_3_in(sink_data3),
+		.gmac_rx_dvld_3_in(sink_valid3),
+		.gmac_rx_frame_error_3_in(sink_error3_in), 
+		
+		.gmac_tx_data_0_out(source_data0),
+		.gmac_tx_dvld_0_out(source_valid0),
+		.gmac_tx_ack_0_out(source_ready0),
+		.end_of_packet_0_out(source_endofpacket0),
+		.start_of_packet_0_out(source_startofpacket0),
+		  
+		.gmac_rx_data_0_in(sink_data0),
+		.gmac_rx_dvld_0_in(sink_valid0),
+		.gmac_rx_frame_error_0_in(sink_error0_in), 
+
+      .core_clk_int(clk),
+      .reset(reset),
+		
+		.cpci_rd_rdy(cpci_rd_rdy),
+		.cpci_wr_rdy(cpci_wr_rdy),
+		
+		//DMA handshake signals
+	  .dma_op_code_req ( dma_op_code_req ),
+	  .dma_op_queue_id ( dma_op_queue_id ),
+	  .dma_op_code_ack ( dma_op_code_ack ),
+ 
+	  // DMA TX data and flow control 
+	  .dma_vld_c2n ( dma_vld_c2n ),
+	  .dma_data_c2n ( dma_data ),
+	  .dma_q_nearly_full_n2c ( dma_q_nearly_full_n2c ),
+ 
+	  // DMA RX data and flow control 
+	  .dma_vld_n2c ( dma_vld_n2c ),
+	  .dma_data_n2c ( dma_data_n2c ),
+	  .dma_q_nearly_full_c2n ( dma_q_nearly_full_c2n ),
+  
+	  // enable to drive tri-state bus 
+	  .dma_data_tri_en ( dma_data_tri_en )
+
+);
+
+/*
+txs_read_fifo	txs_read_fifo_inst (
+	.clock ( clk ),
+	.data ( txs_readdata ),
+	.rdreq ( control_port_read ),
+	.wrreq ( txs_read_valid ),
+	.empty (  ),
+	.full (  ),
+	.usedw ( usedw_sig_txs ),
+	.q ( control_port_readdata_txs_reg )
+	);
+
+
+	always@ (*) begin
+		if(txs_read_valid)begin
+			test_txs_readdata_reg = txs_readdata;
+		end
+		else begin
+			test_txs_readdata_reg = test_txs_readdata_reg;
+		end
+	end
+	*/
+	/*
+	always@ (*) begin
+		if(control_port_read)begin
+			control_port_readdata_txs_reg = test_txs_readdata_reg;
+		end
+		else begin
+			control_port_readdata_txs_reg = test_txs_readdata_reg;
+		end
+	end
+*/
+	
+	//assign  control_port_readdata = control_port_readdata_txs_reg;
+
+	always@ (*) begin
+		if(sink_error0 == 6'b0)begin
+			sink_error0_in_reg = 1'b0;
+		end
+		else begin
+			sink_error0_in_reg = 1'b1;
+		end
+	end
+	always@(*) begin
+		if(sink_error1 == 6'b0)begin
+			sink_error1_in_reg = 1'b0;
+		end
+		else begin
+			sink_error1_in_reg = 1'b1;
+		end
+	end
+		always@(*) begin
+		if(sink_error2 == 6'b0)begin
+			sink_error2_in_reg = 1'b0;
+		end
+		else begin
+			sink_error2_in_reg = 1'b1;
+		end
+	end
+		always@(*) begin
+		if(sink_error3 == 6'b0)begin
+			sink_error3_in_reg = 1'b0;
+		end
+		else begin
+			sink_error3_in_reg = 1'b1;
+		end
+	end
+	
+	assign sink_error0_in = sink_error0_in_reg;
+	assign sink_error1_in = sink_error1_in_reg;
+	assign sink_error2_in = sink_error2_in_reg;
+	assign sink_error3_in = sink_error3_in_reg;
+
+	assign source_error0 = 1'b0;
+	assign source_error1 = 1'b0;
+	assign source_error2 = 1'b0;
+	assign source_error3 = 1'b0;
+
+		always @(posedge clk) begin
+			if (reset) begin
+				sink_ready0_reg = 1'b0;
+
+			end
+			else begin
+			 sink_ready0_reg = 1'b1;
+			 end
+		end
+		
+		always @(posedge clk) begin
+			if (reset) begin
+				sink_ready1_reg = 1'b0;
+
+			end
+			else begin
+			 sink_ready1_reg = 1'b1;
+			 end
+		end	
+		
+		always @(posedge clk) begin
+			if (reset) begin
+				sink_ready2_reg = 1'b0;
+
+			end
+			else begin
+			 sink_ready2_reg = 1'b1;
+			 end
+		end
+		
+		always @(posedge clk) begin
+			if (reset) begin
+				sink_ready3_reg = 1'b0;
+
+			end
+			else begin
+			 sink_ready3_reg = 1'b1;
+			 end
+		end
+	
+	assign sink_ready0 = sink_ready0_reg;
+	assign sink_ready1 = sink_ready1_reg;
+	assign sink_ready2 = sink_ready2_reg;
+	assign sink_ready3 = sink_ready3_reg;	
+
+endmodule		

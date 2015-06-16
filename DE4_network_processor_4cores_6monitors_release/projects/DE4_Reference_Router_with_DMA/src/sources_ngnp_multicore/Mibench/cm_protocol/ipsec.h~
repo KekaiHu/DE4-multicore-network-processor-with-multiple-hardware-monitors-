@@ -1,0 +1,61 @@
+/*
+    PacketBench - Workload Characterization Tool
+    Copyright (C) 2004  Ramaswamy Ramaswamy
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+#include "global.h"
+#include "des.h"
+
+#ifndef IPSEC_H
+#define IPSEC_H
+
+#ifndef MIN_IP_DATAGRAM
+#define MIN_IP_DATAGRAM 20 /* minimum length IP datagram size (bytes) */
+#endif
+
+#ifndef IPDECTTL
+#define IPDECTTL 1 /* No. of time units to decrement TTL */
+#endif
+
+/* Protocol definition for ESP (arbitrary) */
+#define ESP 69
+
+/* SPI index. Used in ESP header */
+#define SPIINDEX 100
+
+/* AES block size in bytes */
+#define DES_BLOCK_SIZE 8
+
+/* Maximum IV size for cipher */
+#define MAX_IV_SIZE 8
+
+struct esp_header
+{
+  unsigned int spi;
+  unsigned int seq_no;
+  unsigned char iv[MAX_IV_SIZE];
+};
+
+typedef struct esp_header esp_header;
+
+static int ETHER_SIZE = 14;
+static int IP_SIZE = 20;
+static int NF2_SIZE = 8;
+static int ESP_SIZE = sizeof(struct esp_header);
+
+DES3_CBC_CTX enccipher;
+
+#endif

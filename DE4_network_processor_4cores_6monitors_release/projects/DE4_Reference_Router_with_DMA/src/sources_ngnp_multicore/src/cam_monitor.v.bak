@@ -1,0 +1,170 @@
+`include "yf32_define.v"
+`include "NF_2.1_defines.v"
+`include "reg_defines_reference_router.v"
+`include "registers.v"
+
+module CAM_monitor
+(
+input clk,
+input statemac_clk,
+input [3:0] four_bit_hash,
+input [11:0] pcin,
+input new_inst_signal,
+input reset,
+output packet_drop_signal,
+input  cam_we,
+input  [3:0]    cam_wr_addr,
+input [31:0] cam_din,
+output cam_wr_ack
+);
+
+parameter LUT_DEPTH = `ROUTER_OP_LUT_DST_IP_FILTER_TABLE_DEPTH;
+parameter LUT_DEPTH_BITS = 4;
+reg [8:0] address_a;
+wire [3:0] four_bit_hash_out_one;
+reg packet_drop_signal_reg;
+
+// Add Hash memory block
+rom_shared rom(
+	.address_a(address_a),
+	.address_b(),
+	.clock(clk),
+	.q_a(four_bit_hash_out_one),
+	.q_b()
+	);	
+
+   wire                                  cam_busy;
+   wire                                  cam_match;
+   wire [LUT_DEPTH-1:0]                  cam_match_addr;
+   wire [31:0]                           cam_cmp_din, cam_cmp_data_mask;
+   wire [31:0]                           cam_data_mask;
+   //wire                                  cam_we;
+  // wire [LUT_DEPTH_BITS-1:0]             cam_wr_addr;
+// Add CAM logic block
+ cam JUMP_CAM
+ (
+	 .reset(reset),   //   reset       
+	 .wr_clk(clk),      //    clk   
+	 .wr_en(),      //       cam_we
+	 .wr_key(),      //     cam_din  
+	 .wr_index(),  //     cam_wr_addr    
+	 .wr_erase_n(1'b1),         //
+	 .rd_clk(clk),             // clk
+	 .rd_en(1'b1),         //   dst_ip_vld  
+	 .rd_key(address_a),  //    cam_cmp_din
+	 .one_hot_addr(),  //     cam_match_addr
+	 .match_addr(),         
+	 .match(),              //   cam_match
+	 .multi_match(),       
+	 .index_reg(),          
+	 .cam_full(),           
+	 .multi_index()         
+);
+
+				   localparam
+      IDLE_STATE_CAM = 2'b00,
+      FIRST_STATE_CAM = 2'b01,
+      SECOND_STATE_CAM = 2'b10;
+		//THIRD_STATE_CAM = 2'b11;
+		
+		reg [1:0] state_cam,state_cam_nxt;
+      reg cam_busy_signal_reg,cam_busy_signal_reg_next;
+		reg cam_wr_ack_reg,cam_wr_ack_reg_next;
+		
+	 always @(posedge clk) begin
+      if (reset) begin
+         state_cam <= IDLE_STATE_CAM;
+			cam_busy_signal_reg <= 1'b0;
+			cam_wr_ack_reg <= 1'b0;
+		end	
+      else begin 
+         state_cam <= state_cam_nxt;
+         cam_busy_signal_reg <= cam_busy_signal_reg_next;
+			cam_wr_ack_reg <= cam_wr_ack_reg_next;
+      end   // else
+   end
+	
+	
+	always @(*) begin      
+      cam_busy_signal_reg_next = cam_busy_signal_reg;
+      state_cam_nxt = state_cam;
+		cam_wr_ack_reg_next = cam_wr_ack_reg;
+      case (state_cam)
+         IDLE_STATE_CAM: begin
+            if (cam_we) begin
+               cam_busy_signal_reg_next = 1'b1;
+               state_cam_nxt = FIRST_STATE_CAM;
+					cam_wr_ack_reg_next = 1'b0;
+            end   
+				else begin
+					cam_busy_signal_reg_next = 1'b0;
+					cam_wr_ack_reg_next = 1'b0;
+				end	
+         end  
+   
+         FIRST_STATE_CAM: begin
+               cam_busy_signal_reg_next = 1'b1;
+               state_cam_nxt = SECOND_STATE_CAM;
+					cam_wr_ack_reg_next = 1'b0;
+         end   
+        
+         SECOND_STATE_CAM: begin
+               cam_busy_signal_reg_next = 1'b0;
+               state_cam_nxt = IDLE_STATE_CAM;
+					cam_wr_ack_reg_next = 1'b1;
+         end  
+			
+        // THIRD_STATE_CAM: begin
+          //     cam_busy_signal_reg_next = 1'b0;
+            //   state_cam_nxt = IDLE_STATE_CAM;
+         //end  
+      endcase // case(state)
+
+   end 
+	assign 	cam_busy = 	cam_busy_signal_reg;
+	assign   cam_wr_ack = cam_wr_ack_reg;
+
+// Add the jump logic instantiation
+//reg [1:0] mon_state, mon_state_next;
+//parameter IDLE = 2'b00;
+/*always@(posedge clk)
+begin
+	if(reset) begin
+		mon_state <= IDLE;
+	end
+	else begin
+		mon_state <= mon_state_next;
+	end
+end
+
+always@(*)
+begin
+	case(mon_state)
+		IDILE: begin
+		
+		end
+	endcase
+end
+*/
+
+always@(posedge clk)
+begin
+	if (reset) begin
+		address_a = 9'h0;
+	end
+	else begin
+		if(new_inst_signal) begin
+			if(four_bit_hash_out_one == four_bit_hash) begin // include case for CAM later
+				address_a = address_a + 1;
+			end
+			else begin
+				packet_drop_signal_reg = 1'b1;
+			end
+		end
+		else begin
+		end
+	end
+end
+
+assign packet_drop_signal = packet_drop_signal_reg;
+endmodule 

@@ -1,0 +1,64 @@
+TARGET = microcode
+SPE_COMPILER = /root/spree/compiler-release/compiler
+SPE_COMPILER_LIBPATH = /root/spree/compiler-release/compiler/lib/gcc/mips-mips-elf/4.0.2/soft-float
+LD_SCRIPT = $(SPE_COMPILER)/tools/lsi.qiang.ld
+START_SRC = $(SPE_COMPILER)/tools/start.s
+
+CC=$(SPE_COMPILER)/bin/mips-mips-elf-gcc
+CXX=$(SPE_COMPILER)/bin/mips-mips-elf-g++
+AS=$(SPE_COMPILER)/bin/mips-mips-elf-as
+LD=$(SPE_COMPILER)/bin/mips-mips-elf-ld
+OBJDUMP=$(SPE_COMPILER)/bin/mips-mips-elf-objdump
+OBJCOPY=$(SPE_COMPILER)/bin/mips-mips-elf-objcopy
+
+CFLAGS= -O3 -mips1 -mgp32 -msoft-float -mlong32
+ASFLAGS= -O3 -mips1
+LDFLAGS= -T $(LD_SCRIPT) -L $(SPE_COMPILER)/tools -L $(SPE_COMPILER)/mips-mips-elf/lib/soft-float -L $(SPE_COMPILER_LIBPATH) -lm -lc -lgcc -lspe
+
+#
+
+
+SRC=microcode.c
+OBJS=${SRC:.c=.o}
+
+
+# START must be linked first
+$(TARGET): $(OBJS)
+	@$(LD) $(START) $(OBJS) $(LDFLAGS) -o $(TARGET)
+	$(OBJDUMP) -D microcode > microcode.lst
+	$(OBJCOPY) -O binary microcode microcode.bin
+	./z microcode.bin > localram.v
+	rm -f /root/NF2/projects/ngnp/src/localram.v
+	mv ./localram.v /root/NF2/projects/ngnp/src/
+
+.c.o: 
+	@$(CC) $(CFLAGS) -c -o $*.o $<
+.s.o: 
+	@$(AS) $(ASFLAGS) -o $*.o $<
+.c.s:	
+	@$(CC) $(CFLAGS) -S -o $*.s $<
+
+
+start.o: $(START_SRC)
+	@echo "====== $@ ======="
+	$(AS) $(ASFLAGS) -o start.o $(START_SRC)
+
+clean:
+	@rm -rf *.o
+	@rm -rf *.lst
+	@rm -rf *.srec
+	@rm -rf *.map
+	@rm -rf *.fl
+	@rm -rf *.bin
+	@rm -rf *.exe
+	@rm firmware.elf firmware.bin -f
+	@rm microcode microcode.bin -f
+
+#	zpu-elf-gcc -Os -phi microcode.c -o firmware -Wl,--relax -Wl,--gc-sections
+#	zpu-elf-gcc -Os -phi microcode.c -o firmware.elf -Wl,--relax -Wl,--gc-sections
+#	zpu-elf-strip ./firmware.elf
+#	zpu-elf-objcopy -O binary ./firmware.elf ./firmware.bin
+#	./z ./firmware.bin > localram.v
+#	rm -f /root/NF2/projects/ngnp/src/localram.v
+#	mv ./localram.v /root/NF2/projects/ngnp/src/
+

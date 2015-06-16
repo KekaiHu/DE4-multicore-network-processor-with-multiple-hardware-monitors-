@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at in_switch.v(105): object "empty_buff_grant" differs only in case from object "EMPTY_BUFF_GRANT" in the same scope
+Warning (10268): Verilog HDL information at mem_ctrl.v(180): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at mult.v(207): always construct contains both blocking and non-blocking assignments

@@ -1,0 +1,122 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+temp_u32            0x4               catvars.o
+temp                0x4               catvars.o
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000        0x0 catvars.o
+ .reginfo       0x0000000000000000        0x0 desc.o
+ .reginfo       0x0000000000000000        0x0 firmware.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0000000000000000 0x0000000000002000 xr
+ram              0x0000000000002000 0x0000000000002000 xw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+TARGET(elf32-bigmips)
+
+.text           0x0000000000000000      0x484
+                0x0000000000000000                __text_start = .
+ *(.text)
+ .text          0x0000000000000000      0x144 crt0.o
+                0x0000000000000000                __start
+ .text          0x0000000000000144      0x11c catvars.o
+                0x0000000000000144                catvars
+ .text          0x0000000000000260       0xa8 desc.o
+                0x0000000000000260                Pack
+ .text          0x0000000000000308      0x17c firmware.o
+                0x0000000000000308                YF32_ISR
+                0x0000000000000310                main
+                0x0000000000000484                __text_end = .
+
+.rodata         0x0000000000000484        0x0
+                0x0000000000000484                __rodata_start = .
+ *(.rodata)
+                0x0000000000000484                __rodata_end = .
+
+.sdata          0x0000000000000484        0x0
+                0x0000000000000484                __sdata_start = .
+ *(.sdata)
+                0x0000000000000484                __sdata_end = .
+
+.pdr            0x0000000000000484       0xa0
+                0x0000000000000484                __pdr_start = .
+ *(.pdr)
+ .pdr           0x0000000000000484       0x20 crt0.o
+ .pdr           0x00000000000004a4       0x20 catvars.o
+ .pdr           0x00000000000004c4       0x20 desc.o
+ .pdr           0x00000000000004e4       0x40 firmware.o
+                0x0000000000000524                __pdr_end = .
+
+.comment        0x0000000000000524       0x36
+                0x0000000000000524                __comment_start = .
+ *(.comment)
+ .comment       0x0000000000000524       0x12 catvars.o
+ .comment       0x0000000000000536       0x12 desc.o
+ .comment       0x0000000000000548       0x12 firmware.o
+                0x000000000000055a                __comment_end = .
+
+.data           0x000000000000055a        0x0
+                0x000000000000055a                __data_start = .
+ *(.data)
+ .data          0x000000000000055a        0x0 crt0.o
+ .data          0x000000000000055a        0x0 catvars.o
+ .data          0x000000000000055a        0x0 desc.o
+ .data          0x000000000000055a        0x0 firmware.o
+                0x000000000000055a                __data_end = .
+
+.sbss           0x0000000000002000        0x8
+                0x0000000000002000                _fbss = .
+                0x0000000000002000                __sbss_start = .
+ *(.sbss)
+ *(.scommon)
+ .scommon       0x0000000000002000        0x8 catvars.o
+                0x0000000000002000                temp_u32
+                0x0000000000002004                temp
+ .scommon       0x0000000000002008        0x0 desc.o
+ .scommon       0x0000000000002008        0x0 firmware.o
+                0x0000000000002008                __sbss_end = .
+
+.bss            0x0000000000002008        0x0
+                0x0000000000002008                __bss_start = .
+ *(.bss)
+ .bss           0x0000000000002008        0x0 crt0.o
+ .bss           0x0000000000002008        0x0 catvars.o
+ .bss           0x0000000000002008        0x0 desc.o
+ .bss           0x0000000000002008        0x0 firmware.o
+ *(.bss.*)
+ *(COMMON)
+                0x0000000000002008                . = ALIGN (0x4)
+                0x0000000000002008                __bss_end = .
+                0x0000000000002008                _end = .
+                0x0000000000002000                _gp = 0x2000
+                0x0000000000003ff8                _sp = 0x3ff8
+LOAD crt0.o
+LOAD catvars.o
+LOAD desc.o
+LOAD firmware.o
+OUTPUT(firmware.exe elf32-bigmips)
+
+.reginfo        0x0000000000000000       0x18
+ .reginfo       0x0000000000000000       0x18 crt0.o
+
+.mdebug.abi32   0x0000000000000000        0x0
+ .mdebug.abi32  0x0000000000000000        0x0 catvars.o
+ .mdebug.abi32  0x0000000000000000        0x0 desc.o
+ .mdebug.abi32  0x0000000000000000        0x0 firmware.o
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 catvars.o
+ .gnu.attributes
+                0x0000000000000010       0x10 desc.o
+ .gnu.attributes
+                0x0000000000000020       0x10 firmware.o

@@ -1,0 +1,6 @@
+CommandLine
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/xst -ifn /home/qiang/Desktop/tmp/_cg/_bbx/lpm_mult_mult_gen_v10_1_xst_1.scr -ofn /home/qiang/Desktop/tmp/_cg/_bbx/lpm_mult_mult_gen_v10_1_xst_1_xst.log -intstyle silent -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s
